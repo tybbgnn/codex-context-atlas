@@ -1,0 +1,361 @@
+{
+  "units": {
+    "A1": {
+      "kind": "action",
+      "text": "取得 reference 与当前 TurnContextItem，计算变化和全量注入标记",
+      "evidenceRefs": [
+        "bb4",
+        "bb14",
+        "bb15",
+        "bb17",
+        "bb18",
+        "bb19",
+        "bb20",
+        "source/mod.rs:4681-4688"
+      ]
+    },
+    "A2": {
+      "kind": "action",
+      "text": "成功取得状态后按 reference 选择注入方式；失败返回构建错误",
+      "evidenceRefs": [
+        "bb21",
+        "bb28",
+        "bb29",
+        "bb30",
+        "bb31",
+        "bb32",
+        "bb34",
+        "source/mod.rs:4689-4691"
+      ]
+    },
+    "A3": {
+      "kind": "action",
+      "text": "取得本次完整 context items",
+      "evidenceRefs": [
+        "bb35",
+        "bb36",
+        "bb43",
+        "source/mod.rs:4692-4694"
+      ]
+    },
+    "A4": {
+      "kind": "action",
+      "text": "将 snapshot 设为基线并组装完整 WorldStateItem",
+      "evidenceRefs": [
+        "bb44",
+        "bb45",
+        "bb54",
+        "bb55",
+        "bb56",
+        "bb58",
+        "bb59",
+        "bb60",
+        "source/mod.rs:4695-4704"
+      ]
+    },
+    "A5": {
+      "kind": "action",
+      "text": "取得可见 context 差量和可选 WorldStateItem",
+      "evidenceRefs": [
+        "bb69",
+        "bb70",
+        "bb71",
+        "bb72",
+        "bb73",
+        "bb74",
+        "source/mod.rs:4706-4715"
+      ]
+    },
+    "A6": {
+      "kind": "action",
+      "text": "仅在已有 reference 且 turn context 改变时追加贡献",
+      "evidenceRefs": [
+        "bb75",
+        "bb76",
+        "bb77",
+        "bb84",
+        "bb85",
+        "source/mod.rs:4717-4722"
+      ]
+    },
+    "A7": {
+      "kind": "action",
+      "text": "没有 context、turn 或 world state 更新时直接返回；否则检查可见 items",
+      "evidenceRefs": [
+        "bb88",
+        "bb89",
+        "bb90",
+        "bb91",
+        "bb92",
+        "bb93",
+        "bb94",
+        "bb95",
+        "bb96",
+        "bb97",
+        "bb98",
+        "source/mod.rs:4724-4728"
+      ]
+    },
+    "A8": {
+      "kind": "action",
+      "text": "完成 conversation items 记录，再进入 world state 记录",
+      "evidenceRefs": [
+        "bb100",
+        "bb101",
+        "bb102",
+        "bb103",
+        "source/mod.rs:4729-4734"
+      ]
+    },
+    "A9": {
+      "kind": "action",
+      "text": "有 WorldStateItem 时请求记录；仅快照变化则返回 world state",
+      "evidenceRefs": [
+        "bb112",
+        "bb113",
+        "bb124",
+        "bb125",
+        "source/mod.rs:4737-4743"
+      ]
+    },
+    "A10": {
+      "kind": "action",
+      "text": "完成 TurnContext 记录请求，随后推进 reference",
+      "evidenceRefs": [
+        "bb126",
+        "bb127",
+        "source/mod.rs:4747-4748"
+      ]
+    },
+    "A11": {
+      "kind": "action",
+      "text": "设置新的 reference_context_item 并返回 world state",
+      "evidenceRefs": [
+        "bb144",
+        "bb145",
+        "bb146",
+        "source/mod.rs:4752-4754"
+      ]
+    },
+    "G1": {
+      "kind": "goal",
+      "text": "reference 和当前设置已比较",
+      "evidenceRefs": [
+        "bb4",
+        "bb14",
+        "bb15",
+        "bb17",
+        "bb18",
+        "bb19",
+        "bb20",
+        "source/mod.rs:4681-4688"
+      ]
+    },
+    "G2": {
+      "kind": "goal",
+      "text": "成功取得 world state 后继续；构建失败则返回错误",
+      "evidenceRefs": [
+        "bb21",
+        "bb28",
+        "bb29",
+        "bb30",
+        "bb31",
+        "bb32",
+        "bb34",
+        "source/mod.rs:4689-4691"
+      ]
+    },
+    "G3": {
+      "kind": "goal",
+      "text": "完整 context items 已生成",
+      "evidenceRefs": [
+        "bb35",
+        "bb36",
+        "bb43",
+        "source/mod.rs:4692-4694"
+      ]
+    },
+    "G4": {
+      "kind": "goal",
+      "text": "history 已接纳 snapshot，完整记录已准备",
+      "evidenceRefs": [
+        "bb44",
+        "bb45",
+        "bb54",
+        "bb55",
+        "bb56",
+        "bb58",
+        "bb59",
+        "bb60",
+        "source/mod.rs:4695-4704"
+      ]
+    },
+    "G5": {
+      "kind": "goal",
+      "text": "更新 history 后产出差量 items 与记录",
+      "evidenceRefs": [
+        "bb69",
+        "bb70",
+        "bb71",
+        "bb72",
+        "bb73",
+        "bb74",
+        "source/mod.rs:4706-4715"
+      ]
+    },
+    "G6": {
+      "kind": "goal",
+      "text": "已有 reference 且 turn context 改变时追加贡献，否则保留当前 context items",
+      "evidenceRefs": [
+        "bb75",
+        "bb76",
+        "bb77",
+        "bb84",
+        "bb85",
+        "source/mod.rs:4717-4722"
+      ]
+    },
+    "G7": {
+      "kind": "goal",
+      "text": "无变化已返回或记录范围已确定",
+      "evidenceRefs": [
+        "bb88",
+        "bb89",
+        "bb90",
+        "bb91",
+        "bb92",
+        "bb93",
+        "bb94",
+        "bb95",
+        "bb96",
+        "bb97",
+        "bb98",
+        "source/mod.rs:4724-4728"
+      ]
+    },
+    "G8": {
+      "kind": "goal",
+      "text": "conversation items 记录调用已完成",
+      "evidenceRefs": [
+        "bb100",
+        "bb101",
+        "bb102",
+        "bb103",
+        "source/mod.rs:4729-4734"
+      ]
+    },
+    "G9": {
+      "kind": "goal",
+      "text": "有 WorldStateItem 时请求记录；仅 world state 变化则返回，否则继续推进 reference",
+      "evidenceRefs": [
+        "bb112",
+        "bb113",
+        "bb124",
+        "bb125",
+        "source/mod.rs:4737-4743"
+      ]
+    },
+    "G10": {
+      "kind": "goal",
+      "text": "先请求记录 TurnContext，再更新内存 reference 并返回 world state",
+      "evidenceRefs": [
+        "bb126",
+        "bb127",
+        "source/mod.rs:4747-4748",
+        "bb144",
+        "bb145",
+        "bb146",
+        "source/mod.rs:4752-4754"
+      ]
+    },
+    "P1": {
+      "kind": "phase",
+      "text": "取得变化标记和可用状态，错误直接结束",
+      "evidenceRefs": [
+        "bb4",
+        "bb14",
+        "bb15",
+        "bb17",
+        "bb18",
+        "bb19",
+        "bb20",
+        "source/mod.rs:4681-4688",
+        "bb21",
+        "bb28",
+        "bb29",
+        "bb30",
+        "bb31",
+        "bb32",
+        "bb34",
+        "source/mod.rs:4689-4691"
+      ]
+    },
+    "P2": {
+      "kind": "phase",
+      "text": "reference 缺失时注入全量，否则更新差量；已有 reference 且 turn context 改变时追加贡献",
+      "evidenceRefs": [
+        "bb35",
+        "bb36",
+        "bb43",
+        "source/mod.rs:4692-4694",
+        "bb44",
+        "bb45",
+        "bb54",
+        "bb55",
+        "bb56",
+        "bb58",
+        "bb59",
+        "bb60",
+        "source/mod.rs:4695-4704",
+        "bb69",
+        "bb70",
+        "bb71",
+        "bb72",
+        "bb73",
+        "bb74",
+        "source/mod.rs:4706-4715",
+        "bb75",
+        "bb76",
+        "bb77",
+        "bb84",
+        "bb85",
+        "source/mod.rs:4717-4722"
+      ]
+    },
+    "P3": {
+      "kind": "phase",
+      "text": "完成所需记录请求，按变化范围返回 world state",
+      "evidenceRefs": [
+        "bb88",
+        "bb89",
+        "bb90",
+        "bb91",
+        "bb92",
+        "bb93",
+        "bb94",
+        "bb95",
+        "bb96",
+        "bb97",
+        "bb98",
+        "source/mod.rs:4724-4728",
+        "bb100",
+        "bb101",
+        "bb102",
+        "bb103",
+        "source/mod.rs:4729-4734",
+        "bb112",
+        "bb113",
+        "bb124",
+        "bb125",
+        "source/mod.rs:4737-4743",
+        "bb126",
+        "bb127",
+        "source/mod.rs:4747-4748",
+        "bb144",
+        "bb145",
+        "bb146",
+        "source/mod.rs:4752-4754"
+      ]
+    }
+  }
+}

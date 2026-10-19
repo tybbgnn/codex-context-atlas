@@ -1,0 +1,72 @@
+{
+  "units": {
+    "A_init": {
+      "kind": "action",
+      "text": "进入 submission_loop；尚未收到关闭确认，开始接收。"
+    },
+    "A_receive": {
+      "kind": "action",
+      "text": "首次进入或上一条处理结束；收到输入则交给分派；通道关闭则结束接收。"
+    },
+    "A_dispatch": {
+      "kind": "action",
+      "text": "接收到 submission；内层分派完成，返回 should_exit。"
+    },
+    "A_release": {
+      "kind": "action",
+      "text": "内层分派已完成；释放 residency guard；继续接收或确认关闭并退出循环。"
+    },
+    "A_exitcheck": {
+      "kind": "action",
+      "text": "接收循环已经结束；未收到关闭确认才执行兜底关闭。"
+    },
+    "A_runtime": {
+      "kind": "action",
+      "text": "尚未收到关闭确认；runtime 关闭完成，继续处理 thread 持久化。"
+    },
+    "A_lookup": {
+      "kind": "action",
+      "text": "runtime 关闭完成；存在 live_thread 则关闭持久化；不存在则结束。"
+    },
+    "A_persist": {
+      "kind": "action",
+      "text": "session 持有 live_thread；等待关闭结果；失败时记录警告后仍结束。"
+    },
+    "A_finish": {
+      "kind": "action",
+      "text": "已有关闭确认或兜底关闭流程结束；返回调用方。"
+    },
+    "G01": {
+      "kind": "goal",
+      "text": "接收循环状态建立；每轮得到输入或确认通道关闭。"
+    },
+    "G02": {
+      "kind": "goal",
+      "text": "内层分派返回当前操作的退出意向。"
+    },
+    "G03": {
+      "kind": "goal",
+      "text": "驻留已释放，继续接收或登记关闭确认。"
+    },
+    "G04": {
+      "kind": "goal",
+      "text": "已确认无需兜底，或 runtime 与可用持久化的关闭尝试均结束。"
+    },
+    "G05": {
+      "kind": "goal",
+      "text": "函数返回调用方。"
+    },
+    "P01": {
+      "kind": "phase",
+      "text": "启动或继续接收；将一条输入交给处理，或确认通道关闭。"
+    },
+    "P02": {
+      "kind": "phase",
+      "text": "已收到一条输入；处理完成后继续接收，或退出循环。"
+    },
+    "P03": {
+      "kind": "phase",
+      "text": "接收循环结束；按关闭确认决定兜底责任，最终返回。"
+    }
+  }
+}

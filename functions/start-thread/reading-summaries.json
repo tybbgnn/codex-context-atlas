@@ -1,0 +1,16 @@
+{
+  "units": {
+    "P01": {
+      "kind": "phase",
+      "text": "接收创建选项，调用内部实现并交付它返回的线程创建结果。"
+    },
+    "sem:P01:start-inner": {
+      "kind": "goal",
+      "text": "把提交创建请求与交付创建结果绑定为同一个完成合同。"
+    },
+    "P01/A01.1": {
+      "kind": "action",
+      "text": "以 options 调用 start_thread_inner，并交付它产生的 NewThread 或 CodexErr。"
+    }
+  }
+}

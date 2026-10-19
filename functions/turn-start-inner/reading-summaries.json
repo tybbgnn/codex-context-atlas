@@ -1,0 +1,148 @@
+{
+  "units": {
+    "P01": {
+      "kind": "phase",
+      "text": "从外部请求取得可直接输入的 thread，并完成内容约束判定。"
+    },
+    "P02": {
+      "kind": "phase",
+      "text": "写入客户端信息，将协议输入、环境和配置转换为提交参数。"
+    },
+    "P03": {
+      "kind": "phase",
+      "text": "提交给 thread；保留新建或转向标识，未提交则报告错误。"
+    },
+    "P04": {
+      "kind": "phase",
+      "text": "按条件启动 memories，关联请求并返回进行中的 turn。"
+    },
+    "sem:P01:admission": {
+      "kind": "goal",
+      "text": "目标 thread 完成加载、直接输入授权及 provider 检查"
+    },
+    "P01/A01.1": {
+      "kind": "action",
+      "text": "取得 thread_id 与 thread；加载失败由 inspect_err 记录并返回。"
+    },
+    "P01/A02.14": {
+      "kind": "action",
+      "text": "直接输入获准后继续；拒绝时传播准入错误。"
+    },
+    "P01/A03.27": {
+      "kind": "action",
+      "text": "读取当前配置并检查 provider；配置错误转换后返回。"
+    },
+    "sem:P01:payload": {
+      "kind": "goal",
+      "text": "输入形状及文本容量判定完成"
+    },
+    "P01/A04.53": {
+      "kind": "action",
+      "text": "有 tool_output 时要求 input 为空且 name 非空，否则返回无效请求。"
+    },
+    "P01/A05.64": {
+      "kind": "action",
+      "text": "累计 input 与 tool_output 的文本字符数；超限进入错误报告。"
+    },
+    "sem:P01:size_error": {
+      "kind": "goal",
+      "text": "带 TooLarge 分类的错误已记录并返回"
+    },
+    "P01/A06.72": {
+      "kind": "action",
+      "text": "构造 TooLarge 错误，记录输入错误类别并交付错误。"
+    },
+    "sem:P02:client": {
+      "kind": "goal",
+      "text": "客户端名称与版本设置成功"
+    },
+    "P02/A01.75": {
+      "kind": "action",
+      "text": "将客户端名称与版本提交给 thread；失败由 inspect_err 记录后返回。"
+    },
+    "sem:P02:normalize": {
+      "kind": "goal",
+      "text": "环境选择、附加上下文与一种 TurnInput 准备完成"
+    },
+    "P02/A02.87": {
+      "kind": "action",
+      "text": "可选根路径经映射，环境选择解析失败则停止准备。"
+    },
+    "P02/A03.94": {
+      "kind": "action",
+      "text": "保存是否有用户输入，并按 tool_output 是否存在选择 TurnInput。"
+    },
+    "P02/A04.99": {
+      "kind": "action",
+      "text": "组装 FunctionCallOutput，校验图片 URL 后交付 ResponseItem 输入；无效 URL 返回错误。"
+    },
+    "P02/A05.106": {
+      "kind": "action",
+      "text": "逐项转换输入内容并保留 client_user_message_id，组成 UserInput。"
+    },
+    "sem:P02:settings": {
+      "kind": "goal",
+      "text": "cwd 与环境覆盖已用于组装本次设置"
+    },
+    "P02/A06.110": {
+      "kind": "action",
+      "text": "cwd 有效时结合工作区根与环境选择建立 environment_override；cwd 无效则返回错误。"
+    },
+    "P02/A07.124": {
+      "kind": "action",
+      "text": "将插件、审批、权限、模型等请求设置形成 ThreadSettingsOverrides；构造失败返回错误。"
+    },
+    "sem:P03:submit": {
+      "kind": "goal",
+      "text": "提交请求完整并取得接纳结果或调用错误"
+    },
+    "P03/A01.135": {
+      "kind": "action",
+      "text": "在同一个 TurnInputRequest 上附加启动选项、上下文、响应元数据和 trace。"
+    },
+    "P03/A02.154": {
+      "kind": "action",
+      "text": "调用 start_or_steer_turn；调用失败经 map_err 记录，成功结果区分新建、转向与未提交。"
+    },
+    "sem:P03:accepted": {
+      "kind": "goal",
+      "text": "从新建或转向结果提取 turn_id 与 started"
+    },
+    "P03/A03.169": {
+      "kind": "action",
+      "text": "保留 turn_id 和是否新建标志，并检查是否为带用户输入的新 turn。"
+    },
+    "sem:P03:rejection": {
+      "kind": "goal",
+      "text": "按未提交原因记录并返回错误"
+    },
+    "P03/A04.168": {
+      "kind": "action",
+      "text": "ServerDraining 使用专门错误，其余原因构造内部错误；记录后返回。"
+    },
+    "sem:P04:memories": {
+      "kind": "goal",
+      "text": "有用户输入的新 turn 完成主环境检查及适用的任务启动"
+    },
+    "P04/A01.183": {
+      "kind": "action",
+      "text": "读取配置快照；仅主环境已配置时进入 memories 启动。"
+    },
+    "P04/A02.194": {
+      "kind": "action",
+      "text": "读取 thread 配置并启动 memories 后台任务；这里只确认启动调用完成。"
+    },
+    "sem:P04:delivery": {
+      "kind": "goal",
+      "text": "请求关联完成并形成 TurnStartResponse"
+    },
+    "P04/A03.211": {
+      "kind": "action",
+      "text": "记录 request_id 与 turn_id 的对应关系，供后续消息关联。"
+    },
+    "P04/A04.221": {
+      "kind": "action",
+      "text": "返回 TurnStartResponse；状态为 InProgress，items 为空且标记 NotLoaded，时间字段未设置。"
+    }
+  }
+}

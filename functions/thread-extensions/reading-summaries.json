@@ -1,0 +1,92 @@
+{
+  "units": {
+    "a-create": {
+      "kind": "action",
+      "text": "builder 已绑定 event_sink"
+    },
+    "a-admission": {
+      "kind": "action",
+      "text": "已配置准入；缺失则保留默认行为"
+    },
+    "a-queue": {
+      "kind": "action",
+      "text": "已注册 queue；缺失则跳过"
+    },
+    "a-history": {
+      "kind": "action",
+      "text": "history notes 已注册"
+    },
+    "a-board": {
+      "kind": "action",
+      "text": "线程消息板已注册"
+    },
+    "a-goals": {
+      "kind": "action",
+      "text": "Goals backend 与配置回调已注册；缺失则跳过"
+    },
+    "a-git": {
+      "kind": "action",
+      "text": "git attribution 依赖已注册"
+    },
+    "a-guardian": {
+      "kind": "action",
+      "text": "Guardian 已绑定认证与线程管理"
+    },
+    "a-memories": {
+      "kind": "action",
+      "text": "memories 已注册并传入 metrics"
+    },
+    "a-mcp": {
+      "kind": "action",
+      "text": "MCP 已注册"
+    },
+    "a-plugins": {
+      "kind": "action",
+      "text": "MCP plugins 已绑定环境管理"
+    },
+    "a-search": {
+      "kind": "action",
+      "text": "web search 已绑定认证"
+    },
+    "a-image": {
+      "kind": "action",
+      "text": "图像生成已注册并传入配置回调"
+    },
+    "a-providers": {
+      "kind": "action",
+      "text": "两种 skills 来源已合并"
+    },
+    "a-skills": {
+      "kind": "action",
+      "text": "skills 来源、配置回调与 metrics 已注册"
+    },
+    "a-deliver": {
+      "kind": "action",
+      "text": "返回 Arc 包装的完整 ExtensionRegistry"
+    },
+    "g-create": {
+      "kind": "goal",
+      "text": "builder 已具备事件出口"
+    },
+    "g-register": {
+      "kind": "goal",
+      "text": "依次把扩展注册到同一 builder；admission、queue、Goals 分别仅在对应依赖存在时配置，skills 使用组合来源。"
+    },
+    "g-deliver": {
+      "kind": "goal",
+      "text": "消费 builder 并返回可共享的 registry"
+    },
+    "p-create": {
+      "kind": "phase",
+      "text": "builder 已具备事件出口"
+    },
+    "p-register": {
+      "kind": "phase",
+      "text": "按可用依赖配置 admission、queue、Goals，并安装其余线程能力；完成后交给 builder 构建。"
+    },
+    "p-deliver": {
+      "kind": "phase",
+      "text": "消费 builder 并返回可共享的 registry"
+    }
+  }
+}

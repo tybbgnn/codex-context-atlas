@@ -1,0 +1,65 @@
+[
+  {
+    "id": "F01",
+    "group": "G01",
+    "symbol": "MessageProcessor::process_request",
+    "path": "functions/process-request/",
+    "available": false
+  },
+  {
+    "id": "F02",
+    "group": "G01",
+    "symbol": "TurnRequestProcessor::turn_start_inner",
+    "path": "functions/turn-start-inner/roundtrip/",
+    "available": true
+  },
+  {
+    "id": "F03",
+    "group": "G01",
+    "symbol": "ThreadManager::start_thread",
+    "path": "functions/start-thread/roundtrip/",
+    "available": true
+  },
+  {
+    "id": "F04",
+    "group": "G01",
+    "symbol": "thread_extensions",
+    "path": "functions/thread-extensions/roundtrip/",
+    "available": true
+  },
+  {
+    "id": "F05",
+    "group": "G02",
+    "symbol": "submission_loop",
+    "path": "functions/submission-loop/roundtrip/",
+    "available": true
+  },
+  {
+    "id": "F07",
+    "group": "G02",
+    "symbol": "run_turn",
+    "path": "functions/run-turn/roundtrip/",
+    "available": true
+  },
+  {
+    "id": "F08",
+    "group": "G03",
+    "symbol": "Session::build_initial_context_with_world_state",
+    "path": "functions/initial-context/roundtrip/",
+    "available": true
+  },
+  {
+    "id": "F09",
+    "group": "G03",
+    "symbol": "Session::record_context_updates_and_set_reference_context_item",
+    "path": "functions/context-updates/roundtrip/",
+    "available": true
+  },
+  {
+    "id": "F10",
+    "group": "G03",
+    "symbol": "build_prompt",
+    "path": "functions/build-prompt/roundtrip/",
+    "available": true
+  }
+]

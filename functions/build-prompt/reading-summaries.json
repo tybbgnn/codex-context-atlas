@@ -1,0 +1,54 @@
+{
+  "units": {
+    "P1": {
+      "kind": "phase",
+      "text": "形成携带工具、指令与输出约束的 Prompt",
+      "evidenceRefs": [
+        "source/turn.rs:1588-1599"
+      ]
+    },
+    "G1": {
+      "kind": "goal",
+      "text": "同一返回值的各字段准备完成并整体交付",
+      "evidenceRefs": [
+        "source/turn.rs:1588-1599"
+      ]
+    },
+    "A1": {
+      "kind": "action",
+      "text": "接收 input 并从 tool_router 取得模型可用工具列表",
+      "evidenceRefs": [
+        "bb71",
+        "bb72",
+        "source/turn.rs:1588-1591"
+      ]
+    },
+    "A2": {
+      "kind": "action",
+      "text": "移动 base_instructions，并复制 turn 的 final_output_json_schema",
+      "evidenceRefs": [
+        "bb73",
+        "bb74",
+        "source/turn.rs:1593-1594"
+      ]
+    },
+    "A3": {
+      "kind": "action",
+      "text": "basic session 关闭严格 schema，其余来源开启",
+      "evidenceRefs": [
+        "bb75",
+        "bb76",
+        "bb77",
+        "source/turn.rs:1595-1598"
+      ]
+    },
+    "A4": {
+      "kind": "action",
+      "text": "合入 cyber_access_program，启用并行工具调用，将所有字段组装为返回值",
+      "evidenceRefs": [
+        "bb78",
+        "source/turn.rs:1589-1599"
+      ]
+    }
+  }
+}
