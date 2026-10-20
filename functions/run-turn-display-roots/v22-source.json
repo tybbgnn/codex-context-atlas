@@ -1,0 +1,18 @@
+{
+  "version": "v22",
+  "source_folder": "1-环境展示路径块",
+  "body_hash": "6ccfbaa7c8ba54b17f347cbdcc2b778a",
+  "source_acceptance": {
+    "semantic_passed": false
+  },
+  "source_asset_sha256": {
+    "basic-block-details.json": "f73ede1b13e143e509fcb39a00148a24ee2e4774f3768a74f0914f201c9e477b",
+    "README.md": "316554005be264fd341915e5fd9e808b57870161cdeb611491fc18d8a532ce52",
+    "renderer-input.json": "a5a55d88302dd8061f6280d1f3c249a120d605ad7c2dfbcf2aed9c6bc6bf641d",
+    "data.js": "369f51ae5a452c2ffa5f15fc58d960acd124914d2bb7f18968e5bbf1b08c808e",
+    "reading-summaries.json": "68c64c7c104643a7ae0c9a25be7925b79233c7e3074a796818e3e05e4beec6bf",
+    "roundtrip/app.bundle.js": "c8dc6908482f21558cc1571a46cd0a17ac6049a760bdb227217651826b942c93",
+    "roundtrip/index.html": "b0af30871a891cce67f1a8d64790002817715530bfb5b299e0aa01e5dfd0342f",
+    "roundtrip/style.css": "e4283d59212c0fb74df3ac0667425fff5d87a910b800ae8165c1f88c09e7897e"
+  }
+}

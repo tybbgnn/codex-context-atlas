@@ -1,0 +1,18 @@
+{
+  "version": "v22",
+  "source_folder": "2-采样请求块",
+  "body_hash": "e0659b8c39c457de7f347cbdcc2b778a",
+  "source_acceptance": {
+    "semantic_passed": false
+  },
+  "source_asset_sha256": {
+    "basic-block-details.json": "738beef86e115500718bf88c6c65e7620614a1982a4b79fe339da2efb1a0293c",
+    "README.md": "430e82ac96f0a556399547ebab6a8580a6a7cb596063dcc502bfbd706f5c1802",
+    "renderer-input.json": "23e27a5d365046f4da592ec282ef2638ebb6bc3baf7e272b0e3bd2242e19be0b",
+    "data.js": "7bc2738b23ffbec68cc06bb794eb2adc326590ab68665bcbf92b9b6fdec22ac7",
+    "reading-summaries.json": "86f3d824e7ca51defd154f2b6328542acb17b7c76da23b73719c658825b98a24",
+    "roundtrip/app.bundle.js": "c8dc6908482f21558cc1571a46cd0a17ac6049a760bdb227217651826b942c93",
+    "roundtrip/index.html": "b0af30871a891cce67f1a8d64790002817715530bfb5b299e0aa01e5dfd0342f",
+    "roundtrip/style.css": "e4283d59212c0fb74df3ac0667425fff5d87a910b800ae8165c1f88c09e7897e"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "version": "v22",
+  "source_folder": "0-run_turn",
+  "body_hash": "0e2e3627499bc9a17f347cbdcc2b778a",
+  "source_acceptance": {
+    "semantic_passed": false
+  },
+  "source_asset_sha256": {
+    "basic-block-details.json": "1683378c64ce13ea7f0fd1b1675fbe4448d39345388c8171afc0ec16dc23aa51",
+    "README.md": "e547951be353e0ec3b3d4eb22447b95621f220d49b70291b6efac6d82682cd79",
+    "renderer-input.json": "17ed75c79363bb5014d4b22d93e28de377962d4a02e0713962c7d15356fbc590",
+    "data.js": "129d2fd04ae5b6dce6f2d0d789f387aba516e535fd4cde6d4d9f29adac5ae2ce",
+    "reading-summaries.json": "2dd479aff51ba584f60e350ae8dd8f824b5c15059718d16c2e4f06499d085e15",
+    "roundtrip/app.bundle.js": "c8dc6908482f21558cc1571a46cd0a17ac6049a760bdb227217651826b942c93",
+    "roundtrip/index.html": "b0af30871a891cce67f1a8d64790002817715530bfb5b299e0aa01e5dfd0342f",
+    "roundtrip/style.css": "e4283d59212c0fb74df3ac0667425fff5d87a910b800ae8165c1f88c09e7897e"
+  }
+}

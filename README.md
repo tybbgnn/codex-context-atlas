@@ -2,7 +2,9 @@
 
 按 G01 请求接入、G02 回合主循环、G03 Context 构造组织的静态网站。
 
-共 9 个入口：8 个交互图，F01 process_request 待补充。
+共 13 个入口：12 个交互图，F01 process_request 待补充。
+
+v22 更新：替换 run_turn，并加入环境展示路径块、采样请求块、采样输入块、采样后状态块。5 个 v22 页面标记为预览版，所提供原始报告的语义验收尚未通过。
 
 入口为 index.html。每个已完成函数的页面位于 functions/<slug>/roundtrip/index.html。配套数据、脚本和样式随站点一起发布。
 

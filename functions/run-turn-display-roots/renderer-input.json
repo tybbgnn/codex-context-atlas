@@ -1,0 +1,2430 @@
+{
+  "actors": [
+    {
+      "actorId": "actor-main",
+      "bodyRef": "6ccfbaa7c8ba54b17f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
+      "color": "#327B98",
+      "kind": "body",
+      "label": "codex_core::session::turn::run_turn::{closure#0}::{closure#4}",
+      "sourceNodeRef": "6ccfbaa7c8ba54b17f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
+    },
+    {
+      "actorId": "actor-crate-7f347cbdcc2b778a7f347cbdcc2b778a",
+      "children": [
+        {
+          "actorId": "actor-module-a5f9c6e4834f234e7f347cbdcc2b778a",
+          "children": [
+            {
+              "actorId": "actor-2",
+              "bodyRef": "5f922a9ffde1e4f67f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
+              "color": "#42758C",
+              "kind": "body",
+              "label": "is_basic_session_source",
+              "sourceNodeRef": "5f922a9ffde1e4f67f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
+            }
+          ],
+          "color": "#42758C",
+          "kind": "module",
+          "label": "review",
+          "sourceNodeRef": "a5f9c6e4834f234e7f347cbdcc2b778a"
+        },
+        {
+          "actorId": "actor-module-d99984c779e578a17f347cbdcc2b778a",
+          "children": [
+            {
+              "actorId": "actor-13",
+              "bodyRef": "48b1f29f6375784d7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
+              "color": "#42758C",
+              "kind": "body",
+              "label": "turn_environments",
+              "sourceNodeRef": "48b1f29f6375784d7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
+            },
+            {
+              "actorId": "actor-15",
+              "bodyRef": "aae21020d04383c17f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
+              "color": "#42758C",
+              "kind": "body",
+              "label": "codex_core::environment_selection::TurnEnvironmentSnapshot::turn_environments::{closure#0}",
+              "sourceNodeRef": "aae21020d04383c17f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
+            }
+          ],
+          "color": "#42758C",
+          "kind": "module",
+          "label": "environment_selection",
+          "sourceNodeRef": "d99984c779e578a17f347cbdcc2b778a"
+        },
+        {
+          "actorId": "actor-module-c0b0acd6f47d1c8c7f347cbdcc2b778a",
+          "children": [
+            {
+              "actorId": "actor-18",
+              "bodyRef": "db1c3daa1940af6d7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
+              "color": "#42758C",
+              "kind": "body",
+              "label": "codex_core::session::turn::turn_diff_display_roots::{closure#0}",
+              "sourceNodeRef": "db1c3daa1940af6d7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
+            }
+          ],
+          "color": "#42758C",
+          "kind": "module",
+          "label": "turn",
+          "sourceNodeRef": "c0b0acd6f47d1c8c7f347cbdcc2b778a"
+        }
+      ],
+      "color": "#42758C",
+      "kind": "crate",
+      "label": "codex_core",
+      "sourceNodeRef": "7f347cbdcc2b778a7f347cbdcc2b778a"
+    },
+    {
+      "actorId": "actor-crate-3a8b0ebc4f04af173a8b0ebc4f04af17",
+      "children": [
+        {
+          "actorId": "actor-module-3a8b0ebc4f04af173a8b0ebc4f04af17",
+          "children": [
+            {
+              "actorId": "actor-9",
+              "bodyRef": "8aac1be8d6ebf13e3a8b0ebc4f04af17|mir_drops_elaborated_and_const_checked|main",
+              "color": "#42758C",
+              "kind": "body",
+              "label": "enabled",
+              "sourceNodeRef": "8aac1be8d6ebf13e3a8b0ebc4f04af17|mir_drops_elaborated_and_const_checked|main"
+            }
+          ],
+          "color": "#42758C",
+          "kind": "module",
+          "label": "codex_features",
+          "sourceNodeRef": "3a8b0ebc4f04af173a8b0ebc4f04af17"
+        }
+      ],
+      "color": "#42758C",
+      "kind": "crate",
+      "label": "codex_features",
+      "sourceNodeRef": "3a8b0ebc4f04af173a8b0ebc4f04af17"
+    }
+  ],
+  "branchRoles": [],
+  "caseIndex": [],
+  "controlOwners": [
+    {
+      "controlRef": "control-2",
+      "owner": {
+        "kind": "action",
+        "ref": "P01/A01.1"
+      }
+    },
+    {
+      "controlRef": "control-9",
+      "owner": {
+        "kind": "action",
+        "ref": "P01/A01.1"
+      }
+    },
+    {
+      "controlRef": "control-13",
+      "owner": {
+        "kind": "action",
+        "ref": "P01/A02.12"
+      }
+    },
+    {
+      "controlRef": "control-15",
+      "owner": {
+        "kind": "action",
+        "ref": "P01/A02.12"
+      }
+    },
+    {
+      "controlRef": "control-18",
+      "owner": {
+        "kind": "action",
+        "ref": "P01/A03.17"
+      }
+    }
+  ],
+  "controls": [
+    {
+      "id": "control-2",
+      "invocationRef": "inv-2",
+      "kind": "sequence",
+      "messages": [
+        "request-2",
+        "return-2"
+      ]
+    },
+    {
+      "condition": "会话不是基础会话",
+      "id": "control-9",
+      "invocationRef": "inv-9",
+      "kind": "opt",
+      "messages": [
+        "request-9",
+        "return-9"
+      ],
+      "skip": "基础会话直接采用工作目录，不读取相对路径功能"
+    },
+    {
+      "id": "control-13",
+      "invocationRef": "inv-13",
+      "kind": "sequence",
+      "messages": [
+        "request-13",
+        "return-13"
+      ]
+    },
+    {
+      "id": "control-15",
+      "invocationRef": "inv-15",
+      "kind": "sequence",
+      "messages": [
+        "request-15",
+        "return-15"
+      ]
+    },
+    {
+      "id": "control-18",
+      "invocationRef": "inv-18",
+      "kind": "sequence",
+      "messages": [
+        "request-18",
+        "return-18"
+      ]
+    }
+  ],
+  "dataKind": "source-backed",
+  "definitionNotes": [],
+  "deliveryMode": "real-flow",
+  "display": {
+    "description": "按会话来源与相对路径功能，直接采用环境工作目录或发现差异展示根目录。",
+    "sourceLabel": "core/src/session/turn.rs:284–306",
+    "title": "环境展示路径块"
+  },
+  "execution": {
+    "artifacts": [
+      {
+        "content": "pub(crate) async fn run_turn(\n    sess: Arc<Session>,\n    turn_context: Arc<TurnContext>,\n    mut input: Vec<TurnInput>,\n    mcp_startup_requirements: &mut McpStartupRequirements,\n    prewarmed_client_session: Option<ModelClientSession>,\n    cancellation_token: CancellationToken,\n) -> CodexResult<Option<String>> {\n    if crate::guardian::is_basic_session_source(&turn_context.session_source) {\n        crate::guardian::check_pending_guardian_input(&sess, &turn_context).await?;\n    }\n    // Record results from hooks that finished after the previous turn before this turn's user prompt.\n    drain_async_hook_results(&sess, &turn_context, /*before_user_prompt*/ true).await;\n\n    let mut client_session =\n        prewarmed_client_session.unwrap_or_else(|| sess.services.model_client.new_session());\n    // TODO(ccunningham): Pre-turn compaction runs before context updates and the\n    // new user message are recorded. Estimate pending incoming items (context\n    // diffs/full reinjection + user input) and trigger compaction preemptively\n    // when they would push the thread over the compaction threshold.\n    if let Err(err) = run_pre_sampling_compact(\n        &sess,\n        &turn_context,\n        &mut client_session,\n        &cancellation_token,\n    )\n    .await\n    {\n        // Compaction runs before the new input is recorded, so preserve it on every failure.\n        run_hooks_and_record_inputs(\n            &sess,\n            &turn_context,\n            &turn_context.capture_current_model_info(),\n            &input,\n            PersistContext::Standard,\n        )\n        .await;\n        if matches!(err.details(), CodexErrorDetails::TurnAborted) {\n            return Err(err);\n        }\n        if matches!(err.details(), CodexErrorDetails::ToolCollision(_)) {\n            return Err(err);\n        }\n        let error = err.to_codex_protocol_error();\n        sess.emit_turn_error_lifecycle(turn_context.as_ref(), error.clone(), err.details())\n            .await;\n        // Publish the failure only after prompt hooks finish, so clients cannot react to\n        // an error by steering follow-up input into a turn still preserving its prompt.\n        let message_prefix = match turn_context.provider.capabilities().remote_compaction {\n            RemoteCompactionSupport::V2 => Some(\"Error running remote compact task\".to_string()),\n            RemoteCompactionSupport::Unsupported => None,\n        };\n        sess.send_event(\n            turn_context.as_ref(),\n            EventMsg::Error(err.to_error_event(message_prefix)),\n        )\n        .await;\n        error!(\"Failed to run pre-sampling compact\");\n        return Ok(None);\n    }\n\n    let user_input = turn_user_input(&input);\n    let allow_plugin_mentions =\n        !crate::guardian::is_basic_session_source(&turn_context.session_source);\n    let McpStartupRequirements {\n        required_servers,\n        required_plugins,\n    } = mcp_startup_requirements;\n    if allow_plugin_mentions {\n        required_plugins.extend(crate::plugins::collect_explicit_plugin_ids(&user_input));\n    }\n    let (input_required_servers, mentioned_plugins) =\n        match required_mcp_servers_for_input(&sess, turn_context.as_ref(), &user_input)\n            .or_cancel(&cancellation_token)\n            .await\n        {\n            Ok(requirements) => requirements,\n            Err(err) => {\n                run_hooks_and_record_inputs(\n                    &sess,\n                    &turn_context,\n                    &turn_context.capture_current_model_info(),\n                    &input,\n                    PersistContext::Standard,\n                )\n                .await;\n                return Err(err.into());\n            }\n        };\n\n    required_servers.extend(input_required_servers);\n    required_servers.sort_unstable();\n    required_servers.dedup();\n\n    // run_turn owns the step used to seed context and make the first sampling request.\n    let first_step_context = match sess\n        .capture_step_context_with_required_mcp_servers(\n            Arc::clone(&turn_context),\n            &cancellation_token,\n            required_servers,\n            required_plugins,\n        )\n        .await\n    {\n        Ok(step_context) => step_context,\n        Err(err) if matches!(err.details(), CodexErrorDetails::TurnAborted) => {\n            run_hooks_and_record_inputs(\n                &sess,\n                &turn_context,\n                &turn_context.capture_current_model_info(),\n                &input,\n                PersistContext::Standard,\n            )\n            .await;\n            return Err(err);\n        }\n        Err(err) => return Err(err),\n    };\n    // Keep the exact model-visible state used by this turn and its inline compactions.\n    let (world_state, display_roots) = tokio::join!(\n        sess.record_context_updates_and_set_reference_context_item(first_step_context.as_ref()),\n        async {\n            // Guardian must not wait for remote Git discovery just to display diff paths.\n            if crate::guardian::is_basic_session_source(&turn_context.session_source)\n                || first_step_context\n                    .turn\n                    .config\n                    .features\n                    .enabled(Feature::CwdRelativeTurnDiffs)\n            {\n                first_step_context\n                    .environments\n                    .turn_environments()\n                    .map(|environment| {\n                        (\n                            environment.selection().environment_id,\n                            environment.cwd().clone(),\n                        )\n                    })\n                    .collect()\n            } else {\n                turn_diff_display_roots(first_step_context.as_ref()).await\n            }\n        },\n    );\n    let mut world_state = world_state?;\n\n    let Some((injection_items, explicitly_enabled_connectors)) = build_skills_and_plugins(\n        &sess,\n        first_step_context.as_ref(),\n        &user_input,\n        &mentioned_plugins,\n        &cancellation_token,\n    )\n    .await\n    else {\n        return Ok(None);\n    };\n\n    if run_pending_session_start_hooks(&sess, &turn_context).await {\n        return Ok(None);\n    }\n    if crate::guardian::is_basic_session_source(&turn_context.session_source)\n        && let Err(error) = crate::guardian::finalize_guardian_input(\n            &sess,\n            &first_step_context,\n            &mut input,\n            codex_guardian_context::HistoryTruncation::Preserve,\n        )\n        .await\n    {\n        // Token-budget compaction resets history, which can discard the evidence\n        // referenced by a pending delta review. Leave budget failures unreusable.\n        if !matches!(error.details(), CodexErrorDetails::ContextWindowExceeded)\n            || turn_context.config.features.enabled(Feature::TokenBudget)\n        {\n            return Err(error);\n        }\n        // Incoming evidence can overflow even below the normal history\n        // threshold. Keep it pending while compacting, then select once more.\n        sess.services\n            .thread_extension_data\n            .insert(crate::guardian::ExhaustedReviewBudget::Compacting);\n        run_auto_compact(\n            &sess,\n            Arc::clone(&first_step_context),\n            /*fallback_step_context*/ None,\n            &mut client_session,\n            InitialContextInjection::DoNotInject,\n            CompactionReason::ContextLimit,\n            CompactionPhase::PreTurn,\n        )\n        .await?;\n        world_state = sess\n            .record_context_updates_and_set_reference_context_item(first_step_context.as_ref())\n            .await?;\n        crate::guardian::finalize_guardian_input(\n            &sess,\n            &first_step_context,\n            &mut input,\n            codex_guardian_context::HistoryTruncation::Allow,\n        )\n        .await?;\n    }\n    let mut can_drain_pending_input = input.is_empty();\n    if run_hooks_and_record_inputs(\n        &sess,\n        &turn_context,\n        &first_step_context.settings.model_info,\n        &input,\n        PersistContext::TurnStart,\n    )\n    .await\n    {\n        return Ok(None);\n    }\n\n    // Only speculate after hooks accept the turn, using its finalized tools and permissions.\n    {\n        let mut state = sess.state.lock().await;\n        if state.shell_snapshot_prewarm.is_none() {\n            state.shell_snapshot_prewarm =\n                sess.prewarm_shell_snapshots(first_step_context.as_ref());\n        }\n    }\n\n    sess.merge_connector_selection(explicitly_enabled_connectors.clone())\n        .await;\n    sess.set_previous_turn_settings(Some(PreviousTurnSettings {\n        model: turn_context.model_info().slug.clone(),\n        cyber_access_program: turn_context.cyber_access_program,\n        comp_hash: turn_context.model_info().comp_hash.clone(),\n        realtime_active: Some(turn_context.realtime_active),\n    }))\n    .await;\n    for response_item in injection_items {\n        sess.record_conversation_items(\n            &turn_context,\n            &first_step_context.settings.model_info,\n            std::slice::from_ref(&response_item),\n        )\n        .await;\n    }\n\n    track_turn_resolved_config_analytics(&sess, &turn_context, &input).await;\n\n    let mut last_agent_message: Option<String> = None;\n    let mut stop_hook_active = false;\n    // Although from the perspective of codex.rs, TurnDiffTracker has the lifecycle of a Task which contains\n    // many turns, from the perspective of the user, it is a single turn.\n    let turn_diff_tracker = Arc::new(tokio::sync::Mutex::new(\n        TurnDiffTracker::with_environment_display_roots(display_roots),\n    ));\n\n    // `ModelClientSession` is turn-scoped and caches WebSocket + sticky routing state, so we reuse\n    // one instance across retries within this turn.\n    // Pending input is drained into history before building the next model request.\n    // However, we defer that drain until after sampling in two cases:\n    // 1. At the start of a turn, so the fresh turn input in `input` gets sampled first.\n    // 2. After auto-compact, while a model/tool continuation is pending.\n\n    let mut next_step_context = Some(first_step_context);\n    let mut guardian_budget_compacted = false;\n    loop {\n        // Note that pending_input would be something like a message the user\n        // submitted through the UI while the model was running. Though the UI\n        // may support this, the model might not.\n        let pending_input = if can_drain_pending_input {\n            sess.input_queue\n                .get_pending_input(&sess.active_turn)\n                .await\n                .0\n        } else {\n            Vec::new()\n        };\n\n        if run_hooks_and_record_inputs(\n            &sess,\n            &turn_context,\n            &turn_context.capture_current_model_info(),\n            &pending_input,\n            PersistContext::SteeredUserInput,\n        )\n        .await\n        {\n            break;\n        }\n\n        // Input and turn-start injections are recorded before recovery can continue this turn.\n        turn_context.extension_data.insert(RecordedTurnInput);\n        let window_id = sess.current_window_id().await;\n        super::rollout_budget::maybe_record_reminder(\n            sess.as_ref(),\n            turn_context.as_ref(),\n            &window_id,\n        )\n        .await;\n\n        // Capture once so context, advertised tools, and tool calls share one request view.\n        let step_context = match next_step_context.take() {\n            Some(step_context) if pending_input.is_empty() => step_context,\n            None if pending_input.is_empty() => {\n                sess.capture_step_context_with_required_mcp_servers(\n                    Arc::clone(&turn_context),\n                    &cancellation_token,\n                    required_servers,\n                    required_plugins,\n                )\n                .await?\n            }\n            Some(_) | None => {\n                let pending_user_input = turn_user_input(&pending_input);\n                if allow_plugin_mentions {\n                    required_plugins.extend(crate::plugins::collect_explicit_plugin_ids(\n                        &pending_user_input,\n                    ));\n                }\n                let (pending_required_servers, _) = required_mcp_servers_for_input(\n                    &sess,\n                    turn_context.as_ref(),\n                    &pending_user_input,\n                )\n                .or_cancel(&cancellation_token)\n                .await?;\n                required_servers.extend(pending_required_servers);\n                required_servers.sort_unstable();\n                required_servers.dedup();\n                sess.capture_step_context_with_required_mcp_servers(\n                    Arc::clone(&turn_context),\n                    &cancellation_token,\n                    required_servers,\n                    required_plugins,\n                )\n                .await?\n            }\n        };\n        let sampling_request_result: CodexResult<_> = async {\n            super::time_reminder::maybe_record_current_time_reminder(\n                sess.as_ref(),\n                turn_context.as_ref(),\n                &window_id,\n            )\n            .await?;\n\n            world_state = sess\n                .record_step_world_state_if_changed(&world_state, step_context.as_ref())\n                .await?;\n\n            // Keep the override after accepted input so history truncation removes them together.\n            sess.record_reasoning_effort_override(step_context.as_ref())\n                .await;\n\n            // Construct the input that we will send to the model.\n            let sampling_request_input: Vec<ResponseItem> = async {\n                sess.clone_history()\n                    .await\n                    .for_prompt(&step_context.settings.model_info.input_modalities)\n            }\n            .instrument(trace_span!(\"run_turn.prepare_sampling_request_input\"))\n            .await;\n\n            run_sampling_request(\n                Arc::clone(&sess),\n                Arc::clone(&step_context),\n                Arc::clone(&turn_context.extension_data),\n                Arc::clone(&turn_diff_tracker),\n                &mut client_session,\n                sampling_request_input,\n                cancellation_token.child_token(),\n            )\n            .await\n        }\n        .await;\n        match sampling_request_result {\n            Ok((sampling_request_output, sampling_request_input)) => {\n                guardian_budget_compacted = false;\n                let SamplingRequestResult {\n                    needs_follow_up: model_needs_follow_up,\n                    last_agent_message: sampling_request_last_agent_message,\n                } = sampling_request_output;\n                if model_needs_follow_up {\n                    sess.input_queue\n                        .accept_mailbox_delivery_for_current_turn(\n                            &sess.active_turn,\n                            &turn_context.sub_id,\n                        )\n                        .await;\n                }\n                can_drain_pending_input = true;\n                // Process async hooks only after sampling and its tools have finished.\n                drain_async_hook_results(&sess, &turn_context, /*before_user_prompt*/ false).await;\n                let (has_pending_input, token_status) = async {\n                    let has_pending_input =\n                        sess.input_queue.has_pending_input(&sess.active_turn).await;\n                    let token_status = super::context_window::context_window_token_status(\n                        sess.as_ref(),\n                        turn_context.as_ref(),\n                    )\n                    .await;\n                    (has_pending_input, token_status)\n                }\n                .instrument(trace_span!(\"run_turn.collect_post_sampling_state\"))\n                .await;\n                let needs_follow_up = model_needs_follow_up || has_pending_input;\n                let token_limit_reached = token_status.token_limit_reached;\n\n                trace!(\n                    turn_id = %turn_context.sub_id,\n                    total_usage_tokens = token_status.active_context_tokens,\n                    auto_compact_scope_tokens = token_status.auto_compact_scope_tokens,\n                    auto_compact_scope_limit = ?token_status.auto_compact_scope_limit,\n                    auto_compact_limit_scope = ?turn_context.config.model_auto_compact_token_limit_scope,\n                    auto_compact_window_prefill_tokens = ?token_status.auto_compact_window_prefill_tokens,\n                    full_context_window_limit = ?token_status.full_context_window_limit,\n                    full_context_window_limit_reached = token_status.full_context_window_limit_reached,\n                    token_limit_reached,\n                    model_needs_follow_up,\n                    has_pending_input,\n                    needs_follow_up,\n                    \"post sampling token usage\"\n                );\n                if tracing::event_enabled!(\n                    target: POST_SAMPLING_TOKEN_ESTIMATE_TARGET,\n                    tracing::Level::TRACE,\n                    turn_id,\n                    estimated_token_count,\n                    message\n                ) {\n                    let estimated_token_count =\n                        sess.get_estimated_token_count(turn_context.as_ref()).await;\n                    trace!(\n                        target: POST_SAMPLING_TOKEN_ESTIMATE_TARGET,\n                        turn_id = %turn_context.sub_id,\n                        estimated_token_count = ?estimated_token_count,\n                        \"post sampling token estimate\"\n                    );\n                }\n\n                let should_roll_over = needs_follow_up\n                    && (sess.take_new_context_window_request().await || token_limit_reached);\n                let allow_auto_compact_fallback = !should_roll_over && !token_limit_reached;\n                super::token_budget::maybe_record(\n                    sess.as_ref(),\n                    turn_context.as_ref(),\n                    token_status.base_window_tokens_remaining,\n                    allow_auto_compact_fallback,\n                )\n                .await;\n\n                // as long as compaction works well in getting us way below the token limit, we shouldn't worry about being in an infinite loop.\n                if should_roll_over {\n                    if let Err(err) = run_auto_compact(\n                        &sess,\n                        Arc::clone(&step_context),\n                        /*fallback_step_context*/ None,\n                        &mut client_session,\n                        InitialContextInjection::BeforeLastUserMessage {\n                            world_state: Arc::clone(&world_state),\n                            step_context: Arc::clone(&step_context),\n                        },\n                        CompactionReason::ContextLimit,\n                        CompactionPhase::MidTurn,\n                    )\n                    .await\n                    {\n                        if matches!(err.details(), CodexErrorDetails::TurnAborted) {\n                            return Err(err);\n                        }\n                        let error = err.to_codex_protocol_error();\n                        sess.emit_turn_error_lifecycle(\n                            turn_context.as_ref(),\n                            error.clone(),\n                            err.details(),\n                        )\n                        .await;\n                        return Ok(None);\n                    }\n                    if run_pending_session_start_hooks(&sess, &turn_context).await {\n                        return Ok(None);\n                    }\n                    // After a signaled step, drain the steer even if compaction\n                    // leaves the estimated context above the token limit.\n                    can_drain_pending_input = !model_needs_follow_up\n                        || step_context\n                            .preempt\n                            .as_ref()\n                            .is_some_and(CancellationToken::is_cancelled);\n                    continue;\n                }\n\n                if !needs_follow_up {\n                    last_agent_message = sampling_request_last_agent_message;\n                    let stop_outcome = run_turn_stop_hooks(\n                        &sess,\n                        &step_context,\n                        stop_hook_active,\n                        last_agent_message.clone(),\n                    )\n                    .await;\n                    if matches!(\n                        turn_context.session_source,\n                        SessionSource::Internal(InternalSessionSource::MemoryConsolidation)\n                    ) && (stop_outcome.should_block || stop_outcome.should_stop)\n                    {\n                        // Do not feed managed rejections back into an unattended memory loop.\n                        return Err(CodexErr::InvalidRequest(\n                            \"Memory consolidation was rejected by a Stop hook.\".to_string(),\n                        ));\n                    }\n                    if stop_outcome.should_block {\n                        if let Some(hook_prompt_message) =\n                            build_hook_prompt_message(&stop_outcome.continuation_fragments)\n                        {\n                            sess.record_response_item_and_emit_turn_item(\n                                &turn_context,\n                                &step_context.settings.model_info,\n                                hook_prompt_message,\n                            )\n                            .await;\n                            sess.input_queue\n                                .accept_mailbox_delivery_for_current_turn(\n                                    &sess.active_turn,\n                                    &turn_context.sub_id,\n                                )\n                                .await;\n                            stop_hook_active = true;\n                            continue;\n                        } else {\n                            sess.send_event(\n                                &turn_context,\n                                EventMsg::Warning(WarningEvent {\n                                    message: \"Stop hook requested continuation without a prompt; ignoring the block.\".to_string(),\n                                }),\n                            )\n                            .await;\n                        }\n                    }\n                    if stop_outcome.should_stop {\n                        break;\n                    }\n                    if run_legacy_after_agent_hook(\n                        &sess,\n                        &turn_context,\n                        &sampling_request_input,\n                        last_agent_message.clone(),\n                    )\n                    .await\n                    {\n                        return Ok(None);\n                    }\n                    // Token-budget resets do not summarize, so preserve their existing rollover\n                    // policy. Keep summarizing compaction in this task to serialize history updates.\n                    let config = &turn_context.config;\n                    if config.model_post_turn_compact_threshold_percent > 0\n                        && !config.features.enabled(Feature::TokenBudget)\n                        && super::context_window::context_window_token_status(\n                            sess.as_ref(),\n                            turn_context.as_ref(),\n                        )\n                        .await\n                        .turn_end_compaction_threshold_reached\n                        && !sess.input_queue.has_pending_input(&sess.active_turn).await\n                        && !cancellation_token.is_cancelled()\n                        && let Err(err) = run_auto_compact(\n                            &sess,\n                            Arc::clone(&step_context),\n                            /*fallback_step_context*/ None,\n                            &mut client_session,\n                            InitialContextInjection::DoNotInject,\n                            CompactionReason::ContextLimit,\n                            CompactionPhase::PostTurn,\n                        )\n                        .await\n                    {\n                        if matches!(\n                            err.details(),\n                            CodexErrorDetails::Interrupted | CodexErrorDetails::TurnAborted\n                        ) {\n                            return Err(err);\n                        }\n                        let error = err.to_codex_protocol_error();\n                        if matches!(error, CodexErrorInfo::UsageLimitExceeded) {\n                            // Preserve the completed answer while stopping automatic work.\n                            sess.emit_turn_error_lifecycle(\n                                turn_context.as_ref(),\n                                error,\n                                err.details(),\n                            )\n                            .await;\n                        }\n                        warn!(error = %err, \"Post-turn compaction failed; preserving the completed turn\");\n                    }\n                    break;\n                }\n                continue;\n            }\n            Err(err)\n                if matches!(err.details(), CodexErrorDetails::ContextWindowExceeded)\n                    && !guardian_budget_compacted\n                    && !turn_context.config.features.enabled(Feature::TokenBudget)\n                    && sess\n                        .services\n                        .thread_extension_data\n                        .get::<crate::guardian::ExhaustedReviewBudget>()\n                        .is_some() =>\n            {\n                // Tool continuations can also cross the complete-request limit.\n                // Only summarizing compaction preserves the action and evidence;\n                // token-budget resets must fail closed and retire the reviewer.\n                // Retry once per model step, so ineffective compaction cannot loop.\n                guardian_budget_compacted = true;\n                sess.services\n                    .thread_extension_data\n                    .insert(crate::guardian::ExhaustedReviewBudget::Compacting);\n                run_auto_compact(\n                    &sess,\n                    Arc::clone(&step_context),\n                    /*fallback_step_context*/ None,\n                    &mut client_session,\n                    InitialContextInjection::BeforeLastUserMessage {\n                        world_state: Arc::clone(&world_state),\n                        step_context: Arc::clone(&step_context),\n                    },\n                    CompactionReason::ContextLimit,\n                    CompactionPhase::MidTurn,\n                )\n                .await?;\n                can_drain_pending_input = false;\n                continue;\n            }\n            Err(err) if matches!(err.details(), CodexErrorDetails::TurnAborted) => {\n                return Err(err);\n            }\n            Err(codex_error)\n                if matches!(\n                    codex_error.details(),\n                    CodexErrorDetails::InvalidImageRequest()\n                ) =>\n            {\n                sess.track_turn_codex_error(turn_context.as_ref(), &codex_error);\n                let error = CodexErrorInfo::BadRequest;\n                sess.emit_turn_error_lifecycle(\n                    turn_context.as_ref(),\n                    error.clone(),\n                    codex_error.details(),\n                )\n                .await;\n                let event = EventMsg::Error(ErrorEvent {\n                    misalignment: None,\n                    message: \"Invalid image in your last message. Please remove it and try again.\"\n                        .to_string(),\n                    codex_error_info: Some(error),\n                });\n                sess.send_event(&turn_context, event).await;\n                break;\n            }\n            Err(e) => {\n                info!(\"Turn error: {e:#}\");\n                if matches!(\n                    e.details(),\n                    CodexErrorDetails::MisalignmentPolicyViolation { .. }\n                ) {\n                    sess.conversation.retire_handoffs_for_misalignment().await;\n                }\n                let error = e.to_codex_protocol_error();\n                sess.emit_turn_error_lifecycle(turn_context.as_ref(), error.clone(), e.details())\n                    .await;\n                sess.track_turn_codex_error(turn_context.as_ref(), &e);\n                let event = EventMsg::Error(e.to_error_event(/*message_prefix*/ None));\n                sess.send_event(&turn_context, event).await;\n                // let the user continue the conversation\n                break;\n            }\n        }\n    }\n\n    Ok(last_agent_message)\n}",
+        "format": "rust",
+        "id": "source-function",
+        "sha256": "1510012cfcb2945f58dcbdae1450ea9e3bc37642408f228dacef205c444f03d8",
+        "sourcePath": "source/turn.rs"
+      }
+    ],
+    "attachments": [
+      {
+        "evidenceRefs": [
+          "evidence-81963e865ca96a565b710231"
+        ],
+        "id": "attachment-purpose-2",
+        "kind": "purpose",
+        "ownerActionRef": "P01/A01.1",
+        "purposeRef": "purpose-2"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-60dede3dfbfd0e50837718f7"
+        ],
+        "id": "attachment-purpose-9",
+        "kind": "purpose",
+        "ownerActionRef": "P01/A01.1",
+        "purposeRef": "purpose-9"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-c9f111f07b2ea43e21275ff8"
+        ],
+        "id": "attachment-purpose-13",
+        "kind": "purpose",
+        "ownerActionRef": "P01/A02.12",
+        "purposeRef": "purpose-13"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-72f68d01da5985fbe1ae7616"
+        ],
+        "id": "attachment-purpose-15",
+        "kind": "purpose",
+        "ownerActionRef": "P01/A02.12",
+        "purposeRef": "purpose-15"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-4875f0d4978ea7d2f08a0b11"
+        ],
+        "id": "attachment-purpose-18",
+        "kind": "purpose",
+        "ownerActionRef": "P01/A03.17",
+        "purposeRef": "purpose-18"
+      }
+    ],
+    "controlBindings": [
+      {
+        "controlRef": "control-2",
+        "evidenceRefs": [
+          "evidence-772c0e0c5f9f748cdfe1a159"
+        ],
+        "nodeRef": "exec-choice"
+      },
+      {
+        "controlRef": "control-9",
+        "evidenceRefs": [
+          "evidence-2e7a2b993539b0d3ac78eb87"
+        ],
+        "nodeRef": "exec-choice"
+      },
+      {
+        "controlRef": "control-13",
+        "evidenceRefs": [
+          "evidence-ff707406fb6d5cd41a2d2565"
+        ],
+        "nodeRef": "exec-direct"
+      },
+      {
+        "controlRef": "control-15",
+        "evidenceRefs": [
+          "evidence-4f22499afb691f3143877804"
+        ],
+        "nodeRef": "exec-direct"
+      },
+      {
+        "controlRef": "control-18",
+        "evidenceRefs": [
+          "evidence-8bb5f01b8af9f74f28181af9"
+        ],
+        "nodeRef": "exec-discover"
+      }
+    ],
+    "decisions": [
+      {
+        "evidenceRefs": [
+          "evidence-164bc36341a40bce4fa988c2"
+        ],
+        "id": "decision-mode",
+        "readingScopeRef": "scope-mode",
+        "stability": "turn",
+        "values": [
+          "basic",
+          "relative",
+          "discover"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "evidenceRefs": [
+          "evidence-78cc4c4862c339843ea357bb"
+        ],
+        "from": "exec-entry",
+        "guards": [],
+        "id": "exec-edge-0",
+        "kind": "flow",
+        "to": "exec-choice"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-c517e906ea963e60ecb21568"
+        ],
+        "from": "exec-choice",
+        "guards": [],
+        "id": "exec-edge-1",
+        "kind": "flow",
+        "to": "exec-mode"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-433eb8cce5257773fd8ecb11"
+        ],
+        "from": "exec-mode",
+        "guards": [
+          {
+            "decisionRef": "decision-mode",
+            "value": "basic"
+          }
+        ],
+        "id": "exec-edge-2",
+        "kind": "branch",
+        "to": "exec-direct"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-4b02ab63b75460044441cf59"
+        ],
+        "from": "exec-mode",
+        "guards": [
+          {
+            "decisionRef": "decision-mode",
+            "value": "relative"
+          }
+        ],
+        "id": "exec-edge-3",
+        "kind": "branch",
+        "to": "exec-direct"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-e768ecce7d285da92a318c4e"
+        ],
+        "from": "exec-mode",
+        "guards": [
+          {
+            "decisionRef": "decision-mode",
+            "value": "discover"
+          }
+        ],
+        "id": "exec-edge-4",
+        "kind": "branch",
+        "to": "exec-discover"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-4d246820f99ce415d3932ed3"
+        ],
+        "from": "exec-direct",
+        "guards": [],
+        "id": "exec-edge-5",
+        "kind": "flow",
+        "to": "exec-return"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-856c4ec6c021e67cc3c83da0"
+        ],
+        "from": "exec-discover",
+        "guards": [],
+        "id": "exec-edge-6",
+        "kind": "flow",
+        "to": "exec-return"
+      }
+    ],
+    "entryNodeRef": "exec-entry",
+    "evidence": [
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "entry",
+          "subjectRef": "exec-entry",
+          "targets": [
+            "actor-main",
+            "codex_core::session::turn::run_turn::{closure#0}::{closure#4}"
+          ]
+        },
+        "id": "evidence-28b30b28945eb55b194086a9",
+        "locator": "bb1",
+        "quote": "            if crate::guardian::is_basic_session_source(&turn_context.session_source)"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "action",
+          "subjectRef": "P01/A01.1",
+          "targets": [
+            "exec-choice"
+          ]
+        },
+        "id": "evidence-75174644133f1f091c201759",
+        "locator": "bb2,bb3,bb9,bb10",
+        "quote": "            if crate::guardian::is_basic_session_source(&turn_context.session_source)"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "decision",
+          "subjectRef": "exec-mode",
+          "targets": [
+            "decision-mode"
+          ]
+        },
+        "id": "evidence-e2d1b73a59982ecde5982351",
+        "locator": "bb3,bb10",
+        "quote": "            if crate::guardian::is_basic_session_source(&turn_context.session_source)"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "action",
+          "subjectRef": "P01/A02.12",
+          "targets": [
+            "exec-direct"
+          ]
+        },
+        "id": "evidence-aa9297604f69d2cf4628df1e",
+        "locator": "bb12,bb13,bb14,bb15",
+        "quote": "                first_step_context\n                    .environments"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "action",
+          "subjectRef": "P01/A03.17",
+          "targets": [
+            "exec-discover"
+          ]
+        },
+        "id": "evidence-695476f2056021805bfa4c5f",
+        "locator": "bb17,bb18,bb22,bb26",
+        "quote": "                turn_diff_display_roots(first_step_context.as_ref()).await"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "terminal",
+          "subjectRef": "exec-return",
+          "targets": [
+            "return"
+          ]
+        },
+        "id": "evidence-df03ad8e7acaa8b663a17723",
+        "locator": "bb28",
+        "quote": "pub(crate) async fn run_turn("
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "relation",
+          "subjectRef": "exec-edge-0",
+          "targets": [
+            "exec-entry",
+            "exec-choice",
+            "flow"
+          ]
+        },
+        "id": "evidence-78cc4c4862c339843ea357bb",
+        "locator": "bb1",
+        "quote": "            if crate::guardian::is_basic_session_source(&turn_context.session_source)"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "relation",
+          "subjectRef": "exec-edge-1",
+          "targets": [
+            "exec-choice",
+            "exec-mode",
+            "flow"
+          ]
+        },
+        "id": "evidence-c517e906ea963e60ecb21568",
+        "locator": "bb3,bb10",
+        "quote": "            if crate::guardian::is_basic_session_source(&turn_context.session_source)"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [
+            "decision-mode=basic"
+          ],
+          "kind": "relation",
+          "subjectRef": "exec-edge-2",
+          "targets": [
+            "exec-mode",
+            "exec-direct",
+            "branch"
+          ]
+        },
+        "id": "evidence-433eb8cce5257773fd8ecb11",
+        "locator": "m3.1,m4.0",
+        "quote": "            if crate::guardian::is_basic_session_source(&turn_context.session_source)"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [
+            "decision-mode=relative"
+          ],
+          "kind": "relation",
+          "subjectRef": "exec-edge-3",
+          "targets": [
+            "exec-mode",
+            "exec-direct",
+            "branch"
+          ]
+        },
+        "id": "evidence-4b02ab63b75460044441cf59",
+        "locator": "m3.0,m10.1,m11.0",
+        "quote": "            if crate::guardian::is_basic_session_source(&turn_context.session_source)"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [
+            "decision-mode=discover"
+          ],
+          "kind": "relation",
+          "subjectRef": "exec-edge-4",
+          "targets": [
+            "exec-mode",
+            "exec-discover",
+            "branch"
+          ]
+        },
+        "id": "evidence-e768ecce7d285da92a318c4e",
+        "locator": "m3.0,m10.0",
+        "quote": "            if crate::guardian::is_basic_session_source(&turn_context.session_source)"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "relation",
+          "subjectRef": "exec-edge-5",
+          "targets": [
+            "exec-direct",
+            "exec-return",
+            "flow"
+          ]
+        },
+        "id": "evidence-4d246820f99ce415d3932ed3",
+        "locator": "m16.0,bb28",
+        "quote": "pub(crate) async fn run_turn("
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "relation",
+          "subjectRef": "exec-edge-6",
+          "targets": [
+            "exec-discover",
+            "exec-return",
+            "flow"
+          ]
+        },
+        "id": "evidence-856c4ec6c021e67cc3c83da0",
+        "locator": "m26.0,m27.0,bb28",
+        "quote": "                turn_diff_display_roots(first_step_context.as_ref()).await"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "decision",
+          "subjectRef": "decision-mode",
+          "targets": [
+            "stability:turn",
+            "basic",
+            "relative",
+            "discover",
+            "scope:scope-mode"
+          ]
+        },
+        "id": "evidence-164bc36341a40bce4fa988c2",
+        "locator": "bb3,bb10",
+        "quote": "            if crate::guardian::is_basic_session_source(&turn_context.session_source)"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "control-binding",
+          "subjectRef": "control-2",
+          "targets": [
+            "exec-choice"
+          ]
+        },
+        "id": "evidence-772c0e0c5f9f748cdfe1a159",
+        "locator": "call:2",
+        "quote": "            if crate::guardian::is_basic_session_source(&turn_context.session_source)"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "control-binding",
+          "subjectRef": "control-9",
+          "targets": [
+            "exec-choice"
+          ]
+        },
+        "id": "evidence-2e7a2b993539b0d3ac78eb87",
+        "locator": "call:9",
+        "quote": "                || first_step_context\n                    .turn\n                    .config\n                    .features\n                    .enabled(Feature::CwdRelativeTurnDiffs)"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "control-binding",
+          "subjectRef": "control-13",
+          "targets": [
+            "exec-direct"
+          ]
+        },
+        "id": "evidence-ff707406fb6d5cd41a2d2565",
+        "locator": "call:13",
+        "quote": "                first_step_context\n                    .environments\n                    .turn_environments()"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "control-binding",
+          "subjectRef": "control-15",
+          "targets": [
+            "exec-direct"
+          ]
+        },
+        "id": "evidence-4f22499afb691f3143877804",
+        "locator": "call:15",
+        "quote": "                first_step_context\n                    .environments\n                    .turn_environments()\n                    .map(|environment| {\n                        (\n                            environment.selection().environment_id,\n                            environment.cwd().clone(),\n                        )\n                    })\n                    .collect()"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "control-binding",
+          "subjectRef": "control-18",
+          "targets": [
+            "exec-discover"
+          ]
+        },
+        "id": "evidence-8bb5f01b8af9f74f28181af9",
+        "locator": "call:18",
+        "quote": "                turn_diff_display_roots(first_step_context.as_ref()).await"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "attachment",
+          "subjectRef": "attachment-purpose-2",
+          "targets": [
+            "P01/A01.1",
+            "purpose-2"
+          ]
+        },
+        "id": "evidence-81963e865ca96a565b710231",
+        "locator": "call:2,bb2",
+        "quote": "            if crate::guardian::is_basic_session_source(&turn_context.session_source)"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "attachment",
+          "subjectRef": "attachment-purpose-9",
+          "targets": [
+            "P01/A01.1",
+            "purpose-9"
+          ]
+        },
+        "id": "evidence-60dede3dfbfd0e50837718f7",
+        "locator": "call:9,bb9",
+        "quote": "                || first_step_context\n                    .turn\n                    .config\n                    .features\n                    .enabled(Feature::CwdRelativeTurnDiffs)"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "attachment",
+          "subjectRef": "attachment-purpose-13",
+          "targets": [
+            "P01/A02.12",
+            "purpose-13"
+          ]
+        },
+        "id": "evidence-c9f111f07b2ea43e21275ff8",
+        "locator": "call:13,bb13",
+        "quote": "                first_step_context\n                    .environments\n                    .turn_environments()"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "attachment",
+          "subjectRef": "attachment-purpose-15",
+          "targets": [
+            "P01/A02.12",
+            "purpose-15"
+          ]
+        },
+        "id": "evidence-72f68d01da5985fbe1ae7616",
+        "locator": "call:15,bb15",
+        "quote": "                first_step_context\n                    .environments\n                    .turn_environments()\n                    .map(|environment| {\n                        (\n                            environment.selection().environment_id,\n                            environment.cwd().clone(),\n                        )\n                    })\n                    .collect()"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "attachment",
+          "subjectRef": "attachment-purpose-18",
+          "targets": [
+            "P01/A03.17",
+            "purpose-18"
+          ]
+        },
+        "id": "evidence-4875f0d4978ea7d2f08a0b11",
+        "locator": "call:18,bb18",
+        "quote": "                turn_diff_display_roots(first_step_context.as_ref()).await"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "inventory",
+          "subjectRef": "codex_core::session::turn::run_turn::{closure#0}::{closure#4}",
+          "targets": [
+            "action:P01/A01.1",
+            "action:P01/A02.12",
+            "action:P01/A03.17",
+            "control:control-2",
+            "control:control-9",
+            "control:control-13",
+            "control:control-15",
+            "control:control-18"
+          ]
+        },
+        "id": "evidence-d69c1ae3d8f8dd8af7a0369a",
+        "locator": "bb1,bb3,bb10,bb15,bb18",
+        "quote": "            if crate::guardian::is_basic_session_source(&turn_context.session_source)"
+      }
+    ],
+    "inventory": {
+      "actionRefs": [
+        "P01/A01.1",
+        "P01/A02.12",
+        "P01/A03.17"
+      ],
+      "controlRefs": [
+        "control-2",
+        "control-9",
+        "control-13",
+        "control-15",
+        "control-18"
+      ],
+      "evidenceRefs": [
+        "evidence-d69c1ae3d8f8dd8af7a0369a"
+      ]
+    },
+    "nodes": [
+      {
+        "basicBlockRefs": [
+          "bb1"
+        ],
+        "evidenceRefs": [
+          "evidence-28b30b28945eb55b194086a9"
+        ],
+        "id": "exec-entry",
+        "kind": "entry",
+        "label": "取得首步上下文后准备展示根目录",
+        "lineRanges": [
+          {
+            "endLine": 286,
+            "startLine": 286
+          }
+        ]
+      },
+      {
+        "actionRef": "P01/A01.1",
+        "basicBlockRefs": [
+          "bb1",
+          "bb2",
+          "bb3",
+          "bb4",
+          "bb5",
+          "bb6",
+          "bb7",
+          "bb8",
+          "bb9",
+          "bb10",
+          "bb11"
+        ],
+        "broadRangeReason": "286行调用基础会话判断，287–291行按短路规则访问功能配置；两段共同决定是否绕过发现，均为展示方式判断所必需，292/303行仅为分支块界限。",
+        "evidenceRefs": [
+          "evidence-75174644133f1f091c201759"
+        ],
+        "id": "exec-choice",
+        "kind": "action",
+        "label": "检验会话来源与相对路径配置",
+        "lineRanges": [
+          {
+            "endLine": 291,
+            "startLine": 286
+          }
+        ]
+      },
+      {
+        "basicBlockRefs": [
+          "bb3",
+          "bb10"
+        ],
+        "broadRangeReason": "286行会话来源条件与287–291行功能条件共同构成短路选择的完整条件；两段均必须核对。",
+        "decisionRef": "decision-mode",
+        "evidenceRefs": [
+          "evidence-e2d1b73a59982ecde5982351"
+        ],
+        "id": "exec-mode",
+        "kind": "decision",
+        "label": "基础会话优先，其次检验相对路径功能",
+        "lineRanges": [
+          {
+            "endLine": 291,
+            "startLine": 286
+          }
+        ]
+      },
+      {
+        "actionRef": "P01/A02.12",
+        "basicBlockRefs": [
+          "bb12",
+          "bb13",
+          "bb14",
+          "bb15",
+          "bb16"
+        ],
+        "broadRangeReason": "293–295行取得本轮环境，296–301行逐项构建环境标识与工作目录元组，302行收集为结果列表；完整链条直接产生本动作结果，不能只高亮collect。",
+        "evidenceRefs": [
+          "evidence-aa9297604f69d2cf4628df1e"
+        ],
+        "id": "exec-direct",
+        "kind": "action",
+        "label": "以环境标识和当前工作目录组成展示基准",
+        "lineRanges": [
+          {
+            "endLine": 302,
+            "startLine": 293
+          }
+        ]
+      },
+      {
+        "actionRef": "P01/A03.17",
+        "basicBlockRefs": [
+          "bb17",
+          "bb18",
+          "bb19",
+          "bb20",
+          "bb21",
+          "bb22",
+          "bb23",
+          "bb26",
+          "bb27"
+        ],
+        "evidenceRefs": [
+          "evidence-695476f2056021805bfa4c5f"
+        ],
+        "id": "exec-discover",
+        "kind": "action",
+        "label": "等待上下文发现适合展示差异的根目录",
+        "lineRanges": [
+          {
+            "endLine": 304,
+            "startLine": 304
+          }
+        ]
+      },
+      {
+        "basicBlockRefs": [
+          "bb28"
+        ],
+        "evidenceRefs": [
+          "evidence-df03ad8e7acaa8b663a17723"
+        ],
+        "id": "exec-return",
+        "kind": "terminal",
+        "label": "根目录列表已可供差异展示使用",
+        "lineRanges": [],
+        "outcome": "return",
+        "sourceRangeReason": "No precise semantic operation span in the recorded BBs; only compiler state, storage, drop, cleanup or enclosing-scope context. Full source remains available."
+      }
+    ],
+    "rootActorRef": "actor-main",
+    "tasks": []
+  },
+  "fixture": {
+    "actors": [
+      {
+        "actorId": "actor-main",
+        "bodyRef": "6ccfbaa7c8ba54b17f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
+        "color": "#327B98",
+        "kind": "body",
+        "label": "codex_core::session::turn::run_turn::{closure#0}::{closure#4}",
+        "sourceNodeRef": "6ccfbaa7c8ba54b17f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
+      },
+      {
+        "actorId": "actor-crate-7f347cbdcc2b778a7f347cbdcc2b778a",
+        "children": [
+          {
+            "actorId": "actor-module-a5f9c6e4834f234e7f347cbdcc2b778a",
+            "children": [
+              {
+                "actorId": "actor-2",
+                "bodyRef": "5f922a9ffde1e4f67f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
+                "color": "#42758C",
+                "kind": "body",
+                "label": "is_basic_session_source",
+                "sourceNodeRef": "5f922a9ffde1e4f67f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
+              }
+            ],
+            "color": "#42758C",
+            "kind": "module",
+            "label": "review",
+            "sourceNodeRef": "a5f9c6e4834f234e7f347cbdcc2b778a"
+          },
+          {
+            "actorId": "actor-module-d99984c779e578a17f347cbdcc2b778a",
+            "children": [
+              {
+                "actorId": "actor-13",
+                "bodyRef": "48b1f29f6375784d7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
+                "color": "#42758C",
+                "kind": "body",
+                "label": "turn_environments",
+                "sourceNodeRef": "48b1f29f6375784d7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
+              },
+              {
+                "actorId": "actor-15",
+                "bodyRef": "aae21020d04383c17f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
+                "color": "#42758C",
+                "kind": "body",
+                "label": "codex_core::environment_selection::TurnEnvironmentSnapshot::turn_environments::{closure#0}",
+                "sourceNodeRef": "aae21020d04383c17f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
+              }
+            ],
+            "color": "#42758C",
+            "kind": "module",
+            "label": "environment_selection",
+            "sourceNodeRef": "d99984c779e578a17f347cbdcc2b778a"
+          },
+          {
+            "actorId": "actor-module-c0b0acd6f47d1c8c7f347cbdcc2b778a",
+            "children": [
+              {
+                "actorId": "actor-18",
+                "bodyRef": "db1c3daa1940af6d7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
+                "color": "#42758C",
+                "kind": "body",
+                "label": "codex_core::session::turn::turn_diff_display_roots::{closure#0}",
+                "sourceNodeRef": "db1c3daa1940af6d7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
+              }
+            ],
+            "color": "#42758C",
+            "kind": "module",
+            "label": "turn",
+            "sourceNodeRef": "c0b0acd6f47d1c8c7f347cbdcc2b778a"
+          }
+        ],
+        "color": "#42758C",
+        "kind": "crate",
+        "label": "codex_core",
+        "sourceNodeRef": "7f347cbdcc2b778a7f347cbdcc2b778a"
+      },
+      {
+        "actorId": "actor-crate-3a8b0ebc4f04af173a8b0ebc4f04af17",
+        "children": [
+          {
+            "actorId": "actor-module-3a8b0ebc4f04af173a8b0ebc4f04af17",
+            "children": [
+              {
+                "actorId": "actor-9",
+                "bodyRef": "8aac1be8d6ebf13e3a8b0ebc4f04af17|mir_drops_elaborated_and_const_checked|main",
+                "color": "#42758C",
+                "kind": "body",
+                "label": "enabled",
+                "sourceNodeRef": "8aac1be8d6ebf13e3a8b0ebc4f04af17|mir_drops_elaborated_and_const_checked|main"
+              }
+            ],
+            "color": "#42758C",
+            "kind": "module",
+            "label": "codex_features",
+            "sourceNodeRef": "3a8b0ebc4f04af173a8b0ebc4f04af17"
+          }
+        ],
+        "color": "#42758C",
+        "kind": "crate",
+        "label": "codex_features",
+        "sourceNodeRef": "3a8b0ebc4f04af173a8b0ebc4f04af17"
+      }
+    ],
+    "messages": []
+  },
+  "functionSource": {
+    "definitionRef": "f3c34698fdfaad6f7f347cbdcc2b778a",
+    "endLine": 840,
+    "file": "core/src/session/turn.rs",
+    "lines": [
+      "pub(crate) async fn run_turn(",
+      "    sess: Arc<Session>,",
+      "    turn_context: Arc<TurnContext>,",
+      "    mut input: Vec<TurnInput>,",
+      "    mcp_startup_requirements: &mut McpStartupRequirements,",
+      "    prewarmed_client_session: Option<ModelClientSession>,",
+      "    cancellation_token: CancellationToken,",
+      ") -> CodexResult<Option<String>> {",
+      "    if crate::guardian::is_basic_session_source(&turn_context.session_source) {",
+      "        crate::guardian::check_pending_guardian_input(&sess, &turn_context).await?;",
+      "    }",
+      "    // Record results from hooks that finished after the previous turn before this turn's user prompt.",
+      "    drain_async_hook_results(&sess, &turn_context, /*before_user_prompt*/ true).await;",
+      "",
+      "    let mut client_session =",
+      "        prewarmed_client_session.unwrap_or_else(|| sess.services.model_client.new_session());",
+      "    // TODO(ccunningham): Pre-turn compaction runs before context updates and the",
+      "    // new user message are recorded. Estimate pending incoming items (context",
+      "    // diffs/full reinjection + user input) and trigger compaction preemptively",
+      "    // when they would push the thread over the compaction threshold.",
+      "    if let Err(err) = run_pre_sampling_compact(",
+      "        &sess,",
+      "        &turn_context,",
+      "        &mut client_session,",
+      "        &cancellation_token,",
+      "    )",
+      "    .await",
+      "    {",
+      "        // Compaction runs before the new input is recorded, so preserve it on every failure.",
+      "        run_hooks_and_record_inputs(",
+      "            &sess,",
+      "            &turn_context,",
+      "            &turn_context.capture_current_model_info(),",
+      "            &input,",
+      "            PersistContext::Standard,",
+      "        )",
+      "        .await;",
+      "        if matches!(err.details(), CodexErrorDetails::TurnAborted) {",
+      "            return Err(err);",
+      "        }",
+      "        if matches!(err.details(), CodexErrorDetails::ToolCollision(_)) {",
+      "            return Err(err);",
+      "        }",
+      "        let error = err.to_codex_protocol_error();",
+      "        sess.emit_turn_error_lifecycle(turn_context.as_ref(), error.clone(), err.details())",
+      "            .await;",
+      "        // Publish the failure only after prompt hooks finish, so clients cannot react to",
+      "        // an error by steering follow-up input into a turn still preserving its prompt.",
+      "        let message_prefix = match turn_context.provider.capabilities().remote_compaction {",
+      "            RemoteCompactionSupport::V2 => Some(\"Error running remote compact task\".to_string()),",
+      "            RemoteCompactionSupport::Unsupported => None,",
+      "        };",
+      "        sess.send_event(",
+      "            turn_context.as_ref(),",
+      "            EventMsg::Error(err.to_error_event(message_prefix)),",
+      "        )",
+      "        .await;",
+      "        error!(\"Failed to run pre-sampling compact\");",
+      "        return Ok(None);",
+      "    }",
+      "",
+      "    let user_input = turn_user_input(&input);",
+      "    let allow_plugin_mentions =",
+      "        !crate::guardian::is_basic_session_source(&turn_context.session_source);",
+      "    let McpStartupRequirements {",
+      "        required_servers,",
+      "        required_plugins,",
+      "    } = mcp_startup_requirements;",
+      "    if allow_plugin_mentions {",
+      "        required_plugins.extend(crate::plugins::collect_explicit_plugin_ids(&user_input));",
+      "    }",
+      "    let (input_required_servers, mentioned_plugins) =",
+      "        match required_mcp_servers_for_input(&sess, turn_context.as_ref(), &user_input)",
+      "            .or_cancel(&cancellation_token)",
+      "            .await",
+      "        {",
+      "            Ok(requirements) => requirements,",
+      "            Err(err) => {",
+      "                run_hooks_and_record_inputs(",
+      "                    &sess,",
+      "                    &turn_context,",
+      "                    &turn_context.capture_current_model_info(),",
+      "                    &input,",
+      "                    PersistContext::Standard,",
+      "                )",
+      "                .await;",
+      "                return Err(err.into());",
+      "            }",
+      "        };",
+      "",
+      "    required_servers.extend(input_required_servers);",
+      "    required_servers.sort_unstable();",
+      "    required_servers.dedup();",
+      "",
+      "    // run_turn owns the step used to seed context and make the first sampling request.",
+      "    let first_step_context = match sess",
+      "        .capture_step_context_with_required_mcp_servers(",
+      "            Arc::clone(&turn_context),",
+      "            &cancellation_token,",
+      "            required_servers,",
+      "            required_plugins,",
+      "        )",
+      "        .await",
+      "    {",
+      "        Ok(step_context) => step_context,",
+      "        Err(err) if matches!(err.details(), CodexErrorDetails::TurnAborted) => {",
+      "            run_hooks_and_record_inputs(",
+      "                &sess,",
+      "                &turn_context,",
+      "                &turn_context.capture_current_model_info(),",
+      "                &input,",
+      "                PersistContext::Standard,",
+      "            )",
+      "            .await;",
+      "            return Err(err);",
+      "        }",
+      "        Err(err) => return Err(err),",
+      "    };",
+      "    // Keep the exact model-visible state used by this turn and its inline compactions.",
+      "    let (world_state, display_roots) = tokio::join!(",
+      "        sess.record_context_updates_and_set_reference_context_item(first_step_context.as_ref()),",
+      "        async {",
+      "            // Guardian must not wait for remote Git discovery just to display diff paths.",
+      "            if crate::guardian::is_basic_session_source(&turn_context.session_source)",
+      "                || first_step_context",
+      "                    .turn",
+      "                    .config",
+      "                    .features",
+      "                    .enabled(Feature::CwdRelativeTurnDiffs)",
+      "            {",
+      "                first_step_context",
+      "                    .environments",
+      "                    .turn_environments()",
+      "                    .map(|environment| {",
+      "                        (",
+      "                            environment.selection().environment_id,",
+      "                            environment.cwd().clone(),",
+      "                        )",
+      "                    })",
+      "                    .collect()",
+      "            } else {",
+      "                turn_diff_display_roots(first_step_context.as_ref()).await",
+      "            }",
+      "        },",
+      "    );",
+      "    let mut world_state = world_state?;",
+      "",
+      "    let Some((injection_items, explicitly_enabled_connectors)) = build_skills_and_plugins(",
+      "        &sess,",
+      "        first_step_context.as_ref(),",
+      "        &user_input,",
+      "        &mentioned_plugins,",
+      "        &cancellation_token,",
+      "    )",
+      "    .await",
+      "    else {",
+      "        return Ok(None);",
+      "    };",
+      "",
+      "    if run_pending_session_start_hooks(&sess, &turn_context).await {",
+      "        return Ok(None);",
+      "    }",
+      "    if crate::guardian::is_basic_session_source(&turn_context.session_source)",
+      "        && let Err(error) = crate::guardian::finalize_guardian_input(",
+      "            &sess,",
+      "            &first_step_context,",
+      "            &mut input,",
+      "            codex_guardian_context::HistoryTruncation::Preserve,",
+      "        )",
+      "        .await",
+      "    {",
+      "        // Token-budget compaction resets history, which can discard the evidence",
+      "        // referenced by a pending delta review. Leave budget failures unreusable.",
+      "        if !matches!(error.details(), CodexErrorDetails::ContextWindowExceeded)",
+      "            || turn_context.config.features.enabled(Feature::TokenBudget)",
+      "        {",
+      "            return Err(error);",
+      "        }",
+      "        // Incoming evidence can overflow even below the normal history",
+      "        // threshold. Keep it pending while compacting, then select once more.",
+      "        sess.services",
+      "            .thread_extension_data",
+      "            .insert(crate::guardian::ExhaustedReviewBudget::Compacting);",
+      "        run_auto_compact(",
+      "            &sess,",
+      "            Arc::clone(&first_step_context),",
+      "            /*fallback_step_context*/ None,",
+      "            &mut client_session,",
+      "            InitialContextInjection::DoNotInject,",
+      "            CompactionReason::ContextLimit,",
+      "            CompactionPhase::PreTurn,",
+      "        )",
+      "        .await?;",
+      "        world_state = sess",
+      "            .record_context_updates_and_set_reference_context_item(first_step_context.as_ref())",
+      "            .await?;",
+      "        crate::guardian::finalize_guardian_input(",
+      "            &sess,",
+      "            &first_step_context,",
+      "            &mut input,",
+      "            codex_guardian_context::HistoryTruncation::Allow,",
+      "        )",
+      "        .await?;",
+      "    }",
+      "    let mut can_drain_pending_input = input.is_empty();",
+      "    if run_hooks_and_record_inputs(",
+      "        &sess,",
+      "        &turn_context,",
+      "        &first_step_context.settings.model_info,",
+      "        &input,",
+      "        PersistContext::TurnStart,",
+      "    )",
+      "    .await",
+      "    {",
+      "        return Ok(None);",
+      "    }",
+      "",
+      "    // Only speculate after hooks accept the turn, using its finalized tools and permissions.",
+      "    {",
+      "        let mut state = sess.state.lock().await;",
+      "        if state.shell_snapshot_prewarm.is_none() {",
+      "            state.shell_snapshot_prewarm =",
+      "                sess.prewarm_shell_snapshots(first_step_context.as_ref());",
+      "        }",
+      "    }",
+      "",
+      "    sess.merge_connector_selection(explicitly_enabled_connectors.clone())",
+      "        .await;",
+      "    sess.set_previous_turn_settings(Some(PreviousTurnSettings {",
+      "        model: turn_context.model_info().slug.clone(),",
+      "        cyber_access_program: turn_context.cyber_access_program,",
+      "        comp_hash: turn_context.model_info().comp_hash.clone(),",
+      "        realtime_active: Some(turn_context.realtime_active),",
+      "    }))",
+      "    .await;",
+      "    for response_item in injection_items {",
+      "        sess.record_conversation_items(",
+      "            &turn_context,",
+      "            &first_step_context.settings.model_info,",
+      "            std::slice::from_ref(&response_item),",
+      "        )",
+      "        .await;",
+      "    }",
+      "",
+      "    track_turn_resolved_config_analytics(&sess, &turn_context, &input).await;",
+      "",
+      "    let mut last_agent_message: Option<String> = None;",
+      "    let mut stop_hook_active = false;",
+      "    // Although from the perspective of codex.rs, TurnDiffTracker has the lifecycle of a Task which contains",
+      "    // many turns, from the perspective of the user, it is a single turn.",
+      "    let turn_diff_tracker = Arc::new(tokio::sync::Mutex::new(",
+      "        TurnDiffTracker::with_environment_display_roots(display_roots),",
+      "    ));",
+      "",
+      "    // `ModelClientSession` is turn-scoped and caches WebSocket + sticky routing state, so we reuse",
+      "    // one instance across retries within this turn.",
+      "    // Pending input is drained into history before building the next model request.",
+      "    // However, we defer that drain until after sampling in two cases:",
+      "    // 1. At the start of a turn, so the fresh turn input in `input` gets sampled first.",
+      "    // 2. After auto-compact, while a model/tool continuation is pending.",
+      "",
+      "    let mut next_step_context = Some(first_step_context);",
+      "    let mut guardian_budget_compacted = false;",
+      "    loop {",
+      "        // Note that pending_input would be something like a message the user",
+      "        // submitted through the UI while the model was running. Though the UI",
+      "        // may support this, the model might not.",
+      "        let pending_input = if can_drain_pending_input {",
+      "            sess.input_queue",
+      "                .get_pending_input(&sess.active_turn)",
+      "                .await",
+      "                .0",
+      "        } else {",
+      "            Vec::new()",
+      "        };",
+      "",
+      "        if run_hooks_and_record_inputs(",
+      "            &sess,",
+      "            &turn_context,",
+      "            &turn_context.capture_current_model_info(),",
+      "            &pending_input,",
+      "            PersistContext::SteeredUserInput,",
+      "        )",
+      "        .await",
+      "        {",
+      "            break;",
+      "        }",
+      "",
+      "        // Input and turn-start injections are recorded before recovery can continue this turn.",
+      "        turn_context.extension_data.insert(RecordedTurnInput);",
+      "        let window_id = sess.current_window_id().await;",
+      "        super::rollout_budget::maybe_record_reminder(",
+      "            sess.as_ref(),",
+      "            turn_context.as_ref(),",
+      "            &window_id,",
+      "        )",
+      "        .await;",
+      "",
+      "        // Capture once so context, advertised tools, and tool calls share one request view.",
+      "        let step_context = match next_step_context.take() {",
+      "            Some(step_context) if pending_input.is_empty() => step_context,",
+      "            None if pending_input.is_empty() => {",
+      "                sess.capture_step_context_with_required_mcp_servers(",
+      "                    Arc::clone(&turn_context),",
+      "                    &cancellation_token,",
+      "                    required_servers,",
+      "                    required_plugins,",
+      "                )",
+      "                .await?",
+      "            }",
+      "            Some(_) | None => {",
+      "                let pending_user_input = turn_user_input(&pending_input);",
+      "                if allow_plugin_mentions {",
+      "                    required_plugins.extend(crate::plugins::collect_explicit_plugin_ids(",
+      "                        &pending_user_input,",
+      "                    ));",
+      "                }",
+      "                let (pending_required_servers, _) = required_mcp_servers_for_input(",
+      "                    &sess,",
+      "                    turn_context.as_ref(),",
+      "                    &pending_user_input,",
+      "                )",
+      "                .or_cancel(&cancellation_token)",
+      "                .await?;",
+      "                required_servers.extend(pending_required_servers);",
+      "                required_servers.sort_unstable();",
+      "                required_servers.dedup();",
+      "                sess.capture_step_context_with_required_mcp_servers(",
+      "                    Arc::clone(&turn_context),",
+      "                    &cancellation_token,",
+      "                    required_servers,",
+      "                    required_plugins,",
+      "                )",
+      "                .await?",
+      "            }",
+      "        };",
+      "        let sampling_request_result: CodexResult<_> = async {",
+      "            super::time_reminder::maybe_record_current_time_reminder(",
+      "                sess.as_ref(),",
+      "                turn_context.as_ref(),",
+      "                &window_id,",
+      "            )",
+      "            .await?;",
+      "",
+      "            world_state = sess",
+      "                .record_step_world_state_if_changed(&world_state, step_context.as_ref())",
+      "                .await?;",
+      "",
+      "            // Keep the override after accepted input so history truncation removes them together.",
+      "            sess.record_reasoning_effort_override(step_context.as_ref())",
+      "                .await;",
+      "",
+      "            // Construct the input that we will send to the model.",
+      "            let sampling_request_input: Vec<ResponseItem> = async {",
+      "                sess.clone_history()",
+      "                    .await",
+      "                    .for_prompt(&step_context.settings.model_info.input_modalities)",
+      "            }",
+      "            .instrument(trace_span!(\"run_turn.prepare_sampling_request_input\"))",
+      "            .await;",
+      "",
+      "            run_sampling_request(",
+      "                Arc::clone(&sess),",
+      "                Arc::clone(&step_context),",
+      "                Arc::clone(&turn_context.extension_data),",
+      "                Arc::clone(&turn_diff_tracker),",
+      "                &mut client_session,",
+      "                sampling_request_input,",
+      "                cancellation_token.child_token(),",
+      "            )",
+      "            .await",
+      "        }",
+      "        .await;",
+      "        match sampling_request_result {",
+      "            Ok((sampling_request_output, sampling_request_input)) => {",
+      "                guardian_budget_compacted = false;",
+      "                let SamplingRequestResult {",
+      "                    needs_follow_up: model_needs_follow_up,",
+      "                    last_agent_message: sampling_request_last_agent_message,",
+      "                } = sampling_request_output;",
+      "                if model_needs_follow_up {",
+      "                    sess.input_queue",
+      "                        .accept_mailbox_delivery_for_current_turn(",
+      "                            &sess.active_turn,",
+      "                            &turn_context.sub_id,",
+      "                        )",
+      "                        .await;",
+      "                }",
+      "                can_drain_pending_input = true;",
+      "                // Process async hooks only after sampling and its tools have finished.",
+      "                drain_async_hook_results(&sess, &turn_context, /*before_user_prompt*/ false).await;",
+      "                let (has_pending_input, token_status) = async {",
+      "                    let has_pending_input =",
+      "                        sess.input_queue.has_pending_input(&sess.active_turn).await;",
+      "                    let token_status = super::context_window::context_window_token_status(",
+      "                        sess.as_ref(),",
+      "                        turn_context.as_ref(),",
+      "                    )",
+      "                    .await;",
+      "                    (has_pending_input, token_status)",
+      "                }",
+      "                .instrument(trace_span!(\"run_turn.collect_post_sampling_state\"))",
+      "                .await;",
+      "                let needs_follow_up = model_needs_follow_up || has_pending_input;",
+      "                let token_limit_reached = token_status.token_limit_reached;",
+      "",
+      "                trace!(",
+      "                    turn_id = %turn_context.sub_id,",
+      "                    total_usage_tokens = token_status.active_context_tokens,",
+      "                    auto_compact_scope_tokens = token_status.auto_compact_scope_tokens,",
+      "                    auto_compact_scope_limit = ?token_status.auto_compact_scope_limit,",
+      "                    auto_compact_limit_scope = ?turn_context.config.model_auto_compact_token_limit_scope,",
+      "                    auto_compact_window_prefill_tokens = ?token_status.auto_compact_window_prefill_tokens,",
+      "                    full_context_window_limit = ?token_status.full_context_window_limit,",
+      "                    full_context_window_limit_reached = token_status.full_context_window_limit_reached,",
+      "                    token_limit_reached,",
+      "                    model_needs_follow_up,",
+      "                    has_pending_input,",
+      "                    needs_follow_up,",
+      "                    \"post sampling token usage\"",
+      "                );",
+      "                if tracing::event_enabled!(",
+      "                    target: POST_SAMPLING_TOKEN_ESTIMATE_TARGET,",
+      "                    tracing::Level::TRACE,",
+      "                    turn_id,",
+      "                    estimated_token_count,",
+      "                    message",
+      "                ) {",
+      "                    let estimated_token_count =",
+      "                        sess.get_estimated_token_count(turn_context.as_ref()).await;",
+      "                    trace!(",
+      "                        target: POST_SAMPLING_TOKEN_ESTIMATE_TARGET,",
+      "                        turn_id = %turn_context.sub_id,",
+      "                        estimated_token_count = ?estimated_token_count,",
+      "                        \"post sampling token estimate\"",
+      "                    );",
+      "                }",
+      "",
+      "                let should_roll_over = needs_follow_up",
+      "                    && (sess.take_new_context_window_request().await || token_limit_reached);",
+      "                let allow_auto_compact_fallback = !should_roll_over && !token_limit_reached;",
+      "                super::token_budget::maybe_record(",
+      "                    sess.as_ref(),",
+      "                    turn_context.as_ref(),",
+      "                    token_status.base_window_tokens_remaining,",
+      "                    allow_auto_compact_fallback,",
+      "                )",
+      "                .await;",
+      "",
+      "                // as long as compaction works well in getting us way below the token limit, we shouldn't worry about being in an infinite loop.",
+      "                if should_roll_over {",
+      "                    if let Err(err) = run_auto_compact(",
+      "                        &sess,",
+      "                        Arc::clone(&step_context),",
+      "                        /*fallback_step_context*/ None,",
+      "                        &mut client_session,",
+      "                        InitialContextInjection::BeforeLastUserMessage {",
+      "                            world_state: Arc::clone(&world_state),",
+      "                            step_context: Arc::clone(&step_context),",
+      "                        },",
+      "                        CompactionReason::ContextLimit,",
+      "                        CompactionPhase::MidTurn,",
+      "                    )",
+      "                    .await",
+      "                    {",
+      "                        if matches!(err.details(), CodexErrorDetails::TurnAborted) {",
+      "                            return Err(err);",
+      "                        }",
+      "                        let error = err.to_codex_protocol_error();",
+      "                        sess.emit_turn_error_lifecycle(",
+      "                            turn_context.as_ref(),",
+      "                            error.clone(),",
+      "                            err.details(),",
+      "                        )",
+      "                        .await;",
+      "                        return Ok(None);",
+      "                    }",
+      "                    if run_pending_session_start_hooks(&sess, &turn_context).await {",
+      "                        return Ok(None);",
+      "                    }",
+      "                    // After a signaled step, drain the steer even if compaction",
+      "                    // leaves the estimated context above the token limit.",
+      "                    can_drain_pending_input = !model_needs_follow_up",
+      "                        || step_context",
+      "                            .preempt",
+      "                            .as_ref()",
+      "                            .is_some_and(CancellationToken::is_cancelled);",
+      "                    continue;",
+      "                }",
+      "",
+      "                if !needs_follow_up {",
+      "                    last_agent_message = sampling_request_last_agent_message;",
+      "                    let stop_outcome = run_turn_stop_hooks(",
+      "                        &sess,",
+      "                        &step_context,",
+      "                        stop_hook_active,",
+      "                        last_agent_message.clone(),",
+      "                    )",
+      "                    .await;",
+      "                    if matches!(",
+      "                        turn_context.session_source,",
+      "                        SessionSource::Internal(InternalSessionSource::MemoryConsolidation)",
+      "                    ) && (stop_outcome.should_block || stop_outcome.should_stop)",
+      "                    {",
+      "                        // Do not feed managed rejections back into an unattended memory loop.",
+      "                        return Err(CodexErr::InvalidRequest(",
+      "                            \"Memory consolidation was rejected by a Stop hook.\".to_string(),",
+      "                        ));",
+      "                    }",
+      "                    if stop_outcome.should_block {",
+      "                        if let Some(hook_prompt_message) =",
+      "                            build_hook_prompt_message(&stop_outcome.continuation_fragments)",
+      "                        {",
+      "                            sess.record_response_item_and_emit_turn_item(",
+      "                                &turn_context,",
+      "                                &step_context.settings.model_info,",
+      "                                hook_prompt_message,",
+      "                            )",
+      "                            .await;",
+      "                            sess.input_queue",
+      "                                .accept_mailbox_delivery_for_current_turn(",
+      "                                    &sess.active_turn,",
+      "                                    &turn_context.sub_id,",
+      "                                )",
+      "                                .await;",
+      "                            stop_hook_active = true;",
+      "                            continue;",
+      "                        } else {",
+      "                            sess.send_event(",
+      "                                &turn_context,",
+      "                                EventMsg::Warning(WarningEvent {",
+      "                                    message: \"Stop hook requested continuation without a prompt; ignoring the block.\".to_string(),",
+      "                                }),",
+      "                            )",
+      "                            .await;",
+      "                        }",
+      "                    }",
+      "                    if stop_outcome.should_stop {",
+      "                        break;",
+      "                    }",
+      "                    if run_legacy_after_agent_hook(",
+      "                        &sess,",
+      "                        &turn_context,",
+      "                        &sampling_request_input,",
+      "                        last_agent_message.clone(),",
+      "                    )",
+      "                    .await",
+      "                    {",
+      "                        return Ok(None);",
+      "                    }",
+      "                    // Token-budget resets do not summarize, so preserve their existing rollover",
+      "                    // policy. Keep summarizing compaction in this task to serialize history updates.",
+      "                    let config = &turn_context.config;",
+      "                    if config.model_post_turn_compact_threshold_percent > 0",
+      "                        && !config.features.enabled(Feature::TokenBudget)",
+      "                        && super::context_window::context_window_token_status(",
+      "                            sess.as_ref(),",
+      "                            turn_context.as_ref(),",
+      "                        )",
+      "                        .await",
+      "                        .turn_end_compaction_threshold_reached",
+      "                        && !sess.input_queue.has_pending_input(&sess.active_turn).await",
+      "                        && !cancellation_token.is_cancelled()",
+      "                        && let Err(err) = run_auto_compact(",
+      "                            &sess,",
+      "                            Arc::clone(&step_context),",
+      "                            /*fallback_step_context*/ None,",
+      "                            &mut client_session,",
+      "                            InitialContextInjection::DoNotInject,",
+      "                            CompactionReason::ContextLimit,",
+      "                            CompactionPhase::PostTurn,",
+      "                        )",
+      "                        .await",
+      "                    {",
+      "                        if matches!(",
+      "                            err.details(),",
+      "                            CodexErrorDetails::Interrupted | CodexErrorDetails::TurnAborted",
+      "                        ) {",
+      "                            return Err(err);",
+      "                        }",
+      "                        let error = err.to_codex_protocol_error();",
+      "                        if matches!(error, CodexErrorInfo::UsageLimitExceeded) {",
+      "                            // Preserve the completed answer while stopping automatic work.",
+      "                            sess.emit_turn_error_lifecycle(",
+      "                                turn_context.as_ref(),",
+      "                                error,",
+      "                                err.details(),",
+      "                            )",
+      "                            .await;",
+      "                        }",
+      "                        warn!(error = %err, \"Post-turn compaction failed; preserving the completed turn\");",
+      "                    }",
+      "                    break;",
+      "                }",
+      "                continue;",
+      "            }",
+      "            Err(err)",
+      "                if matches!(err.details(), CodexErrorDetails::ContextWindowExceeded)",
+      "                    && !guardian_budget_compacted",
+      "                    && !turn_context.config.features.enabled(Feature::TokenBudget)",
+      "                    && sess",
+      "                        .services",
+      "                        .thread_extension_data",
+      "                        .get::<crate::guardian::ExhaustedReviewBudget>()",
+      "                        .is_some() =>",
+      "            {",
+      "                // Tool continuations can also cross the complete-request limit.",
+      "                // Only summarizing compaction preserves the action and evidence;",
+      "                // token-budget resets must fail closed and retire the reviewer.",
+      "                // Retry once per model step, so ineffective compaction cannot loop.",
+      "                guardian_budget_compacted = true;",
+      "                sess.services",
+      "                    .thread_extension_data",
+      "                    .insert(crate::guardian::ExhaustedReviewBudget::Compacting);",
+      "                run_auto_compact(",
+      "                    &sess,",
+      "                    Arc::clone(&step_context),",
+      "                    /*fallback_step_context*/ None,",
+      "                    &mut client_session,",
+      "                    InitialContextInjection::BeforeLastUserMessage {",
+      "                        world_state: Arc::clone(&world_state),",
+      "                        step_context: Arc::clone(&step_context),",
+      "                    },",
+      "                    CompactionReason::ContextLimit,",
+      "                    CompactionPhase::MidTurn,",
+      "                )",
+      "                .await?;",
+      "                can_drain_pending_input = false;",
+      "                continue;",
+      "            }",
+      "            Err(err) if matches!(err.details(), CodexErrorDetails::TurnAborted) => {",
+      "                return Err(err);",
+      "            }",
+      "            Err(codex_error)",
+      "                if matches!(",
+      "                    codex_error.details(),",
+      "                    CodexErrorDetails::InvalidImageRequest()",
+      "                ) =>",
+      "            {",
+      "                sess.track_turn_codex_error(turn_context.as_ref(), &codex_error);",
+      "                let error = CodexErrorInfo::BadRequest;",
+      "                sess.emit_turn_error_lifecycle(",
+      "                    turn_context.as_ref(),",
+      "                    error.clone(),",
+      "                    codex_error.details(),",
+      "                )",
+      "                .await;",
+      "                let event = EventMsg::Error(ErrorEvent {",
+      "                    misalignment: None,",
+      "                    message: \"Invalid image in your last message. Please remove it and try again.\"",
+      "                        .to_string(),",
+      "                    codex_error_info: Some(error),",
+      "                });",
+      "                sess.send_event(&turn_context, event).await;",
+      "                break;",
+      "            }",
+      "            Err(e) => {",
+      "                info!(\"Turn error: {e:#}\");",
+      "                if matches!(",
+      "                    e.details(),",
+      "                    CodexErrorDetails::MisalignmentPolicyViolation { .. }",
+      "                ) {",
+      "                    sess.conversation.retire_handoffs_for_misalignment().await;",
+      "                }",
+      "                let error = e.to_codex_protocol_error();",
+      "                sess.emit_turn_error_lifecycle(turn_context.as_ref(), error.clone(), e.details())",
+      "                    .await;",
+      "                sess.track_turn_codex_error(turn_context.as_ref(), &e);",
+      "                let event = EventMsg::Error(e.to_error_event(/*message_prefix*/ None));",
+      "                sess.send_event(&turn_context, event).await;",
+      "                // let the user continue the conversation",
+      "                break;",
+      "            }",
+      "        }",
+      "    }",
+      "",
+      "    Ok(last_agent_message)",
+      "}"
+    ],
+    "sourcePath": "source/turn.rs",
+    "startLine": 163
+  },
+  "initialState": {
+    "expandedActionIds": [],
+    "expandedActorIds": [],
+    "expandedGoalIds": [],
+    "expandedPhaseIds": []
+  },
+  "messagePlacements": [
+    {
+      "branchPath": [],
+      "controlRef": "control-2",
+      "messageRef": "request-2",
+      "rootControlRef": "control-2"
+    },
+    {
+      "branchPath": [],
+      "controlRef": "control-2",
+      "messageRef": "return-2",
+      "rootControlRef": "control-2"
+    },
+    {
+      "branchPath": [],
+      "controlRef": "control-9",
+      "messageRef": "request-9",
+      "rootControlRef": "control-9"
+    },
+    {
+      "branchPath": [],
+      "controlRef": "control-9",
+      "messageRef": "return-9",
+      "rootControlRef": "control-9"
+    },
+    {
+      "branchPath": [],
+      "controlRef": "control-13",
+      "messageRef": "request-13",
+      "rootControlRef": "control-13"
+    },
+    {
+      "branchPath": [],
+      "controlRef": "control-13",
+      "messageRef": "return-13",
+      "rootControlRef": "control-13"
+    },
+    {
+      "branchPath": [],
+      "controlRef": "control-15",
+      "messageRef": "request-15",
+      "rootControlRef": "control-15"
+    },
+    {
+      "branchPath": [],
+      "controlRef": "control-15",
+      "messageRef": "return-15",
+      "rootControlRef": "control-15"
+    },
+    {
+      "branchPath": [],
+      "controlRef": "control-18",
+      "messageRef": "request-18",
+      "rootControlRef": "control-18"
+    },
+    {
+      "branchPath": [],
+      "controlRef": "control-18",
+      "messageRef": "return-18",
+      "rootControlRef": "control-18"
+    }
+  ],
+  "messages": [
+    {
+      "bindingRef": "call:2",
+      "fromActorId": "actor-main",
+      "invocationRef": "inv-2",
+      "kind": "request",
+      "label": "检查会话来源",
+      "messageId": "request-2",
+      "pair": "pair-2",
+      "stage": "business-request",
+      "toActorId": "actor-2"
+    },
+    {
+      "bindingRef": "call:2",
+      "fromActorId": "actor-2",
+      "invocationRef": "inv-2",
+      "kind": "return",
+      "label": "交还基础会话判定",
+      "messageId": "return-2",
+      "pair": "pair-2",
+      "stage": "business-completion",
+      "toActorId": "actor-main"
+    },
+    {
+      "bindingRef": "call:9",
+      "fromActorId": "actor-main",
+      "invocationRef": "inv-9",
+      "kind": "request",
+      "label": "查询相对路径功能",
+      "messageId": "request-9",
+      "pair": "pair-9",
+      "stage": "business-request",
+      "toActorId": "actor-9"
+    },
+    {
+      "bindingRef": "call:9",
+      "fromActorId": "actor-9",
+      "invocationRef": "inv-9",
+      "kind": "return",
+      "label": "交还功能启用状态",
+      "messageId": "return-9",
+      "pair": "pair-9",
+      "stage": "business-completion",
+      "toActorId": "actor-main"
+    },
+    {
+      "bindingRef": "call:13",
+      "fromActorId": "actor-main",
+      "invocationRef": "inv-13",
+      "kind": "request",
+      "label": "取得环境筛选视图",
+      "messageId": "request-13",
+      "pair": "pair-13",
+      "stage": "business-request",
+      "toActorId": "actor-13"
+    },
+    {
+      "bindingRef": "call:13",
+      "fromActorId": "actor-13",
+      "invocationRef": "inv-13",
+      "kind": "return",
+      "label": "交还本轮环境遍历入口",
+      "messageId": "return-13",
+      "pair": "pair-13",
+      "stage": "business-completion",
+      "toActorId": "actor-main"
+    },
+    {
+      "bindingRef": "call:15",
+      "fromActorId": "actor-main",
+      "invocationRef": "inv-15",
+      "kind": "request",
+      "label": "执行有效环境筛选",
+      "messageId": "request-15",
+      "pair": "pair-15",
+      "stage": "business-request",
+      "toActorId": "actor-15"
+    },
+    {
+      "bindingRef": "call:15",
+      "fromActorId": "actor-15",
+      "invocationRef": "inv-15",
+      "kind": "return",
+      "label": "保留就绪的本轮环境",
+      "messageId": "return-15",
+      "pair": "pair-15",
+      "stage": "business-completion",
+      "toActorId": "actor-main"
+    },
+    {
+      "bindingRef": "call:18",
+      "fromActorId": "actor-main",
+      "invocationRef": "inv-18",
+      "kind": "request",
+      "label": "请求发现差异展示根目录",
+      "messageId": "request-18",
+      "pair": "pair-18",
+      "stage": "business-request",
+      "toActorId": "actor-18"
+    },
+    {
+      "bindingRef": "call:18",
+      "fromActorId": "actor-18",
+      "invocationRef": "inv-18",
+      "kind": "return",
+      "label": "交还发现结果或工作目录回退值",
+      "messageId": "return-18",
+      "pair": "pair-18",
+      "stage": "business-completion",
+      "toActorId": "actor-main"
+    }
+  ],
+  "phases": [
+    {
+      "basicBlockRefs": [
+        "bb1",
+        "bb2",
+        "bb3",
+        "bb4",
+        "bb5",
+        "bb6",
+        "bb7",
+        "bb8",
+        "bb9",
+        "bb10",
+        "bb11",
+        "bb12",
+        "bb13",
+        "bb14",
+        "bb15",
+        "bb16",
+        "bb17",
+        "bb18",
+        "bb19",
+        "bb20",
+        "bb21",
+        "bb22",
+        "bb23",
+        "bb26",
+        "bb27"
+      ],
+      "boundaryControlRefs": [],
+      "color": "#327B98",
+      "goals": [
+        {
+          "actions": [
+            {
+              "basicBlockRefs": [
+                "bb1",
+                "bb2",
+                "bb3",
+                "bb4",
+                "bb5",
+                "bb6",
+                "bb7",
+                "bb8",
+                "bb9",
+                "bb10",
+                "bb11"
+              ],
+              "broadRangeReason": "286行调用基础会话判断，287–291行按短路规则访问功能配置；两段共同决定是否绕过发现，均为展示方式判断所必需，292/303行仅为分支块界限。",
+              "controlRefs": [
+                "control-2",
+                "control-9"
+              ],
+              "id": "P01/A01.1",
+              "label": "判断是否可以直接采用环境工作目录",
+              "lineRanges": [
+                {
+                  "endLine": 291,
+                  "startLine": 286
+                }
+              ],
+              "renderId": "P01_A01.1"
+            },
+            {
+              "basicBlockRefs": [
+                "bb12",
+                "bb13",
+                "bb14",
+                "bb15",
+                "bb16"
+              ],
+              "broadRangeReason": "293–295行取得本轮环境，296–301行逐项构建环境标识与工作目录元组，302行收集为结果列表；完整链条直接产生本动作结果，不能只高亮collect。",
+              "controlRefs": [
+                "control-13",
+                "control-15"
+              ],
+              "id": "P01/A02.12",
+              "label": "从本轮环境生成直接展示根目录",
+              "lineRanges": [
+                {
+                  "endLine": 302,
+                  "startLine": 293
+                }
+              ],
+              "renderId": "P01_A02.12"
+            },
+            {
+              "basicBlockRefs": [
+                "bb17",
+                "bb18",
+                "bb19",
+                "bb20",
+                "bb21",
+                "bb22",
+                "bb23",
+                "bb26",
+                "bb27"
+              ],
+              "controlRefs": [
+                "control-18"
+              ],
+              "id": "P01/A03.17",
+              "label": "发现适合差异展示的根目录",
+              "lineRanges": [
+                {
+                  "endLine": 304,
+                  "startLine": 304
+                }
+              ],
+              "renderId": "P01_A03.17"
+            }
+          ],
+          "basicBlockRefs": [
+            "bb1",
+            "bb2",
+            "bb3",
+            "bb4",
+            "bb5",
+            "bb6",
+            "bb7",
+            "bb8",
+            "bb9",
+            "bb10",
+            "bb11",
+            "bb12",
+            "bb13",
+            "bb14",
+            "bb15",
+            "bb16",
+            "bb17",
+            "bb18",
+            "bb19",
+            "bb20",
+            "bb21",
+            "bb22",
+            "bb23",
+            "bb26",
+            "bb27"
+          ],
+          "broadRangeReason": "286行检验会话来源，287–291行检验功能，293–302行收集环境目录，304行等待发现；这些互斥路径都直接决定或生成同一输出，296–301行是元组映射本体，未包含283行的并发兄弟工作。",
+          "id": "sem:P01:display-roots",
+          "label": "让差异路径采用符合会话与功能配置的根目录",
+          "lineRanges": [
+            {
+              "endLine": 291,
+              "startLine": 286
+            },
+            {
+              "endLine": 302,
+              "startLine": 293
+            },
+            {
+              "endLine": 304,
+              "startLine": 304
+            }
+          ],
+          "renderId": "sem:P01:display-roots"
+        }
+      ],
+      "id": "P01",
+      "label": "准备本轮差异路径的展示基准",
+      "lineRanges": [
+        {
+          "endLine": 291,
+          "startLine": 286
+        },
+        {
+          "endLine": 302,
+          "startLine": 293
+        },
+        {
+          "endLine": 304,
+          "startLine": 304
+        }
+      ]
+    }
+  ],
+  "profile": "v6.1/1",
+  "purposeProjections": [
+    {
+      "defaultVisible": true,
+      "goalRef": "sem:P01:display-roots",
+      "id": "purpose-2",
+      "invocationRefs": [
+        "inv-2"
+      ],
+      "relatedGoalRefs": [],
+      "summary": {
+        "drawAsMessage": false,
+        "kind": "note",
+        "object": "会话来源",
+        "purpose": "判定基础会话可直接使用工作目录",
+        "result": "得到基础会话判定"
+      },
+      "waitRefs": []
+    },
+    {
+      "defaultVisible": true,
+      "goalRef": "sem:P01:display-roots",
+      "id": "purpose-9",
+      "invocationRefs": [
+        "inv-9"
+      ],
+      "relatedGoalRefs": [],
+      "summary": {
+        "drawAsMessage": false,
+        "kind": "note",
+        "object": "本轮功能配置",
+        "purpose": "判定是否启用工作目录相对路径",
+        "result": "得到相对路径功能判定"
+      },
+      "waitRefs": []
+    },
+    {
+      "defaultVisible": true,
+      "goalRef": "sem:P01:display-roots",
+      "id": "purpose-13",
+      "invocationRefs": [
+        "inv-13"
+      ],
+      "relatedGoalRefs": [],
+      "summary": {
+        "drawAsMessage": false,
+        "kind": "note",
+        "object": "本轮环境快照",
+        "purpose": "取得可用于展示的环境集合",
+        "result": "得到本轮有效环境"
+      },
+      "waitRefs": []
+    },
+    {
+      "defaultVisible": true,
+      "goalRef": "sem:P01:display-roots",
+      "id": "purpose-15",
+      "invocationRefs": [
+        "inv-15"
+      ],
+      "relatedGoalRefs": [],
+      "summary": {
+        "drawAsMessage": false,
+        "kind": "note",
+        "object": "环境状态",
+        "purpose": "保留具备本轮环境的项目",
+        "result": "剔除没有本轮环境的状态"
+      },
+      "waitRefs": []
+    },
+    {
+      "defaultVisible": true,
+      "goalRef": "sem:P01:display-roots",
+      "id": "purpose-18",
+      "invocationRefs": [
+        "inv-18"
+      ],
+      "relatedGoalRefs": [],
+      "summary": {
+        "drawAsMessage": false,
+        "kind": "note",
+        "object": "首步上下文",
+        "purpose": "发现差异展示根目录",
+        "result": "取得展示根目录列表"
+      },
+      "waitRefs": []
+    }
+  ],
+  "readingScopes": [
+    {
+      "branches": [
+        {
+          "condition": "基础会话或已启用相对路径功能",
+          "id": "branch-direct",
+          "members": [
+            {
+              "kind": "action",
+              "ref": "P01/A02.12"
+            }
+          ],
+          "when": [
+            "basic",
+            "relative"
+          ]
+        },
+        {
+          "condition": "非基础会话且未启用相对路径功能",
+          "id": "branch-discover",
+          "members": [
+            {
+              "kind": "action",
+              "ref": "P01/A03.17"
+            }
+          ],
+          "when": [
+            "discover"
+          ]
+        }
+      ],
+      "condition": "依据会话来源与相对路径功能选择展示基准",
+      "decision": {
+        "values": [
+          "basic",
+          "relative",
+          "discover"
+        ],
+        "variable": "decision-mode"
+      },
+      "id": "scope-mode",
+      "kind": "alt",
+      "members": [
+        {
+          "kind": "action",
+          "ref": "P01/A02.12"
+        },
+        {
+          "kind": "action",
+          "ref": "P01/A03.17"
+        }
+      ],
+      "parentScopeRef": null
+    }
+  ],
+  "returnContracts": [
+    {
+      "branchRef": null,
+      "meaning": "normal-return",
+      "messageRef": "return-2"
+    },
+    {
+      "branchRef": null,
+      "meaning": "normal-return",
+      "messageRef": "return-9"
+    },
+    {
+      "branchRef": null,
+      "meaning": "normal-return",
+      "messageRef": "return-13"
+    },
+    {
+      "branchRef": null,
+      "meaning": "normal-return",
+      "messageRef": "return-15"
+    },
+    {
+      "branchRef": null,
+      "meaning": "normal-return",
+      "messageRef": "return-18"
+    }
+  ],
+  "rootAnchors": [],
+  "rootControlRefs": [],
+  "scopeAnnotations": [],
+  "segments": [
+    {
+      "id": "segment-2",
+      "invocationRef": "inv-2",
+      "kind": "sequence",
+      "messages": [
+        "request-2",
+        "return-2"
+      ]
+    },
+    {
+      "id": "segment-9",
+      "invocationRef": "inv-9",
+      "kind": "sequence",
+      "messages": [
+        "request-9",
+        "return-9"
+      ]
+    },
+    {
+      "id": "segment-13",
+      "invocationRef": "inv-13",
+      "kind": "sequence",
+      "messages": [
+        "request-13",
+        "return-13"
+      ]
+    },
+    {
+      "id": "segment-15",
+      "invocationRef": "inv-15",
+      "kind": "sequence",
+      "messages": [
+        "request-15",
+        "return-15"
+      ]
+    },
+    {
+      "id": "segment-18",
+      "invocationRef": "inv-18",
+      "kind": "sequence",
+      "messages": [
+        "request-18",
+        "return-18"
+      ]
+    }
+  ],
+  "semanticRoot": {
+    "actorRef": "actor-main",
+    "symbol": "codex_core::session::turn::run_turn::{closure#0}::{closure#4}"
+  },
+  "sourceGroups": [
+    {
+      "basicBlockRefs": [
+        "bb1",
+        "bb2",
+        "bb3"
+      ],
+      "id": "P01/A01.1/C1",
+      "label": "读取会话来源并检验基础会话条件",
+      "lineRanges": [
+        {
+          "endLine": 286,
+          "startLine": 286
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb11"
+      ],
+      "id": "P01/A01.1/C11",
+      "label": "已启用相对路径时转入目录收集",
+      "lineRanges": [],
+      "sourceRangeReason": "No precise semantic operation span in the recorded BBs; only compiler state, storage, drop, cleanup or enclosing-scope context. Full source remains available."
+    },
+    {
+      "basicBlockRefs": [
+        "bb4"
+      ],
+      "id": "P01/A01.1/C4",
+      "label": "基础会话转入目录收集",
+      "lineRanges": [],
+      "sourceRangeReason": "No precise semantic operation span in the recorded BBs; only compiler state, storage, drop, cleanup or enclosing-scope context. Full source remains available."
+    },
+    {
+      "basicBlockRefs": [
+        "bb5",
+        "bb6",
+        "bb7",
+        "bb8",
+        "bb9",
+        "bb10"
+      ],
+      "id": "P01/A01.1/C5",
+      "label": "读取本轮配置并检验相对路径功能",
+      "lineRanges": [
+        {
+          "endLine": 291,
+          "startLine": 287
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb12",
+        "bb13",
+        "bb14",
+        "bb15",
+        "bb16"
+      ],
+      "id": "P01/A02.12/C12",
+      "label": "遍历选中的环境并收集标识与工作目录",
+      "lineRanges": [
+        {
+          "endLine": 302,
+          "startLine": 293
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb17",
+        "bb18",
+        "bb19",
+        "bb20"
+      ],
+      "id": "P01/A03.17/C17",
+      "label": "以本轮上下文发起根目录发现",
+      "lineRanges": [
+        {
+          "endLine": 304,
+          "startLine": 304
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb21",
+        "bb22",
+        "bb23"
+      ],
+      "id": "P01/A03.17/C21",
+      "label": "等待根目录发现完成",
+      "lineRanges": [
+        {
+          "endLine": 304,
+          "startLine": 304
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb26",
+        "bb27"
+      ],
+      "id": "P01/A03.17/C26",
+      "label": "取出发现结果并结束等待",
+      "lineRanges": [
+        {
+          "endLine": 304,
+          "startLine": 304
+        }
+      ]
+    }
+  ],
+  "testBoundaries": []
+}
