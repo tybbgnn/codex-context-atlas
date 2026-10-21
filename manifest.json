@@ -41,9 +41,12 @@
     "path": "functions/run-turn/roundtrip/",
     "available": true,
     "body_hash": "0e2e3627499bc9a17f347cbdcc2b778a",
-    "version": "v22",
-    "status": "preview",
-    "label": "回合主循环"
+    "version": "v24",
+    "status": "available",
+    "label": "回合主循环",
+    "group_label": "回合主循环",
+    "classification_label": "G02 · 回合主循环",
+    "source_acceptance_passed": true
   },
   {
     "id": "F07.1",
@@ -52,9 +55,12 @@
     "path": "functions/run-turn-display-roots/roundtrip/",
     "available": true,
     "body_hash": "6ccfbaa7c8ba54b17f347cbdcc2b778a",
-    "version": "v22",
-    "status": "preview",
-    "label": "环境展示路径块"
+    "version": "v24",
+    "status": "available",
+    "label": "环境展示路径块",
+    "group_label": "回合主循环",
+    "classification_label": "G02 · 回合主循环",
+    "source_acceptance_passed": true
   },
   {
     "id": "F07.2",
@@ -63,9 +69,12 @@
     "path": "functions/run-turn-sampling-request/roundtrip/",
     "available": true,
     "body_hash": "e0659b8c39c457de7f347cbdcc2b778a",
-    "version": "v22",
-    "status": "preview",
-    "label": "采样请求块"
+    "version": "v24",
+    "status": "available",
+    "label": "采样请求块",
+    "group_label": "回合主循环",
+    "classification_label": "G02 · 回合主循环",
+    "source_acceptance_passed": true
   },
   {
     "id": "F07.3",
@@ -74,9 +83,12 @@
     "path": "functions/run-turn-sampling-input/roundtrip/",
     "available": true,
     "body_hash": "c3a273c4e2967a3a7f347cbdcc2b778a",
-    "version": "v22",
-    "status": "preview",
-    "label": "采样输入块"
+    "version": "v24",
+    "status": "available",
+    "label": "采样输入块",
+    "group_label": "回合主循环",
+    "classification_label": "G02 · 回合主循环",
+    "source_acceptance_passed": true
   },
   {
     "id": "F07.4",
@@ -85,9 +97,12 @@
     "path": "functions/run-turn-post-sampling-state/roundtrip/",
     "available": true,
     "body_hash": "bc6a3af3a9ed11207f347cbdcc2b778a",
-    "version": "v22",
-    "status": "preview",
-    "label": "采样后状态块"
+    "version": "v24",
+    "status": "available",
+    "label": "采样后状态块",
+    "group_label": "回合主循环",
+    "classification_label": "G02 · 回合主循环",
+    "source_acceptance_passed": true
   },
   {
     "id": "F08",

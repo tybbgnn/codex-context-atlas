@@ -2,23 +2,23 @@
   "units": {
     "P01": {
       "kind": "phase",
-      "text": "会话来源与相对路径配置决定本轮展示基准；直接路径避免等待远程发现。"
+      "text": "本轮上下文已就绪；生成本轮环境的路径显示基准；获得环境标识与显示路径列表"
     },
     "P01/A01.1": {
       "kind": "action",
-      "text": "先检查基础会话；仅非基础会话继续读取相对路径功能，短路规则保留。"
+      "text": "收到本轮 `session_source` 和 `features`；确定本轮显示路径的取根方式；basic session 或启用 `CwdRelativeTurnDiffs` 时使用 `cwd`，其余发现显示根"
     },
     "P01/A02.12": {
       "kind": "action",
-      "text": "仅为直接展示路径枚举有效环境，把每个环境的标识和当前工作目录组成一项。"
+      "text": "basic session 或 `CwdRelativeTurnDiffs` 已启用；收集环境标识与 `cwd` 作为显示路径；得到每个 turn environment 的标识与 `cwd` 列表"
     },
     "P01/A03.17": {
       "kind": "action",
-      "text": "仅在两项直接展示条件都不成立时，等待本轮上下文的根目录发现结果。"
+      "text": "非 basic session 且未启用 `CwdRelativeTurnDiffs`；发现环境的显示根并接收路径列表；获得 `turn_diff_display_roots` 返回的显示路径列表"
     },
     "sem:P01:display-roots": {
       "kind": "goal",
-      "text": "两条互斥路径都产出环境标识到展示根目录的对应列表。"
+      "text": "本轮上下文已就绪；按 session 与功能配置交付环境显示路径；为各 turn environment 交付 `cwd` 或发现后的显示根"
     }
   }
 }

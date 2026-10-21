@@ -1,0 +1,33 @@
+{
+  "version": "v24",
+  "group": "G02",
+  "group_label": "回合主循环",
+  "label": "环境展示路径块",
+  "source_folder": "1-环境展示路径块",
+  "body_hash": "6ccfbaa7c8ba54b17f347cbdcc2b778a",
+  "source_acceptance": {
+    "passed": true,
+    "browser_checked": true,
+    "checks": {
+      "batch": true,
+      "batch-reference": true,
+      "browser": true,
+      "contract": true,
+      "duplicates": true,
+      "hard-rules": true,
+      "independent-source": true,
+      "principles": true,
+      "regressions": true
+    }
+  },
+  "source_asset_sha256": {
+    "basic-block-details.json": "3630d053539a6b86cddc8070513e20df04eeacd9b6a57798541f1bc51543ee28",
+    "README.md": "9d56ea8ccd22e333b94a03863d3dc2ba9fbb7b504ea093f52c6fa39c0f568866",
+    "renderer-input.json": "aca97a63bc80d0eeb3b97f908dfac65a6c567048943a5fd4a49295a64f047aee",
+    "data.js": "bd44d20c167bc0dd70691a9e39fe11194e12aa851626c2b8f17aedb7f3487b71",
+    "reading-summaries.json": "2eed53d86abe927549e076223bce4a12b10aff048bc176f52007bcd1dec887e2",
+    "roundtrip/app.bundle.js": "c8dc6908482f21558cc1571a46cd0a17ac6049a760bdb227217651826b942c93",
+    "roundtrip/index.html": "b0af30871a891cce67f1a8d64790002817715530bfb5b299e0aa01e5dfd0342f",
+    "roundtrip/style.css": "e4283d59212c0fb74df3ac0667425fff5d87a910b800ae8165c1f88c09e7897e"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "version": "v24",
+  "group": "G02",
+  "group_label": "回合主循环",
+  "label": "回合主循环",
+  "source_folder": "0-run_turn",
+  "body_hash": "0e2e3627499bc9a17f347cbdcc2b778a",
+  "source_acceptance": {
+    "passed": true,
+    "browser_checked": true,
+    "checks": {
+      "batch": true,
+      "batch-reference": true,
+      "browser": true,
+      "contract": true,
+      "duplicates": true,
+      "hard-rules": true,
+      "independent-source": true,
+      "principles": true,
+      "regressions": true
+    }
+  },
+  "source_asset_sha256": {
+    "basic-block-details.json": "298ca56b3e5be53130c4911b1202e80adf85aa44e620f61c4cd2af77a6b18a10",
+    "README.md": "a7e909abb2074826327d3ee2fe233874c4bcd35e06409f4172e5aac11046db61",
+    "renderer-input.json": "14d8185a207d2edb9ee68f1d0c4e96c0f572aed35af25794bfc4f3b94d6c53f2",
+    "data.js": "21753c8edff73135c9ffd04aa10a3aca92b08ec3fb8eee4b72482b77a0d024ad",
+    "reading-summaries.json": "72efa40f9a8c205eaeea0a226b8f24672ea0db0b8160aa2da3f648968ee16117",
+    "roundtrip/app.bundle.js": "c8dc6908482f21558cc1571a46cd0a17ac6049a760bdb227217651826b942c93",
+    "roundtrip/index.html": "b0af30871a891cce67f1a8d64790002817715530bfb5b299e0aa01e5dfd0342f",
+    "roundtrip/style.css": "e4283d59212c0fb74df3ac0667425fff5d87a910b800ae8165c1f88c09e7897e"
+  }
+}

@@ -8857,7 +8857,7 @@
         }
       ]
     },
-    "sem:P01:prepare-prompt": {
+    "sem:P01:sampling-input": {
       "rust_snippets": [
         {
           "code": "                sess.clone_history()\n                    .await\n                    .for_prompt(&step_context.settings.model_info.input_modalities)",
@@ -8881,7 +8881,7 @@
         "bb10"
       ],
       "depth": 2,
-      "name": "取得当前会话的历史快照"
+      "name": "取得独立的 `history` 快照"
     },
     "P01/A02.11": {
       "basic_block_refs": [
@@ -8893,9 +8893,9 @@
         "bb16"
       ],
       "depth": 2,
-      "name": "按模型输入模态转换历史并交还条目"
+      "name": "按模型输入模态生成 `ResponseItem` 列表"
     },
-    "sem:P01:prepare-prompt": {
+    "sem:P01:sampling-input": {
       "basic_block_refs": [
         "bb1",
         "bb2",
@@ -8913,7 +8913,7 @@
         "bb16"
       ],
       "depth": 1.5,
-      "name": "把当前历史转化为模型可用的输入"
+      "name": "把 `history` 快照转为模型可用的输入"
     }
   }
 }

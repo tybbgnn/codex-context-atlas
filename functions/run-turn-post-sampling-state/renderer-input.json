@@ -5,11 +5,11 @@
       "bodyRef": "bc6a3af3a9ed11207f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
       "color": "#42758c",
       "kind": "body",
-      "label": "codex_core::session::turn::run_turn::{closure#0}::{closure#2}",
+      "label": "run_turn::{closure#0}::{closure#2}",
       "sourceNodeRef": "bc6a3af3a9ed11207f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
     },
     {
-      "actorId": "actor-core",
+      "actorId": "actor-crate",
       "children": [
         {
           "actorId": "actor-module-3",
@@ -19,7 +19,7 @@
               "bodyRef": "0cdb51d88e231b437f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
               "color": "#42758c",
               "kind": "body",
-              "label": "codex_core::session::input_queue::InputQueue::has_pending_input::{closure#0}",
+              "label": "InputQueue::has_pending_input::{closure#0}",
               "sourceNodeRef": "0cdb51d88e231b437f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
             }
           ],
@@ -36,7 +36,7 @@
               "bodyRef": "92c30899ad0902317f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
               "color": "#42758c",
               "kind": "body",
-              "label": "codex_core::session::context_window::context_window_token_status::{closure#0}",
+              "label": "context_window_token_status::{closure#0}",
               "sourceNodeRef": "92c30899ad0902317f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
             }
           ],
@@ -96,7 +96,7 @@
   "display": {
     "description": "codex_core::session::turn::run_turn::{closure#0}::{closure#2}",
     "sourceLabel": "core/src/session/turn.rs",
-    "title": "{closure#0}"
+    "title": "run_turn::{closure#0}::{closure#2}"
   },
   "execution": {
     "artifacts": [
@@ -111,7 +111,7 @@
     "attachments": [
       {
         "evidenceRefs": [
-          "evidence-b90f16bc43a782de654d382f"
+          "evidence-3df833d14fa8fbfad010cde5"
         ],
         "id": "attachment-purpose-3",
         "kind": "purpose",
@@ -120,7 +120,7 @@
       },
       {
         "evidenceRefs": [
-          "evidence-8152d6f962dae8ca0110840f"
+          "evidence-95f5349aa36af713629d1efa"
         ],
         "id": "attachment-purpose-14",
         "kind": "purpose",
@@ -132,57 +132,47 @@
       {
         "controlRef": "control-3",
         "evidenceRefs": [
-          "evidence-5590394e51abe2ca5d98e123"
+          "evidence-bce19d46c681200e9bdd543f"
         ],
-        "nodeRef": "exec-0"
+        "nodeRef": "exec-input"
       },
       {
         "controlRef": "control-14",
         "evidenceRefs": [
-          "evidence-e050630fc0f2c89297d4d437"
+          "evidence-1b9ac725b6a49f615cef5b54"
         ],
-        "nodeRef": "exec-1"
+        "nodeRef": "exec-token"
       }
     ],
     "decisions": [],
     "edges": [
       {
         "evidenceRefs": [
-          "evidence-61d9e8274403bd0dbf733317"
+          "evidence-92739a5041650d993d02dbe8"
         ],
         "from": "exec-entry",
         "guards": [],
         "id": "exec-edge-0",
         "kind": "flow",
-        "to": "exec-0"
+        "to": "exec-input"
       },
       {
         "evidenceRefs": [
-          "evidence-a9ce08c80076e9b4a9de0d0a"
+          "evidence-41951878bbdba047eda90119"
         ],
-        "from": "exec-0",
+        "from": "exec-input",
         "guards": [],
         "id": "exec-edge-1",
         "kind": "flow",
-        "to": "exec-1"
+        "to": "exec-token"
       },
       {
         "evidenceRefs": [
-          "evidence-542a2bebbc5c9f3c8ec01b61"
+          "evidence-da5c64ea08a74a886687008a"
         ],
-        "from": "exec-1",
+        "from": "exec-token",
         "guards": [],
         "id": "exec-edge-2",
-        "kind": "flow",
-        "to": "exec-2"
-      },
-      {
-        "evidenceRefs": [
-          "evidence-aad5a03d82ff40a34355b01c"
-        ],
-        "from": "exec-2",
-        "guards": [],
-        "id": "exec-edge-3",
         "kind": "flow",
         "to": "exec-return"
       }
@@ -197,11 +187,11 @@
           "subjectRef": "exec-entry",
           "targets": [
             "actor-main",
-            "{closure#0}"
+            "run_turn::{closure#0}::{closure#2}"
           ]
         },
-        "id": "evidence-1c164afa6fe028b72a0c64e5",
-        "locator": "bb1",
+        "id": "evidence-221079383ffe6e1020e8e342",
+        "locator": "bb0,bb1",
         "quote": "                        sess.input_queue.has_pending_input(&sess.active_turn).await;"
       },
       {
@@ -211,11 +201,11 @@
           "kind": "action",
           "subjectRef": "P01/A01.1",
           "targets": [
-            "exec-0"
+            "exec-input"
           ]
         },
-        "id": "evidence-2345e90b176bbd996d036bb8",
-        "locator": "bb1,bb2,bb3,bb4,bb5,bb6,bb7,bb8,bb11",
+        "id": "evidence-ece51100a06869215b9e2e58",
+        "locator": "bb3,bb11",
         "quote": "                        sess.input_queue.has_pending_input(&sess.active_turn).await;"
       },
       {
@@ -225,26 +215,12 @@
           "kind": "action",
           "subjectRef": "P01/A02.12",
           "targets": [
-            "exec-1"
+            "exec-token"
           ]
         },
-        "id": "evidence-f777266ed74fadd08787997f",
-        "locator": "bb12,bb13,bb14,bb15,bb16,bb17,bb18,bb19,bb21",
-        "quote": "                        sess.as_ref(),"
-      },
-      {
-        "artifactRef": "source-function",
-        "claim": {
-          "conditions": [],
-          "kind": "action",
-          "subjectRef": "P01/A03.22",
-          "targets": [
-            "exec-2"
-          ]
-        },
-        "id": "evidence-962a124296acc4ecd180c58e",
-        "locator": "bb22",
-        "quote": "                    (has_pending_input, token_status)"
+        "id": "evidence-f6b930c4b7f0b5e06fa4fc14",
+        "locator": "bb14,bb22",
+        "quote": "                    let token_status = super::context_window::context_window_token_status(\n                        sess.as_ref(),\n                        turn_context.as_ref(),\n                    )"
       },
       {
         "artifactRef": "source-function",
@@ -268,13 +244,13 @@
           "subjectRef": "exec-edge-0",
           "targets": [
             "exec-entry",
-            "exec-0",
+            "exec-input",
             "flow"
           ]
         },
-        "id": "evidence-61d9e8274403bd0dbf733317",
-        "locator": "bb1",
-        "quote": "                        sess.input_queue.has_pending_input(&sess.active_turn).await;"
+        "id": "evidence-92739a5041650d993d02dbe8",
+        "locator": "m0.0",
+        "quote": "pub(crate) async fn run_turn("
       },
       {
         "artifactRef": "source-function",
@@ -283,12 +259,12 @@
           "kind": "relation",
           "subjectRef": "exec-edge-1",
           "targets": [
-            "exec-0",
-            "exec-1",
+            "exec-input",
+            "exec-token",
             "flow"
           ]
         },
-        "id": "evidence-a9ce08c80076e9b4a9de0d0a",
+        "id": "evidence-41951878bbdba047eda90119",
         "locator": "m11.0",
         "quote": "                        sess.input_queue.has_pending_input(&sess.active_turn).await;"
       },
@@ -299,28 +275,12 @@
           "kind": "relation",
           "subjectRef": "exec-edge-2",
           "targets": [
-            "exec-1",
-            "exec-2",
-            "flow"
-          ]
-        },
-        "id": "evidence-542a2bebbc5c9f3c8ec01b61",
-        "locator": "m21.0",
-        "quote": "                    let token_status = super::context_window::context_window_token_status(\n                        sess.as_ref(),\n                        turn_context.as_ref(),\n                    )\n                    .await;"
-      },
-      {
-        "artifactRef": "source-function",
-        "claim": {
-          "conditions": [],
-          "kind": "relation",
-          "subjectRef": "exec-edge-3",
-          "targets": [
-            "exec-2",
+            "exec-token",
             "exec-return",
             "flow"
           ]
         },
-        "id": "evidence-aad5a03d82ff40a34355b01c",
+        "id": "evidence-da5c64ea08a74a886687008a",
         "locator": "bb22",
         "quote": "                    (has_pending_input, token_status)"
       },
@@ -331,11 +291,11 @@
           "kind": "control-binding",
           "subjectRef": "control-3",
           "targets": [
-            "exec-0"
+            "exec-input"
           ]
         },
-        "id": "evidence-5590394e51abe2ca5d98e123",
-        "locator": "call:3",
+        "id": "evidence-bce19d46c681200e9bdd543f",
+        "locator": "call:3,bb11",
         "quote": "                        sess.input_queue.has_pending_input(&sess.active_turn).await;"
       },
       {
@@ -345,11 +305,11 @@
           "kind": "control-binding",
           "subjectRef": "control-14",
           "targets": [
-            "exec-1"
+            "exec-token"
           ]
         },
-        "id": "evidence-e050630fc0f2c89297d4d437",
-        "locator": "call:14",
+        "id": "evidence-1b9ac725b6a49f615cef5b54",
+        "locator": "call:14,bb22",
         "quote": "                    let token_status = super::context_window::context_window_token_status(\n                        sess.as_ref(),\n                        turn_context.as_ref(),\n                    )"
       },
       {
@@ -363,8 +323,8 @@
             "purpose-3"
           ]
         },
-        "id": "evidence-b90f16bc43a782de654d382f",
-        "locator": "call:3,bb3",
+        "id": "evidence-3df833d14fa8fbfad010cde5",
+        "locator": "call:3,bb3,bb11",
         "quote": "                        sess.input_queue.has_pending_input(&sess.active_turn).await;"
       },
       {
@@ -378,8 +338,8 @@
             "purpose-14"
           ]
         },
-        "id": "evidence-8152d6f962dae8ca0110840f",
-        "locator": "call:14,bb14",
+        "id": "evidence-95f5349aa36af713629d1efa",
+        "locator": "call:14,bb14,bb22",
         "quote": "                    let token_status = super::context_window::context_window_token_status(\n                        sess.as_ref(),\n                        turn_context.as_ref(),\n                    )"
       },
       {
@@ -387,45 +347,44 @@
         "claim": {
           "conditions": [],
           "kind": "inventory",
-          "subjectRef": "{closure#0}",
+          "subjectRef": "run_turn::{closure#0}::{closure#2}",
           "targets": [
             "action:P01/A01.1",
             "action:P01/A02.12",
-            "action:P01/A03.22",
             "control:control-3",
             "control:control-14"
           ]
         },
-        "id": "evidence-068c7c50117bb2e5b14fd364",
-        "locator": "bb3,bb14,bb22,m11.0,m21.0",
+        "id": "evidence-d3c4e35b865aa61b43006c94",
+        "locator": "bb3,bb11,bb14,bb22",
         "quote": "                        sess.input_queue.has_pending_input(&sess.active_turn).await;"
       }
     ],
     "inventory": {
       "actionRefs": [
         "P01/A01.1",
-        "P01/A02.12",
-        "P01/A03.22"
+        "P01/A02.12"
       ],
       "controlRefs": [
         "control-3",
         "control-14"
       ],
       "evidenceRefs": [
-        "evidence-068c7c50117bb2e5b14fd364"
+        "evidence-d3c4e35b865aa61b43006c94"
       ]
     },
     "nodes": [
       {
         "basicBlockRefs": [
+          "bb0",
           "bb1"
         ],
         "evidenceRefs": [
-          "evidence-1c164afa6fe028b72a0c64e5"
+          "evidence-221079383ffe6e1020e8e342"
         ],
         "id": "exec-entry",
         "kind": "entry",
-        "label": "开始采集采样后状态",
+        "label": "开始收集 sampling 后状态",
         "lineRanges": [
           {
             "endLine": 556,
@@ -447,11 +406,11 @@
           "bb11"
         ],
         "evidenceRefs": [
-          "evidence-2345e90b176bbd996d036bb8"
+          "evidence-ece51100a06869215b9e2e58"
         ],
-        "id": "exec-0",
+        "id": "exec-input",
         "kind": "action",
-        "label": "确认当前轮次是否有待处理输入",
+        "label": "确认 pending input",
         "lineRanges": [
           {
             "endLine": 556,
@@ -470,36 +429,19 @@
           "bb17",
           "bb18",
           "bb19",
-          "bb21"
-        ],
-        "evidenceRefs": [
-          "evidence-f777266ed74fadd08787997f"
-        ],
-        "id": "exec-1",
-        "kind": "action",
-        "label": "获取当前上下文的 token 状态",
-        "lineRanges": [
-          {
-            "endLine": 561,
-            "startLine": 557
-          }
-        ]
-      },
-      {
-        "actionRef": "P01/A03.22",
-        "basicBlockRefs": [
+          "bb21",
           "bb22"
         ],
         "evidenceRefs": [
-          "evidence-962a124296acc4ecd180c58e"
+          "evidence-f6b930c4b7f0b5e06fa4fc14"
         ],
-        "id": "exec-2",
+        "id": "exec-token",
         "kind": "action",
-        "label": "交还采样后状态快照",
+        "label": "取得容量状态并返回二元组",
         "lineRanges": [
           {
             "endLine": 562,
-            "startLine": 562
+            "startLine": 557
           }
         ]
       },
@@ -512,7 +454,7 @@
         ],
         "id": "exec-return",
         "kind": "terminal",
-        "label": "输入标志与用量状态已交付",
+        "label": "交回 pending input 与 token 状态",
         "lineRanges": [
           {
             "endLine": 562,
@@ -532,11 +474,11 @@
         "bodyRef": "bc6a3af3a9ed11207f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
         "color": "#42758c",
         "kind": "body",
-        "label": "codex_core::session::turn::run_turn::{closure#0}::{closure#2}",
+        "label": "run_turn::{closure#0}::{closure#2}",
         "sourceNodeRef": "bc6a3af3a9ed11207f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
       },
       {
-        "actorId": "actor-core",
+        "actorId": "actor-crate",
         "children": [
           {
             "actorId": "actor-module-3",
@@ -546,7 +488,7 @@
                 "bodyRef": "0cdb51d88e231b437f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
                 "color": "#42758c",
                 "kind": "body",
-                "label": "codex_core::session::input_queue::InputQueue::has_pending_input::{closure#0}",
+                "label": "InputQueue::has_pending_input::{closure#0}",
                 "sourceNodeRef": "0cdb51d88e231b437f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
               }
             ],
@@ -563,7 +505,7 @@
                 "bodyRef": "92c30899ad0902317f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
                 "color": "#42758c",
                 "kind": "body",
-                "label": "codex_core::session::context_window::context_window_token_status::{closure#0}",
+                "label": "context_window_token_status::{closure#0}",
                 "sourceNodeRef": "92c30899ad0902317f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
               }
             ],
@@ -1306,7 +1248,7 @@
       "fromActorId": "actor-main",
       "invocationRef": "invocation-3",
       "kind": "request",
-      "label": "查询当前活动轮次的输入队列",
+      "label": "查询当前 turn 待处理输入",
       "messageId": "request-3",
       "pair": "pair-3",
       "stage": "business-request",
@@ -1317,7 +1259,7 @@
       "fromActorId": "actor-3",
       "invocationRef": "invocation-3",
       "kind": "return",
-      "label": "取得待处理输入标志",
+      "label": "交还 `has_pending_input`",
       "messageId": "return-3",
       "pair": "pair-3",
       "stage": "business-completion",
@@ -1328,7 +1270,7 @@
       "fromActorId": "actor-main",
       "invocationRef": "invocation-14",
       "kind": "request",
-      "label": "查询当前上下文 token 用量与限制",
+      "label": "请求当前 context window 状态",
       "messageId": "request-14",
       "pair": "pair-14",
       "stage": "business-request",
@@ -1339,7 +1281,7 @@
       "fromActorId": "actor-14",
       "invocationRef": "invocation-14",
       "kind": "return",
-      "label": "取得 token 状态",
+      "label": "交还 `token_status`",
       "messageId": "return-14",
       "pair": "pair-14",
       "stage": "business-completion",
@@ -1390,7 +1332,7 @@
                 "control-3"
               ],
               "id": "P01/A01.1",
-              "label": "确认当前轮次是否有待处理输入",
+              "label": "确认当前 turn 是否有 pending input",
               "lineRanges": [
                 {
                   "endLine": 556,
@@ -1409,35 +1351,22 @@
                 "bb17",
                 "bb18",
                 "bb19",
-                "bb21"
+                "bb21",
+                "bb22"
               ],
+              "broadRangeReason": "557–561行的调用、Session/TurnContext 引用和 await 共同取得 token 状态；562行交付状态二元组，均属于同一连续结果收集动作。",
               "controlRefs": [
                 "control-14"
               ],
               "id": "P01/A02.12",
-              "label": "获取当前上下文的 token 状态",
+              "label": "取得 token 容量状态并交回收集结果",
               "lineRanges": [
                 {
-                  "endLine": 561,
+                  "endLine": 562,
                   "startLine": 557
                 }
               ],
               "renderId": "P01_A02.12"
-            },
-            {
-              "basicBlockRefs": [
-                "bb22"
-              ],
-              "controlRefs": [],
-              "id": "P01/A03.22",
-              "label": "交还采样后状态快照",
-              "lineRanges": [
-                {
-                  "endLine": 562,
-                  "startLine": 562
-                }
-              ],
-              "renderId": "P01_A03.22"
             }
           ],
           "basicBlockRefs": [
@@ -1461,8 +1390,9 @@
             "bb21",
             "bb22"
           ],
+          "broadRangeReason": "556行读取 pending input；557–561行取得 token 状态；562行组合并返回二元组，均为本目标必要范围。",
           "id": "sem:P01:collect-state",
-          "label": "把队列与用量信息汇成采样后快照",
+          "label": "为后续 turn 决策提供输入与容量依据",
           "lineRanges": [
             {
               "endLine": 562,
@@ -1473,7 +1403,7 @@
         }
       ],
       "id": "P01",
-      "label": "汇集下一步调度所需的状态",
+      "label": "收集 sampling 后的输入与 token 状态",
       "lineRanges": [
         {
           "endLine": 562,
@@ -1495,9 +1425,9 @@
       "summary": {
         "drawAsMessage": false,
         "kind": "note",
-        "object": "当前活动轮次的输入队列",
+        "object": "当前 turn 的 pending input",
         "purpose": "确认是否仍有待处理输入",
-        "result": "取得待处理输入标志"
+        "result": "取得 `has_pending_input`"
       },
       "waitRefs": []
     },
@@ -1512,9 +1442,9 @@
       "summary": {
         "drawAsMessage": false,
         "kind": "note",
-        "object": "当前上下文 token 用量与限制",
-        "purpose": "为后续上下文预算判断提供状态",
-        "result": "取得 token 状态"
+        "object": "当前 context window 的 token 使用与限制",
+        "purpose": "为后续容量决策提供依据",
+        "result": "取得 `token_status`"
       },
       "waitRefs": []
     }
@@ -1557,7 +1487,7 @@
   ],
   "semanticRoot": {
     "actorRef": "actor-main",
-    "symbol": "{closure#0}"
+    "symbol": "run_turn::{closure#0}::{closure#2}"
   },
   "sourceGroups": [
     {
@@ -1569,7 +1499,7 @@
         "bb5"
       ],
       "id": "P01/A01.1/C1",
-      "label": "借用会话与活动轮次并发起队列查询",
+      "label": "借用 `Session` 并发起队列查询",
       "lineRanges": [
         {
           "endLine": 556,
@@ -1582,7 +1512,7 @@
         "bb11"
       ],
       "id": "P01/A01.1/C11",
-      "label": "保存输入标志并释放已完成查询",
+      "label": "提取 pending input 结论并释放查询对象",
       "lineRanges": [
         {
           "endLine": 556,
@@ -1597,7 +1527,7 @@
         "bb8"
       ],
       "id": "P01/A01.1/C6",
-      "label": "轮询待处理输入查询结果",
+      "label": "等待队列查询产生完成结果",
       "lineRanges": [
         {
           "endLine": 556,
@@ -1614,7 +1544,7 @@
         "bb16"
       ],
       "id": "P01/A02.12/C12",
-      "label": "借用会话及轮次上下文并发起用量查询",
+      "label": "借用 `Session` 与 `TurnContext` 并请求容量状态",
       "lineRanges": [
         {
           "endLine": 561,
@@ -1629,7 +1559,7 @@
         "bb19"
       ],
       "id": "P01/A02.12/C17",
-      "label": "轮询上下文用量查询结果",
+      "label": "等待 context window 查询完成",
       "lineRanges": [
         {
           "endLine": 561,
@@ -1639,27 +1569,15 @@
     },
     {
       "basicBlockRefs": [
-        "bb21"
-      ],
-      "id": "P01/A02.12/C21",
-      "label": "保存用量状态并释放已完成查询",
-      "lineRanges": [
-        {
-          "endLine": 561,
-          "startLine": 557
-        }
-      ]
-    },
-    {
-      "basicBlockRefs": [
+        "bb21",
         "bb22"
       ],
-      "id": "P01/A03.22/C22",
-      "label": "组装输入标志及用量状态的返回值",
+      "id": "P01/A02.12/C21",
+      "label": "释放容量查询并组合状态二元组",
       "lineRanges": [
         {
           "endLine": 562,
-          "startLine": 562
+          "startLine": 557
         }
       ]
     }

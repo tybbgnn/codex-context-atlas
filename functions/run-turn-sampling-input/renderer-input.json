@@ -9,7 +9,7 @@
       "sourceNodeRef": "c3a273c4e2967a3a7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
     },
     {
-      "actorId": "actor-crate",
+      "actorId": "actor-core",
       "children": [
         {
           "actorId": "actor-history",
@@ -19,13 +19,13 @@
               "bodyRef": "45c155a51f62509c7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
               "color": "#42758c",
               "kind": "body",
-              "label": "for_prompt",
+              "label": "ContextManager::for_prompt",
               "sourceNodeRef": "45c155a51f62509c7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
             }
           ],
           "color": "#42758c",
           "kind": "module",
-          "label": "context_manager::history",
+          "label": "history",
           "sourceNodeRef": "646e22380528ed707f347cbdcc2b778a"
         }
       ],
@@ -63,7 +63,7 @@
   "display": {
     "description": "codex_core::session::turn::run_turn::{closure#0}::{closure#1}::{closure#0}",
     "sourceLabel": "core/src/session/turn.rs",
-    "title": "{closure#1}"
+    "title": "run_turn::{closure#0}::{closure#1}::{closure#0}"
   },
   "execution": {
     "artifacts": [
@@ -78,7 +78,7 @@
     "attachments": [
       {
         "evidenceRefs": [
-          "evidence-bd7f41b23f4d2c2bdd90b95f"
+          "evidence-75f9b23429ab77d04a28e85a"
         ],
         "id": "attachment-purpose-prompt",
         "kind": "purpose",
@@ -99,31 +99,31 @@
     "edges": [
       {
         "evidenceRefs": [
-          "evidence-dfbee270400802ccf4dbfd1e"
+          "evidence-7489645ccbfda15b6767c24d"
         ],
         "from": "exec-entry",
         "guards": [],
-        "id": "exec-edge-entry",
+        "id": "exec-edge-0",
         "kind": "flow",
-        "to": "exec-history"
+        "to": "exec-snapshot"
       },
       {
         "evidenceRefs": [
-          "evidence-1e5a669cef060abd1e3ef145"
+          "evidence-353b2b0168ab55f40e091296"
         ],
-        "from": "exec-history",
+        "from": "exec-snapshot",
         "guards": [],
-        "id": "exec-edge-transform",
+        "id": "exec-edge-1",
         "kind": "flow",
         "to": "exec-prompt"
       },
       {
         "evidenceRefs": [
-          "evidence-48da258fd043df12bc2cbd7d"
+          "evidence-54a63737bc4e06e4fcbc780e"
         ],
         "from": "exec-prompt",
         "guards": [],
-        "id": "exec-edge-return",
+        "id": "exec-edge-2",
         "kind": "flow",
         "to": "exec-return"
       }
@@ -138,10 +138,10 @@
           "subjectRef": "exec-entry",
           "targets": [
             "actor-main",
-            "{closure#1}"
+            "run_turn::{closure#0}::{closure#1}::{closure#0}"
           ]
         },
-        "id": "evidence-91ff23bb5b6b38af79e244c2",
+        "id": "evidence-4afcbe0f86820166bda39111",
         "locator": "bb1",
         "quote": "                sess.clone_history()"
       },
@@ -152,11 +152,11 @@
           "kind": "action",
           "subjectRef": "P01/A01.1",
           "targets": [
-            "exec-history"
+            "exec-snapshot"
           ]
         },
-        "id": "evidence-941c31dc6267a80b4e16b851",
-        "locator": "bb1,bb2,bb10",
+        "id": "evidence-1f239511e2d4e4e56f0ff9bc",
+        "locator": "bb2,bb10",
         "quote": "                sess.clone_history()"
       },
       {
@@ -169,9 +169,9 @@
             "exec-prompt"
           ]
         },
-        "id": "evidence-e010d9d35f3cf62b3d5db340",
-        "locator": "bb11,bb15,bb16",
-        "quote": "                    .for_prompt(&step_context.settings.model_info.input_modalities)"
+        "id": "evidence-36a7c445541a857cd063b31c",
+        "locator": "bb15,bb16",
+        "quote": "                sess.clone_history()\n                    .await\n                    .for_prompt(&step_context.settings.model_info.input_modalities)"
       },
       {
         "artifactRef": "source-function",
@@ -192,14 +192,14 @@
         "claim": {
           "conditions": [],
           "kind": "relation",
-          "subjectRef": "exec-edge-entry",
+          "subjectRef": "exec-edge-0",
           "targets": [
             "exec-entry",
-            "exec-history",
+            "exec-snapshot",
             "flow"
           ]
         },
-        "id": "evidence-dfbee270400802ccf4dbfd1e",
+        "id": "evidence-7489645ccbfda15b6767c24d",
         "locator": "bb1",
         "quote": "                sess.clone_history()"
       },
@@ -208,14 +208,14 @@
         "claim": {
           "conditions": [],
           "kind": "relation",
-          "subjectRef": "exec-edge-transform",
+          "subjectRef": "exec-edge-1",
           "targets": [
-            "exec-history",
+            "exec-snapshot",
             "exec-prompt",
             "flow"
           ]
         },
-        "id": "evidence-1e5a669cef060abd1e3ef145",
+        "id": "evidence-353b2b0168ab55f40e091296",
         "locator": "m10.0",
         "quote": "                sess.clone_history()\n                    .await"
       },
@@ -224,16 +224,16 @@
         "claim": {
           "conditions": [],
           "kind": "relation",
-          "subjectRef": "exec-edge-return",
+          "subjectRef": "exec-edge-2",
           "targets": [
             "exec-prompt",
             "exec-return",
             "flow"
           ]
         },
-        "id": "evidence-48da258fd043df12bc2cbd7d",
-        "locator": "bb16",
-        "quote": "pub(crate) async fn run_turn("
+        "id": "evidence-54a63737bc4e06e4fcbc780e",
+        "locator": "m15.0,bb16",
+        "quote": "                sess.clone_history()\n                    .await\n                    .for_prompt(&step_context.settings.model_info.input_modalities)"
       },
       {
         "artifactRef": "source-function",
@@ -260,8 +260,8 @@
             "purpose-prompt"
           ]
         },
-        "id": "evidence-bd7f41b23f4d2c2bdd90b95f",
-        "locator": "call:15,bb15,bb16",
+        "id": "evidence-75f9b23429ab77d04a28e85a",
+        "locator": "call:15,bb15",
         "quote": "                sess.clone_history()\n                    .await\n                    .for_prompt(&step_context.settings.model_info.input_modalities)"
       },
       {
@@ -269,15 +269,15 @@
         "claim": {
           "conditions": [],
           "kind": "inventory",
-          "subjectRef": "{closure#1}",
+          "subjectRef": "run_turn::{closure#0}::{closure#1}::{closure#0}",
           "targets": [
             "action:P01/A01.1",
             "action:P01/A02.11",
             "control:control-prompt"
           ]
         },
-        "id": "evidence-e09740ddb89340df4090dab4",
-        "locator": "call:2,call:15,bb10,bb16",
+        "id": "evidence-0df75e7b22844a4cfedc6002",
+        "locator": "bb2,bb10,bb15,bb16,m10.0",
         "quote": "                sess.clone_history()"
       }
     ],
@@ -290,7 +290,7 @@
         "control-prompt"
       ],
       "evidenceRefs": [
-        "evidence-e09740ddb89340df4090dab4"
+        "evidence-0df75e7b22844a4cfedc6002"
       ]
     },
     "nodes": [
@@ -299,11 +299,11 @@
           "bb1"
         ],
         "evidenceRefs": [
-          "evidence-91ff23bb5b6b38af79e244c2"
+          "evidence-4afcbe0f86820166bda39111"
         ],
         "id": "exec-entry",
         "kind": "entry",
-        "label": "接收本次提示构建任务",
+        "label": "开始准备模型输入",
         "lineRanges": [
           {
             "endLine": 517,
@@ -323,12 +323,13 @@
           "bb7",
           "bb10"
         ],
+        "broadRangeReason": "517–518 行的 `clone_history().await` 是本动作唯一业务操作，必须完整高亮；2/5 行超过25%。",
         "evidenceRefs": [
-          "evidence-941c31dc6267a80b4e16b851"
+          "evidence-1f239511e2d4e4e56f0ff9bc"
         ],
-        "id": "exec-history",
+        "id": "exec-snapshot",
         "kind": "action",
-        "label": "取得当前会话历史",
+        "label": "取得 `history` 快照",
         "lineRanges": [
           {
             "endLine": 518,
@@ -346,13 +347,13 @@
           "bb15",
           "bb16"
         ],
-        "broadRangeReason": "517–519行原始链式表达式覆盖历史输入与转换，520行交还输出；均属于该转换的数据流。",
+        "broadRangeReason": "519 行读取 `settings.model_info.input_modalities` 并调用 `for_prompt`，调用接收者跨 517–518 行的链式表达，保留的高亮只覆盖该表达与结果交付。",
         "evidenceRefs": [
-          "evidence-e010d9d35f3cf62b3d5db340"
+          "evidence-36a7c445541a857cd063b31c"
         ],
         "id": "exec-prompt",
         "kind": "action",
-        "label": "按模型模态转换历史",
+        "label": "按 `input_modalities` 生成输入",
         "lineRanges": [
           {
             "endLine": 519,
@@ -369,7 +370,7 @@
         ],
         "id": "exec-return",
         "kind": "terminal",
-        "label": "交还本次采样输入",
+        "label": "交付 `Vec<ResponseItem>`",
         "lineRanges": [],
         "outcome": "return",
         "sourceRangeReason": "No precise semantic operation span in the recorded BBs; only compiler state, storage, drop, cleanup or enclosing-scope context. Full source remains available."
@@ -389,7 +390,7 @@
         "sourceNodeRef": "c3a273c4e2967a3a7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
       },
       {
-        "actorId": "actor-crate",
+        "actorId": "actor-core",
         "children": [
           {
             "actorId": "actor-history",
@@ -399,13 +400,13 @@
                 "bodyRef": "45c155a51f62509c7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
                 "color": "#42758c",
                 "kind": "body",
-                "label": "for_prompt",
+                "label": "ContextManager::for_prompt",
                 "sourceNodeRef": "45c155a51f62509c7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
               }
             ],
             "color": "#42758c",
             "kind": "module",
-            "label": "context_manager::history",
+            "label": "history",
             "sourceNodeRef": "646e22380528ed707f347cbdcc2b778a"
           }
         ],
@@ -1130,7 +1131,7 @@
       "fromActorId": "actor-main",
       "invocationRef": "invocation-prompt",
       "kind": "request",
-      "label": "提交历史与模型输入模态",
+      "label": "提交 `history` 快照与 `input_modalities`",
       "messageId": "request-prompt",
       "pair": "pair-prompt",
       "stage": "business-request",
@@ -1141,7 +1142,7 @@
       "fromActorId": "actor-prompt",
       "invocationRef": "invocation-prompt",
       "kind": "return",
-      "label": "交还模型可用的响应条目",
+      "label": "交还规范化的 `ResponseItem` 列表",
       "messageId": "return-prompt",
       "pair": "pair-prompt",
       "stage": "business-completion",
@@ -1182,10 +1183,10 @@
                 "bb7",
                 "bb10"
               ],
-              "broadRangeReason": "517–518行完整表示历史获取与等待，2/5行；取得历史是后续转换的必要输入。",
+              "broadRangeReason": "517–518 行的 `clone_history().await` 是本动作唯一业务操作，必须完整高亮；2/5 行超过25%。",
               "controlRefs": [],
               "id": "P01/A01.1",
-              "label": "取得当前会话的历史快照",
+              "label": "取得独立的 `history` 快照",
               "lineRanges": [
                 {
                   "endLine": 518,
@@ -1203,12 +1204,12 @@
                 "bb15",
                 "bb16"
               ],
-              "broadRangeReason": "517–519行链式调用在转换调用的原始span中连成一个表达式；519行执行转换，520行返回结果；保留精确操作范围，不高亮外围采样。",
+              "broadRangeReason": "519 行读取 `settings.model_info.input_modalities` 并调用 `for_prompt`，调用接收者跨 517–518 行的链式表达，保留的高亮只覆盖该表达与结果交付。",
               "controlRefs": [
                 "control-prompt"
               ],
               "id": "P01/A02.11",
-              "label": "按模型输入模态转换历史并交还条目",
+              "label": "按模型输入模态生成 `ResponseItem` 列表",
               "lineRanges": [
                 {
                   "endLine": 519,
@@ -1234,20 +1235,20 @@
             "bb15",
             "bb16"
           ],
-          "broadRangeReason": "本执行体为516–520行；517–518行取得历史，519行把历史与模型输入模态共同交给提示转换，均为本责任必要语句；不含外围采样请求。",
-          "id": "sem:P01:prepare-prompt",
-          "label": "把当前历史转化为模型可用的输入",
+          "broadRangeReason": "517–518 行取得并等待 `history` 快照，519 行把该快照按 `input_modalities` 转为 prompt；这是 516–520 行执行体的完整业务表达，两部分均不可省略。",
+          "id": "sem:P01:sampling-input",
+          "label": "把 `history` 快照转为模型可用的输入",
           "lineRanges": [
             {
               "endLine": 519,
               "startLine": 517
             }
           ],
-          "renderId": "sem:P01:prepare-prompt"
+          "renderId": "sem:P01:sampling-input"
         }
       ],
       "id": "P01",
-      "label": "准备本次模型提示输入",
+      "label": "准备发送给模型的 `sampling` 输入",
       "lineRanges": [
         {
           "endLine": 519,
@@ -1260,7 +1261,7 @@
   "purposeProjections": [
     {
       "defaultVisible": true,
-      "goalRef": "sem:P01:prepare-prompt",
+      "goalRef": "sem:P01:sampling-input",
       "id": "purpose-prompt",
       "invocationRefs": [
         "invocation-prompt"
@@ -1269,9 +1270,9 @@
       "summary": {
         "drawAsMessage": false,
         "kind": "note",
-        "object": "会话历史与模型输入模态",
-        "purpose": "生成本次采样的提示输入",
-        "result": "模型可用的响应条目"
+        "object": "`history` 快照与 `input_modalities`",
+        "purpose": "为模型构造可消费的上下文",
+        "result": "得到规范化的 `Vec<ResponseItem>`"
       },
       "waitRefs": []
     }
@@ -1300,7 +1301,7 @@
   ],
   "semanticRoot": {
     "actorRef": "actor-main",
-    "symbol": "{closure#1}"
+    "symbol": "run_turn::{closure#0}::{closure#1}::{closure#0}"
   },
   "sourceGroups": [
     {
@@ -1311,7 +1312,7 @@
         "bb4"
       ],
       "id": "P01/A01.1/C1",
-      "label": "借用会话并启动历史读取",
+      "label": "借用 `sess` 并构造历史读取请求",
       "lineRanges": [
         {
           "endLine": 518,
@@ -1324,7 +1325,7 @@
         "bb10"
       ],
       "id": "P01/A01.1/C10",
-      "label": "接收已就绪的历史值",
+      "label": "接收 `ContextManager` 并释放读取对象",
       "lineRanges": [
         {
           "endLine": 518,
@@ -1339,7 +1340,7 @@
         "bb7"
       ],
       "id": "P01/A01.1/C5",
-      "label": "推进历史获取并区分是否完成",
+      "label": "等待历史快照读取完成",
       "lineRanges": [
         {
           "endLine": 518,
@@ -1357,7 +1358,7 @@
         "bb16"
       ],
       "id": "P01/A02.11/C11",
-      "label": "读取模态配置并生成响应条目",
+      "label": "读取 `input_modalities`、转换快照并交付列表",
       "lineRanges": [
         {
           "endLine": 519,

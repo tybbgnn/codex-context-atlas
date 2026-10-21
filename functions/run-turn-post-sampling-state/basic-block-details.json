@@ -8120,7 +8120,7 @@
     "bb22": {
       "basic_block": 22,
       "is_cleanup": false,
-      "reading_parent": "P01/A03.22/C22",
+      "reading_parent": "P01/A02.12/C21",
       "rust_snippets": [
         {
           "code": "                    (has_pending_input, token_status)",
@@ -14456,20 +14456,10 @@
     "P01/A02.12": {
       "rust_snippets": [
         {
-          "code": "                    let token_status = super::context_window::context_window_token_status(\n                        sess.as_ref(),\n                        turn_context.as_ref(),\n                    )\n                    .await;",
-          "end_line": 561,
-          "file": "core/src/session/turn.rs",
-          "start_line": 557
-        }
-      ]
-    },
-    "P01/A03.22": {
-      "rust_snippets": [
-        {
-          "code": "                    (has_pending_input, token_status)",
+          "code": "                    let token_status = super::context_window::context_window_token_status(\n                        sess.as_ref(),\n                        turn_context.as_ref(),\n                    )\n                    .await;\n                    (has_pending_input, token_status)",
           "end_line": 562,
           "file": "core/src/session/turn.rs",
-          "start_line": 562
+          "start_line": 557
         }
       ]
     },
@@ -14498,7 +14488,7 @@
         "bb11"
       ],
       "depth": 2,
-      "name": "确认当前轮次是否有待处理输入"
+      "name": "确认当前 turn 是否有 pending input"
     },
     "P01/A02.12": {
       "basic_block_refs": [
@@ -14510,17 +14500,11 @@
         "bb17",
         "bb18",
         "bb19",
-        "bb21"
-      ],
-      "depth": 2,
-      "name": "获取当前上下文的 token 状态"
-    },
-    "P01/A03.22": {
-      "basic_block_refs": [
+        "bb21",
         "bb22"
       ],
       "depth": 2,
-      "name": "交还采样后状态快照"
+      "name": "取得 token 容量状态并交回收集结果"
     },
     "sem:P01:collect-state": {
       "basic_block_refs": [
@@ -14545,7 +14529,7 @@
         "bb22"
       ],
       "depth": 1.5,
-      "name": "把队列与用量信息汇成采样后快照"
+      "name": "为后续 turn 决策提供输入与容量依据"
     }
   }
 }

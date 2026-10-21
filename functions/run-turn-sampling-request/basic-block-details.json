@@ -3049,7 +3049,7 @@
     "bb100": {
       "basic_block": 100,
       "is_cleanup": false,
-      "reading_parent": "ROOT",
+      "reading_parent": "P02/A01.92/C92",
       "rust_snippets": [
         {
           "code": "            run_sampling_request(\n                Arc::clone(&sess),\n                Arc::clone(&step_context),\n                Arc::clone(&turn_context.extension_data),\n                Arc::clone(&turn_diff_tracker),\n                &mut client_session,\n                sampling_request_input,\n                cancellation_token.child_token(),\n            )\n            .await",
@@ -3955,7 +3955,7 @@
     "bb101": {
       "basic_block": 101,
       "is_cleanup": false,
-      "reading_parent": "P02/A01.92/C101",
+      "reading_parent": "P02/A01.92/C92",
       "rust_snippets": [
         {
           "code": "            .await",
@@ -5472,7 +5472,7 @@
     "bb102": {
       "basic_block": 102,
       "is_cleanup": false,
-      "reading_parent": "P02/A01.92/C101",
+      "reading_parent": "P02/A01.92/C92",
       "rust_snippets": [
         {
           "code": "            run_sampling_request(\n                Arc::clone(&sess),\n                Arc::clone(&step_context),\n                Arc::clone(&turn_context.extension_data),\n                Arc::clone(&turn_diff_tracker),\n                &mut client_session,\n                sampling_request_input,\n                cancellation_token.child_token(),\n            )\n            .await",
@@ -6255,7 +6255,7 @@
     "bb103": {
       "basic_block": 103,
       "is_cleanup": false,
-      "reading_parent": "P02/A01.92/C101",
+      "reading_parent": "P02/A01.92/C92",
       "rust_snippets": [
         {
           "code": "            .await",
@@ -7204,7 +7204,7 @@
     "bb105": {
       "basic_block": 105,
       "is_cleanup": false,
-      "reading_parent": "P02/A01.92/C105",
+      "reading_parent": "P02/A01.92/C92",
       "rust_snippets": [
         {
           "code": "            run_sampling_request(\n                Arc::clone(&sess),\n                Arc::clone(&step_context),\n                Arc::clone(&turn_context.extension_data),\n                Arc::clone(&turn_diff_tracker),\n                &mut client_session,\n                sampling_request_input,\n                cancellation_token.child_token(),\n            )\n            .await",
@@ -8460,7 +8460,7 @@
     "bb106": {
       "basic_block": 106,
       "is_cleanup": false,
-      "reading_parent": "P02/A01.92/C105",
+      "reading_parent": "P02/A01.92/C92",
       "rust_snippets": [],
       "sourceRangeReason": "No precise semantic span; original MIR source_info retained.",
       "source_context_only": true,
@@ -12034,7 +12034,7 @@
     "bb12": {
       "basic_block": 12,
       "is_cleanup": false,
-      "reading_parent": "P01/A01.1/C12",
+      "reading_parent": "P01/A01.1/C1",
       "rust_snippets": [
         {
           "code": "            super::time_reminder::maybe_record_current_time_reminder(\n                sess.as_ref(),\n                turn_context.as_ref(),\n                &window_id,\n            )\n            .await?;",
@@ -14134,7 +14134,7 @@
     "bb13": {
       "basic_block": 13,
       "is_cleanup": false,
-      "reading_parent": "P01/A01.1/C12",
+      "reading_parent": "P01/A01.1/C1",
       "rust_snippets": [
         {
           "code": "            super::time_reminder::maybe_record_current_time_reminder(\n                sess.as_ref(),\n                turn_context.as_ref(),\n                &window_id,\n            )\n            .await?;",
@@ -16462,7 +16462,7 @@
     "bb14": {
       "basic_block": 14,
       "is_cleanup": false,
-      "reading_parent": "P01/A01.1/C12",
+      "reading_parent": "P01/A01.1/C1",
       "rust_snippets": [
         {
           "code": "            super::time_reminder::maybe_record_current_time_reminder(\n                sess.as_ref(),\n                turn_context.as_ref(),\n                &window_id,\n            )\n            .await?;",
@@ -29735,7 +29735,7 @@
     "bb21": {
       "basic_block": 21,
       "is_cleanup": false,
-      "reading_parent": "ROOT",
+      "reading_parent": "P01/A02.15/C15",
       "rust_snippets": [
         {
           "code": "            world_state = sess\n                .record_step_world_state_if_changed(&world_state, step_context.as_ref())\n                .await?;",
@@ -32868,7 +32868,7 @@
     "bb22": {
       "basic_block": 22,
       "is_cleanup": false,
-      "reading_parent": "P01/A02.15/C22",
+      "reading_parent": "P01/A02.15/C15",
       "rust_snippets": [
         {
           "code": "                .await?;",
@@ -34131,7 +34131,7 @@
     "bb23": {
       "basic_block": 23,
       "is_cleanup": false,
-      "reading_parent": "P01/A02.15/C22",
+      "reading_parent": "P01/A02.15/C15",
       "rust_snippets": [
         {
           "code": "            world_state = sess\n                .record_step_world_state_if_changed(&world_state, step_context.as_ref())\n                .await?;",
@@ -34787,7 +34787,7 @@
     "bb24": {
       "basic_block": 24,
       "is_cleanup": false,
-      "reading_parent": "P01/A02.15/C22",
+      "reading_parent": "P01/A02.15/C15",
       "rust_snippets": [
         {
           "code": "                .await?;",
@@ -35709,7 +35709,7 @@
     "bb26": {
       "basic_block": 26,
       "is_cleanup": false,
-      "reading_parent": "P01/A02.15/C26",
+      "reading_parent": "P01/A02.15/C15",
       "rust_snippets": [
         {
           "code": "            world_state = sess\n                .record_step_world_state_if_changed(&world_state, step_context.as_ref())\n                .await?;",
@@ -36800,7 +36800,7 @@
     "bb27": {
       "basic_block": 27,
       "is_cleanup": false,
-      "reading_parent": "P01/A02.15/C26",
+      "reading_parent": "P01/A02.15/C15",
       "rust_snippets": [
         {
           "code": "            world_state = sess\n                .record_step_world_state_if_changed(&world_state, step_context.as_ref())\n                .await?;",
@@ -36998,7 +36998,7 @@
     "bb28": {
       "basic_block": 28,
       "is_cleanup": false,
-      "reading_parent": "P01/A02.15/C26",
+      "reading_parent": "P01/A02.15/C15",
       "rust_snippets": [
         {
           "code": "            world_state = sess\n                .record_step_world_state_if_changed(&world_state, step_context.as_ref())\n                .await?;",
@@ -39867,7 +39867,7 @@
     "bb32": {
       "basic_block": 32,
       "is_cleanup": false,
-      "reading_parent": "P01/A03.32/C32",
+      "reading_parent": "P01/A02.15/C29",
       "rust_snippets": [
         {
           "code": "            world_state = sess",
@@ -42193,7 +42193,7 @@
     "bb34": {
       "basic_block": 34,
       "is_cleanup": false,
-      "reading_parent": "P01/A03.32/C32",
+      "reading_parent": "P01/A03.34/C34",
       "rust_snippets": [
         {
           "code": "            sess.record_reasoning_effort_override(step_context.as_ref())",
@@ -43055,7 +43055,7 @@
     "bb35": {
       "basic_block": 35,
       "is_cleanup": false,
-      "reading_parent": "P01/A03.32/C32",
+      "reading_parent": "P01/A03.34/C34",
       "rust_snippets": [
         {
           "code": "            sess.record_reasoning_effort_override(step_context.as_ref())",
@@ -43256,7 +43256,7 @@
     "bb36": {
       "basic_block": 36,
       "is_cleanup": false,
-      "reading_parent": "P01/A03.32/C32",
+      "reading_parent": "P01/A03.34/C34",
       "rust_snippets": [
         {
           "code": "                .await;",
@@ -43558,7 +43558,7 @@
     "bb37": {
       "basic_block": 37,
       "is_cleanup": false,
-      "reading_parent": "ROOT",
+      "reading_parent": "P01/A03.34/C34",
       "rust_snippets": [
         {
           "code": "            sess.record_reasoning_effort_override(step_context.as_ref())\n                .await;",
@@ -44248,7 +44248,7 @@
     "bb38": {
       "basic_block": 38,
       "is_cleanup": false,
-      "reading_parent": "P01/A03.32/C38",
+      "reading_parent": "P01/A03.34/C34",
       "rust_snippets": [
         {
           "code": "                .await;",
@@ -45333,7 +45333,7 @@
     "bb39": {
       "basic_block": 39,
       "is_cleanup": false,
-      "reading_parent": "P01/A03.32/C38",
+      "reading_parent": "P01/A03.34/C34",
       "rust_snippets": [
         {
           "code": "            sess.record_reasoning_effort_override(step_context.as_ref())\n                .await;",
@@ -46120,7 +46120,7 @@
     "bb40": {
       "basic_block": 40,
       "is_cleanup": false,
-      "reading_parent": "P01/A03.32/C38",
+      "reading_parent": "P01/A03.34/C34",
       "rust_snippets": [
         {
           "code": "                .await;",
@@ -46922,7 +46922,7 @@
     "bb42": {
       "basic_block": 42,
       "is_cleanup": false,
-      "reading_parent": "P01/A03.32/C42",
+      "reading_parent": "P01/A03.34/C34",
       "rust_snippets": [],
       "sourceRangeReason": "No precise semantic span; original MIR source_info retained.",
       "source_context_only": true,
@@ -55860,7 +55860,7 @@
     "bb6": {
       "basic_block": 6,
       "is_cleanup": false,
-      "reading_parent": "ROOT",
+      "reading_parent": "P01/A01.1/C1",
       "rust_snippets": [
         {
           "code": "            super::time_reminder::maybe_record_current_time_reminder(\n                sess.as_ref(),\n                turn_context.as_ref(),\n                &window_id,\n            )\n            .await?;",
@@ -58404,7 +58404,7 @@
     "bb7": {
       "basic_block": 7,
       "is_cleanup": false,
-      "reading_parent": "P01/A01.1/C7",
+      "reading_parent": "P01/A01.1/C1",
       "rust_snippets": [
         {
           "code": "            .await?;",
@@ -62939,7 +62939,7 @@
     "bb8": {
       "basic_block": 8,
       "is_cleanup": false,
-      "reading_parent": "P01/A01.1/C7",
+      "reading_parent": "P01/A01.1/C1",
       "rust_snippets": [
         {
           "code": "            super::time_reminder::maybe_record_current_time_reminder(\n                sess.as_ref(),\n                turn_context.as_ref(),\n                &window_id,\n            )\n            .await?;",
@@ -65117,7 +65117,7 @@
     "bb86": {
       "basic_block": 86,
       "is_cleanup": false,
-      "reading_parent": "ROOT",
+      "reading_parent": "P01/A04.43/C84",
       "rust_snippets": [
         {
           "code": "            let sampling_request_input: Vec<ResponseItem> = async {\n                sess.clone_history()\n                    .await\n                    .for_prompt(&step_context.settings.model_info.input_modalities)\n            }\n            .instrument(trace_span!(\"run_turn.prepare_sampling_request_input\"))\n            .await;",
@@ -65886,7 +65886,7 @@
     "bb87": {
       "basic_block": 87,
       "is_cleanup": false,
-      "reading_parent": "P01/A04.43/C87",
+      "reading_parent": "P01/A04.43/C84",
       "rust_snippets": [
         {
           "code": "            .await;",
@@ -67129,7 +67129,7 @@
     "bb88": {
       "basic_block": 88,
       "is_cleanup": false,
-      "reading_parent": "P01/A04.43/C87",
+      "reading_parent": "P01/A04.43/C84",
       "rust_snippets": [
         {
           "code": "            let sampling_request_input: Vec<ResponseItem> = async {\n                sess.clone_history()\n                    .await\n                    .for_prompt(&step_context.settings.model_info.input_modalities)\n            }\n            .instrument(trace_span!(\"run_turn.prepare_sampling_request_input\"))\n            .await;",
@@ -67775,7 +67775,7 @@
     "bb89": {
       "basic_block": 89,
       "is_cleanup": false,
-      "reading_parent": "P01/A04.43/C87",
+      "reading_parent": "P01/A04.43/C84",
       "rust_snippets": [
         {
           "code": "            .await;",
@@ -67988,7 +67988,7 @@
     "bb9": {
       "basic_block": 9,
       "is_cleanup": false,
-      "reading_parent": "P01/A01.1/C7",
+      "reading_parent": "P01/A01.1/C1",
       "rust_snippets": [
         {
           "code": "            .await?;",
@@ -68775,7 +68775,7 @@
     "bb91": {
       "basic_block": 91,
       "is_cleanup": false,
-      "reading_parent": "P01/A04.43/C91",
+      "reading_parent": "P01/A04.43/C84",
       "rust_snippets": [
         {
           "code": "            let sampling_request_input: Vec<ResponseItem> = async {\n                sess.clone_history()\n                    .await\n                    .for_prompt(&step_context.settings.model_info.input_modalities)\n            }\n            .instrument(trace_span!(\"run_turn.prepare_sampling_request_input\"))\n            .await;",
@@ -77917,23 +77917,17 @@
           "end_line": 509,
           "file": "core/src/session/turn.rs",
           "start_line": 507
+        },
+        {
+          "code": "            sess.record_reasoning_effort_override(step_context.as_ref())",
+          "end_line": 512,
+          "file": "core/src/session/turn.rs",
+          "start_line": 512
         }
       ]
     },
-    "P01/A03.32": {
+    "P01/A03.34": {
       "rust_snippets": [
-        {
-          "code": "            world_state = sess",
-          "end_line": 507,
-          "file": "core/src/session/turn.rs",
-          "start_line": 507
-        },
-        {
-          "code": "                .await?;",
-          "end_line": 509,
-          "file": "core/src/session/turn.rs",
-          "start_line": 509
-        },
         {
           "code": "            sess.record_reasoning_effort_override(step_context.as_ref())\n                .await;",
           "end_line": 513,
@@ -77994,7 +77988,7 @@
         }
       ]
     },
-    "sem:P02:sample": {
+    "sem:P02:sampling": {
       "rust_snippets": [
         {
           "code": "            run_sampling_request(\n                Arc::clone(&sess),\n                Arc::clone(&step_context),\n                Arc::clone(&turn_context.extension_data),\n                Arc::clone(&turn_diff_tracker),\n                &mut client_session,\n                sampling_request_input,\n                cancellation_token.child_token(),\n            )\n            .await",
@@ -78013,6 +78007,7 @@
         "bb3",
         "bb4",
         "bb5",
+        "bb6",
         "bb7",
         "bb8",
         "bb9",
@@ -78023,7 +78018,7 @@
         "bb17"
       ],
       "depth": 2,
-      "name": "按需记录当前时间提醒并确认可继续"
+      "name": "按需记录当前时间提醒"
     },
     "P01/A02.15": {
       "basic_block_refs": [
@@ -78031,6 +78026,7 @@
         "bb18",
         "bb19",
         "bb20",
+        "bb21",
         "bb22",
         "bb23",
         "bb24",
@@ -78039,37 +78035,39 @@
         "bb28",
         "bb29",
         "bb30",
-        "bb31"
+        "bb31",
+        "bb32"
       ],
       "depth": 2,
-      "name": "记录世界状态并取得新基线"
+      "name": "记录本步变化的 `world_state`"
     },
-    "P01/A03.32": {
+    "P01/A03.34": {
       "basic_block_refs": [
-        "bb32",
         "bb34",
         "bb35",
         "bb36",
+        "bb37",
         "bb38",
         "bb39",
         "bb40",
         "bb42"
       ],
       "depth": 2,
-      "name": "接纳新世界状态并按需记录推理覆盖"
+      "name": "记录本步 `reasoning_effort` override"
     },
     "P01/A04.43": {
       "basic_block_refs": [
         "bb43",
         "bb84",
         "bb85",
+        "bb86",
         "bb87",
         "bb88",
         "bb89",
         "bb91"
       ],
       "depth": 2,
-      "name": "把历史整理为模型可用输入"
+      "name": "从 `history` 准备模型输入"
     },
     "P02/A01.92": {
       "basic_block_refs": [
@@ -78081,6 +78079,7 @@
         "bb97",
         "bb98",
         "bb99",
+        "bb100",
         "bb101",
         "bb102",
         "bb103",
@@ -78088,7 +78087,7 @@
         "bb106"
       ],
       "depth": 2,
-      "name": "执行采样并交还请求结果"
+      "name": "提交本次 `sampling` 请求并交还结果"
     },
     "sem:P01:context": {
       "basic_block_refs": [
@@ -78097,6 +78096,7 @@
         "bb3",
         "bb4",
         "bb5",
+        "bb6",
         "bb7",
         "bb8",
         "bb9",
@@ -78109,6 +78109,7 @@
         "bb18",
         "bb19",
         "bb20",
+        "bb21",
         "bb22",
         "bb23",
         "bb24",
@@ -78122,28 +78123,30 @@
         "bb34",
         "bb35",
         "bb36",
+        "bb37",
         "bb38",
         "bb39",
         "bb40",
         "bb42"
       ],
       "depth": 1.5,
-      "name": "为采样保留本步上下文"
+      "name": "把当前步上下文记入 `history`"
     },
     "sem:P01:input": {
       "basic_block_refs": [
         "bb43",
         "bb84",
         "bb85",
+        "bb86",
         "bb87",
         "bb88",
         "bb89",
         "bb91"
       ],
       "depth": 1.5,
-      "name": "从历史生成本次模型输入"
+      "name": "为本次模型请求生成可用输入"
     },
-    "sem:P02:sample": {
+    "sem:P02:sampling": {
       "basic_block_refs": [
         "bb92",
         "bb93",
@@ -78153,6 +78156,7 @@
         "bb97",
         "bb98",
         "bb99",
+        "bb100",
         "bb101",
         "bb102",
         "bb103",
@@ -78160,7 +78164,7 @@
         "bb106"
       ],
       "depth": 1.5,
-      "name": "取得模型输出与本次采样输入"
+      "name": "交回 `SamplingRequestResult` 与实际输入"
     }
   }
 }

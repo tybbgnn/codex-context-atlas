@@ -9,13 +9,13 @@
       "sourceNodeRef": "e0659b8c39c457de7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
     },
     {
-      "actorId": "actor-crate-0",
+      "actorId": "actor-ancestor-7f347cbdcc2b",
       "children": [
         {
-          "actorId": "actor-module-0",
+          "actorId": "actor-ancestor-c5797c4b3193",
           "children": [
             {
-              "actorId": "actor-time",
+              "actorId": "actor-body-1",
               "bodyRef": "1689e5505ac2102c7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
               "color": "#42758c",
               "kind": "body",
@@ -29,14 +29,14 @@
           "sourceNodeRef": "c5797c4b319328f47f347cbdcc2b778a"
         },
         {
-          "actorId": "actor-module-1",
+          "actorId": "actor-ancestor-249d9ca6da1f",
           "children": [
             {
-              "actorId": "actor-world",
+              "actorId": "actor-body-2",
               "bodyRef": "eed7cff1c759c58a7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
               "color": "#42758c",
               "kind": "body",
-              "label": "record_step_world_state_if_changed::{closure#0}",
+              "label": "Session::record_step_world_state_if_changed::{closure#0}",
               "sourceNodeRef": "eed7cff1c759c58a7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
             }
           ],
@@ -46,14 +46,14 @@
           "sourceNodeRef": "249d9ca6da1ff0d07f347cbdcc2b778a"
         },
         {
-          "actorId": "actor-module-2",
+          "actorId": "actor-ancestor-97e4af704a39",
           "children": [
             {
-              "actorId": "actor-effort",
+              "actorId": "actor-body-3",
               "bodyRef": "8317183245901d1a7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
               "color": "#42758c",
               "kind": "body",
-              "label": "record_reasoning_effort_override::{closure#0}",
+              "label": "Session::record_reasoning_effort_override::{closure#0}",
               "sourceNodeRef": "8317183245901d1a7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
             }
           ],
@@ -63,10 +63,10 @@
           "sourceNodeRef": "97e4af704a39226c7f347cbdcc2b778a"
         },
         {
-          "actorId": "actor-module-3",
+          "actorId": "actor-ancestor-c0b0acd6f47d",
           "children": [
             {
-              "actorId": "actor-input",
+              "actorId": "actor-body-4",
               "bodyRef": "c3a273c4e2967a3a7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
               "color": "#42758c",
               "kind": "body",
@@ -74,7 +74,7 @@
               "sourceNodeRef": "c3a273c4e2967a3a7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
             },
             {
-              "actorId": "actor-sample",
+              "actorId": "actor-body-5",
               "bodyRef": "e6aba10dbc0532157f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
               "color": "#42758c",
               "kind": "body",
@@ -96,58 +96,72 @@
   ],
   "branchRoles": [
     {
-      "branchRef": "time-success",
-      "controlRef": "control-time",
-      "role": "normal"
+      "branchRef": "result-1-ok",
+      "controlRef": "result-1",
+      "role": "business"
     },
     {
-      "branchRef": "time-error",
-      "controlRef": "control-time",
-      "role": "terminate-turn"
+      "branchRef": "result-1-err",
+      "controlRef": "result-1",
+      "role": "business"
     },
     {
-      "branchRef": "world-success",
-      "controlRef": "control-world",
-      "role": "normal"
+      "branchRef": "result-2-ok",
+      "controlRef": "result-2",
+      "role": "business"
     },
     {
-      "branchRef": "world-error",
-      "controlRef": "control-world",
-      "role": "terminate-turn"
+      "branchRef": "result-2-err",
+      "controlRef": "result-2",
+      "role": "business"
     }
   ],
   "caseIndex": [],
   "controlOwners": [
     {
-      "controlRef": "control-time",
+      "controlRef": "control-1",
       "owner": {
         "kind": "action",
         "ref": "P01/A01.1"
       }
     },
     {
-      "controlRef": "control-world",
+      "controlRef": "result-1",
+      "owner": {
+        "kind": "action",
+        "ref": "P01/A01.1"
+      }
+    },
+    {
+      "controlRef": "control-2",
       "owner": {
         "kind": "action",
         "ref": "P01/A02.15"
       }
     },
     {
-      "controlRef": "control-effort",
+      "controlRef": "result-2",
       "owner": {
         "kind": "action",
-        "ref": "P01/A03.32"
+        "ref": "P01/A02.15"
       }
     },
     {
-      "controlRef": "control-input",
+      "controlRef": "control-3",
+      "owner": {
+        "kind": "action",
+        "ref": "P01/A03.34"
+      }
+    },
+    {
+      "controlRef": "control-4",
       "owner": {
         "kind": "action",
         "ref": "P01/A04.43"
       }
     },
     {
-      "controlRef": "control-sample",
+      "controlRef": "control-5",
       "owner": {
         "kind": "action",
         "ref": "P02/A01.92"
@@ -156,88 +170,96 @@
   ],
   "controls": [
     {
+      "id": "control-1",
+      "invocationRef": "invocation-1",
+      "kind": "sequence",
+      "messages": [
+        "request-1",
+        "return-1"
+      ]
+    },
+    {
+      "id": "control-2",
+      "invocationRef": "invocation-2",
+      "kind": "sequence",
+      "messages": [
+        "request-2",
+        "return-2"
+      ]
+    },
+    {
+      "id": "control-3",
+      "invocationRef": "invocation-3",
+      "kind": "sequence",
+      "messages": [
+        "request-3",
+        "return-3"
+      ]
+    },
+    {
+      "id": "control-4",
+      "invocationRef": "invocation-4",
+      "kind": "sequence",
+      "messages": [
+        "request-4",
+        "return-4"
+      ]
+    },
+    {
+      "id": "control-5",
+      "invocationRef": "invocation-5",
+      "kind": "sequence",
+      "messages": [
+        "request-5",
+        "return-5"
+      ]
+    },
+    {
       "branches": [
         {
           "children": [],
-          "condition": "记录成功",
-          "id": "time-success",
-          "outcome": "继续准备本步请求"
+          "condition": "成功",
+          "id": "result-1-ok",
+          "outcome": "继续记录本步环境状态"
         },
         {
           "children": [],
-          "condition": "记录失败",
-          "id": "time-error",
-          "outcome": "交还错误并结束本次请求准备"
+          "condition": "失败",
+          "id": "result-1-err",
+          "outcome": "交还该准备错误，结束本次请求块"
         }
       ],
-      "condition": "确认当前时间提醒记录结果",
-      "id": "control-time",
-      "invocationRef": "inv-time",
-      "kind": "alt",
-      "messages": [
-        "request-time",
-        "return-time"
-      ]
+      "condition": "时间提醒结果",
+      "id": "result-1",
+      "kind": "alt"
     },
     {
       "branches": [
         {
           "children": [],
-          "condition": "记录成功",
-          "id": "world-success",
-          "outcome": "继续准备本步请求"
+          "condition": "成功",
+          "id": "result-2-ok",
+          "outcome": "更新 `world_state` 并记录推理设置"
         },
         {
           "children": [],
-          "condition": "记录失败",
-          "id": "world-error",
-          "outcome": "交还错误并结束本次请求准备"
+          "condition": "失败",
+          "id": "result-2-err",
+          "outcome": "交还该准备错误，结束本次请求块"
         }
       ],
-      "condition": "确认世界状态基线记录结果",
-      "id": "control-world",
-      "invocationRef": "inv-world",
-      "kind": "alt",
-      "messages": [
-        "request-world",
-        "return-world"
-      ]
-    },
-    {
-      "id": "control-effort",
-      "invocationRef": "inv-effort",
-      "kind": "sequence",
-      "messages": [
-        "request-effort",
-        "return-effort"
-      ]
-    },
-    {
-      "id": "control-input",
-      "invocationRef": "inv-input",
-      "kind": "sequence",
-      "messages": [
-        "request-input",
-        "return-input"
-      ]
-    },
-    {
-      "id": "control-sample",
-      "invocationRef": "inv-sample",
-      "kind": "sequence",
-      "messages": [
-        "request-sample",
-        "return-sample"
-      ]
+      "condition": "环境状态记录结果",
+      "id": "result-2",
+      "kind": "alt"
     }
   ],
   "dataKind": "source-backed",
   "definitionNotes": [],
   "deliveryMode": "real-flow",
   "display": {
-    "description": "记录本步上下文、整理模型输入并执行一次采样请求。",
-    "sourceLabel": "core/src/session/turn.rs:499–534",
-    "title": "采样请求块：从上下文准备到采样结果"
+    "description": "codex_core::session::turn::run_turn::{closure#0}::{closure#1}",
+    "sourceLabel": "core/src/session/turn.rs",
+    "title": "run_turn::{closure#0}::{closure#1}"
   },
   "execution": {
     "artifacts": [
@@ -252,137 +274,151 @@
     "attachments": [
       {
         "evidenceRefs": [
-          "evidence-78489e507c318eee2170758f"
+          "evidence-77b6419840216269640a0848"
         ],
-        "id": "attachment-purpose-time",
+        "id": "attachment-purpose-1",
         "kind": "purpose",
         "ownerActionRef": "P01/A01.1",
-        "purposeRef": "purpose-time"
+        "purposeRef": "purpose-1"
       },
       {
         "evidenceRefs": [
-          "evidence-e9a970120cdc4be2be1861d1"
+          "evidence-dd4b5f51f9a83e77364e7fe4"
         ],
-        "id": "attachment-purpose-world",
+        "id": "attachment-purpose-2",
         "kind": "purpose",
         "ownerActionRef": "P01/A02.15",
-        "purposeRef": "purpose-world"
+        "purposeRef": "purpose-2"
       },
       {
         "evidenceRefs": [
-          "evidence-da425f27a1e60e50d47a9ae9"
+          "evidence-7f368a891369c510cafd38dc"
         ],
-        "id": "attachment-purpose-effort",
+        "id": "attachment-purpose-3",
         "kind": "purpose",
-        "ownerActionRef": "P01/A03.32",
-        "purposeRef": "purpose-effort"
+        "ownerActionRef": "P01/A03.34",
+        "purposeRef": "purpose-3"
       },
       {
         "evidenceRefs": [
-          "evidence-9682762e88114d6474b6a454"
+          "evidence-3a76f3b7f7983569f1fec90a"
         ],
-        "id": "attachment-purpose-input",
+        "id": "attachment-purpose-4",
         "kind": "purpose",
         "ownerActionRef": "P01/A04.43",
-        "purposeRef": "purpose-input"
+        "purposeRef": "purpose-4"
       },
       {
         "evidenceRefs": [
-          "evidence-602b0f95fe545c440e5a2c5f"
+          "evidence-0cf5701909a7cd6ea0b6cadd"
         ],
-        "id": "attachment-purpose-sample",
+        "id": "attachment-purpose-5",
         "kind": "purpose",
         "ownerActionRef": "P02/A01.92",
-        "purposeRef": "purpose-sample"
+        "purposeRef": "purpose-5"
       }
     ],
     "controlBindings": [
       {
-        "controlRef": "control-time",
+        "controlRef": "control-1",
         "evidenceRefs": [
-          "evidence-a35c08c3ee9c1afc9f4caecc"
+          "evidence-11a036bbfc452fb4fe7354b7"
         ],
-        "nodeRef": "exec-time"
+        "nodeRef": "exec-1"
       },
       {
-        "controlRef": "control-world",
+        "controlRef": "result-1",
         "evidenceRefs": [
-          "evidence-3694a38a7214f9eb00b92226"
+          "evidence-c4e2f19d52cfc45c315a1c80"
         ],
-        "nodeRef": "exec-world"
+        "nodeRef": "exec-1"
       },
       {
-        "controlRef": "control-effort",
+        "controlRef": "control-2",
         "evidenceRefs": [
-          "evidence-76171af5052e316079308b8d"
+          "evidence-51b1f3d21f69630baf03c1ec"
         ],
-        "nodeRef": "exec-effort"
+        "nodeRef": "exec-2"
       },
       {
-        "controlRef": "control-input",
+        "controlRef": "result-2",
         "evidenceRefs": [
-          "evidence-3fe25a9afbb6e563751acbe3"
+          "evidence-6c820d809b03bf6c32a44c11"
         ],
-        "nodeRef": "exec-input"
+        "nodeRef": "exec-2"
       },
       {
-        "controlRef": "control-sample",
+        "controlRef": "control-3",
         "evidenceRefs": [
-          "evidence-31e33d0794fef0dfc7b34643"
+          "evidence-718245fe89224097da129758"
         ],
-        "nodeRef": "exec-sample"
+        "nodeRef": "exec-3"
+      },
+      {
+        "controlRef": "control-4",
+        "evidenceRefs": [
+          "evidence-838bf1964a4a3fe925d8fe1d"
+        ],
+        "nodeRef": "exec-4"
+      },
+      {
+        "controlRef": "control-5",
+        "evidenceRefs": [
+          "evidence-f55c6c2a4d026434e5c83d5d"
+        ],
+        "nodeRef": "exec-5"
       }
     ],
     "decisions": [
       {
         "branchBindings": [
           {
-            "branchRef": "time-success",
+            "branchRef": "result-1-ok",
             "values": [
-              "success"
+              "ok"
             ]
           },
           {
-            "branchRef": "time-error",
+            "branchRef": "result-1-err",
             "values": [
               "error"
             ]
           }
         ],
-        "controlRef": "control-time",
+        "controlRef": "result-1",
         "evidenceRefs": [
-          "evidence-be7ccb60379b0afebee1c557"
+          "evidence-53079826b038bc5c585465c4"
         ],
-        "id": "decision-bb14",
+        "id": "decision-14",
         "stability": "turn",
         "values": [
-          "success",
+          "ok",
           "error"
         ]
       },
       {
         "branchBindings": [
           {
-            "branchRef": "world-success",
+            "branchRef": "result-2-ok",
             "values": [
-              "success"
+              "ok"
             ]
           },
           {
-            "branchRef": "world-error",
+            "branchRef": "result-2-err",
             "values": [
               "error"
             ]
           }
         ],
-        "controlRef": "control-world",
+        "controlRef": "result-2",
         "evidenceRefs": [
-          "evidence-cbb17f1fec30aa77f3c6394c"
+          "evidence-7eae73557496cdb5611937b6"
         ],
-        "id": "decision-bb28",
+        "id": "decision-28",
         "stability": "turn",
         "values": [
-          "success",
+          "ok",
           "error"
         ]
       }
@@ -390,121 +426,121 @@
     "edges": [
       {
         "evidenceRefs": [
-          "evidence-cdc999e87c4359df1fab7680"
+          "evidence-ad011576f0dd16581ddeafa9"
         ],
         "from": "exec-entry",
         "guards": [],
-        "id": "entry-time",
+        "id": "execution-edge-0",
         "kind": "flow",
-        "to": "exec-time"
+        "to": "exec-1"
       },
       {
         "evidenceRefs": [
-          "evidence-0c919b70cbf1ea55a717e152"
+          "evidence-3e37b57fa9dff53c35d646dd"
         ],
-        "from": "exec-time",
+        "from": "exec-1",
         "guards": [],
-        "id": "time-result",
+        "id": "execution-edge-1",
         "kind": "flow",
-        "to": "exec-time-result"
+        "to": "exec-decision-14"
       },
       {
         "evidenceRefs": [
-          "evidence-cb13b07eb388741f9a0019d6"
+          "evidence-9d7e56f1f14dcf5172228a7e"
         ],
-        "from": "exec-time-result",
+        "from": "exec-decision-14",
         "guards": [
           {
-            "decisionRef": "decision-bb14",
-            "value": "success"
+            "decisionRef": "decision-14",
+            "value": "ok"
           }
         ],
-        "id": "time-success",
+        "id": "execution-edge-2",
         "kind": "branch",
-        "to": "exec-world"
+        "to": "exec-2"
       },
       {
         "evidenceRefs": [
-          "evidence-6124ab16cafd63f2669faf62"
+          "evidence-867283cfcdd0d27a00ad1093"
         ],
-        "from": "exec-time-result",
+        "from": "exec-decision-14",
         "guards": [
           {
-            "decisionRef": "decision-bb14",
+            "decisionRef": "decision-14",
             "value": "error"
           }
         ],
-        "id": "time-error",
+        "id": "execution-edge-3",
         "kind": "branch",
-        "to": "exec-time-error"
+        "to": "exec-error-time"
       },
       {
         "evidenceRefs": [
-          "evidence-f531e516440b7de669b6fe6e"
+          "evidence-29800a24cc220ea759053bfb"
         ],
-        "from": "exec-world",
+        "from": "exec-2",
         "guards": [],
-        "id": "world-result",
+        "id": "execution-edge-4",
         "kind": "flow",
-        "to": "exec-world-result"
+        "to": "exec-decision-28"
       },
       {
         "evidenceRefs": [
-          "evidence-5f53afe63a91e4b78850c588"
+          "evidence-f709c3fd2bb61ee93cdf0b67"
         ],
-        "from": "exec-world-result",
+        "from": "exec-decision-28",
         "guards": [
           {
-            "decisionRef": "decision-bb28",
-            "value": "success"
+            "decisionRef": "decision-28",
+            "value": "ok"
           }
         ],
-        "id": "world-success",
+        "id": "execution-edge-5",
         "kind": "branch",
-        "to": "exec-effort"
+        "to": "exec-3"
       },
       {
         "evidenceRefs": [
-          "evidence-9fbced548ab976f3372e7005"
+          "evidence-43227ea6677624d67782d38a"
         ],
-        "from": "exec-world-result",
+        "from": "exec-decision-28",
         "guards": [
           {
-            "decisionRef": "decision-bb28",
+            "decisionRef": "decision-28",
             "value": "error"
           }
         ],
-        "id": "world-error",
+        "id": "execution-edge-6",
         "kind": "branch",
-        "to": "exec-world-error"
+        "to": "exec-error-world"
       },
       {
         "evidenceRefs": [
-          "evidence-75ef360ee1c7d6d981122a50"
+          "evidence-b2c62727ebab0ae16ea73840"
         ],
-        "from": "exec-effort",
+        "from": "exec-3",
         "guards": [],
-        "id": "effort-input",
+        "id": "execution-edge-7",
         "kind": "flow",
-        "to": "exec-input"
+        "to": "exec-4"
       },
       {
         "evidenceRefs": [
-          "evidence-767aa94d8a7a38993942cfab"
+          "evidence-b051a00ba3acc44ef787e7bd"
         ],
-        "from": "exec-input",
+        "from": "exec-4",
         "guards": [],
-        "id": "input-sample",
+        "id": "execution-edge-8",
         "kind": "flow",
-        "to": "exec-sample"
+        "to": "exec-5"
       },
       {
         "evidenceRefs": [
-          "evidence-8643d05a55b39eeb657bb8f9"
+          "evidence-381a817c964dcfb0da50afc5"
         ],
-        "from": "exec-sample",
+        "from": "exec-5",
         "guards": [],
-        "id": "sample-return",
+        "id": "execution-edge-9",
         "kind": "flow",
         "to": "exec-return"
       }
@@ -533,11 +569,11 @@
           "kind": "action",
           "subjectRef": "P01/A01.1",
           "targets": [
-            "exec-time"
+            "exec-1"
           ]
         },
-        "id": "evidence-74f1338a9afdee1373b8bda6",
-        "locator": "bb1,bb2,bb3,bb4,bb5,bb7,bb8,bb9,bb12,bb13,bb14,bb16,bb17",
+        "id": "evidence-399108b86902c92328baeef9",
+        "locator": "bb1,bb2,bb3,bb4,bb5,bb6,bb7,bb8,bb9,bb12,bb13,bb14,bb16,bb17",
         "quote": "            super::time_reminder::maybe_record_current_time_reminder(\n                sess.as_ref(),\n                turn_context.as_ref(),\n                &window_id,\n            )\n            .await?;"
       },
       {
@@ -547,11 +583,11 @@
           "kind": "action",
           "subjectRef": "P01/A02.15",
           "targets": [
-            "exec-world"
+            "exec-2"
           ]
         },
-        "id": "evidence-09b3048e028aee6b9717d89f",
-        "locator": "bb15,bb18,bb19,bb20,bb22,bb23,bb24,bb26,bb27,bb28,bb29,bb30,bb31",
+        "id": "evidence-415d95529a8d4939ed32790e",
+        "locator": "bb15,bb18,bb19,bb20,bb21,bb22,bb23,bb24,bb26,bb27,bb28,bb29,bb30,bb31,bb32",
         "quote": "            .await?;"
       },
       {
@@ -559,14 +595,14 @@
         "claim": {
           "conditions": [],
           "kind": "action",
-          "subjectRef": "P01/A03.32",
+          "subjectRef": "P01/A03.34",
           "targets": [
-            "exec-effort"
+            "exec-3"
           ]
         },
-        "id": "evidence-3aba50471ce2a5bd62b35218",
-        "locator": "bb32,bb34,bb35,bb36,bb38,bb39,bb40,bb42",
-        "quote": "            world_state = sess"
+        "id": "evidence-d5b2976cbd2a61f4b7eedcad",
+        "locator": "bb34,bb35,bb36,bb37,bb38,bb39,bb40,bb42",
+        "quote": "            sess.record_reasoning_effort_override(step_context.as_ref())"
       },
       {
         "artifactRef": "source-function",
@@ -575,11 +611,11 @@
           "kind": "action",
           "subjectRef": "P01/A04.43",
           "targets": [
-            "exec-input"
+            "exec-4"
           ]
         },
-        "id": "evidence-3c457e89d02656add8532532",
-        "locator": "bb43,bb84,bb85,bb87,bb88,bb89,bb91",
+        "id": "evidence-9fca0f2bad974cd7f9686979",
+        "locator": "bb43,bb84,bb85,bb86,bb87,bb88,bb89,bb91",
         "quote": "            let sampling_request_input: Vec<ResponseItem> = async {\n                sess.clone_history()\n                    .await\n                    .for_prompt(&step_context.settings.model_info.input_modalities)\n            }\n            .instrument(trace_span!(\"run_turn.prepare_sampling_request_input\"))"
       },
       {
@@ -589,11 +625,11 @@
           "kind": "action",
           "subjectRef": "P02/A01.92",
           "targets": [
-            "exec-sample"
+            "exec-5"
           ]
         },
-        "id": "evidence-f3bb0f4962a8bdff24033bcc",
-        "locator": "bb92,bb93,bb94,bb95,bb96,bb97,bb98,bb99,bb101,bb102,bb103,bb105,bb106",
+        "id": "evidence-b8fe50bea06697eeae907aa7",
+        "locator": "bb92,bb93,bb94,bb95,bb96,bb97,bb98,bb99,bb100,bb101,bb102,bb103,bb105,bb106",
         "quote": "                Arc::clone(&sess),"
       },
       {
@@ -601,12 +637,12 @@
         "claim": {
           "conditions": [],
           "kind": "decision",
-          "subjectRef": "exec-time-result",
+          "subjectRef": "exec-decision-14",
           "targets": [
-            "decision-bb14"
+            "decision-14"
           ]
         },
-        "id": "evidence-1ea4475e51868d6e89463d25",
+        "id": "evidence-138079795413ba2c41891457",
         "locator": "bb14",
         "quote": "            super::time_reminder::maybe_record_current_time_reminder(\n                sess.as_ref(),\n                turn_context.as_ref(),\n                &window_id,\n            )\n            .await?;"
       },
@@ -615,12 +651,12 @@
         "claim": {
           "conditions": [],
           "kind": "decision",
-          "subjectRef": "exec-world-result",
+          "subjectRef": "exec-decision-28",
           "targets": [
-            "decision-bb28"
+            "decision-28"
           ]
         },
-        "id": "evidence-1821381c4cd5c3a1758519cf",
+        "id": "evidence-f44d3485b73fbb457b258004",
         "locator": "bb28",
         "quote": "            world_state = sess\n                .record_step_world_state_if_changed(&world_state, step_context.as_ref())\n                .await?;"
       },
@@ -629,12 +665,12 @@
         "claim": {
           "conditions": [],
           "kind": "terminal",
-          "subjectRef": "exec-time-error",
+          "subjectRef": "exec-error-time",
           "targets": [
             "error"
           ]
         },
-        "id": "evidence-da4d487f4d7e46790fc84be4",
+        "id": "evidence-f6c7839e3638c6760d14b566",
         "locator": "bb16,bb17,bb107",
         "quote": "            super::time_reminder::maybe_record_current_time_reminder(\n                sess.as_ref(),\n                turn_context.as_ref(),\n                &window_id,\n            )\n            .await?;"
       },
@@ -643,12 +679,12 @@
         "claim": {
           "conditions": [],
           "kind": "terminal",
-          "subjectRef": "exec-world-error",
+          "subjectRef": "exec-error-world",
           "targets": [
             "error"
           ]
         },
-        "id": "evidence-3274bdddf0bc598c93b1f66f",
+        "id": "evidence-67fe77be528704622da7cf03",
         "locator": "bb30,bb31,bb107",
         "quote": "            world_state = sess\n                .record_step_world_state_if_changed(&world_state, step_context.as_ref())\n                .await?;"
       },
@@ -671,14 +707,14 @@
         "claim": {
           "conditions": [],
           "kind": "relation",
-          "subjectRef": "entry-time",
+          "subjectRef": "execution-edge-0",
           "targets": [
             "exec-entry",
-            "exec-time",
+            "exec-1",
             "flow"
           ]
         },
-        "id": "evidence-cdc999e87c4359df1fab7680",
+        "id": "evidence-ad011576f0dd16581ddeafa9",
         "locator": "bb1",
         "quote": "            super::time_reminder::maybe_record_current_time_reminder(\n                sess.as_ref(),\n                turn_context.as_ref(),\n                &window_id,\n            )\n            .await?;"
       },
@@ -687,14 +723,14 @@
         "claim": {
           "conditions": [],
           "kind": "relation",
-          "subjectRef": "time-result",
+          "subjectRef": "execution-edge-1",
           "targets": [
-            "exec-time",
-            "exec-time-result",
+            "exec-1",
+            "exec-decision-14",
             "flow"
           ]
         },
-        "id": "evidence-0c919b70cbf1ea55a717e152",
+        "id": "evidence-3e37b57fa9dff53c35d646dd",
         "locator": "bb14",
         "quote": "            super::time_reminder::maybe_record_current_time_reminder(\n                sess.as_ref(),\n                turn_context.as_ref(),\n                &window_id,\n            )\n            .await?;"
       },
@@ -702,17 +738,17 @@
         "artifactRef": "source-function",
         "claim": {
           "conditions": [
-            "decision-bb14=success"
+            "decision-14=ok"
           ],
           "kind": "relation",
-          "subjectRef": "time-success",
+          "subjectRef": "execution-edge-2",
           "targets": [
-            "exec-time-result",
-            "exec-world",
+            "exec-decision-14",
+            "exec-2",
             "branch"
           ]
         },
-        "id": "evidence-cb13b07eb388741f9a0019d6",
+        "id": "evidence-9d7e56f1f14dcf5172228a7e",
         "locator": "m14.0",
         "quote": "            super::time_reminder::maybe_record_current_time_reminder(\n                sess.as_ref(),\n                turn_context.as_ref(),\n                &window_id,\n            )\n            .await?;"
       },
@@ -720,18 +756,18 @@
         "artifactRef": "source-function",
         "claim": {
           "conditions": [
-            "decision-bb14=error"
+            "decision-14=error"
           ],
           "kind": "relation",
-          "subjectRef": "time-error",
+          "subjectRef": "execution-edge-3",
           "targets": [
-            "exec-time-result",
-            "exec-time-error",
+            "exec-decision-14",
+            "exec-error-time",
             "branch"
           ]
         },
-        "id": "evidence-6124ab16cafd63f2669faf62",
-        "locator": "m14.1,m16.0,m17.0",
+        "id": "evidence-867283cfcdd0d27a00ad1093",
+        "locator": "m14.1",
         "quote": "            super::time_reminder::maybe_record_current_time_reminder(\n                sess.as_ref(),\n                turn_context.as_ref(),\n                &window_id,\n            )\n            .await?;"
       },
       {
@@ -739,14 +775,14 @@
         "claim": {
           "conditions": [],
           "kind": "relation",
-          "subjectRef": "world-result",
+          "subjectRef": "execution-edge-4",
           "targets": [
-            "exec-world",
-            "exec-world-result",
+            "exec-2",
+            "exec-decision-28",
             "flow"
           ]
         },
-        "id": "evidence-f531e516440b7de669b6fe6e",
+        "id": "evidence-29800a24cc220ea759053bfb",
         "locator": "bb28",
         "quote": "            world_state = sess\n                .record_step_world_state_if_changed(&world_state, step_context.as_ref())\n                .await?;"
       },
@@ -754,36 +790,36 @@
         "artifactRef": "source-function",
         "claim": {
           "conditions": [
-            "decision-bb28=success"
+            "decision-28=ok"
           ],
           "kind": "relation",
-          "subjectRef": "world-success",
+          "subjectRef": "execution-edge-5",
           "targets": [
-            "exec-world-result",
-            "exec-effort",
+            "exec-decision-28",
+            "exec-3",
             "branch"
           ]
         },
-        "id": "evidence-5f53afe63a91e4b78850c588",
-        "locator": "m28.0,m29.0",
+        "id": "evidence-f709c3fd2bb61ee93cdf0b67",
+        "locator": "m28.0,m29.0,m32.0",
         "quote": "            world_state = sess\n                .record_step_world_state_if_changed(&world_state, step_context.as_ref())\n                .await?;"
       },
       {
         "artifactRef": "source-function",
         "claim": {
           "conditions": [
-            "decision-bb28=error"
+            "decision-28=error"
           ],
           "kind": "relation",
-          "subjectRef": "world-error",
+          "subjectRef": "execution-edge-6",
           "targets": [
-            "exec-world-result",
-            "exec-world-error",
+            "exec-decision-28",
+            "exec-error-world",
             "branch"
           ]
         },
-        "id": "evidence-9fbced548ab976f3372e7005",
-        "locator": "m28.1,m30.0,m31.0",
+        "id": "evidence-43227ea6677624d67782d38a",
+        "locator": "m28.1",
         "quote": "            world_state = sess\n                .record_step_world_state_if_changed(&world_state, step_context.as_ref())\n                .await?;"
       },
       {
@@ -791,14 +827,14 @@
         "claim": {
           "conditions": [],
           "kind": "relation",
-          "subjectRef": "effort-input",
+          "subjectRef": "execution-edge-7",
           "targets": [
-            "exec-effort",
-            "exec-input",
+            "exec-3",
+            "exec-4",
             "flow"
           ]
         },
-        "id": "evidence-75ef360ee1c7d6d981122a50",
+        "id": "evidence-b2c62727ebab0ae16ea73840",
         "locator": "m42.0",
         "quote": "pub(crate) async fn run_turn("
       },
@@ -807,14 +843,14 @@
         "claim": {
           "conditions": [],
           "kind": "relation",
-          "subjectRef": "input-sample",
+          "subjectRef": "execution-edge-8",
           "targets": [
-            "exec-input",
-            "exec-sample",
+            "exec-4",
+            "exec-5",
             "flow"
           ]
         },
-        "id": "evidence-767aa94d8a7a38993942cfab",
+        "id": "evidence-b051a00ba3acc44ef787e7bd",
         "locator": "m91.0",
         "quote": "            let sampling_request_input: Vec<ResponseItem> = async {\n                sess.clone_history()\n                    .await\n                    .for_prompt(&step_context.settings.model_info.input_modalities)\n            }\n            .instrument(trace_span!(\"run_turn.prepare_sampling_request_input\"))\n            .await;"
       },
@@ -823,34 +859,34 @@
         "claim": {
           "conditions": [],
           "kind": "relation",
-          "subjectRef": "sample-return",
+          "subjectRef": "execution-edge-9",
           "targets": [
-            "exec-sample",
+            "exec-5",
             "exec-return",
             "flow"
           ]
         },
-        "id": "evidence-8643d05a55b39eeb657bb8f9",
-        "locator": "m105.0,m106.0",
-        "quote": "            run_sampling_request(\n                Arc::clone(&sess),\n                Arc::clone(&step_context),\n                Arc::clone(&turn_context.extension_data),\n                Arc::clone(&turn_diff_tracker),\n                &mut client_session,\n                sampling_request_input,\n                cancellation_token.child_token(),\n            )\n            .await"
+        "id": "evidence-381a817c964dcfb0da50afc5",
+        "locator": "m106.0",
+        "quote": "pub(crate) async fn run_turn("
       },
       {
         "artifactRef": "source-function",
         "claim": {
           "conditions": [
-            "time-success=success",
-            "time-error=error"
+            "result-1-ok=ok",
+            "result-1-err=error"
           ],
           "kind": "decision",
-          "subjectRef": "decision-bb14",
+          "subjectRef": "decision-14",
           "targets": [
             "stability:turn",
-            "success",
+            "ok",
             "error",
-            "control:control-time"
+            "control:result-1"
           ]
         },
-        "id": "evidence-be7ccb60379b0afebee1c557",
+        "id": "evidence-53079826b038bc5c585465c4",
         "locator": "bb14",
         "quote": "            super::time_reminder::maybe_record_current_time_reminder(\n                sess.as_ref(),\n                turn_context.as_ref(),\n                &window_id,\n            )\n            .await?;"
       },
@@ -858,19 +894,19 @@
         "artifactRef": "source-function",
         "claim": {
           "conditions": [
-            "world-success=success",
-            "world-error=error"
+            "result-2-ok=ok",
+            "result-2-err=error"
           ],
           "kind": "decision",
-          "subjectRef": "decision-bb28",
+          "subjectRef": "decision-28",
           "targets": [
             "stability:turn",
-            "success",
+            "ok",
             "error",
-            "control:control-world"
+            "control:result-2"
           ]
         },
-        "id": "evidence-cbb17f1fec30aa77f3c6394c",
+        "id": "evidence-7eae73557496cdb5611937b6",
         "locator": "bb28",
         "quote": "            world_state = sess\n                .record_step_world_state_if_changed(&world_state, step_context.as_ref())\n                .await?;"
       },
@@ -879,13 +915,13 @@
         "claim": {
           "conditions": [],
           "kind": "control-binding",
-          "subjectRef": "control-time",
+          "subjectRef": "control-1",
           "targets": [
-            "exec-time"
+            "exec-1"
           ]
         },
-        "id": "evidence-a35c08c3ee9c1afc9f4caecc",
-        "locator": "call:4",
+        "id": "evidence-11a036bbfc452fb4fe7354b7",
+        "locator": "call:4,bb1,bb2,bb3,bb4,bb5,bb6,bb7,bb8,bb9,bb12,bb13,bb14,bb16,bb17",
         "quote": "            super::time_reminder::maybe_record_current_time_reminder(\n                sess.as_ref(),\n                turn_context.as_ref(),\n                &window_id,\n            )"
       },
       {
@@ -893,13 +929,27 @@
         "claim": {
           "conditions": [],
           "kind": "control-binding",
-          "subjectRef": "control-world",
+          "subjectRef": "result-1",
           "targets": [
-            "exec-world"
+            "exec-1"
           ]
         },
-        "id": "evidence-3694a38a7214f9eb00b92226",
-        "locator": "call:19",
+        "id": "evidence-c4e2f19d52cfc45c315a1c80",
+        "locator": "bb14",
+        "quote": "            super::time_reminder::maybe_record_current_time_reminder(\n                sess.as_ref(),\n                turn_context.as_ref(),\n                &window_id,\n            )\n            .await?;"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "control-binding",
+          "subjectRef": "control-2",
+          "targets": [
+            "exec-2"
+          ]
+        },
+        "id": "evidence-51b1f3d21f69630baf03c1ec",
+        "locator": "call:19,bb15,bb18,bb19,bb20,bb21,bb22,bb23,bb24,bb26,bb27,bb28,bb29,bb30,bb31",
         "quote": "            world_state = sess\n                .record_step_world_state_if_changed(&world_state, step_context.as_ref())"
       },
       {
@@ -907,13 +957,27 @@
         "claim": {
           "conditions": [],
           "kind": "control-binding",
-          "subjectRef": "control-effort",
+          "subjectRef": "result-2",
           "targets": [
-            "exec-effort"
+            "exec-2"
           ]
         },
-        "id": "evidence-76171af5052e316079308b8d",
-        "locator": "call:35",
+        "id": "evidence-6c820d809b03bf6c32a44c11",
+        "locator": "bb28",
+        "quote": "            world_state = sess\n                .record_step_world_state_if_changed(&world_state, step_context.as_ref())\n                .await?;"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "control-binding",
+          "subjectRef": "control-3",
+          "targets": [
+            "exec-3"
+          ]
+        },
+        "id": "evidence-718245fe89224097da129758",
+        "locator": "call:35,bb32,bb34,bb35,bb36,bb37,bb38,bb39,bb40,bb42",
         "quote": "            sess.record_reasoning_effort_override(step_context.as_ref())"
       },
       {
@@ -921,13 +985,13 @@
         "claim": {
           "conditions": [],
           "kind": "control-binding",
-          "subjectRef": "control-input",
+          "subjectRef": "control-4",
           "targets": [
-            "exec-input"
+            "exec-4"
           ]
         },
-        "id": "evidence-3fe25a9afbb6e563751acbe3",
-        "locator": "call:84",
+        "id": "evidence-838bf1964a4a3fe925d8fe1d",
+        "locator": "call:84,bb43,bb84,bb85,bb86,bb87,bb88,bb89,bb91",
         "quote": "            let sampling_request_input: Vec<ResponseItem> = async {\n                sess.clone_history()\n                    .await\n                    .for_prompt(&step_context.settings.model_info.input_modalities)\n            }\n            .instrument(trace_span!(\"run_turn.prepare_sampling_request_input\"))"
       },
       {
@@ -935,13 +999,13 @@
         "claim": {
           "conditions": [],
           "kind": "control-binding",
-          "subjectRef": "control-sample",
+          "subjectRef": "control-5",
           "targets": [
-            "exec-sample"
+            "exec-5"
           ]
         },
-        "id": "evidence-31e33d0794fef0dfc7b34643",
-        "locator": "call:98",
+        "id": "evidence-f55c6c2a4d026434e5c83d5d",
+        "locator": "call:98,bb92,bb93,bb94,bb95,bb96,bb97,bb98,bb99,bb100,bb101,bb102,bb103,bb105,bb106",
         "quote": "            run_sampling_request(\n                Arc::clone(&sess),\n                Arc::clone(&step_context),\n                Arc::clone(&turn_context.extension_data),\n                Arc::clone(&turn_diff_tracker),\n                &mut client_session,\n                sampling_request_input,\n                cancellation_token.child_token(),\n            )"
       },
       {
@@ -949,14 +1013,14 @@
         "claim": {
           "conditions": [],
           "kind": "attachment",
-          "subjectRef": "attachment-purpose-time",
+          "subjectRef": "attachment-purpose-1",
           "targets": [
             "P01/A01.1",
-            "purpose-time"
+            "purpose-1"
           ]
         },
-        "id": "evidence-78489e507c318eee2170758f",
-        "locator": "call:4,bb4",
+        "id": "evidence-77b6419840216269640a0848",
+        "locator": "call:4,bb1,bb2,bb3,bb4,bb5,bb6,bb7,bb8,bb9,bb12,bb13,bb14,bb16,bb17",
         "quote": "            super::time_reminder::maybe_record_current_time_reminder(\n                sess.as_ref(),\n                turn_context.as_ref(),\n                &window_id,\n            )"
       },
       {
@@ -964,14 +1028,14 @@
         "claim": {
           "conditions": [],
           "kind": "attachment",
-          "subjectRef": "attachment-purpose-world",
+          "subjectRef": "attachment-purpose-2",
           "targets": [
             "P01/A02.15",
-            "purpose-world"
+            "purpose-2"
           ]
         },
-        "id": "evidence-e9a970120cdc4be2be1861d1",
-        "locator": "call:19,bb19",
+        "id": "evidence-dd4b5f51f9a83e77364e7fe4",
+        "locator": "call:19,bb15,bb18,bb19,bb20,bb21,bb22,bb23,bb24,bb26,bb27,bb28,bb29,bb30,bb31",
         "quote": "            world_state = sess\n                .record_step_world_state_if_changed(&world_state, step_context.as_ref())"
       },
       {
@@ -979,14 +1043,14 @@
         "claim": {
           "conditions": [],
           "kind": "attachment",
-          "subjectRef": "attachment-purpose-effort",
+          "subjectRef": "attachment-purpose-3",
           "targets": [
-            "P01/A03.32",
-            "purpose-effort"
+            "P01/A03.34",
+            "purpose-3"
           ]
         },
-        "id": "evidence-da425f27a1e60e50d47a9ae9",
-        "locator": "call:35,bb35",
+        "id": "evidence-7f368a891369c510cafd38dc",
+        "locator": "call:35,bb32,bb34,bb35,bb36,bb37,bb38,bb39,bb40,bb42",
         "quote": "            sess.record_reasoning_effort_override(step_context.as_ref())"
       },
       {
@@ -994,14 +1058,14 @@
         "claim": {
           "conditions": [],
           "kind": "attachment",
-          "subjectRef": "attachment-purpose-input",
+          "subjectRef": "attachment-purpose-4",
           "targets": [
             "P01/A04.43",
-            "purpose-input"
+            "purpose-4"
           ]
         },
-        "id": "evidence-9682762e88114d6474b6a454",
-        "locator": "call:84,bb43",
+        "id": "evidence-3a76f3b7f7983569f1fec90a",
+        "locator": "call:84,bb43,bb84,bb85,bb86,bb87,bb88,bb89,bb91",
         "quote": "            let sampling_request_input: Vec<ResponseItem> = async {\n                sess.clone_history()\n                    .await\n                    .for_prompt(&step_context.settings.model_info.input_modalities)\n            }\n            .instrument(trace_span!(\"run_turn.prepare_sampling_request_input\"))"
       },
       {
@@ -1009,14 +1073,14 @@
         "claim": {
           "conditions": [],
           "kind": "attachment",
-          "subjectRef": "attachment-purpose-sample",
+          "subjectRef": "attachment-purpose-5",
           "targets": [
             "P02/A01.92",
-            "purpose-sample"
+            "purpose-5"
           ]
         },
-        "id": "evidence-602b0f95fe545c440e5a2c5f",
-        "locator": "call:98,bb98",
+        "id": "evidence-0cf5701909a7cd6ea0b6cadd",
+        "locator": "call:98,bb92,bb93,bb94,bb95,bb96,bb97,bb98,bb99,bb100,bb101,bb102,bb103,bb105,bb106",
         "quote": "            run_sampling_request(\n                Arc::clone(&sess),\n                Arc::clone(&step_context),\n                Arc::clone(&turn_context.extension_data),\n                Arc::clone(&turn_diff_tracker),\n                &mut client_session,\n                sampling_request_input,\n                cancellation_token.child_token(),\n            )"
       },
       {
@@ -1028,38 +1092,42 @@
           "targets": [
             "action:P01/A01.1",
             "action:P01/A02.15",
-            "action:P01/A03.32",
+            "action:P01/A03.34",
             "action:P01/A04.43",
             "action:P02/A01.92",
-            "control:control-time",
-            "control:control-world",
-            "control:control-effort",
-            "control:control-input",
-            "control:control-sample"
+            "control:control-1",
+            "control:control-2",
+            "control:control-3",
+            "control:control-4",
+            "control:control-5",
+            "control:result-1",
+            "control:result-2"
           ]
         },
-        "id": "evidence-493436f6e5223055c4fe3e19",
-        "locator": "bb4,bb19,bb35,bb84,bb98",
-        "quote": "            super::time_reminder::maybe_record_current_time_reminder(\n                sess.as_ref(),\n                turn_context.as_ref(),\n                &window_id,\n            )"
+        "id": "evidence-8957d5e98608023ed43988d7",
+        "locator": "bb1,bb14,bb28,bb35,bb43,bb98",
+        "quote": "            super::time_reminder::maybe_record_current_time_reminder(\n                sess.as_ref(),\n                turn_context.as_ref(),\n                &window_id,\n            )\n            .await?;"
       }
     ],
     "inventory": {
       "actionRefs": [
         "P01/A01.1",
         "P01/A02.15",
-        "P01/A03.32",
+        "P01/A03.34",
         "P01/A04.43",
         "P02/A01.92"
       ],
       "controlRefs": [
-        "control-time",
-        "control-world",
-        "control-effort",
-        "control-input",
-        "control-sample"
+        "control-1",
+        "control-2",
+        "control-3",
+        "control-4",
+        "control-5",
+        "result-1",
+        "result-2"
       ],
       "evidenceRefs": [
-        "evidence-493436f6e5223055c4fe3e19"
+        "evidence-8957d5e98608023ed43988d7"
       ]
     },
     "nodes": [
@@ -1072,7 +1140,7 @@
         ],
         "id": "exec-entry",
         "kind": "entry",
-        "label": "开始本步采样准备",
+        "label": "接纳本步请求准备",
         "lineRanges": [
           {
             "endLine": 505,
@@ -1088,6 +1156,7 @@
           "bb3",
           "bb4",
           "bb5",
+          "bb6",
           "bb7",
           "bb8",
           "bb9",
@@ -1098,11 +1167,11 @@
           "bb17"
         ],
         "evidenceRefs": [
-          "evidence-74f1338a9afdee1373b8bda6"
+          "evidence-399108b86902c92328baeef9"
         ],
-        "id": "exec-time",
+        "id": "exec-1",
         "kind": "action",
-        "label": "按需记录当前时间提醒并确认可继续",
+        "label": "按需记录当前时间提醒",
         "lineRanges": [
           {
             "endLine": 505,
@@ -1117,6 +1186,7 @@
           "bb18",
           "bb19",
           "bb20",
+          "bb21",
           "bb22",
           "bb23",
           "bb24",
@@ -1125,14 +1195,15 @@
           "bb28",
           "bb29",
           "bb30",
-          "bb31"
+          "bb31",
+          "bb32"
         ],
         "evidenceRefs": [
-          "evidence-09b3048e028aee6b9717d89f"
+          "evidence-415d95529a8d4939ed32790e"
         ],
-        "id": "exec-world",
+        "id": "exec-2",
         "kind": "action",
-        "label": "记录世界状态并取得新基线",
+        "label": "记录本步变化的 `world_state`",
         "lineRanges": [
           {
             "endLine": 505,
@@ -1141,36 +1212,32 @@
           {
             "endLine": 509,
             "startLine": 507
+          },
+          {
+            "endLine": 512,
+            "startLine": 512
           }
         ]
       },
       {
-        "actionRef": "P01/A03.32",
+        "actionRef": "P01/A03.34",
         "basicBlockRefs": [
-          "bb32",
           "bb34",
           "bb35",
           "bb36",
+          "bb37",
           "bb38",
           "bb39",
           "bb40",
           "bb42"
         ],
         "evidenceRefs": [
-          "evidence-3aba50471ce2a5bd62b35218"
+          "evidence-d5b2976cbd2a61f4b7eedcad"
         ],
-        "id": "exec-effort",
+        "id": "exec-3",
         "kind": "action",
-        "label": "接纳新世界状态并按需记录推理覆盖",
+        "label": "记录本步 `reasoning_effort` override",
         "lineRanges": [
-          {
-            "endLine": 507,
-            "startLine": 507
-          },
-          {
-            "endLine": 509,
-            "startLine": 509
-          },
           {
             "endLine": 513,
             "startLine": 512
@@ -1183,17 +1250,18 @@
           "bb43",
           "bb84",
           "bb85",
+          "bb86",
           "bb87",
           "bb88",
           "bb89",
           "bb91"
         ],
         "evidenceRefs": [
-          "evidence-3c457e89d02656add8532532"
+          "evidence-9fca0f2bad974cd7f9686979"
         ],
-        "id": "exec-input",
+        "id": "exec-4",
         "kind": "action",
-        "label": "把历史整理为模型可用输入",
+        "label": "从 `history` 准备模型输入",
         "lineRanges": [
           {
             "endLine": 522,
@@ -1212,19 +1280,20 @@
           "bb97",
           "bb98",
           "bb99",
+          "bb100",
           "bb101",
           "bb102",
           "bb103",
           "bb105",
           "bb106"
         ],
-        "broadRangeReason": "524–532行准备并提交采样依赖、输入和取消令牌，533行取得同一请求结果；十行共同构成采样交接，超过本执行体36行的25%。",
+        "broadRangeReason": "524–532行完整构造 run_sampling_request 的 session、step_context、extension_data、turn_diff_tracker、client_session、输入及取消令牌参数；533行等待同一请求结果。十行均服务本次请求，不能只高亮调用首行。",
         "evidenceRefs": [
-          "evidence-f3bb0f4962a8bdff24033bcc"
+          "evidence-b8fe50bea06697eeae907aa7"
         ],
-        "id": "exec-sample",
+        "id": "exec-5",
         "kind": "action",
-        "label": "执行采样并交还请求结果",
+        "label": "提交本次 `sampling` 请求并交还结果",
         "lineRanges": [
           {
             "endLine": 533,
@@ -1236,13 +1305,13 @@
         "basicBlockRefs": [
           "bb14"
         ],
-        "decisionRef": "decision-bb14",
+        "decisionRef": "decision-14",
         "evidenceRefs": [
-          "evidence-1ea4475e51868d6e89463d25"
+          "evidence-138079795413ba2c41891457"
         ],
-        "id": "exec-time-result",
+        "id": "exec-decision-14",
         "kind": "decision",
-        "label": "时间提醒记录是否成功",
+        "label": "确认时间提醒可以继续",
         "lineRanges": [
           {
             "endLine": 505,
@@ -1254,13 +1323,13 @@
         "basicBlockRefs": [
           "bb28"
         ],
-        "decisionRef": "decision-bb28",
+        "decisionRef": "decision-28",
         "evidenceRefs": [
-          "evidence-1821381c4cd5c3a1758519cf"
+          "evidence-f44d3485b73fbb457b258004"
         ],
-        "id": "exec-world-result",
+        "id": "exec-decision-28",
         "kind": "decision",
-        "label": "世界状态记录是否成功",
+        "label": "确认环境记录可以继续",
         "lineRanges": [
           {
             "endLine": 509,
@@ -1275,11 +1344,11 @@
           "bb107"
         ],
         "evidenceRefs": [
-          "evidence-da4d487f4d7e46790fc84be4"
+          "evidence-f6c7839e3638c6760d14b566"
         ],
-        "id": "exec-time-error",
+        "id": "exec-error-time",
         "kind": "terminal",
-        "label": "交还时间提醒记录错误",
+        "label": "交还时间提醒错误",
         "lineRanges": [
           {
             "endLine": 505,
@@ -1295,11 +1364,11 @@
           "bb107"
         ],
         "evidenceRefs": [
-          "evidence-3274bdddf0bc598c93b1f66f"
+          "evidence-67fe77be528704622da7cf03"
         ],
-        "id": "exec-world-error",
+        "id": "exec-error-world",
         "kind": "terminal",
-        "label": "交还世界状态记录错误",
+        "label": "交还环境记录错误",
         "lineRanges": [
           {
             "endLine": 509,
@@ -1318,7 +1387,7 @@
         ],
         "id": "exec-return",
         "kind": "terminal",
-        "label": "交还采样结果或采样错误",
+        "label": "交还请求结果与实际输入",
         "lineRanges": [],
         "outcome": "return",
         "sourceRangeReason": "No precise semantic operation span in the recorded BBs; only compiler state, storage, drop, cleanup or enclosing-scope context. Full source remains available."
@@ -1338,13 +1407,13 @@
         "sourceNodeRef": "e0659b8c39c457de7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
       },
       {
-        "actorId": "actor-crate-0",
+        "actorId": "actor-ancestor-7f347cbdcc2b",
         "children": [
           {
-            "actorId": "actor-module-0",
+            "actorId": "actor-ancestor-c5797c4b3193",
             "children": [
               {
-                "actorId": "actor-time",
+                "actorId": "actor-body-1",
                 "bodyRef": "1689e5505ac2102c7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
                 "color": "#42758c",
                 "kind": "body",
@@ -1358,14 +1427,14 @@
             "sourceNodeRef": "c5797c4b319328f47f347cbdcc2b778a"
           },
           {
-            "actorId": "actor-module-1",
+            "actorId": "actor-ancestor-249d9ca6da1f",
             "children": [
               {
-                "actorId": "actor-world",
+                "actorId": "actor-body-2",
                 "bodyRef": "eed7cff1c759c58a7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
                 "color": "#42758c",
                 "kind": "body",
-                "label": "record_step_world_state_if_changed::{closure#0}",
+                "label": "Session::record_step_world_state_if_changed::{closure#0}",
                 "sourceNodeRef": "eed7cff1c759c58a7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
               }
             ],
@@ -1375,14 +1444,14 @@
             "sourceNodeRef": "249d9ca6da1ff0d07f347cbdcc2b778a"
           },
           {
-            "actorId": "actor-module-2",
+            "actorId": "actor-ancestor-97e4af704a39",
             "children": [
               {
-                "actorId": "actor-effort",
+                "actorId": "actor-body-3",
                 "bodyRef": "8317183245901d1a7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
                 "color": "#42758c",
                 "kind": "body",
-                "label": "record_reasoning_effort_override::{closure#0}",
+                "label": "Session::record_reasoning_effort_override::{closure#0}",
                 "sourceNodeRef": "8317183245901d1a7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
               }
             ],
@@ -1392,10 +1461,10 @@
             "sourceNodeRef": "97e4af704a39226c7f347cbdcc2b778a"
           },
           {
-            "actorId": "actor-module-3",
+            "actorId": "actor-ancestor-c0b0acd6f47d",
             "children": [
               {
-                "actorId": "actor-input",
+                "actorId": "actor-body-4",
                 "bodyRef": "c3a273c4e2967a3a7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
                 "color": "#42758c",
                 "kind": "body",
@@ -1403,7 +1472,7 @@
                 "sourceNodeRef": "c3a273c4e2967a3a7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
               },
               {
-                "actorId": "actor-sample",
+                "actorId": "actor-body-5",
                 "bodyRef": "e6aba10dbc0532157f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
                 "color": "#42758c",
                 "kind": "body",
@@ -2121,173 +2190,173 @@
   "messagePlacements": [
     {
       "branchPath": [],
-      "controlRef": "control-time",
-      "messageRef": "request-time",
-      "rootControlRef": "control-time"
+      "controlRef": "control-1",
+      "messageRef": "request-1",
+      "rootControlRef": "control-1"
     },
     {
       "branchPath": [],
-      "controlRef": "control-time",
-      "messageRef": "return-time",
-      "rootControlRef": "control-time"
+      "controlRef": "control-1",
+      "messageRef": "return-1",
+      "rootControlRef": "control-1"
     },
     {
       "branchPath": [],
-      "controlRef": "control-world",
-      "messageRef": "request-world",
-      "rootControlRef": "control-world"
+      "controlRef": "control-2",
+      "messageRef": "request-2",
+      "rootControlRef": "control-2"
     },
     {
       "branchPath": [],
-      "controlRef": "control-world",
-      "messageRef": "return-world",
-      "rootControlRef": "control-world"
+      "controlRef": "control-2",
+      "messageRef": "return-2",
+      "rootControlRef": "control-2"
     },
     {
       "branchPath": [],
-      "controlRef": "control-effort",
-      "messageRef": "request-effort",
-      "rootControlRef": "control-effort"
+      "controlRef": "control-3",
+      "messageRef": "request-3",
+      "rootControlRef": "control-3"
     },
     {
       "branchPath": [],
-      "controlRef": "control-effort",
-      "messageRef": "return-effort",
-      "rootControlRef": "control-effort"
+      "controlRef": "control-3",
+      "messageRef": "return-3",
+      "rootControlRef": "control-3"
     },
     {
       "branchPath": [],
-      "controlRef": "control-input",
-      "messageRef": "request-input",
-      "rootControlRef": "control-input"
+      "controlRef": "control-4",
+      "messageRef": "request-4",
+      "rootControlRef": "control-4"
     },
     {
       "branchPath": [],
-      "controlRef": "control-input",
-      "messageRef": "return-input",
-      "rootControlRef": "control-input"
+      "controlRef": "control-4",
+      "messageRef": "return-4",
+      "rootControlRef": "control-4"
     },
     {
       "branchPath": [],
-      "controlRef": "control-sample",
-      "messageRef": "request-sample",
-      "rootControlRef": "control-sample"
+      "controlRef": "control-5",
+      "messageRef": "request-5",
+      "rootControlRef": "control-5"
     },
     {
       "branchPath": [],
-      "controlRef": "control-sample",
-      "messageRef": "return-sample",
-      "rootControlRef": "control-sample"
+      "controlRef": "control-5",
+      "messageRef": "return-5",
+      "rootControlRef": "control-5"
     }
   ],
   "messages": [
     {
       "bindingRef": "call:4",
       "fromActorId": "actor-main",
-      "invocationRef": "inv-time",
+      "invocationRef": "invocation-1",
       "kind": "request",
-      "label": "让模型获知应补充的当前时间信息",
-      "messageId": "request-time",
-      "pair": "pair-time",
+      "label": "当前时间提醒：按需记录当前时间提醒",
+      "messageId": "request-1",
+      "pair": "pair-1",
       "stage": "business-request",
-      "toActorId": "actor-time"
+      "toActorId": "actor-body-1"
     },
     {
       "bindingRef": "call:4",
-      "fromActorId": "actor-time",
-      "invocationRef": "inv-time",
+      "fromActorId": "actor-body-1",
+      "invocationRef": "invocation-1",
       "kind": "return",
-      "label": "时间提醒检查完成，必要时写入提醒；失败则交还错误",
-      "messageId": "return-time",
-      "pair": "pair-time",
+      "label": "时间提醒已处理，失败时交还错误",
+      "messageId": "return-1",
+      "pair": "pair-1",
       "stage": "business-completion",
       "toActorId": "actor-main"
     },
     {
       "bindingRef": "call:19",
       "fromActorId": "actor-main",
-      "invocationRef": "inv-world",
+      "invocationRef": "invocation-2",
       "kind": "request",
-      "label": "让本次请求使用已记录的世界状态",
-      "messageId": "request-world",
-      "pair": "pair-world",
+      "label": "本步 `world_state`：记录本步变化的 `world_state`",
+      "messageId": "request-2",
+      "pair": "pair-2",
       "stage": "business-request",
-      "toActorId": "actor-world"
+      "toActorId": "actor-body-2"
     },
     {
       "bindingRef": "call:19",
-      "fromActorId": "actor-world",
-      "invocationRef": "inv-world",
+      "fromActorId": "actor-body-2",
+      "invocationRef": "invocation-2",
       "kind": "return",
-      "label": "取得新世界状态并更新持久基线；失败则交还错误",
-      "messageId": "return-world",
-      "pair": "pair-world",
+      "label": "更新 `world_state`，失败时交还错误",
+      "messageId": "return-2",
+      "pair": "pair-2",
       "stage": "business-completion",
       "toActorId": "actor-main"
     },
     {
       "bindingRef": "call:35",
       "fromActorId": "actor-main",
-      "invocationRef": "inv-effort",
+      "invocationRef": "invocation-3",
       "kind": "request",
-      "label": "让覆盖设置与已接纳输入共同保留",
-      "messageId": "request-effort",
-      "pair": "pair-effort",
+      "label": "本步 `reasoning_effort`：记录本步 `reasoning_effort` override",
+      "messageId": "request-3",
+      "pair": "pair-3",
       "stage": "business-request",
-      "toActorId": "actor-effort"
+      "toActorId": "actor-body-3"
     },
     {
       "bindingRef": "call:35",
-      "fromActorId": "actor-effort",
-      "invocationRef": "inv-effort",
+      "fromActorId": "actor-body-3",
+      "invocationRef": "invocation-3",
       "kind": "return",
-      "label": "推理覆盖检查完成，必要时写入更新",
-      "messageId": "return-effort",
-      "pair": "pair-effort",
+      "label": "override 与已接纳输入一同留在 history",
+      "messageId": "return-3",
+      "pair": "pair-3",
       "stage": "business-completion",
       "toActorId": "actor-main"
     },
     {
       "bindingRef": "call:84",
       "fromActorId": "actor-main",
-      "invocationRef": "inv-input",
+      "invocationRef": "invocation-4",
       "kind": "request",
-      "label": "形成将发送给模型的输入",
-      "messageId": "request-input",
-      "pair": "pair-input",
+      "label": "当前 `history`：从 `history` 准备模型输入",
+      "messageId": "request-4",
+      "pair": "pair-4",
       "stage": "business-request",
-      "toActorId": "actor-input"
+      "toActorId": "actor-body-4"
     },
     {
       "bindingRef": "call:84",
-      "fromActorId": "actor-input",
-      "invocationRef": "inv-input",
+      "fromActorId": "actor-body-4",
+      "invocationRef": "invocation-4",
       "kind": "return",
-      "label": "取得适合模型输入模态的请求条目",
-      "messageId": "return-input",
-      "pair": "pair-input",
+      "label": "取得适配 `input_modalities` 的 `ResponseItem` 列表",
+      "messageId": "return-4",
+      "pair": "pair-4",
       "stage": "business-completion",
       "toActorId": "actor-main"
     },
     {
       "bindingRef": "call:98",
       "fromActorId": "actor-main",
-      "invocationRef": "inv-sample",
+      "invocationRef": "invocation-5",
       "kind": "request",
-      "label": "取得本轮模型输出与实际输入",
-      "messageId": "request-sample",
-      "pair": "pair-sample",
+      "label": "本次 `sampling` 请求：提交本次 `sampling` 请求并交还结果",
+      "messageId": "request-5",
+      "pair": "pair-5",
       "stage": "business-request",
-      "toActorId": "actor-sample"
+      "toActorId": "actor-body-5"
     },
     {
       "bindingRef": "call:98",
-      "fromActorId": "actor-sample",
-      "invocationRef": "inv-sample",
+      "fromActorId": "actor-body-5",
+      "invocationRef": "invocation-5",
       "kind": "return",
-      "label": "返回采样结果与输入，或采样失败原因",
-      "messageId": "return-sample",
-      "pair": "pair-sample",
+      "label": "交还 `SamplingRequestResult` 与实际输入，或请求错误",
+      "messageId": "return-5",
+      "pair": "pair-5",
       "stage": "business-completion",
       "toActorId": "actor-main"
     }
@@ -2300,6 +2369,7 @@
         "bb3",
         "bb4",
         "bb5",
+        "bb6",
         "bb7",
         "bb8",
         "bb9",
@@ -2312,6 +2382,7 @@
         "bb18",
         "bb19",
         "bb20",
+        "bb21",
         "bb22",
         "bb23",
         "bb24",
@@ -2325,6 +2396,7 @@
         "bb34",
         "bb35",
         "bb36",
+        "bb37",
         "bb38",
         "bb39",
         "bb40",
@@ -2332,6 +2404,7 @@
         "bb43",
         "bb84",
         "bb85",
+        "bb86",
         "bb87",
         "bb88",
         "bb89",
@@ -2349,6 +2422,7 @@
                 "bb3",
                 "bb4",
                 "bb5",
+                "bb6",
                 "bb7",
                 "bb8",
                 "bb9",
@@ -2359,10 +2433,11 @@
                 "bb17"
               ],
               "controlRefs": [
-                "control-time"
+                "control-1",
+                "result-1"
               ],
               "id": "P01/A01.1",
-              "label": "按需记录当前时间提醒并确认可继续",
+              "label": "按需记录当前时间提醒",
               "lineRanges": [
                 {
                   "endLine": 505,
@@ -2377,6 +2452,7 @@
                 "bb18",
                 "bb19",
                 "bb20",
+                "bb21",
                 "bb22",
                 "bb23",
                 "bb24",
@@ -2385,13 +2461,15 @@
                 "bb28",
                 "bb29",
                 "bb30",
-                "bb31"
+                "bb31",
+                "bb32"
               ],
               "controlRefs": [
-                "control-world"
+                "control-2",
+                "result-2"
               ],
               "id": "P01/A02.15",
-              "label": "记录世界状态并取得新基线",
+              "label": "记录本步变化的 `world_state`",
               "lineRanges": [
                 {
                   "endLine": 505,
@@ -2400,41 +2478,37 @@
                 {
                   "endLine": 509,
                   "startLine": 507
+                },
+                {
+                  "endLine": 512,
+                  "startLine": 512
                 }
               ],
               "renderId": "P01_A02.15"
             },
             {
               "basicBlockRefs": [
-                "bb32",
                 "bb34",
                 "bb35",
                 "bb36",
+                "bb37",
                 "bb38",
                 "bb39",
                 "bb40",
                 "bb42"
               ],
               "controlRefs": [
-                "control-effort"
+                "control-3"
               ],
-              "id": "P01/A03.32",
-              "label": "接纳新世界状态并按需记录推理覆盖",
+              "id": "P01/A03.34",
+              "label": "记录本步 `reasoning_effort` override",
               "lineRanges": [
-                {
-                  "endLine": 507,
-                  "startLine": 507
-                },
-                {
-                  "endLine": 509,
-                  "startLine": 509
-                },
                 {
                   "endLine": 513,
                   "startLine": 512
                 }
               ],
-              "renderId": "P01_A03.32"
+              "renderId": "P01_A03.34"
             }
           ],
           "basicBlockRefs": [
@@ -2443,6 +2517,7 @@
             "bb3",
             "bb4",
             "bb5",
+            "bb6",
             "bb7",
             "bb8",
             "bb9",
@@ -2455,6 +2530,7 @@
             "bb18",
             "bb19",
             "bb20",
+            "bb21",
             "bb22",
             "bb23",
             "bb24",
@@ -2468,14 +2544,15 @@
             "bb34",
             "bb35",
             "bb36",
+            "bb37",
             "bb38",
             "bb39",
             "bb40",
             "bb42"
           ],
-          "broadRangeReason": "500–505行补充时间提醒、507–509行记录并替换世界状态、512–513行记录推理覆盖；三个不连续区间均为上下文准备的必要操作，排除注释和空行，合计11/36行。",
+          "broadRangeReason": "500–505行记录当前时间提醒并处理失败；507–509行记录并替换环境状态；512–513行将 reasoning override 跟随已接纳输入保存。三段共11行，均属于当前步 history 上下文记录合同，排除506、510、511行注释/空行及后续输入构造。",
           "id": "sem:P01:context",
-          "label": "为采样保留本步上下文",
+          "label": "把当前步上下文记入 `history`",
           "lineRanges": [
             {
               "endLine": 505,
@@ -2499,16 +2576,17 @@
                 "bb43",
                 "bb84",
                 "bb85",
+                "bb86",
                 "bb87",
                 "bb88",
                 "bb89",
                 "bb91"
               ],
               "controlRefs": [
-                "control-input"
+                "control-4"
               ],
               "id": "P01/A04.43",
-              "label": "把历史整理为模型可用输入",
+              "label": "从 `history` 准备模型输入",
               "lineRanges": [
                 {
                   "endLine": 522,
@@ -2522,13 +2600,14 @@
             "bb43",
             "bb84",
             "bb85",
+            "bb86",
             "bb87",
             "bb88",
             "bb89",
             "bb91"
           ],
           "id": "sem:P01:input",
-          "label": "从历史生成本次模型输入",
+          "label": "为本次模型请求生成可用输入",
           "lineRanges": [
             {
               "endLine": 522,
@@ -2539,7 +2618,7 @@
         }
       ],
       "id": "P01",
-      "label": "准备本步上下文与模型输入",
+      "label": "固定本步上下文并准备模型输入",
       "lineRanges": [
         {
           "endLine": 505,
@@ -2569,6 +2648,7 @@
         "bb97",
         "bb98",
         "bb99",
+        "bb100",
         "bb101",
         "bb102",
         "bb103",
@@ -2590,18 +2670,19 @@
                 "bb97",
                 "bb98",
                 "bb99",
+                "bb100",
                 "bb101",
                 "bb102",
                 "bb103",
                 "bb105",
                 "bb106"
               ],
-              "broadRangeReason": "524–532行准备并提交采样依赖、输入和取消令牌，533行取得同一请求结果；十行共同构成采样交接，超过本执行体36行的25%。",
+              "broadRangeReason": "524–532行完整构造 run_sampling_request 的 session、step_context、extension_data、turn_diff_tracker、client_session、输入及取消令牌参数；533行等待同一请求结果。十行均服务本次请求，不能只高亮调用首行。",
               "controlRefs": [
-                "control-sample"
+                "control-5"
               ],
               "id": "P02/A01.92",
-              "label": "执行采样并交还请求结果",
+              "label": "提交本次 `sampling` 请求并交还结果",
               "lineRanges": [
                 {
                   "endLine": 533,
@@ -2620,26 +2701,27 @@
             "bb97",
             "bb98",
             "bb99",
+            "bb100",
             "bb101",
             "bb102",
             "bb103",
             "bb105",
             "bb106"
           ],
-          "broadRangeReason": "524–532行准备并提交采样依赖、输入和取消令牌，533行取得同一请求结果；十行共同构成采样交接，超过本执行体36行的25%。",
-          "id": "sem:P02:sample",
-          "label": "取得模型输出与本次采样输入",
+          "broadRangeReason": "524–532行完整构造 run_sampling_request 的 session、step_context、extension_data、turn_diff_tracker、client_session、输入及取消令牌参数；533行等待同一请求结果。十行均服务本次请求，不能只高亮调用首行。",
+          "id": "sem:P02:sampling",
+          "label": "交回 `SamplingRequestResult` 与实际输入",
           "lineRanges": [
             {
               "endLine": 533,
               "startLine": 524
             }
           ],
-          "renderId": "sem:P02:sample"
+          "renderId": "sem:P02:sampling"
         }
       ],
       "id": "P02",
-      "label": "执行本轮模型采样",
+      "label": "向模型提交本次请求",
       "lineRanges": [
         {
           "endLine": 533,
@@ -2653,85 +2735,85 @@
     {
       "defaultVisible": true,
       "goalRef": "sem:P01:context",
-      "id": "purpose-time",
+      "id": "purpose-1",
       "invocationRefs": [
-        "inv-time"
+        "invocation-1"
       ],
       "relatedGoalRefs": [],
       "summary": {
         "drawAsMessage": false,
         "kind": "note",
         "object": "当前时间提醒",
-        "purpose": "让模型获知应补充的当前时间信息",
-        "result": "时间提醒检查完成，必要时写入提醒；失败则交还错误"
+        "purpose": "按需记录当前时间提醒",
+        "result": "时间提醒已处理，失败时交还错误"
       },
       "waitRefs": []
     },
     {
       "defaultVisible": true,
       "goalRef": "sem:P01:context",
-      "id": "purpose-world",
+      "id": "purpose-2",
       "invocationRefs": [
-        "inv-world"
+        "invocation-2"
       ],
       "relatedGoalRefs": [],
       "summary": {
         "drawAsMessage": false,
         "kind": "note",
-        "object": "世界状态基线",
-        "purpose": "让本次请求使用已记录的世界状态",
-        "result": "取得新世界状态并更新持久基线；失败则交还错误"
+        "object": "本步 `world_state`",
+        "purpose": "记录本步变化的 `world_state`",
+        "result": "更新 `world_state`，失败时交还错误"
       },
       "waitRefs": []
     },
     {
       "defaultVisible": true,
       "goalRef": "sem:P01:context",
-      "id": "purpose-effort",
+      "id": "purpose-3",
       "invocationRefs": [
-        "inv-effort"
+        "invocation-3"
       ],
       "relatedGoalRefs": [],
       "summary": {
         "drawAsMessage": false,
         "kind": "note",
-        "object": "推理强度覆盖",
-        "purpose": "让覆盖设置与已接纳输入共同保留",
-        "result": "推理覆盖检查完成，必要时写入更新"
+        "object": "本步 `reasoning_effort`",
+        "purpose": "记录本步 `reasoning_effort` override",
+        "result": "override 与已接纳输入一同留在 history"
       },
       "waitRefs": []
     },
     {
       "defaultVisible": true,
       "goalRef": "sem:P01:input",
-      "id": "purpose-input",
+      "id": "purpose-4",
       "invocationRefs": [
-        "inv-input"
+        "invocation-4"
       ],
       "relatedGoalRefs": [],
       "summary": {
         "drawAsMessage": false,
         "kind": "note",
-        "object": "会话历史",
-        "purpose": "形成将发送给模型的输入",
-        "result": "取得适合模型输入模态的请求条目"
+        "object": "当前 `history`",
+        "purpose": "从 `history` 准备模型输入",
+        "result": "取得适配 `input_modalities` 的 `ResponseItem` 列表"
       },
       "waitRefs": []
     },
     {
       "defaultVisible": true,
-      "goalRef": "sem:P02:sample",
-      "id": "purpose-sample",
+      "goalRef": "sem:P02:sampling",
+      "id": "purpose-5",
       "invocationRefs": [
-        "inv-sample"
+        "invocation-5"
       ],
       "relatedGoalRefs": [],
       "summary": {
         "drawAsMessage": false,
         "kind": "note",
-        "object": "采样请求",
-        "purpose": "取得本轮模型输出与实际输入",
-        "result": "返回采样结果与输入，或采样失败原因"
+        "object": "本次 `sampling` 请求",
+        "purpose": "提交本次 `sampling` 请求并交还结果",
+        "result": "交还 `SamplingRequestResult` 与实际输入，或请求错误"
       },
       "waitRefs": []
     }
@@ -2741,27 +2823,27 @@
     {
       "branchRef": null,
       "meaning": "normal-return",
-      "messageRef": "return-time"
+      "messageRef": "return-1"
     },
     {
       "branchRef": null,
       "meaning": "normal-return",
-      "messageRef": "return-world"
+      "messageRef": "return-2"
     },
     {
       "branchRef": null,
       "meaning": "normal-return",
-      "messageRef": "return-effort"
+      "messageRef": "return-3"
     },
     {
       "branchRef": null,
       "meaning": "normal-return",
-      "messageRef": "return-input"
+      "messageRef": "return-4"
     },
     {
       "branchRef": null,
       "meaning": "normal-return",
-      "messageRef": "return-sample"
+      "messageRef": "return-5"
     }
   ],
   "rootAnchors": [],
@@ -2769,48 +2851,48 @@
   "scopeAnnotations": [],
   "segments": [
     {
-      "id": "segment-time",
-      "invocationRef": "inv-time",
+      "id": "segment-1",
+      "invocationRef": "invocation-1",
       "kind": "sequence",
       "messages": [
-        "request-time",
-        "return-time"
+        "request-1",
+        "return-1"
       ]
     },
     {
-      "id": "segment-world",
-      "invocationRef": "inv-world",
+      "id": "segment-2",
+      "invocationRef": "invocation-2",
       "kind": "sequence",
       "messages": [
-        "request-world",
-        "return-world"
+        "request-2",
+        "return-2"
       ]
     },
     {
-      "id": "segment-effort",
-      "invocationRef": "inv-effort",
+      "id": "segment-3",
+      "invocationRef": "invocation-3",
       "kind": "sequence",
       "messages": [
-        "request-effort",
-        "return-effort"
+        "request-3",
+        "return-3"
       ]
     },
     {
-      "id": "segment-input",
-      "invocationRef": "inv-input",
+      "id": "segment-4",
+      "invocationRef": "invocation-4",
       "kind": "sequence",
       "messages": [
-        "request-input",
-        "return-input"
+        "request-4",
+        "return-4"
       ]
     },
     {
-      "id": "segment-sample",
-      "invocationRef": "inv-sample",
+      "id": "segment-5",
+      "invocationRef": "invocation-5",
       "kind": "sequence",
       "messages": [
-        "request-sample",
-        "return-sample"
+        "request-5",
+        "return-5"
       ]
     }
   ],
@@ -2825,25 +2907,17 @@
         "bb2",
         "bb3",
         "bb4",
-        "bb5"
-      ],
-      "id": "P01/A01.1/C1",
-      "label": "取得会话与时间窗口并发起提醒记录",
-      "lineRanges": [
-        {
-          "endLine": 505,
-          "startLine": 500
-        }
-      ]
-    },
-    {
-      "basicBlockRefs": [
+        "bb5",
+        "bb6",
+        "bb7",
+        "bb8",
+        "bb9",
         "bb12",
         "bb13",
         "bb14"
       ],
-      "id": "P01/A01.1/C12",
-      "label": "取得提醒记录的成功或失败结论",
+      "id": "P01/A01.1/C1",
+      "label": "读取 `session` 与 `turn_context` 并提交时间检查",
       "lineRanges": [
         {
           "endLine": 505,
@@ -2857,22 +2931,7 @@
         "bb17"
       ],
       "id": "P01/A01.1/C16",
-      "label": "转换提醒记录失败的返回结果",
-      "lineRanges": [
-        {
-          "endLine": 505,
-          "startLine": 500
-        }
-      ]
-    },
-    {
-      "basicBlockRefs": [
-        "bb7",
-        "bb8",
-        "bb9"
-      ],
-      "id": "P01/A01.1/C7",
-      "label": "等待时间提醒写入结果",
+      "label": "转换时间提醒失败原因",
       "lineRanges": [
         {
           "endLine": 505,
@@ -2885,10 +2944,17 @@
         "bb15",
         "bb18",
         "bb19",
-        "bb20"
+        "bb20",
+        "bb21",
+        "bb22",
+        "bb23",
+        "bb24",
+        "bb26",
+        "bb27",
+        "bb28"
       ],
       "id": "P01/A02.15/C15",
-      "label": "提交旧基线与本步上下文",
+      "label": "请求记录变化的环境状态",
       "lineRanges": [
         {
           "endLine": 505,
@@ -2902,44 +2968,19 @@
     },
     {
       "basicBlockRefs": [
-        "bb22",
-        "bb23",
-        "bb24"
-      ],
-      "id": "P01/A02.15/C22",
-      "label": "等待世界状态记录完成",
-      "lineRanges": [
-        {
-          "endLine": 509,
-          "startLine": 507
-        }
-      ]
-    },
-    {
-      "basicBlockRefs": [
-        "bb26",
-        "bb27",
-        "bb28"
-      ],
-      "id": "P01/A02.15/C26",
-      "label": "取得世界状态或失败结论",
-      "lineRanges": [
-        {
-          "endLine": 509,
-          "startLine": 507
-        }
-      ]
-    },
-    {
-      "basicBlockRefs": [
-        "bb29"
+        "bb29",
+        "bb32"
       ],
       "id": "P01/A02.15/C29",
-      "label": "释放旧世界状态以接纳新基线",
+      "label": "替换当前 `world_state` 引用",
       "lineRanges": [
         {
           "endLine": 509,
           "startLine": 507
+        },
+        {
+          "endLine": 512,
+          "startLine": 512
         }
       ]
     },
@@ -2949,7 +2990,7 @@
         "bb31"
       ],
       "id": "P01/A02.15/C30",
-      "label": "转换世界状态记录失败的返回结果",
+      "label": "转换环境记录失败原因",
       "lineRanges": [
         {
           "endLine": 509,
@@ -2959,58 +3000,30 @@
     },
     {
       "basicBlockRefs": [
-        "bb32",
         "bb34",
         "bb35",
-        "bb36"
-      ],
-      "id": "P01/A03.32/C32",
-      "label": "替换当前世界状态并提交推理设置",
-      "lineRanges": [
-        {
-          "endLine": 507,
-          "startLine": 507
-        },
-        {
-          "endLine": 509,
-          "startLine": 509
-        },
-        {
-          "endLine": 513,
-          "startLine": 512
-        }
-      ]
-    },
-    {
-      "basicBlockRefs": [
+        "bb36",
+        "bb37",
         "bb38",
         "bb39",
-        "bb40"
+        "bb40",
+        "bb42"
       ],
-      "id": "P01/A03.32/C38",
-      "label": "等待推理强度覆盖写入",
+      "id": "P01/A03.34/C34",
+      "label": "提交当前 `step_context` 的推理设置",
       "lineRanges": [
         {
           "endLine": 513,
           "startLine": 512
         }
       ]
-    },
-    {
-      "basicBlockRefs": [
-        "bb42"
-      ],
-      "id": "P01/A03.32/C42",
-      "label": "完成覆盖记录后的资源收尾",
-      "lineRanges": [],
-      "sourceRangeReason": "No precise semantic operation span in the recorded BBs; only compiler state, storage, drop, cleanup or enclosing-scope context. Full source remains available."
     },
     {
       "basicBlockRefs": [
         "bb43"
       ],
       "id": "P01/A04.43/C43",
-      "label": "构造历史读取与提示整理任务",
+      "label": "捕获 `sess` 和 `step_context` 以读取 history",
       "lineRanges": [
         {
           "endLine": 521,
@@ -3021,71 +3034,19 @@
     {
       "basicBlockRefs": [
         "bb84",
-        "bb85"
-      ],
-      "id": "P01/A04.43/C84",
-      "label": "为输入准备任务附加追踪范围",
-      "lineRanges": [
-        {
-          "endLine": 522,
-          "startLine": 516
-        }
-      ]
-    },
-    {
-      "basicBlockRefs": [
+        "bb85",
+        "bb86",
         "bb87",
         "bb88",
-        "bb89"
-      ],
-      "id": "P01/A04.43/C87",
-      "label": "等待历史输入整理完成",
-      "lineRanges": [
-        {
-          "endLine": 522,
-          "startLine": 516
-        }
-      ]
-    },
-    {
-      "basicBlockRefs": [
+        "bb89",
         "bb91"
       ],
-      "id": "P01/A04.43/C91",
-      "label": "接收整理后的请求条目",
+      "id": "P01/A04.43/C84",
+      "label": "运行输入准备并取得列表",
       "lineRanges": [
         {
           "endLine": 522,
           "startLine": 516
-        }
-      ]
-    },
-    {
-      "basicBlockRefs": [
-        "bb101",
-        "bb102",
-        "bb103"
-      ],
-      "id": "P02/A01.92/C101",
-      "label": "等待本次采样请求完成",
-      "lineRanges": [
-        {
-          "endLine": 533,
-          "startLine": 524
-        }
-      ]
-    },
-    {
-      "basicBlockRefs": [
-        "bb105",
-        "bb106"
-      ],
-      "id": "P02/A01.92/C105",
-      "label": "接收并交还采样请求结果",
-      "lineRanges": [
-        {
-          "endLine": 533,
-          "startLine": 524
         }
       ]
     },
@@ -3098,10 +3059,16 @@
         "bb96",
         "bb97",
         "bb98",
-        "bb99"
+        "bb99",
+        "bb100",
+        "bb101",
+        "bb102",
+        "bb103",
+        "bb105",
+        "bb106"
       ],
       "id": "P02/A01.92/C92",
-      "label": "准备采样依赖与输入并提交请求",
+      "label": "准备共享上下文与取消令牌并执行模型请求",
       "lineRanges": [
         {
           "endLine": 533,

@@ -5,99 +5,99 @@
       "bodyRef": "6ccfbaa7c8ba54b17f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
       "color": "#327B98",
       "kind": "body",
-      "label": "codex_core::session::turn::run_turn::{closure#0}::{closure#4}",
+      "label": "run_turn::{closure#0}::{closure#4}",
       "sourceNodeRef": "6ccfbaa7c8ba54b17f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
     },
     {
-      "actorId": "actor-crate-7f347cbdcc2b778a7f347cbdcc2b778a",
+      "actorId": "crate-7f347cbdcc2b778a7f347cbdcc2b778a",
       "children": [
         {
-          "actorId": "actor-module-a5f9c6e4834f234e7f347cbdcc2b778a",
+          "actorId": "module-a5f9c6e4834f234e7f347cbdcc2b778a",
           "children": [
             {
-              "actorId": "actor-2",
+              "actorId": "actor-source",
               "bodyRef": "5f922a9ffde1e4f67f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
-              "color": "#42758C",
+              "color": "#327B98",
               "kind": "body",
               "label": "is_basic_session_source",
               "sourceNodeRef": "5f922a9ffde1e4f67f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
             }
           ],
-          "color": "#42758C",
+          "color": "#327B98",
           "kind": "module",
           "label": "review",
           "sourceNodeRef": "a5f9c6e4834f234e7f347cbdcc2b778a"
         },
         {
-          "actorId": "actor-module-d99984c779e578a17f347cbdcc2b778a",
+          "actorId": "module-d99984c779e578a17f347cbdcc2b778a",
           "children": [
             {
-              "actorId": "actor-13",
+              "actorId": "actor-environments",
               "bodyRef": "48b1f29f6375784d7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
-              "color": "#42758C",
+              "color": "#327B98",
               "kind": "body",
-              "label": "turn_environments",
+              "label": "TurnEnvironmentSnapshot::turn_environments",
               "sourceNodeRef": "48b1f29f6375784d7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
             },
             {
-              "actorId": "actor-15",
+              "actorId": "actor-filter",
               "bodyRef": "aae21020d04383c17f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
-              "color": "#42758C",
+              "color": "#327B98",
               "kind": "body",
-              "label": "codex_core::environment_selection::TurnEnvironmentSnapshot::turn_environments::{closure#0}",
+              "label": "TurnEnvironmentSnapshot::turn_environments::{closure#0}",
               "sourceNodeRef": "aae21020d04383c17f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
             }
           ],
-          "color": "#42758C",
+          "color": "#327B98",
           "kind": "module",
           "label": "environment_selection",
           "sourceNodeRef": "d99984c779e578a17f347cbdcc2b778a"
         },
         {
-          "actorId": "actor-module-c0b0acd6f47d1c8c7f347cbdcc2b778a",
+          "actorId": "module-c0b0acd6f47d1c8c7f347cbdcc2b778a",
           "children": [
             {
-              "actorId": "actor-18",
+              "actorId": "actor-roots",
               "bodyRef": "db1c3daa1940af6d7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
-              "color": "#42758C",
+              "color": "#327B98",
               "kind": "body",
-              "label": "codex_core::session::turn::turn_diff_display_roots::{closure#0}",
+              "label": "turn_diff_display_roots::{closure#0}",
               "sourceNodeRef": "db1c3daa1940af6d7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
             }
           ],
-          "color": "#42758C",
+          "color": "#327B98",
           "kind": "module",
           "label": "turn",
           "sourceNodeRef": "c0b0acd6f47d1c8c7f347cbdcc2b778a"
         }
       ],
-      "color": "#42758C",
+      "color": "#327B98",
       "kind": "crate",
       "label": "codex_core",
       "sourceNodeRef": "7f347cbdcc2b778a7f347cbdcc2b778a"
     },
     {
-      "actorId": "actor-crate-3a8b0ebc4f04af173a8b0ebc4f04af17",
+      "actorId": "crate-3a8b0ebc4f04af173a8b0ebc4f04af17",
       "children": [
         {
-          "actorId": "actor-module-3a8b0ebc4f04af173a8b0ebc4f04af17",
+          "actorId": "module-3a8b0ebc4f04af173a8b0ebc4f04af17",
           "children": [
             {
-              "actorId": "actor-9",
+              "actorId": "actor-feature",
               "bodyRef": "8aac1be8d6ebf13e3a8b0ebc4f04af17|mir_drops_elaborated_and_const_checked|main",
-              "color": "#42758C",
+              "color": "#327B98",
               "kind": "body",
-              "label": "enabled",
+              "label": "Features::enabled",
               "sourceNodeRef": "8aac1be8d6ebf13e3a8b0ebc4f04af17|mir_drops_elaborated_and_const_checked|main"
             }
           ],
-          "color": "#42758C",
+          "color": "#327B98",
           "kind": "module",
           "label": "codex_features",
           "sourceNodeRef": "3a8b0ebc4f04af173a8b0ebc4f04af17"
         }
       ],
-      "color": "#42758C",
+      "color": "#327B98",
       "kind": "crate",
       "label": "codex_features",
       "sourceNodeRef": "3a8b0ebc4f04af173a8b0ebc4f04af17"
@@ -107,35 +107,35 @@
   "caseIndex": [],
   "controlOwners": [
     {
-      "controlRef": "control-2",
+      "controlRef": "control-source",
       "owner": {
         "kind": "action",
         "ref": "P01/A01.1"
       }
     },
     {
-      "controlRef": "control-9",
+      "controlRef": "opt-feature",
       "owner": {
         "kind": "action",
         "ref": "P01/A01.1"
       }
     },
     {
-      "controlRef": "control-13",
+      "controlRef": "control-environments",
       "owner": {
         "kind": "action",
         "ref": "P01/A02.12"
       }
     },
     {
-      "controlRef": "control-15",
+      "controlRef": "control-filter",
       "owner": {
         "kind": "action",
         "ref": "P01/A02.12"
       }
     },
     {
-      "controlRef": "control-18",
+      "controlRef": "control-roots",
       "owner": {
         "kind": "action",
         "ref": "P01/A03.17"
@@ -144,50 +144,50 @@
   ],
   "controls": [
     {
-      "id": "control-2",
-      "invocationRef": "inv-2",
+      "id": "control-source",
+      "invocationRef": "inv-source",
       "kind": "sequence",
       "messages": [
-        "request-2",
-        "return-2"
+        "request-source",
+        "return-source"
       ]
     },
     {
-      "condition": "会话不是基础会话",
-      "id": "control-9",
-      "invocationRef": "inv-9",
+      "condition": "非 basic session",
+      "id": "opt-feature",
+      "invocationRef": "inv-feature",
       "kind": "opt",
       "messages": [
-        "request-9",
-        "return-9"
+        "request-feature",
+        "return-feature"
       ],
-      "skip": "基础会话直接采用工作目录，不读取相对路径功能"
+      "skip": "basic session 直接采用 `cwd`，不查询相对路径功能"
     },
     {
-      "id": "control-13",
-      "invocationRef": "inv-13",
+      "id": "control-environments",
+      "invocationRef": "inv-environments",
       "kind": "sequence",
       "messages": [
-        "request-13",
-        "return-13"
+        "request-environments",
+        "return-environments"
       ]
     },
     {
-      "id": "control-15",
-      "invocationRef": "inv-15",
+      "id": "control-filter",
+      "invocationRef": "inv-filter",
       "kind": "sequence",
       "messages": [
-        "request-15",
-        "return-15"
+        "request-filter",
+        "return-filter"
       ]
     },
     {
-      "id": "control-18",
-      "invocationRef": "inv-18",
+      "id": "control-roots",
+      "invocationRef": "inv-roots",
       "kind": "sequence",
       "messages": [
-        "request-18",
-        "return-18"
+        "request-roots",
+        "return-roots"
       ]
     }
   ],
@@ -195,9 +195,9 @@
   "definitionNotes": [],
   "deliveryMode": "real-flow",
   "display": {
-    "description": "按会话来源与相对路径功能，直接采用环境工作目录或发现差异展示根目录。",
-    "sourceLabel": "core/src/session/turn.rs:284–306",
-    "title": "环境展示路径块"
+    "description": "codex_core::session::turn::run_turn::{closure#0}::{closure#4}",
+    "sourceLabel": "core/src/session/turn.rs",
+    "title": "run_turn::{closure#0}::{closure#4}"
   },
   "execution": {
     "artifacts": [
@@ -212,98 +212,115 @@
     "attachments": [
       {
         "evidenceRefs": [
-          "evidence-81963e865ca96a565b710231"
+          "evidence-d59ccb2cb4fdacc5e64b2357"
         ],
-        "id": "attachment-purpose-2",
+        "id": "attachment-purpose-source",
         "kind": "purpose",
         "ownerActionRef": "P01/A01.1",
-        "purposeRef": "purpose-2"
+        "purposeRef": "purpose-source"
       },
       {
         "evidenceRefs": [
-          "evidence-60dede3dfbfd0e50837718f7"
+          "evidence-fd5cb1c27047152e5afb6969"
         ],
-        "id": "attachment-purpose-9",
+        "id": "attachment-purpose-feature",
         "kind": "purpose",
         "ownerActionRef": "P01/A01.1",
-        "purposeRef": "purpose-9"
+        "purposeRef": "purpose-feature"
       },
       {
         "evidenceRefs": [
-          "evidence-c9f111f07b2ea43e21275ff8"
+          "evidence-bcaffadd2fc571dd68d5c747"
         ],
-        "id": "attachment-purpose-13",
+        "id": "attachment-purpose-environments",
         "kind": "purpose",
         "ownerActionRef": "P01/A02.12",
-        "purposeRef": "purpose-13"
+        "purposeRef": "purpose-environments"
       },
       {
         "evidenceRefs": [
-          "evidence-72f68d01da5985fbe1ae7616"
+          "evidence-73fbd3d147382cd65f8c6c22"
         ],
-        "id": "attachment-purpose-15",
+        "id": "attachment-purpose-filter",
         "kind": "purpose",
         "ownerActionRef": "P01/A02.12",
-        "purposeRef": "purpose-15"
+        "purposeRef": "purpose-filter"
       },
       {
         "evidenceRefs": [
-          "evidence-4875f0d4978ea7d2f08a0b11"
+          "evidence-269fa5e37123c66ca9662f59"
         ],
-        "id": "attachment-purpose-18",
+        "id": "attachment-purpose-roots",
         "kind": "purpose",
         "ownerActionRef": "P01/A03.17",
-        "purposeRef": "purpose-18"
+        "purposeRef": "purpose-roots"
       }
     ],
     "controlBindings": [
       {
-        "controlRef": "control-2",
+        "controlRef": "control-source",
         "evidenceRefs": [
-          "evidence-772c0e0c5f9f748cdfe1a159"
+          "evidence-a8d98a3c97c29e6fd87d86f3"
         ],
-        "nodeRef": "exec-choice"
+        "nodeRef": "exec-mode"
       },
       {
-        "controlRef": "control-9",
+        "controlRef": "opt-feature",
         "evidenceRefs": [
-          "evidence-2e7a2b993539b0d3ac78eb87"
+          "evidence-ee59145c5ac29c5eefd15b9d"
         ],
-        "nodeRef": "exec-choice"
+        "nodeRef": "exec-mode"
       },
       {
-        "controlRef": "control-13",
+        "controlRef": "control-environments",
         "evidenceRefs": [
-          "evidence-ff707406fb6d5cd41a2d2565"
+          "evidence-d8fab82b23a45f3367fe3a20"
         ],
-        "nodeRef": "exec-direct"
+        "nodeRef": "exec-cwd"
       },
       {
-        "controlRef": "control-15",
+        "controlRef": "control-filter",
         "evidenceRefs": [
-          "evidence-4f22499afb691f3143877804"
+          "evidence-c123646a6e6a2dea0598cc8d"
         ],
-        "nodeRef": "exec-direct"
+        "nodeRef": "exec-cwd"
       },
       {
-        "controlRef": "control-18",
+        "controlRef": "control-roots",
         "evidenceRefs": [
-          "evidence-8bb5f01b8af9f74f28181af9"
+          "evidence-2fd50669fa3a73d27b5c11f5"
         ],
         "nodeRef": "exec-discover"
       }
     ],
     "decisions": [
       {
+        "controlRef": "opt-feature",
         "evidenceRefs": [
-          "evidence-164bc36341a40bce4fa988c2"
+          "evidence-26b1536f61118cf3f72d446b"
         ],
-        "id": "decision-mode",
-        "readingScopeRef": "scope-mode",
+        "id": "decision-basic",
+        "skipValues": [
+          "basic"
+        ],
         "stability": "turn",
+        "takeValues": [
+          "nonbasic"
+        ],
         "values": [
           "basic",
-          "relative",
+          "nonbasic"
+        ]
+      },
+      {
+        "evidenceRefs": [
+          "evidence-4194c69483f1525882216b9f"
+        ],
+        "id": "decision-roots",
+        "readingScopeRef": "scope-roots",
+        "stability": "turn",
+        "values": [
+          "cwd",
           "discover"
         ]
       }
@@ -311,86 +328,105 @@
     "edges": [
       {
         "evidenceRefs": [
-          "evidence-78cc4c4862c339843ea357bb"
+          "evidence-be1f6d905b5acdd7afe43cb0"
         ],
         "from": "exec-entry",
         "guards": [],
-        "id": "exec-edge-0",
-        "kind": "flow",
-        "to": "exec-choice"
-      },
-      {
-        "evidenceRefs": [
-          "evidence-c517e906ea963e60ecb21568"
-        ],
-        "from": "exec-choice",
-        "guards": [],
-        "id": "exec-edge-1",
+        "id": "exec-edge-entry",
         "kind": "flow",
         "to": "exec-mode"
       },
       {
         "evidenceRefs": [
-          "evidence-433eb8cce5257773fd8ecb11"
+          "evidence-1160c2f02dc5a1b9fe233d6a"
         ],
         "from": "exec-mode",
+        "guards": [],
+        "id": "exec-edge-mode",
+        "kind": "flow",
+        "to": "exec-basic"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-6cba490ac64f7000af09afa3"
+        ],
+        "from": "exec-basic",
         "guards": [
           {
-            "decisionRef": "decision-mode",
+            "decisionRef": "decision-basic",
             "value": "basic"
+          },
+          {
+            "decisionRef": "decision-roots",
+            "value": "cwd"
           }
         ],
-        "id": "exec-edge-2",
+        "id": "exec-edge-basic",
         "kind": "branch",
-        "to": "exec-direct"
+        "to": "exec-roots"
       },
       {
         "evidenceRefs": [
-          "evidence-4b02ab63b75460044441cf59"
+          "evidence-c9aa86e134025dc3411cd346"
         ],
-        "from": "exec-mode",
+        "from": "exec-basic",
         "guards": [
           {
-            "decisionRef": "decision-mode",
-            "value": "relative"
+            "decisionRef": "decision-basic",
+            "value": "nonbasic"
           }
         ],
-        "id": "exec-edge-3",
+        "id": "exec-edge-nonbasic",
         "kind": "branch",
-        "to": "exec-direct"
+        "to": "exec-roots"
       },
       {
         "evidenceRefs": [
-          "evidence-e768ecce7d285da92a318c4e"
+          "evidence-dbebcf02cb10e0bc9b7f545e"
         ],
-        "from": "exec-mode",
+        "from": "exec-roots",
         "guards": [
           {
-            "decisionRef": "decision-mode",
+            "decisionRef": "decision-roots",
+            "value": "cwd"
+          }
+        ],
+        "id": "exec-edge-cwd",
+        "kind": "branch",
+        "to": "exec-cwd"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-b67f59ab64328367cf0bff62"
+        ],
+        "from": "exec-roots",
+        "guards": [
+          {
+            "decisionRef": "decision-roots",
             "value": "discover"
           }
         ],
-        "id": "exec-edge-4",
+        "id": "exec-edge-discover",
         "kind": "branch",
         "to": "exec-discover"
       },
       {
         "evidenceRefs": [
-          "evidence-4d246820f99ce415d3932ed3"
+          "evidence-9c3673fe44bf5ed28169d721"
         ],
-        "from": "exec-direct",
+        "from": "exec-cwd",
         "guards": [],
-        "id": "exec-edge-5",
+        "id": "exec-edge-cwd-return",
         "kind": "flow",
         "to": "exec-return"
       },
       {
         "evidenceRefs": [
-          "evidence-856c4ec6c021e67cc3c83da0"
+          "evidence-21d16f5b3d82041befa13155"
         ],
         "from": "exec-discover",
         "guards": [],
-        "id": "exec-edge-6",
+        "id": "exec-edge-roots-return",
         "kind": "flow",
         "to": "exec-return"
       }
@@ -405,10 +441,10 @@
           "subjectRef": "exec-entry",
           "targets": [
             "actor-main",
-            "codex_core::session::turn::run_turn::{closure#0}::{closure#4}"
+            "run_turn::{closure#0}::{closure#4}"
           ]
         },
-        "id": "evidence-28b30b28945eb55b194086a9",
+        "id": "evidence-642baf7780948006f9a7a83d",
         "locator": "bb1",
         "quote": "            if crate::guardian::is_basic_session_source(&turn_context.session_source)"
       },
@@ -419,11 +455,11 @@
           "kind": "action",
           "subjectRef": "P01/A01.1",
           "targets": [
-            "exec-choice"
+            "exec-mode"
           ]
         },
-        "id": "evidence-75174644133f1f091c201759",
-        "locator": "bb2,bb3,bb9,bb10",
+        "id": "evidence-da1e5827f7b81f7279f3e504",
+        "locator": "bb1,bb2,bb3,bb5,bb6,bb7,bb8,bb9,bb10",
         "quote": "            if crate::guardian::is_basic_session_source(&turn_context.session_source)"
       },
       {
@@ -431,12 +467,26 @@
         "claim": {
           "conditions": [],
           "kind": "decision",
-          "subjectRef": "exec-mode",
+          "subjectRef": "exec-basic",
           "targets": [
-            "decision-mode"
+            "decision-basic"
           ]
         },
-        "id": "evidence-e2d1b73a59982ecde5982351",
+        "id": "evidence-6f7229881e55d72a8ceafcd1",
+        "locator": "bb3",
+        "quote": "            if crate::guardian::is_basic_session_source(&turn_context.session_source)"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "decision",
+          "subjectRef": "exec-roots",
+          "targets": [
+            "decision-roots"
+          ]
+        },
+        "id": "evidence-7d2facb6f6f00f43c117e00e",
         "locator": "bb3,bb10",
         "quote": "            if crate::guardian::is_basic_session_source(&turn_context.session_source)"
       },
@@ -447,11 +497,11 @@
           "kind": "action",
           "subjectRef": "P01/A02.12",
           "targets": [
-            "exec-direct"
+            "exec-cwd"
           ]
         },
-        "id": "evidence-aa9297604f69d2cf4628df1e",
-        "locator": "bb12,bb13,bb14,bb15",
+        "id": "evidence-417aaeed7a62e2fcbbf70ee8",
+        "locator": "bb12,bb13,bb14,bb15,bb16",
         "quote": "                first_step_context\n                    .environments"
       },
       {
@@ -464,8 +514,8 @@
             "exec-discover"
           ]
         },
-        "id": "evidence-695476f2056021805bfa4c5f",
-        "locator": "bb17,bb18,bb22,bb26",
+        "id": "evidence-276de5d6ebeab326a0fe23b8",
+        "locator": "bb17,bb18,bb19,bb20,bb21,bb22,bb23,bb26,bb27",
         "quote": "                turn_diff_display_roots(first_step_context.as_ref()).await"
       },
       {
@@ -487,14 +537,14 @@
         "claim": {
           "conditions": [],
           "kind": "relation",
-          "subjectRef": "exec-edge-0",
+          "subjectRef": "exec-edge-entry",
           "targets": [
             "exec-entry",
-            "exec-choice",
+            "exec-mode",
             "flow"
           ]
         },
-        "id": "evidence-78cc4c4862c339843ea357bb",
+        "id": "evidence-be1f6d905b5acdd7afe43cb0",
         "locator": "bb1",
         "quote": "            if crate::guardian::is_basic_session_source(&turn_context.session_source)"
       },
@@ -503,32 +553,33 @@
         "claim": {
           "conditions": [],
           "kind": "relation",
-          "subjectRef": "exec-edge-1",
+          "subjectRef": "exec-edge-mode",
           "targets": [
-            "exec-choice",
             "exec-mode",
+            "exec-basic",
             "flow"
           ]
         },
-        "id": "evidence-c517e906ea963e60ecb21568",
-        "locator": "bb3,bb10",
+        "id": "evidence-1160c2f02dc5a1b9fe233d6a",
+        "locator": "bb3",
         "quote": "            if crate::guardian::is_basic_session_source(&turn_context.session_source)"
       },
       {
         "artifactRef": "source-function",
         "claim": {
           "conditions": [
-            "decision-mode=basic"
+            "decision-basic=basic",
+            "decision-roots=cwd"
           ],
           "kind": "relation",
-          "subjectRef": "exec-edge-2",
+          "subjectRef": "exec-edge-basic",
           "targets": [
-            "exec-mode",
-            "exec-direct",
+            "exec-basic",
+            "exec-roots",
             "branch"
           ]
         },
-        "id": "evidence-433eb8cce5257773fd8ecb11",
+        "id": "evidence-6cba490ac64f7000af09afa3",
         "locator": "m3.1,m4.0",
         "quote": "            if crate::guardian::is_basic_session_source(&turn_context.session_source)"
       },
@@ -536,35 +587,53 @@
         "artifactRef": "source-function",
         "claim": {
           "conditions": [
-            "decision-mode=relative"
+            "decision-basic=nonbasic"
           ],
           "kind": "relation",
-          "subjectRef": "exec-edge-3",
+          "subjectRef": "exec-edge-nonbasic",
           "targets": [
-            "exec-mode",
-            "exec-direct",
+            "exec-basic",
+            "exec-roots",
             "branch"
           ]
         },
-        "id": "evidence-4b02ab63b75460044441cf59",
-        "locator": "m3.0,m10.1,m11.0",
+        "id": "evidence-c9aa86e134025dc3411cd346",
+        "locator": "m3.0,bb5,bb9,bb10",
         "quote": "            if crate::guardian::is_basic_session_source(&turn_context.session_source)"
       },
       {
         "artifactRef": "source-function",
         "claim": {
           "conditions": [
-            "decision-mode=discover"
+            "decision-roots=cwd"
           ],
           "kind": "relation",
-          "subjectRef": "exec-edge-4",
+          "subjectRef": "exec-edge-cwd",
           "targets": [
-            "exec-mode",
+            "exec-roots",
+            "exec-cwd",
+            "branch"
+          ]
+        },
+        "id": "evidence-dbebcf02cb10e0bc9b7f545e",
+        "locator": "m3.1,m4.0,m10.1,m11.0",
+        "quote": "            if crate::guardian::is_basic_session_source(&turn_context.session_source)"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [
+            "decision-roots=discover"
+          ],
+          "kind": "relation",
+          "subjectRef": "exec-edge-discover",
+          "targets": [
+            "exec-roots",
             "exec-discover",
             "branch"
           ]
         },
-        "id": "evidence-e768ecce7d285da92a318c4e",
+        "id": "evidence-b67f59ab64328367cf0bff62",
         "locator": "m3.0,m10.0",
         "quote": "            if crate::guardian::is_basic_session_source(&turn_context.session_source)"
       },
@@ -573,15 +642,15 @@
         "claim": {
           "conditions": [],
           "kind": "relation",
-          "subjectRef": "exec-edge-5",
+          "subjectRef": "exec-edge-cwd-return",
           "targets": [
-            "exec-direct",
+            "exec-cwd",
             "exec-return",
             "flow"
           ]
         },
-        "id": "evidence-4d246820f99ce415d3932ed3",
-        "locator": "m16.0,bb28",
+        "id": "evidence-9c3673fe44bf5ed28169d721",
+        "locator": "m16.0",
         "quote": "pub(crate) async fn run_turn("
       },
       {
@@ -589,33 +658,52 @@
         "claim": {
           "conditions": [],
           "kind": "relation",
-          "subjectRef": "exec-edge-6",
+          "subjectRef": "exec-edge-roots-return",
           "targets": [
             "exec-discover",
             "exec-return",
             "flow"
           ]
         },
-        "id": "evidence-856c4ec6c021e67cc3c83da0",
-        "locator": "m26.0,m27.0,bb28",
-        "quote": "                turn_diff_display_roots(first_step_context.as_ref()).await"
+        "id": "evidence-21d16f5b3d82041befa13155",
+        "locator": "m27.0",
+        "quote": "pub(crate) async fn run_turn("
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [
+            "take=nonbasic",
+            "skip=basic"
+          ],
+          "kind": "decision",
+          "subjectRef": "decision-basic",
+          "targets": [
+            "stability:turn",
+            "basic",
+            "nonbasic",
+            "control:opt-feature"
+          ]
+        },
+        "id": "evidence-26b1536f61118cf3f72d446b",
+        "locator": "bb3,m3.0,m3.1",
+        "quote": "            if crate::guardian::is_basic_session_source(&turn_context.session_source)"
       },
       {
         "artifactRef": "source-function",
         "claim": {
           "conditions": [],
           "kind": "decision",
-          "subjectRef": "decision-mode",
+          "subjectRef": "decision-roots",
           "targets": [
             "stability:turn",
-            "basic",
-            "relative",
+            "cwd",
             "discover",
-            "scope:scope-mode"
+            "scope:scope-roots"
           ]
         },
-        "id": "evidence-164bc36341a40bce4fa988c2",
-        "locator": "bb3,bb10",
+        "id": "evidence-4194c69483f1525882216b9f",
+        "locator": "bb3,bb10,m3.1,m10.0,m10.1",
         "quote": "            if crate::guardian::is_basic_session_source(&turn_context.session_source)"
       },
       {
@@ -623,12 +711,12 @@
         "claim": {
           "conditions": [],
           "kind": "control-binding",
-          "subjectRef": "control-2",
+          "subjectRef": "control-source",
           "targets": [
-            "exec-choice"
+            "exec-mode"
           ]
         },
-        "id": "evidence-772c0e0c5f9f748cdfe1a159",
+        "id": "evidence-a8d98a3c97c29e6fd87d86f3",
         "locator": "call:2",
         "quote": "            if crate::guardian::is_basic_session_source(&turn_context.session_source)"
       },
@@ -637,12 +725,12 @@
         "claim": {
           "conditions": [],
           "kind": "control-binding",
-          "subjectRef": "control-9",
+          "subjectRef": "opt-feature",
           "targets": [
-            "exec-choice"
+            "exec-mode"
           ]
         },
-        "id": "evidence-2e7a2b993539b0d3ac78eb87",
+        "id": "evidence-ee59145c5ac29c5eefd15b9d",
         "locator": "call:9",
         "quote": "                || first_step_context\n                    .turn\n                    .config\n                    .features\n                    .enabled(Feature::CwdRelativeTurnDiffs)"
       },
@@ -651,12 +739,12 @@
         "claim": {
           "conditions": [],
           "kind": "control-binding",
-          "subjectRef": "control-13",
+          "subjectRef": "control-environments",
           "targets": [
-            "exec-direct"
+            "exec-cwd"
           ]
         },
-        "id": "evidence-ff707406fb6d5cd41a2d2565",
+        "id": "evidence-d8fab82b23a45f3367fe3a20",
         "locator": "call:13",
         "quote": "                first_step_context\n                    .environments\n                    .turn_environments()"
       },
@@ -665,12 +753,12 @@
         "claim": {
           "conditions": [],
           "kind": "control-binding",
-          "subjectRef": "control-15",
+          "subjectRef": "control-filter",
           "targets": [
-            "exec-direct"
+            "exec-cwd"
           ]
         },
-        "id": "evidence-4f22499afb691f3143877804",
+        "id": "evidence-c123646a6e6a2dea0598cc8d",
         "locator": "call:15",
         "quote": "                first_step_context\n                    .environments\n                    .turn_environments()\n                    .map(|environment| {\n                        (\n                            environment.selection().environment_id,\n                            environment.cwd().clone(),\n                        )\n                    })\n                    .collect()"
       },
@@ -679,12 +767,12 @@
         "claim": {
           "conditions": [],
           "kind": "control-binding",
-          "subjectRef": "control-18",
+          "subjectRef": "control-roots",
           "targets": [
             "exec-discover"
           ]
         },
-        "id": "evidence-8bb5f01b8af9f74f28181af9",
+        "id": "evidence-2fd50669fa3a73d27b5c11f5",
         "locator": "call:18",
         "quote": "                turn_diff_display_roots(first_step_context.as_ref()).await"
       },
@@ -693,14 +781,14 @@
         "claim": {
           "conditions": [],
           "kind": "attachment",
-          "subjectRef": "attachment-purpose-2",
+          "subjectRef": "attachment-purpose-source",
           "targets": [
             "P01/A01.1",
-            "purpose-2"
+            "purpose-source"
           ]
         },
-        "id": "evidence-81963e865ca96a565b710231",
-        "locator": "call:2,bb2",
+        "id": "evidence-d59ccb2cb4fdacc5e64b2357",
+        "locator": "call:2",
         "quote": "            if crate::guardian::is_basic_session_source(&turn_context.session_source)"
       },
       {
@@ -708,14 +796,14 @@
         "claim": {
           "conditions": [],
           "kind": "attachment",
-          "subjectRef": "attachment-purpose-9",
+          "subjectRef": "attachment-purpose-feature",
           "targets": [
             "P01/A01.1",
-            "purpose-9"
+            "purpose-feature"
           ]
         },
-        "id": "evidence-60dede3dfbfd0e50837718f7",
-        "locator": "call:9,bb9",
+        "id": "evidence-fd5cb1c27047152e5afb6969",
+        "locator": "call:9",
         "quote": "                || first_step_context\n                    .turn\n                    .config\n                    .features\n                    .enabled(Feature::CwdRelativeTurnDiffs)"
       },
       {
@@ -723,14 +811,14 @@
         "claim": {
           "conditions": [],
           "kind": "attachment",
-          "subjectRef": "attachment-purpose-13",
+          "subjectRef": "attachment-purpose-environments",
           "targets": [
             "P01/A02.12",
-            "purpose-13"
+            "purpose-environments"
           ]
         },
-        "id": "evidence-c9f111f07b2ea43e21275ff8",
-        "locator": "call:13,bb13",
+        "id": "evidence-bcaffadd2fc571dd68d5c747",
+        "locator": "call:13",
         "quote": "                first_step_context\n                    .environments\n                    .turn_environments()"
       },
       {
@@ -738,14 +826,14 @@
         "claim": {
           "conditions": [],
           "kind": "attachment",
-          "subjectRef": "attachment-purpose-15",
+          "subjectRef": "attachment-purpose-filter",
           "targets": [
             "P01/A02.12",
-            "purpose-15"
+            "purpose-filter"
           ]
         },
-        "id": "evidence-72f68d01da5985fbe1ae7616",
-        "locator": "call:15,bb15",
+        "id": "evidence-73fbd3d147382cd65f8c6c22",
+        "locator": "call:15",
         "quote": "                first_step_context\n                    .environments\n                    .turn_environments()\n                    .map(|environment| {\n                        (\n                            environment.selection().environment_id,\n                            environment.cwd().clone(),\n                        )\n                    })\n                    .collect()"
       },
       {
@@ -753,14 +841,14 @@
         "claim": {
           "conditions": [],
           "kind": "attachment",
-          "subjectRef": "attachment-purpose-18",
+          "subjectRef": "attachment-purpose-roots",
           "targets": [
             "P01/A03.17",
-            "purpose-18"
+            "purpose-roots"
           ]
         },
-        "id": "evidence-4875f0d4978ea7d2f08a0b11",
-        "locator": "call:18,bb18",
+        "id": "evidence-269fa5e37123c66ca9662f59",
+        "locator": "call:18",
         "quote": "                turn_diff_display_roots(first_step_context.as_ref()).await"
       },
       {
@@ -768,20 +856,20 @@
         "claim": {
           "conditions": [],
           "kind": "inventory",
-          "subjectRef": "codex_core::session::turn::run_turn::{closure#0}::{closure#4}",
+          "subjectRef": "run_turn::{closure#0}::{closure#4}",
           "targets": [
             "action:P01/A01.1",
             "action:P01/A02.12",
             "action:P01/A03.17",
-            "control:control-2",
-            "control:control-9",
-            "control:control-13",
-            "control:control-15",
-            "control:control-18"
+            "control:control-source",
+            "control:opt-feature",
+            "control:control-environments",
+            "control:control-filter",
+            "control:control-roots"
           ]
         },
-        "id": "evidence-d69c1ae3d8f8dd8af7a0369a",
-        "locator": "bb1,bb3,bb10,bb15,bb18",
+        "id": "evidence-fe18fb9d9dbcdcc3ad0e2f6a",
+        "locator": "bb1,bb3,bb10,bb12,bb17,bb28",
         "quote": "            if crate::guardian::is_basic_session_source(&turn_context.session_source)"
       }
     ],
@@ -792,14 +880,14 @@
         "P01/A03.17"
       ],
       "controlRefs": [
-        "control-2",
-        "control-9",
-        "control-13",
-        "control-15",
-        "control-18"
+        "control-source",
+        "opt-feature",
+        "control-environments",
+        "control-filter",
+        "control-roots"
       ],
       "evidenceRefs": [
-        "evidence-d69c1ae3d8f8dd8af7a0369a"
+        "evidence-fe18fb9d9dbcdcc3ad0e2f6a"
       ]
     },
     "nodes": [
@@ -808,11 +896,11 @@
           "bb1"
         ],
         "evidenceRefs": [
-          "evidence-28b30b28945eb55b194086a9"
+          "evidence-642baf7780948006f9a7a83d"
         ],
         "id": "exec-entry",
         "kind": "entry",
-        "label": "取得首步上下文后准备展示根目录",
+        "label": "接收本轮路径基准请求",
         "lineRanges": [
           {
             "endLine": 286,
@@ -835,13 +923,13 @@
           "bb10",
           "bb11"
         ],
-        "broadRangeReason": "286行调用基础会话判断，287–291行按短路规则访问功能配置；两段共同决定是否绕过发现，均为展示方式判断所必需，292/303行仅为分支块界限。",
+        "broadRangeReason": "286行检查session与287–291行检查feature是同一短路模式选择，6/23行均需要保留。",
         "evidenceRefs": [
-          "evidence-75174644133f1f091c201759"
+          "evidence-da1e5827f7b81f7279f3e504"
         ],
-        "id": "exec-choice",
+        "id": "exec-mode",
         "kind": "action",
-        "label": "检验会话来源与相对路径配置",
+        "label": "选择 session 对应的路径模式",
         "lineRanges": [
           {
             "endLine": 291,
@@ -851,17 +939,35 @@
       },
       {
         "basicBlockRefs": [
+          "bb3"
+        ],
+        "decisionRef": "decision-basic",
+        "evidenceRefs": [
+          "evidence-6f7229881e55d72a8ceafcd1"
+        ],
+        "id": "exec-basic",
+        "kind": "decision",
+        "label": "basic session 直接使用工作目录",
+        "lineRanges": [
+          {
+            "endLine": 286,
+            "startLine": 286
+          }
+        ]
+      },
+      {
+        "basicBlockRefs": [
           "bb3",
           "bb10"
         ],
-        "broadRangeReason": "286行会话来源条件与287–291行功能条件共同构成短路选择的完整条件；两段均必须核对。",
-        "decisionRef": "decision-mode",
+        "broadRangeReason": "286行与287–291行是同一短路表达式的两个条件操作数，6/23行都影响路径模式。",
+        "decisionRef": "decision-roots",
         "evidenceRefs": [
-          "evidence-e2d1b73a59982ecde5982351"
+          "evidence-7d2facb6f6f00f43c117e00e"
         ],
-        "id": "exec-mode",
+        "id": "exec-roots",
         "kind": "decision",
-        "label": "基础会话优先，其次检验相对路径功能",
+        "label": "确定使用工作目录还是发现显示根",
         "lineRanges": [
           {
             "endLine": 291,
@@ -878,13 +984,13 @@
           "bb15",
           "bb16"
         ],
-        "broadRangeReason": "293–295行取得本轮环境，296–301行逐项构建环境标识与工作目录元组，302行收集为结果列表；完整链条直接产生本动作结果，不能只高亮collect。",
+        "broadRangeReason": "293–302行共同完成筛选、映射、收集，10/23行是列表生成的必要表达式。",
         "evidenceRefs": [
-          "evidence-aa9297604f69d2cf4628df1e"
+          "evidence-417aaeed7a62e2fcbbf70ee8"
         ],
-        "id": "exec-direct",
+        "id": "exec-cwd",
         "kind": "action",
-        "label": "以环境标识和当前工作目录组成展示基准",
+        "label": "生成环境标识与工作目录列表",
         "lineRanges": [
           {
             "endLine": 302,
@@ -906,11 +1012,11 @@
           "bb27"
         ],
         "evidenceRefs": [
-          "evidence-695476f2056021805bfa4c5f"
+          "evidence-276de5d6ebeab326a0fe23b8"
         ],
         "id": "exec-discover",
         "kind": "action",
-        "label": "等待上下文发现适合展示差异的根目录",
+        "label": "发现并接收环境显示根",
         "lineRanges": [
           {
             "endLine": 304,
@@ -927,7 +1033,7 @@
         ],
         "id": "exec-return",
         "kind": "terminal",
-        "label": "根目录列表已可供差异展示使用",
+        "label": "交还环境显示路径列表",
         "lineRanges": [],
         "outcome": "return",
         "sourceRangeReason": "No precise semantic operation span in the recorded BBs; only compiler state, storage, drop, cleanup or enclosing-scope context. Full source remains available."
@@ -943,99 +1049,99 @@
         "bodyRef": "6ccfbaa7c8ba54b17f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
         "color": "#327B98",
         "kind": "body",
-        "label": "codex_core::session::turn::run_turn::{closure#0}::{closure#4}",
+        "label": "run_turn::{closure#0}::{closure#4}",
         "sourceNodeRef": "6ccfbaa7c8ba54b17f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
       },
       {
-        "actorId": "actor-crate-7f347cbdcc2b778a7f347cbdcc2b778a",
+        "actorId": "crate-7f347cbdcc2b778a7f347cbdcc2b778a",
         "children": [
           {
-            "actorId": "actor-module-a5f9c6e4834f234e7f347cbdcc2b778a",
+            "actorId": "module-a5f9c6e4834f234e7f347cbdcc2b778a",
             "children": [
               {
-                "actorId": "actor-2",
+                "actorId": "actor-source",
                 "bodyRef": "5f922a9ffde1e4f67f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
-                "color": "#42758C",
+                "color": "#327B98",
                 "kind": "body",
                 "label": "is_basic_session_source",
                 "sourceNodeRef": "5f922a9ffde1e4f67f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
               }
             ],
-            "color": "#42758C",
+            "color": "#327B98",
             "kind": "module",
             "label": "review",
             "sourceNodeRef": "a5f9c6e4834f234e7f347cbdcc2b778a"
           },
           {
-            "actorId": "actor-module-d99984c779e578a17f347cbdcc2b778a",
+            "actorId": "module-d99984c779e578a17f347cbdcc2b778a",
             "children": [
               {
-                "actorId": "actor-13",
+                "actorId": "actor-environments",
                 "bodyRef": "48b1f29f6375784d7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
-                "color": "#42758C",
+                "color": "#327B98",
                 "kind": "body",
-                "label": "turn_environments",
+                "label": "TurnEnvironmentSnapshot::turn_environments",
                 "sourceNodeRef": "48b1f29f6375784d7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
               },
               {
-                "actorId": "actor-15",
+                "actorId": "actor-filter",
                 "bodyRef": "aae21020d04383c17f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
-                "color": "#42758C",
+                "color": "#327B98",
                 "kind": "body",
-                "label": "codex_core::environment_selection::TurnEnvironmentSnapshot::turn_environments::{closure#0}",
+                "label": "TurnEnvironmentSnapshot::turn_environments::{closure#0}",
                 "sourceNodeRef": "aae21020d04383c17f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
               }
             ],
-            "color": "#42758C",
+            "color": "#327B98",
             "kind": "module",
             "label": "environment_selection",
             "sourceNodeRef": "d99984c779e578a17f347cbdcc2b778a"
           },
           {
-            "actorId": "actor-module-c0b0acd6f47d1c8c7f347cbdcc2b778a",
+            "actorId": "module-c0b0acd6f47d1c8c7f347cbdcc2b778a",
             "children": [
               {
-                "actorId": "actor-18",
+                "actorId": "actor-roots",
                 "bodyRef": "db1c3daa1940af6d7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
-                "color": "#42758C",
+                "color": "#327B98",
                 "kind": "body",
-                "label": "codex_core::session::turn::turn_diff_display_roots::{closure#0}",
+                "label": "turn_diff_display_roots::{closure#0}",
                 "sourceNodeRef": "db1c3daa1940af6d7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
               }
             ],
-            "color": "#42758C",
+            "color": "#327B98",
             "kind": "module",
             "label": "turn",
             "sourceNodeRef": "c0b0acd6f47d1c8c7f347cbdcc2b778a"
           }
         ],
-        "color": "#42758C",
+        "color": "#327B98",
         "kind": "crate",
         "label": "codex_core",
         "sourceNodeRef": "7f347cbdcc2b778a7f347cbdcc2b778a"
       },
       {
-        "actorId": "actor-crate-3a8b0ebc4f04af173a8b0ebc4f04af17",
+        "actorId": "crate-3a8b0ebc4f04af173a8b0ebc4f04af17",
         "children": [
           {
-            "actorId": "actor-module-3a8b0ebc4f04af173a8b0ebc4f04af17",
+            "actorId": "module-3a8b0ebc4f04af173a8b0ebc4f04af17",
             "children": [
               {
-                "actorId": "actor-9",
+                "actorId": "actor-feature",
                 "bodyRef": "8aac1be8d6ebf13e3a8b0ebc4f04af17|mir_drops_elaborated_and_const_checked|main",
-                "color": "#42758C",
+                "color": "#327B98",
                 "kind": "body",
-                "label": "enabled",
+                "label": "Features::enabled",
                 "sourceNodeRef": "8aac1be8d6ebf13e3a8b0ebc4f04af17|mir_drops_elaborated_and_const_checked|main"
               }
             ],
-            "color": "#42758C",
+            "color": "#327B98",
             "kind": "module",
             "label": "codex_features",
             "sourceNodeRef": "3a8b0ebc4f04af173a8b0ebc4f04af17"
           }
         ],
-        "color": "#42758C",
+        "color": "#327B98",
         "kind": "crate",
         "label": "codex_features",
         "sourceNodeRef": "3a8b0ebc4f04af173a8b0ebc4f04af17"
@@ -1739,173 +1845,173 @@
   "messagePlacements": [
     {
       "branchPath": [],
-      "controlRef": "control-2",
-      "messageRef": "request-2",
-      "rootControlRef": "control-2"
+      "controlRef": "control-source",
+      "messageRef": "request-source",
+      "rootControlRef": "control-source"
     },
     {
       "branchPath": [],
-      "controlRef": "control-2",
-      "messageRef": "return-2",
-      "rootControlRef": "control-2"
+      "controlRef": "control-source",
+      "messageRef": "return-source",
+      "rootControlRef": "control-source"
     },
     {
       "branchPath": [],
-      "controlRef": "control-9",
-      "messageRef": "request-9",
-      "rootControlRef": "control-9"
+      "controlRef": "opt-feature",
+      "messageRef": "request-feature",
+      "rootControlRef": "opt-feature"
     },
     {
       "branchPath": [],
-      "controlRef": "control-9",
-      "messageRef": "return-9",
-      "rootControlRef": "control-9"
+      "controlRef": "opt-feature",
+      "messageRef": "return-feature",
+      "rootControlRef": "opt-feature"
     },
     {
       "branchPath": [],
-      "controlRef": "control-13",
-      "messageRef": "request-13",
-      "rootControlRef": "control-13"
+      "controlRef": "control-environments",
+      "messageRef": "request-environments",
+      "rootControlRef": "control-environments"
     },
     {
       "branchPath": [],
-      "controlRef": "control-13",
-      "messageRef": "return-13",
-      "rootControlRef": "control-13"
+      "controlRef": "control-environments",
+      "messageRef": "return-environments",
+      "rootControlRef": "control-environments"
     },
     {
       "branchPath": [],
-      "controlRef": "control-15",
-      "messageRef": "request-15",
-      "rootControlRef": "control-15"
+      "controlRef": "control-filter",
+      "messageRef": "request-filter",
+      "rootControlRef": "control-filter"
     },
     {
       "branchPath": [],
-      "controlRef": "control-15",
-      "messageRef": "return-15",
-      "rootControlRef": "control-15"
+      "controlRef": "control-filter",
+      "messageRef": "return-filter",
+      "rootControlRef": "control-filter"
     },
     {
       "branchPath": [],
-      "controlRef": "control-18",
-      "messageRef": "request-18",
-      "rootControlRef": "control-18"
+      "controlRef": "control-roots",
+      "messageRef": "request-roots",
+      "rootControlRef": "control-roots"
     },
     {
       "branchPath": [],
-      "controlRef": "control-18",
-      "messageRef": "return-18",
-      "rootControlRef": "control-18"
+      "controlRef": "control-roots",
+      "messageRef": "return-roots",
+      "rootControlRef": "control-roots"
     }
   ],
   "messages": [
     {
       "bindingRef": "call:2",
       "fromActorId": "actor-main",
-      "invocationRef": "inv-2",
+      "invocationRef": "inv-source",
       "kind": "request",
-      "label": "检查会话来源",
-      "messageId": "request-2",
-      "pair": "pair-2",
+      "label": "判断本轮 `session_source`",
+      "messageId": "request-source",
+      "pair": "pair-source",
       "stage": "business-request",
-      "toActorId": "actor-2"
+      "toActorId": "actor-source"
     },
     {
       "bindingRef": "call:2",
-      "fromActorId": "actor-2",
-      "invocationRef": "inv-2",
+      "fromActorId": "actor-source",
+      "invocationRef": "inv-source",
       "kind": "return",
-      "label": "交还基础会话判定",
-      "messageId": "return-2",
-      "pair": "pair-2",
+      "label": "返回 basic session 判断",
+      "messageId": "return-source",
+      "pair": "pair-source",
       "stage": "business-completion",
       "toActorId": "actor-main"
     },
     {
       "bindingRef": "call:9",
       "fromActorId": "actor-main",
-      "invocationRef": "inv-9",
+      "invocationRef": "inv-feature",
       "kind": "request",
-      "label": "查询相对路径功能",
-      "messageId": "request-9",
-      "pair": "pair-9",
+      "label": "查询 `CwdRelativeTurnDiffs`",
+      "messageId": "request-feature",
+      "pair": "pair-feature",
       "stage": "business-request",
-      "toActorId": "actor-9"
+      "toActorId": "actor-feature"
     },
     {
       "bindingRef": "call:9",
-      "fromActorId": "actor-9",
-      "invocationRef": "inv-9",
+      "fromActorId": "actor-feature",
+      "invocationRef": "inv-feature",
       "kind": "return",
-      "label": "交还功能启用状态",
-      "messageId": "return-9",
-      "pair": "pair-9",
+      "label": "返回相对路径功能状态",
+      "messageId": "return-feature",
+      "pair": "pair-feature",
       "stage": "business-completion",
       "toActorId": "actor-main"
     },
     {
       "bindingRef": "call:13",
       "fromActorId": "actor-main",
-      "invocationRef": "inv-13",
+      "invocationRef": "inv-environments",
       "kind": "request",
-      "label": "取得环境筛选视图",
-      "messageId": "request-13",
-      "pair": "pair-13",
+      "label": "提供本轮环境快照",
+      "messageId": "request-environments",
+      "pair": "pair-environments",
       "stage": "business-request",
-      "toActorId": "actor-13"
+      "toActorId": "actor-environments"
     },
     {
       "bindingRef": "call:13",
-      "fromActorId": "actor-13",
-      "invocationRef": "inv-13",
+      "fromActorId": "actor-environments",
+      "invocationRef": "inv-environments",
       "kind": "return",
-      "label": "交还本轮环境遍历入口",
-      "messageId": "return-13",
-      "pair": "pair-13",
+      "label": "返回 turn environment 访问视图",
+      "messageId": "return-environments",
+      "pair": "pair-environments",
       "stage": "business-completion",
       "toActorId": "actor-main"
     },
     {
       "bindingRef": "call:15",
       "fromActorId": "actor-main",
-      "invocationRef": "inv-15",
+      "invocationRef": "inv-filter",
       "kind": "request",
-      "label": "执行有效环境筛选",
-      "messageId": "request-15",
-      "pair": "pair-15",
+      "label": "收集过程中执行 `Ready` environment 筛选闭包",
+      "messageId": "request-filter",
+      "pair": "pair-filter",
       "stage": "business-request",
-      "toActorId": "actor-15"
+      "toActorId": "actor-filter"
     },
     {
       "bindingRef": "call:15",
-      "fromActorId": "actor-15",
-      "invocationRef": "inv-15",
+      "fromActorId": "actor-filter",
+      "invocationRef": "inv-filter",
       "kind": "return",
-      "label": "保留就绪的本轮环境",
-      "messageId": "return-15",
-      "pair": "pair-15",
+      "label": "保留已就绪的 turn environments",
+      "messageId": "return-filter",
+      "pair": "pair-filter",
       "stage": "business-completion",
       "toActorId": "actor-main"
     },
     {
       "bindingRef": "call:18",
       "fromActorId": "actor-main",
-      "invocationRef": "inv-18",
+      "invocationRef": "inv-roots",
       "kind": "request",
-      "label": "请求发现差异展示根目录",
-      "messageId": "request-18",
-      "pair": "pair-18",
+      "label": "发现各环境的显示根",
+      "messageId": "request-roots",
+      "pair": "pair-roots",
       "stage": "business-request",
-      "toActorId": "actor-18"
+      "toActorId": "actor-roots"
     },
     {
       "bindingRef": "call:18",
-      "fromActorId": "actor-18",
-      "invocationRef": "inv-18",
+      "fromActorId": "actor-roots",
+      "invocationRef": "inv-roots",
       "kind": "return",
-      "label": "交还发现结果或工作目录回退值",
-      "messageId": "return-18",
-      "pair": "pair-18",
+      "label": "交还环境标识与显示根列表",
+      "messageId": "return-roots",
+      "pair": "pair-roots",
       "stage": "business-completion",
       "toActorId": "actor-main"
     }
@@ -1958,13 +2064,13 @@
                 "bb10",
                 "bb11"
               ],
-              "broadRangeReason": "286行调用基础会话判断，287–291行按短路规则访问功能配置；两段共同决定是否绕过发现，均为展示方式判断所必需，292/303行仅为分支块界限。",
+              "broadRangeReason": "286行判断session与287–291行读取功能共同完成短路取根条件，6/23行不可省略。",
               "controlRefs": [
-                "control-2",
-                "control-9"
+                "control-source",
+                "opt-feature"
               ],
               "id": "P01/A01.1",
-              "label": "判断是否可以直接采用环境工作目录",
+              "label": "确定本轮显示路径的取根方式",
               "lineRanges": [
                 {
                   "endLine": 291,
@@ -1981,13 +2087,13 @@
                 "bb15",
                 "bb16"
               ],
-              "broadRangeReason": "293–295行取得本轮环境，296–301行逐项构建环境标识与工作目录元组，302行收集为结果列表；完整链条直接产生本动作结果，不能只高亮collect。",
+              "broadRangeReason": "293–302行筛选环境并把environment_id和cwd组成列表，10/23行是同一列表生成表达式。",
               "controlRefs": [
-                "control-13",
-                "control-15"
+                "control-environments",
+                "control-filter"
               ],
               "id": "P01/A02.12",
-              "label": "从本轮环境生成直接展示根目录",
+              "label": "收集环境标识与 `cwd` 作为显示路径",
               "lineRanges": [
                 {
                   "endLine": 302,
@@ -2008,11 +2114,12 @@
                 "bb26",
                 "bb27"
               ],
+              "broadRangeReason": "304行发起并等待显示根发现，保留接收结果的源码。",
               "controlRefs": [
-                "control-18"
+                "control-roots"
               ],
               "id": "P01/A03.17",
-              "label": "发现适合差异展示的根目录",
+              "label": "发现环境的显示根并接收路径列表",
               "lineRanges": [
                 {
                   "endLine": 304,
@@ -2049,9 +2156,9 @@
             "bb26",
             "bb27"
           ],
-          "broadRangeReason": "286行检验会话来源，287–291行检验功能，293–302行收集环境目录，304行等待发现；这些互斥路径都直接决定或生成同一输出，296–301行是元组映射本体，未包含283行的并发兄弟工作。",
+          "broadRangeReason": "286行判断session，287–291行判断功能，293–302行收集cwd，304行发现根；均属于当前23行async块的路径选择与生成责任，各分支源码分别保留。",
           "id": "sem:P01:display-roots",
-          "label": "让差异路径采用符合会话与功能配置的根目录",
+          "label": "按 session 与功能配置交付环境显示路径",
           "lineRanges": [
             {
               "endLine": 291,
@@ -2070,7 +2177,7 @@
         }
       ],
       "id": "P01",
-      "label": "准备本轮差异路径的展示基准",
+      "label": "生成本轮环境的路径显示基准",
       "lineRanges": [
         {
           "endLine": 291,
@@ -2092,85 +2199,85 @@
     {
       "defaultVisible": true,
       "goalRef": "sem:P01:display-roots",
-      "id": "purpose-2",
+      "id": "purpose-source",
       "invocationRefs": [
-        "inv-2"
+        "inv-source"
       ],
       "relatedGoalRefs": [],
       "summary": {
         "drawAsMessage": false,
         "kind": "note",
-        "object": "会话来源",
-        "purpose": "判定基础会话可直接使用工作目录",
-        "result": "得到基础会话判定"
+        "object": "session 的来源",
+        "purpose": "决定是否直接使用 `cwd`",
+        "result": "获得 basic session 判断"
       },
       "waitRefs": []
     },
     {
       "defaultVisible": true,
       "goalRef": "sem:P01:display-roots",
-      "id": "purpose-9",
+      "id": "purpose-feature",
       "invocationRefs": [
-        "inv-9"
+        "inv-feature"
       ],
       "relatedGoalRefs": [],
       "summary": {
         "drawAsMessage": false,
         "kind": "note",
-        "object": "本轮功能配置",
-        "purpose": "判定是否启用工作目录相对路径",
-        "result": "得到相对路径功能判定"
+        "object": "`CwdRelativeTurnDiffs` 配置",
+        "purpose": "决定非 basic session 的路径基准",
+        "result": "获得功能启用判断"
       },
       "waitRefs": []
     },
     {
       "defaultVisible": true,
       "goalRef": "sem:P01:display-roots",
-      "id": "purpose-13",
+      "id": "purpose-environments",
       "invocationRefs": [
-        "inv-13"
+        "inv-environments"
       ],
       "relatedGoalRefs": [],
       "summary": {
         "drawAsMessage": false,
         "kind": "note",
         "object": "本轮环境快照",
-        "purpose": "取得可用于展示的环境集合",
-        "result": "得到本轮有效环境"
+        "purpose": "只为 turn environments 生成显示路径",
+        "result": "得到参与本轮的环境"
       },
       "waitRefs": []
     },
     {
       "defaultVisible": true,
       "goalRef": "sem:P01:display-roots",
-      "id": "purpose-15",
+      "id": "purpose-filter",
       "invocationRefs": [
-        "inv-15"
+        "inv-filter"
       ],
       "relatedGoalRefs": [],
       "summary": {
         "drawAsMessage": false,
         "kind": "note",
-        "object": "环境状态",
-        "purpose": "保留具备本轮环境的项目",
-        "result": "剔除没有本轮环境的状态"
+        "object": "环境状态项",
+        "purpose": "只保留处于 `Ready` 的 turn environments",
+        "result": "排除尚未就绪的环境"
       },
       "waitRefs": []
     },
     {
       "defaultVisible": true,
       "goalRef": "sem:P01:display-roots",
-      "id": "purpose-18",
+      "id": "purpose-roots",
       "invocationRefs": [
-        "inv-18"
+        "inv-roots"
       ],
       "relatedGoalRefs": [],
       "summary": {
         "drawAsMessage": false,
         "kind": "note",
-        "object": "首步上下文",
-        "purpose": "发现差异展示根目录",
-        "result": "取得展示根目录列表"
+        "object": "本轮环境工作目录",
+        "purpose": "为 diff 发现合适显示根",
+        "result": "收到显示根列表"
       },
       "waitRefs": []
     }
@@ -2179,8 +2286,8 @@
     {
       "branches": [
         {
-          "condition": "基础会话或已启用相对路径功能",
-          "id": "branch-direct",
+          "condition": "basic session 或 `CwdRelativeTurnDiffs` 已启用",
+          "id": "branch-cwd",
           "members": [
             {
               "kind": "action",
@@ -2188,12 +2295,11 @@
             }
           ],
           "when": [
-            "basic",
-            "relative"
+            "cwd"
           ]
         },
         {
-          "condition": "非基础会话且未启用相对路径功能",
+          "condition": "非 basic session 且未启用 `CwdRelativeTurnDiffs`",
           "id": "branch-discover",
           "members": [
             {
@@ -2206,16 +2312,15 @@
           ]
         }
       ],
-      "condition": "依据会话来源与相对路径功能选择展示基准",
+      "condition": "按 session 与 `CwdRelativeTurnDiffs` 选择路径基准",
       "decision": {
         "values": [
-          "basic",
-          "relative",
+          "cwd",
           "discover"
         ],
-        "variable": "decision-mode"
+        "variable": "decision-roots"
       },
-      "id": "scope-mode",
+      "id": "scope-roots",
       "kind": "alt",
       "members": [
         {
@@ -2234,27 +2339,27 @@
     {
       "branchRef": null,
       "meaning": "normal-return",
-      "messageRef": "return-2"
+      "messageRef": "return-source"
     },
     {
       "branchRef": null,
       "meaning": "normal-return",
-      "messageRef": "return-9"
+      "messageRef": "return-feature"
     },
     {
       "branchRef": null,
       "meaning": "normal-return",
-      "messageRef": "return-13"
+      "messageRef": "return-environments"
     },
     {
       "branchRef": null,
       "meaning": "normal-return",
-      "messageRef": "return-15"
+      "messageRef": "return-filter"
     },
     {
       "branchRef": null,
       "meaning": "normal-return",
-      "messageRef": "return-18"
+      "messageRef": "return-roots"
     }
   ],
   "rootAnchors": [],
@@ -2262,54 +2367,54 @@
   "scopeAnnotations": [],
   "segments": [
     {
-      "id": "segment-2",
-      "invocationRef": "inv-2",
+      "id": "segment-source",
+      "invocationRef": "inv-source",
       "kind": "sequence",
       "messages": [
-        "request-2",
-        "return-2"
+        "request-source",
+        "return-source"
       ]
     },
     {
-      "id": "segment-9",
-      "invocationRef": "inv-9",
+      "id": "segment-feature",
+      "invocationRef": "inv-feature",
       "kind": "sequence",
       "messages": [
-        "request-9",
-        "return-9"
+        "request-feature",
+        "return-feature"
       ]
     },
     {
-      "id": "segment-13",
-      "invocationRef": "inv-13",
+      "id": "segment-environments",
+      "invocationRef": "inv-environments",
       "kind": "sequence",
       "messages": [
-        "request-13",
-        "return-13"
+        "request-environments",
+        "return-environments"
       ]
     },
     {
-      "id": "segment-15",
-      "invocationRef": "inv-15",
+      "id": "segment-filter",
+      "invocationRef": "inv-filter",
       "kind": "sequence",
       "messages": [
-        "request-15",
-        "return-15"
+        "request-filter",
+        "return-filter"
       ]
     },
     {
-      "id": "segment-18",
-      "invocationRef": "inv-18",
+      "id": "segment-roots",
+      "invocationRef": "inv-roots",
       "kind": "sequence",
       "messages": [
-        "request-18",
-        "return-18"
+        "request-roots",
+        "return-roots"
       ]
     }
   ],
   "semanticRoot": {
     "actorRef": "actor-main",
-    "symbol": "codex_core::session::turn::run_turn::{closure#0}::{closure#4}"
+    "symbol": "run_turn::{closure#0}::{closure#4}"
   },
   "sourceGroups": [
     {
@@ -2319,7 +2424,7 @@
         "bb3"
       ],
       "id": "P01/A01.1/C1",
-      "label": "读取会话来源并检验基础会话条件",
+      "label": "读取 `session_source` 并判断是否为 basic session",
       "lineRanges": [
         {
           "endLine": 286,
@@ -2332,7 +2437,7 @@
         "bb11"
       ],
       "id": "P01/A01.1/C11",
-      "label": "已启用相对路径时转入目录收集",
+      "label": "相对路径功能开启后进入环境路径收集",
       "lineRanges": [],
       "sourceRangeReason": "No precise semantic operation span in the recorded BBs; only compiler state, storage, drop, cleanup or enclosing-scope context. Full source remains available."
     },
@@ -2341,7 +2446,7 @@
         "bb4"
       ],
       "id": "P01/A01.1/C4",
-      "label": "基础会话转入目录收集",
+      "label": "basic session 直接进入环境路径收集",
       "lineRanges": [],
       "sourceRangeReason": "No precise semantic operation span in the recorded BBs; only compiler state, storage, drop, cleanup or enclosing-scope context. Full source remains available."
     },
@@ -2355,7 +2460,7 @@
         "bb10"
       ],
       "id": "P01/A01.1/C5",
-      "label": "读取本轮配置并检验相对路径功能",
+      "label": "非 basic session 时读取并核对 `CwdRelativeTurnDiffs`",
       "lineRanges": [
         {
           "endLine": 291,
@@ -2372,7 +2477,7 @@
         "bb16"
       ],
       "id": "P01/A02.12/C12",
-      "label": "遍历选中的环境并收集标识与工作目录",
+      "label": "筛选 turn environments 并组装环境标识与工作目录",
       "lineRanges": [
         {
           "endLine": 302,
@@ -2388,7 +2493,7 @@
         "bb20"
       ],
       "id": "P01/A03.17/C17",
-      "label": "以本轮上下文发起根目录发现",
+      "label": "借用 `StepContext` 并发起显示根发现",
       "lineRanges": [
         {
           "endLine": 304,
@@ -2403,7 +2508,7 @@
         "bb23"
       ],
       "id": "P01/A03.17/C21",
-      "label": "等待根目录发现完成",
+      "label": "等待显示根发现的结果",
       "lineRanges": [
         {
           "endLine": 304,
@@ -2417,7 +2522,7 @@
         "bb27"
       ],
       "id": "P01/A03.17/C26",
-      "label": "取出发现结果并结束等待",
+      "label": "提取已完成的显示根列表并释放任务",
       "lineRanges": [
         {
           "endLine": 304,

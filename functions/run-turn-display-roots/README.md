@@ -1,4 +1,4 @@
-# codex_core::session::turn::run_turn::{closure#0}::{closure#4}
+# run_turn::{closure#0}::{closure#4}
 
 双击 [打开页面](roundtrip/index.html)，支持 file://。
 
