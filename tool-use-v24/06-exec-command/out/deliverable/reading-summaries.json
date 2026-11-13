@@ -1,0 +1,168 @@
+{
+  "units": {
+    "P01": {
+      "kind": "phase",
+      "text": "只接受 Function payload；按本地或远程环境的路径语义校验 cwd，再解析参数和 TTY 要求。"
+    },
+    "P01/A01.1": {
+      "kind": "action",
+      "text": "收到 ToolInvocation时，只有 Function payload 可以继续。"
+    },
+    "P01/A02.2": {
+      "kind": "action",
+      "text": "payload 不是 Function时，返回 RespondToModel。"
+    },
+    "P01/A03.3": {
+      "kind": "action",
+      "text": "收到 Function arguments时，建立 UnifiedExecContext 并取得环境选择参数。"
+    },
+    "P01/A04.14": {
+      "kind": "action",
+      "text": "环境参数已解析时，取得 TurnEnvironment，或交付解析/不可用错误。"
+    },
+    "P01/A05.25": {
+      "kind": "action",
+      "text": "执行环境可用时，取得环境原生 cwd 与本次工作目录，或返回路径错误。"
+    },
+    "P01/A06.36": {
+      "kind": "action",
+      "text": "本次 cwd 已解析时，仅本地且需 host sandbox 时要求 native cwd。"
+    },
+    "P01/A07.53": {
+      "kind": "action",
+      "text": "已知是否需要 host-native cwd时，取得可选 native_cwd；必须本地化却失败时拒绝。"
+    },
+    "P01/A08.73": {
+      "kind": "action",
+      "text": "cwd 校验通过时，得到 ExecCommandArgs，或交付解析错误。"
+    },
+    "P01/A09.88": {
+      "kind": "action",
+      "text": "完整参数已解析时，TTY 被允许或未请求；否则返回配置拒绝。"
+    },
+    "P02": {
+      "kind": "phase",
+      "text": "选择环境 shell，落实 OneShot/Interactive 行为，再合并已批准权限并校验新的权限请求。"
+    },
+    "P02/A10.99": {
+      "kind": "action",
+      "text": "TTY 条件满足时，得到有效 sandbox_permissions 与原始 hook_command。"
+    },
+    "P02/A11.106": {
+      "kind": "action",
+      "text": "sandbox 参数有效时，完成 implicit skill 通知。"
+    },
+    "P02/A12.120": {
+      "kind": "action",
+      "text": "隐式 skill 检查完成时，得到可用 shell 与 shell_mode，或拒绝不支持的远程 shell。"
+    },
+    "P02/A13.153": {
+      "kind": "action",
+      "text": "shell 选择符合环境约束时，得到 ResolvedCommand 或交付构造错误。"
+    },
+    "P02/A14.158": {
+      "kind": "action",
+      "text": "实际 command 已解析时，Interactive 不设 completion timeout；OneShot 关闭 TTY 并设置时限。"
+    },
+    "P02/A15.165": {
+      "kind": "action",
+      "text": "生命周期参数已确定时，得到 effective permissions 与 additional_permissions_allowed。"
+    },
+    "P02/A16.194": {
+      "kind": "action",
+      "text": "有效 turn 权限已合并时，已预批准权限继续；新的禁止提升请求返回错误。"
+    },
+    "P02/A17.210": {
+      "kind": "action",
+      "text": "提升权限策略允许继续时，采用 implicit grant 或规范化校验结果，错误直接返回。"
+    },
+    "P03": {
+      "kind": "phase",
+      "text": "先尝试 apply_patch 拦截；普通命令在开始通知后分配 process_id，并交给选定的 manager 执行路径。"
+    },
+    "P03/A18.215": {
+      "kind": "action",
+      "text": "命令和权限准备完成时，取得可选补丁输出；拦截错误直接返回。"
+    },
+    "P03/A19.236": {
+      "kind": "action",
+      "text": "intercept_apply_patch 返回 Some output时，返回没有 live process 的 ExecCommandToolOutput。"
+    },
+    "P03/A20.235": {
+      "kind": "action",
+      "text": "命令未被 apply_patch 拦截时，notify_command_start 完成后才进入进程预留。"
+    },
+    "P03/A21.261": {
+      "kind": "action",
+      "text": "命令开始通知已完成时，得到本次进程标识。"
+    },
+    "P03/A22.269": {
+      "kind": "action",
+      "text": "process_id 已预留时，ExecCommandRequest 完成并选定执行模式。"
+    },
+    "P03/A23.276": {
+      "kind": "action",
+      "text": "completion_timeout 为 Some时，取得不能继续 write_stdin 的完成结果。"
+    },
+    "P03/A24.275": {
+      "kind": "action",
+      "text": "completion_timeout 为 None时，取得输出或可继续使用的执行响应。"
+    },
+    "P04": {
+      "kind": "phase",
+      "text": "成功响应直接包装；SandboxDenied 作为终局输出返回，其他错误生成截断消息。"
+    },
+    "P04/A25.293": {
+      "kind": "action",
+      "text": "所选执行路径已返回时，确定成功、sandbox denial 或其他错误。"
+    },
+    "P04/A26.297": {
+      "kind": "action",
+      "text": "执行结果为 Ok时，包装原响应为 ToolOutput。"
+    },
+    "P04/A27.296": {
+      "kind": "action",
+      "text": "执行结果为 SandboxDenied时，保留输出、退出码与截断信息，process_id=None。"
+    },
+    "P04/A28.295": {
+      "kind": "action",
+      "text": "执行结果为其他 UnifiedExecError时，返回长度受限的 RespondToModel。"
+    },
+    "sem:P01:arguments": {
+      "kind": "goal",
+      "text": "工作目录已可使用后，ExecCommandArgs 与 TTY 请求有效。"
+    },
+    "sem:P01:environment": {
+      "kind": "goal",
+      "text": "环境参数已解析后，TurnEnvironment、cwd 与可选 native_cwd 已确定。"
+    },
+    "sem:P01:input": {
+      "kind": "goal",
+      "text": "ToolInvocation 到达 handler后，有效 Function arguments 与环境参数已取得。"
+    },
+    "sem:P02:command": {
+      "kind": "goal",
+      "text": "完整参数有效后，ResolvedCommand 与 shell_type 已确定。"
+    },
+    "sem:P02:permissions": {
+      "kind": "goal",
+      "text": "command 已解析后，timeout/TTY 与有效附加权限已确定。"
+    },
+    "sem:P03:dispatch": {
+      "kind": "goal",
+      "text": "准备已经完成后，补丁输出已交付或确认需要启动命令。"
+    },
+    "sem:P03:execution": {
+      "kind": "goal",
+      "text": "执行请求已经形成后，manager 已返回相应 Result。"
+    },
+    "sem:P03:process": {
+      "kind": "goal",
+      "text": "命令没有被补丁拦截后，process_id 与 ExecCommandRequest 已形成。"
+    },
+    "sem:P04:delivery": {
+      "kind": "goal",
+      "text": "manager 的 Result 已取得后，返回可继续的响应、无进程的终局输出或错误。"
+    }
+  }
+}

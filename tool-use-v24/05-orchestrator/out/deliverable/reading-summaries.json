@@ -1,0 +1,148 @@
+{
+  "units": {
+    "P01": {
+      "kind": "phase",
+      "text": "先确定环境权限，再落实 Skip、Forbidden 或 NeedsApproval；严格模式会把 Skip 转入审查。"
+    },
+    "P01/A01.1": {
+      "kind": "action",
+      "text": "收到 ToolRuntime 请求时，取得 approval_policy、telemetry 与 strict_auto_review。"
+    },
+    "P01/A02.19": {
+      "kind": "action",
+      "text": "执行上下文已准备时，得到环境配置与适用于执行器的 permission profile。"
+    },
+    "P01/A03.36": {
+      "kind": "action",
+      "text": "权限边界已准备时，获得 Skip、Forbidden 或 NeedsApproval。"
+    },
+    "P01/A04.41": {
+      "kind": "action",
+      "text": "requirement 为 Skip时，严格模式仍需 request_approval，普通模式按配置通过。"
+    },
+    "P01/A05.40": {
+      "kind": "action",
+      "text": "requirement 为 Forbidden时，返回 ToolError::Rejected。"
+    },
+    "P01/A06.39": {
+      "kind": "action",
+      "text": "requirement 为 NeedsApproval时，审批通过标记 already_approved；准备或审批失败直接返回。"
+    },
+    "P02": {
+      "kind": "phase",
+      "text": "保存网络基线并选择 sandbox，运行一次工具；成功与非 sandbox 拒绝错误直接完成。"
+    },
+    "P02/A07.97": {
+      "kind": "action",
+      "text": "初次审批已允许执行时，确定 unsandboxed_allowed、sandbox_override 与 network_approval_spec。"
+    },
+    "P02/A08.104": {
+      "kind": "action",
+      "text": "首次执行参数正在准备时，按 owner policy、proxy 与权限计算 managed_network_active。"
+    },
+    "P02/A09.134": {
+      "kind": "action",
+      "text": "已知 override 与 managed network 基线时，得到 sandbox_requested、windows 类型与 initial_sandbox。"
+    },
+    "P02/A10.144": {
+      "kind": "action",
+      "text": "初次 sandbox 已选定时，绑定 cwd、权限、workspace roots 与 sandbox executable。"
+    },
+    "P02/A11.155": {
+      "kind": "action",
+      "text": "首次 SandboxAttempt 已形成时，取得 first_result、延迟网络审批与首次耗时。"
+    },
+    "P02/A12.168": {
+      "kind": "action",
+      "text": "first_result 为 Ok时，保留 output 与 first_deferred_network_approval。"
+    },
+    "P02/A13.167": {
+      "kind": "action",
+      "text": "first_result 为 ToolError::Codex时，真正 sandbox denial 才继续；其他错误记录并返回。"
+    },
+    "P02/A14.166": {
+      "kind": "action",
+      "text": "first_result 为其他 ToolError时，按可用分类记录 sandbox outcome 并返回原错误。"
+    },
+    "P03": {
+      "kind": "phase",
+      "text": "依次核对网络上下文、工具升级能力和审批策略，再决定是否重新审查。"
+    },
+    "P03/A15.178": {
+      "kind": "action",
+      "text": "首次执行被 sandbox 拒绝时，网络 policy denial 必须可构造审批上下文，否则直接拒绝。"
+    },
+    "P03/A16.194": {
+      "kind": "action",
+      "text": "denial 已有可继续处理的上下文时，禁止 escalation 则记录 denied 并返回。"
+    },
+    "P03/A17.196": {
+      "kind": "action",
+      "text": "工具允许 escalate_on_failure时，允许 no-sandbox 审批或符合 OnRequest 网络例外才继续。"
+    },
+    "P03/A18.223": {
+      "kind": "action",
+      "text": "升级审批策略允许继续时，无 unsandboxed 权限时必须存在网络审批上下文。"
+    },
+    "P03/A19.231": {
+      "kind": "action",
+      "text": "重试前置条件全部满足时，生成被阻断 host 或 sandbox 输出的说明。"
+    },
+    "P03/A20.241": {
+      "kind": "action",
+      "text": "已形成 retry_reason时，必要时重新 request_approval；审批错误直接返回。"
+    },
+    "P04": {
+      "kind": "phase",
+      "text": "重试保留 managed network 基线，按权限保留或移除 sandbox；第二次结果直接结束编排。"
+    },
+    "P04/A21.280": {
+      "kind": "action",
+      "text": "重试审批已满足时，按 unsandboxed 权限与执行器职责选择重试 sandbox。"
+    },
+    "P04/A22.293": {
+      "kind": "action",
+      "text": "重试 SandboxAttempt 已形成时，取得 retry_result、延迟网络审批与升级耗时。"
+    },
+    "P04/A23.305": {
+      "kind": "action",
+      "text": "retry_result 为 Ok时，返回 output 与 retry_deferred_network_approval。"
+    },
+    "P04/A24.304": {
+      "kind": "action",
+      "text": "retry_result 为 Err时，保留原错误并按可用分类记录升级耗时。"
+    },
+    "sem:P01:approval": {
+      "kind": "goal",
+      "text": "有效权限配置已准备后，允许执行或交付审批拒绝。"
+    },
+    "sem:P01:config": {
+      "kind": "goal",
+      "text": "进入 ToolOrchestrator后，审批设置与执行器权限边界已准备。"
+    },
+    "sem:P02:initial-result": {
+      "kind": "goal",
+      "text": "首次执行条件齐备后，成功输出已交付，或错误已交付/进入 denial 处理。"
+    },
+    "sem:P02:sandbox": {
+      "kind": "goal",
+      "text": "首次审批通过后，SandboxAttempt 与计时起点已形成。"
+    },
+    "sem:P03:retry-approval": {
+      "kind": "goal",
+      "text": "允许申请重试后，形成可用于重试的审批状态。"
+    },
+    "sem:P03:retry-gates": {
+      "kind": "goal",
+      "text": "首次执行被 sandbox 拒绝后，全部重试前置条件成立或返回原 denial。"
+    },
+    "sem:P04:retry": {
+      "kind": "goal",
+      "text": "重试审批状态已满足后，retry_result 与升级耗时已得到。"
+    },
+    "sem:P04:retry-result": {
+      "kind": "goal",
+      "text": "第二次执行已经结束后，结果与可用 sandbox outcome 已交付。"
+    }
+  }
+}

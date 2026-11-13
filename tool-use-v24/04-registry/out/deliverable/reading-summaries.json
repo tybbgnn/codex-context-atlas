@@ -1,0 +1,160 @@
+{
+  "units": {
+    "P01": {
+      "kind": "phase",
+      "text": "先更新调用归属，再查找工具并验证 payload 类型。"
+    },
+    "P01/A01.1": {
+      "kind": "action",
+      "text": "收到 ToolInvocation时，调用标识、产品 SKU 与 sandbox tags 已提取。"
+    },
+    "P01/A02.12": {
+      "kind": "action",
+      "text": "存在 active_turn时，有活动 turn 时增加 tool_calls；否则继续分发。"
+    },
+    "P01/A03.40": {
+      "kind": "action",
+      "text": "调用上下文已准备时，找到 CoreToolRuntime 或确定工具未知。"
+    },
+    "P01/A04.43": {
+      "kind": "action",
+      "text": "Registry 中不存在该工具时，记录失败并返回 RespondToModel。"
+    },
+    "P01/A05.44": {
+      "kind": "action",
+      "text": "已找到工具 runtime时，标签集与两组输出容器已准备。"
+    },
+    "P01/A06.64": {
+      "kind": "action",
+      "text": "迭代器还有标签时，MCP 字段放 trace，其余放结果 tags。"
+    },
+    "P01/A07.67": {
+      "kind": "action",
+      "text": "工具已注册时，确定 payload 是否兼容。"
+    },
+    "P01/A08.84": {
+      "kind": "action",
+      "text": "matches_kind 为 false时，记录失败并返回 Fatal。"
+    },
+    "P02": {
+      "kind": "phase",
+      "text": "前置 hook 可拦截或更新参数；通过后准备开始事件与执行标签。"
+    },
+    "P02/A09.83": {
+      "kind": "action",
+      "text": "payload 类型兼容时，取得可选 pre_tool_use_payload。"
+    },
+    "P02/A10.99": {
+      "kind": "action",
+      "text": "存在 pre_tool_use_payload时，得到 Blocked 或 Continue，释放本轮 hook 结果。"
+    },
+    "P02/A11.113": {
+      "kind": "action",
+      "text": "PreToolUse 返回 Blocked时，报告 Blocked 生命周期并返回 RespondToModel。"
+    },
+    "P02/A12.112": {
+      "kind": "action",
+      "text": "Continue 附带 updated_input时，替换有效 invocation，或交给更新失败处理。"
+    },
+    "P02/A13.135": {
+      "kind": "action",
+      "text": "with_updated_hook_input 返回 Err时，报告 Failed 且 handler_executed=false 并返回错误。"
+    },
+    "P02/A14.158": {
+      "kind": "action",
+      "text": "前置 hook 已允许继续时，非 MCP 发出 notify_tool_start；MCP 由自身流程通知。"
+    },
+    "P02/A15.172": {
+      "kind": "action",
+      "text": "即将执行工具时，内置控制工具取得可选 guard。"
+    },
+    "P02/A16.175": {
+      "kind": "action",
+      "text": "invocation 可表示 shell script时，填入单一类别、mixed 或 unknown。"
+    },
+    "P03": {
+      "kind": "phase",
+      "text": "handler 完成后记录指标、处理 PostToolUse 与附加上下文，再发出执行终局。"
+    },
+    "P03/A17.193": {
+      "kind": "action",
+      "text": "准备与 hook 检查通过时，取得 handler Result 并计算 success_for_logging。"
+    },
+    "P03/A18.210": {
+      "kind": "action",
+      "text": "handler 已返回时，控制工具状态与 tool read 指标已记录。"
+    },
+    "P03/A19.219": {
+      "kind": "action",
+      "text": "已知 success_for_logging时，成功结果可携带 post_tool_use_payload，其他情况没有。"
+    },
+    "P03/A20.226": {
+      "kind": "action",
+      "text": "存在 post_tool_use_payload时，取得可选 PostToolUse outcome。"
+    },
+    "P03/A21.241": {
+      "kind": "action",
+      "text": "存在 post_tool_use_outcome时，把附加上下文写入当前 turn。"
+    },
+    "P03/A22.253": {
+      "kind": "action",
+      "text": "后置 hook 已处理时，报告 Completed 或 Failed(handler_executed=true)。"
+    },
+    "P04": {
+      "kind": "phase",
+      "text": "后置 hook 可以拒绝已经执行的结果，或替换模型可见文本；最终由 runtime 接收。"
+    },
+    "P04/A23.265": {
+      "kind": "action",
+      "text": "生命周期通知完成时，Err 交付失败，Ok 进入可选 PostToolUse 过滤。"
+    },
+    "P04/A24.268": {
+      "kind": "action",
+      "text": "result 为 Ok 且 outcome.should_block时，记录 RespondToModel；原工具执行已完成。"
+    },
+    "P04/A25.272": {
+      "kind": "action",
+      "text": "post outcome 没有阻断结果时，有反馈时包装原输出，无反馈时保留原输出。"
+    },
+    "P04/A26.278": {
+      "kind": "action",
+      "text": "工具结果为 Ok 且没有被后置 hook 阻断时，通知 runtime 接收结果并返回 Ok。"
+    },
+    "P04/A27.266": {
+      "kind": "action",
+      "text": "工具执行结果为 Err时，保留原 FunctionCallError。"
+    },
+    "sem:P01:context": {
+      "kind": "goal",
+      "text": "ToolInvocation 进入 Registry后，调用标识、telemetry 与活动 turn 计数已准备。"
+    },
+    "sem:P01:registry": {
+      "kind": "goal",
+      "text": "调用归属已准备后，取得兼容工具或交付未知/不兼容错误。"
+    },
+    "sem:P02:execution": {
+      "kind": "goal",
+      "text": "前置 hook 允许继续后，开始事件归属、control guard 与命令类别已准备。"
+    },
+    "sem:P02:prehook": {
+      "kind": "goal",
+      "text": "找到兼容工具后，允许的 invocation 已确定，或已报告未执行的失败。"
+    },
+    "sem:P03:handler": {
+      "kind": "goal",
+      "text": "执行准备完成后，handler Result 与 success 已知，control/read 指标已完成。"
+    },
+    "sem:P03:lifecycle": {
+      "kind": "goal",
+      "text": "后置 hook 工作完成后，发送已执行 handler 的终局状态。"
+    },
+    "sem:P03:posthook": {
+      "kind": "goal",
+      "text": "handler 已完成后，post outcome 与 additional_contexts 已处理。"
+    },
+    "sem:P04:delivery": {
+      "kind": "goal",
+      "text": "工具执行已完成后，接受结果、应用 feedback 或交付错误。"
+    }
+  }
+}

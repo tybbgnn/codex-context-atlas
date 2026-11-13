@@ -1,0 +1,3376 @@
+{
+  "actors": [
+    {
+      "actorId": "actor-main",
+      "bodyRef": "fe2e95c3e6be137e7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
+      "color": "#327B98",
+      "kind": "body",
+      "label": "ToolCallRuntime::handle_tool_call_with_source::{closure#1}",
+      "sourceNodeRef": "fe2e95c3e6be137e7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
+    },
+    {
+      "actorId": "actor-crate",
+      "children": [
+        {
+          "actorId": "module-registry",
+          "children": [
+            {
+              "actorId": "actor-8",
+              "bodyRef": "c0d1e4ad485880a07f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
+              "color": "#567B5A",
+              "kind": "body",
+              "label": "CoreToolRuntime::wait_until_ready",
+              "sourceNodeRef": "c0d1e4ad485880a07f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
+            }
+          ],
+          "color": "#567B5A",
+          "kind": "module",
+          "label": "tools::registry",
+          "sourceNodeRef": "3168a63966c331067f347cbdcc2b778a"
+        },
+        {
+          "actorId": "module-router",
+          "children": [
+            {
+              "actorId": "actor-48",
+              "bodyRef": "baf48489da22c9437f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
+              "color": "#567B5A",
+              "kind": "body",
+              "label": "ToolRouter::dispatch_tool_call_with_state::{closure#0}",
+              "sourceNodeRef": "baf48489da22c9437f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
+            }
+          ],
+          "color": "#567B5A",
+          "kind": "module",
+          "label": "tools::router",
+          "sourceNodeRef": "0842d5d216317e2b7f347cbdcc2b778a"
+        },
+        {
+          "actorId": "module-call_trace",
+          "children": [
+            {
+              "actorId": "actor-67",
+              "bodyRef": "8ea69ae16a50823e7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
+              "color": "#567B5A",
+              "kind": "body",
+              "label": "result_ready",
+              "sourceNodeRef": "8ea69ae16a50823e7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
+            }
+          ],
+          "color": "#567B5A",
+          "kind": "module",
+          "label": "tools::call_trace",
+          "sourceNodeRef": "cde361f3781343167f347cbdcc2b778a"
+        }
+      ],
+      "color": "#567B5A",
+      "kind": "crate",
+      "label": "codex_core",
+      "sourceNodeRef": "7f347cbdcc2b778a7f347cbdcc2b778a"
+    }
+  ],
+  "branchRoles": [
+    {
+      "branchRef": "branch-readiness-none",
+      "controlRef": "control-readiness",
+      "role": "business"
+    },
+    {
+      "branchRef": "branch-readiness-some",
+      "controlRef": "control-readiness",
+      "role": "business"
+    },
+    {
+      "branchRef": "branch-parallel",
+      "controlRef": "control-parallel",
+      "role": "business"
+    },
+    {
+      "branchRef": "branch-exclusive",
+      "controlRef": "control-parallel",
+      "role": "business"
+    }
+  ],
+  "caseIndex": [],
+  "controlOwners": [
+    {
+      "controlRef": "control-reject",
+      "owner": {
+        "kind": "action",
+        "ref": "P01/A02.5"
+      }
+    },
+    {
+      "controlRef": "control-8",
+      "owner": {
+        "kind": "action",
+        "ref": "P01/A03.4"
+      }
+    },
+    {
+      "controlRef": "control-parallel",
+      "owner": {
+        "kind": "action",
+        "ref": "P01/A04.19"
+      }
+    },
+    {
+      "controlRef": "control-42",
+      "owner": {
+        "kind": "action",
+        "ref": "P01/A05.40"
+      }
+    },
+    {
+      "controlRef": "control-48",
+      "owner": {
+        "kind": "action",
+        "ref": "P02/A06.47"
+      }
+    },
+    {
+      "controlRef": "control-67",
+      "owner": {
+        "kind": "action",
+        "ref": "P02/A07.59"
+      }
+    }
+  ],
+  "controls": [
+    {
+      "condition": "消息准入失败",
+      "id": "control-reject",
+      "kind": "opt",
+      "skip": "消息准入成功时进入 runtime 与执行许可准备"
+    },
+    {
+      "children": [
+        {
+          "id": "sequence-runtime",
+          "invocationRef": "invocation-8",
+          "kind": "sequence",
+          "messages": [
+            "request-8",
+            "return-8"
+          ]
+        },
+        {
+          "branches": [
+            {
+              "children": [],
+              "condition": "没有 readiness 对象",
+              "id": "branch-readiness-none",
+              "outcome": "直接继续并发准入"
+            },
+            {
+              "children": [],
+              "condition": "有 readiness 对象",
+              "id": "branch-readiness-some",
+              "outcome": "等待就绪后继续并发准入"
+            }
+          ],
+          "condition": "runtime 返回的 readiness 是否需要等待",
+          "id": "control-readiness",
+          "kind": "alt"
+        }
+      ],
+      "condition": "存在 tool_runtime",
+      "id": "control-8",
+      "kind": "opt",
+      "skip": "没有 runtime 时直接继续并发准入"
+    },
+    {
+      "branches": [
+        {
+          "children": [],
+          "condition": "支持并行",
+          "id": "branch-parallel",
+          "outcome": "等待共享执行许可后继续"
+        },
+        {
+          "children": [],
+          "condition": "不支持并行",
+          "id": "branch-exclusive",
+          "outcome": "等待独占执行许可后继续"
+        }
+      ],
+      "condition": "工具是否支持并行执行",
+      "id": "control-parallel",
+      "kind": "alt"
+    },
+    {
+      "condition": "提供 execution_started_at",
+      "id": "control-42",
+      "invocationRef": "invocation-42",
+      "kind": "opt",
+      "messages": [
+        "self-42"
+      ],
+      "skip": "未启用起点计时时继续 router 分发"
+    },
+    {
+      "id": "control-48",
+      "invocationRef": "invocation-48",
+      "kind": "sequence",
+      "messages": [
+        "request-48",
+        "return-48"
+      ]
+    },
+    {
+      "condition": "结果不是 Fatal 错误",
+      "id": "control-67",
+      "invocationRef": "invocation-67",
+      "kind": "opt",
+      "messages": [
+        "request-67",
+        "return-67"
+      ],
+      "skip": "Fatal 错误直接传播，不产生结果就绪事件"
+    }
+  ],
+  "dataKind": "source-backed",
+  "definitionNotes": [],
+  "deliveryMode": "real-flow",
+  "display": {
+    "description": "codex_core::tools::parallel::ToolCallRuntime::handle_tool_call_with_source::{closure#1}",
+    "sourceLabel": "core/src/tools/parallel.rs",
+    "title": "ToolCallRuntime::handle_tool_call_with_source::{closure#1}"
+  },
+  "execution": {
+    "artifacts": [
+      {
+        "content": "    pub(crate) fn handle_tool_call_with_source(\n        self,\n        step_context: Arc<StepContext>,\n        call: ToolCall,\n        source: ToolCallSource,\n        cancellation_token: CancellationToken,\n        call_state: Arc<ToolCallState>,\n    ) -> impl std::future::Future<Output = Result<AnyToolResult, FunctionCallError>> {\n        let message_admission =\n            super::user_messaging::admit_code_mode_send(&self.session, &source, &call.tool_name);\n        self.session\n            .services\n            .executed_tool_calls\n            .record_tool_call(&call, &source, &step_context);\n        let router = &step_context.tool_router;\n        let supports_parallel = router.tool_supports_parallel(&call);\n        let tool_runtime = router.tool_runtime(&call.tool_name);\n        let router = Arc::clone(router);\n        let session = Arc::clone(&self.session);\n        let turn = Arc::clone(&step_context.turn);\n        let tracker = Arc::clone(&self.tracker);\n        let lock = Arc::clone(&self.parallel_execution);\n        let invocation_cancellation_token = cancellation_token.clone();\n        let started = Instant::now();\n        let mut tool_call_timing_guard = ToolCallTimingGuard::capture(\n            started,\n            &session.thread_id,\n            &turn.sub_id,\n            &call,\n            &source,\n            Arc::clone(&session.services.extensions),\n        );\n        if let Some(guard) = tool_call_timing_guard.as_mut() {\n            for observer in session.services.extensions.tool_lifecycle_contributors() {\n                observer.on_tool_dispatch(codex_extension_api::ToolDispatchInput {\n                    thread_id: &guard.conversation_id,\n                    turn_id: &guard.turn_id,\n                    call_id: &guard.call_id,\n                    tool_name: &guard.tool_name,\n                });\n            }\n        }\n        let execution_started_at = tool_call_timing_guard\n            .as_ref()\n            .map(|timing| Arc::clone(&timing.execution_started_at));\n        let abort_session = Arc::clone(&session);\n        let abort_source = source.clone();\n        let abort_turn = Arc::clone(&turn);\n        let dispatch_call_state = Arc::clone(&call_state);\n        let dispatch_call = call.clone();\n        let thread_id = session.thread_id;\n        let trace_source = match &source {\n            ToolCallSource::Direct | ToolCallSource::DirectPlaintextMessage => {\n                call_trace::Source::Direct\n            }\n            ToolCallSource::CodeMode { .. } => call_trace::Source::CodeMode,\n        };\n        let dispatch_tool_name = call.tool_name.clone();\n        let dispatch_call_id = call.call_id.clone();\n\n        // Code-mode callbacks can resume outside the turn's local span ancestry.\n        let dispatch_span = trace_span!(\n            \"dispatch_tool_call_with_code_mode_result\",\n            otel.name = %call.tool_name,\n            tool_name = %call.tool_name,\n            thread.id = %session.thread_id,\n            call_id = call.call_id.as_str(),\n            aborted = false,\n        );\n        let abort_dispatch_span = dispatch_span.clone();\n\n        let mut dispatch_handle = AbortOnDropHandle::new(tokio::spawn(\n            async move {\n                let _message_admission = message_admission?;\n                if let Some(tool_runtime) = tool_runtime\n                    && let Some(readiness) = tool_runtime.wait_until_ready(&session)\n                {\n                    readiness.await;\n                }\n\n                let guard = if supports_parallel {\n                    Either::Left(lock.read().await)\n                } else {\n                    Either::Right(lock.write().await)\n                };\n                // Admission through the parallel-execution gate marks the end\n                // of dispatch waiting and the start of handler execution.\n                if let Some(execution_started_at) = execution_started_at {\n                    let _ = execution_started_at.set(Instant::now());\n                }\n\n                let result = router\n                    .dispatch_tool_call_with_state(\n                        session,\n                        step_context,\n                        invocation_cancellation_token,\n                        tracker,\n                        dispatch_call,\n                        source,\n                        dispatch_call_state,\n                    )\n                    .instrument(dispatch_span.clone())\n                    .await;\n                drop(guard);\n                // The sampling loop collects results in order only after its stream ends.\n                // Record readiness here, before either caller encodes or collects the result.\n                // A fatal error still propagates to the caller instead of producing a tool\n                // result; unlike a normal tool failure, it has no readiness event.\n                if !matches!(&result, Err(FunctionCallError::Fatal(_))) {\n                    call_trace::result_ready(\n                        thread_id,\n                        &turn.sub_id,\n                        &dispatch_tool_name,\n                        &dispatch_call_id,\n                        trace_source,\n                    );\n                }\n                result\n            }\n            .in_current_span(),\n        ));\n\n        async move {\n            let mut tool_call_timing_guard = tool_call_timing_guard;\n            let mut result = tokio::select! {\n                res = &mut dispatch_handle => res.map_err(Self::tool_task_join_error)?,\n                _ = cancellation_token.cancelled() => {\n                    if call_state.terminal_outcome_reached.load(Ordering::Acquire) || dispatch_handle.is_finished() {\n                        dispatch_handle.await.map_err(Self::tool_task_join_error)?\n                    } else {\n                        let secs = started.elapsed().as_secs_f32().max(0.1);\n                        abort_dispatch_span.record(\"aborted\", true);\n                        dispatch_handle.abort();\n                        match dispatch_handle.await {\n                            Ok(result) => result,\n                            Err(err) if err.is_cancelled() => {\n                                let response = Self::aborted_response(&call, secs);\n                                call_trace::result_ready(\n                                    thread_id,\n                                    &abort_turn.sub_id,\n                                    &call.tool_name,\n                                    &call.call_id,\n                                    trace_source,\n                                );\n                                notify_tool_aborted(\n                                    abort_session.as_ref(),\n                                    abort_turn.as_ref(),\n                                    call.call_id.as_str(),\n                                    &call.tool_name,\n                                    abort_source,\n                                )\n                                .await;\n                                Ok(response)\n                            }\n                            Err(err) => Err(Self::tool_task_join_error(err)),\n                        }\n                    }\n                },\n            };\n            // Use one completion measurement for logging and response formatting.\n            // Measuring inside a handler would omit routing and output processing.\n            if let Some(timing) = tool_call_timing_guard.as_mut()\n                && let Some(handler_duration_ms) = timing.finish()\n                && let Ok(result) = &mut result\n            {\n                result.result.set_handler_duration_ms(handler_duration_ms);\n            }\n            result\n        }\n        .in_current_span()\n    }",
+        "format": "rust",
+        "id": "source-function",
+        "sha256": "33dd50f9ab2648de9e3d78fa5c39b6fcb724b6b97e2e31183eefeefbdef547db",
+        "sourcePath": "source/parallel.rs"
+      }
+    ],
+    "attachments": [
+      {
+        "evidenceRefs": [
+          "evidence-dc1acf7bc3541f1dd3c1f0bd"
+        ],
+        "id": "attachment-purpose-8",
+        "kind": "purpose",
+        "ownerActionRef": "P01/A03.4",
+        "purposeRef": "purpose-8"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-1cb3eee8cf416408cfc15be8"
+        ],
+        "id": "attachment-purpose-42",
+        "kind": "purpose",
+        "ownerActionRef": "P01/A05.40",
+        "purposeRef": "purpose-42"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-19bb60ca649d43748af42632"
+        ],
+        "id": "attachment-purpose-48",
+        "kind": "purpose",
+        "ownerActionRef": "P02/A06.47",
+        "purposeRef": "purpose-48"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-e7eee74a9b808a1191fd6a98"
+        ],
+        "id": "attachment-purpose-67",
+        "kind": "purpose",
+        "ownerActionRef": "P02/A07.59",
+        "purposeRef": "purpose-67"
+      }
+    ],
+    "controlBindings": [
+      {
+        "controlRef": "control-reject",
+        "evidenceRefs": [
+          "evidence-9ca00a2f895407406e62c52f"
+        ],
+        "nodeRef": "exec-5"
+      },
+      {
+        "controlRef": "control-8",
+        "evidenceRefs": [
+          "evidence-512998ed79b6286cf178b301"
+        ],
+        "nodeRef": "exec-4"
+      },
+      {
+        "controlRef": "control-parallel",
+        "evidenceRefs": [
+          "evidence-4fbb75df420a6a8124e0d02e"
+        ],
+        "nodeRef": "exec-19"
+      },
+      {
+        "controlRef": "control-42",
+        "evidenceRefs": [
+          "evidence-fb4f6937080ed112a8ab9e44"
+        ],
+        "nodeRef": "exec-40"
+      },
+      {
+        "controlRef": "control-48",
+        "evidenceRefs": [
+          "evidence-51c3db8b163a0c002d38a866"
+        ],
+        "nodeRef": "exec-47"
+      },
+      {
+        "controlRef": "control-67",
+        "evidenceRefs": [
+          "evidence-1d8571c037c4608ebfb845b9"
+        ],
+        "nodeRef": "exec-59"
+      }
+    ],
+    "decisions": [
+      {
+        "evidenceRefs": [
+          "evidence-6f7a6108f4f43f6b60885595"
+        ],
+        "id": "decision-admission",
+        "readingScopeRef": "scope-reject",
+        "stability": "turn",
+        "values": [
+          "accepted",
+          "rejected"
+        ]
+      },
+      {
+        "controlRef": "control-8",
+        "evidenceRefs": [
+          "evidence-e4da6e60b9a6c048ae410a08"
+        ],
+        "id": "decision-runtime",
+        "skipValues": [
+          "no"
+        ],
+        "stability": "turn",
+        "takeValues": [
+          "yes"
+        ],
+        "values": [
+          "no",
+          "yes"
+        ]
+      },
+      {
+        "branchBindings": [
+          {
+            "branchRef": "branch-readiness-none",
+            "values": [
+              "none"
+            ]
+          },
+          {
+            "branchRef": "branch-readiness-some",
+            "values": [
+              "some"
+            ]
+          }
+        ],
+        "controlRef": "control-readiness",
+        "evidenceRefs": [
+          "evidence-9c4f7f29d826946b3018140c"
+        ],
+        "id": "decision-readiness",
+        "stability": "turn",
+        "values": [
+          "none",
+          "some"
+        ]
+      },
+      {
+        "branchBindings": [
+          {
+            "branchRef": "branch-parallel",
+            "values": [
+              "parallel"
+            ]
+          },
+          {
+            "branchRef": "branch-exclusive",
+            "values": [
+              "exclusive"
+            ]
+          }
+        ],
+        "controlRef": "control-parallel",
+        "evidenceRefs": [
+          "evidence-8ee7b9b92bb5ea894765e704"
+        ],
+        "id": "decision-parallel",
+        "stability": "turn",
+        "values": [
+          "exclusive",
+          "parallel"
+        ]
+      },
+      {
+        "controlRef": "control-42",
+        "evidenceRefs": [
+          "evidence-aa79bff050582d7494f731ea"
+        ],
+        "id": "decision-timing",
+        "skipValues": [
+          "no"
+        ],
+        "stability": "turn",
+        "takeValues": [
+          "yes"
+        ],
+        "values": [
+          "no",
+          "yes"
+        ]
+      },
+      {
+        "controlRef": "control-67",
+        "evidenceRefs": [
+          "evidence-b35895ce0bb51a69daeb4c46"
+        ],
+        "id": "decision-ready-event",
+        "skipValues": [
+          "no"
+        ],
+        "stability": "turn",
+        "takeValues": [
+          "yes"
+        ],
+        "values": [
+          "no",
+          "yes"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "evidenceRefs": [
+          "evidence-4a7ba053f38b9e33cfde6084"
+        ],
+        "from": "exec-entry",
+        "guards": [],
+        "id": "flow-0",
+        "kind": "flow",
+        "to": "exec-1"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-386305f902918606e52afdaf"
+        ],
+        "from": "exec-1",
+        "guards": [],
+        "id": "flow-1",
+        "kind": "flow",
+        "to": "exec-decision-admission"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-f071322875a77587bbc4b7be"
+        ],
+        "from": "exec-decision-admission",
+        "guards": [
+          {
+            "decisionRef": "decision-admission",
+            "value": "rejected"
+          }
+        ],
+        "id": "flow-2",
+        "kind": "branch",
+        "to": "exec-5"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-92ca2828a785461413db306b"
+        ],
+        "from": "exec-5",
+        "guards": [],
+        "id": "flow-3",
+        "kind": "flow",
+        "to": "exec-rejected"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-37620e3304dbc70b9bd57e48"
+        ],
+        "from": "exec-decision-admission",
+        "guards": [
+          {
+            "decisionRef": "decision-admission",
+            "value": "accepted"
+          }
+        ],
+        "id": "flow-4",
+        "kind": "branch",
+        "to": "exec-4"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-4373aab54c174e39d32ca354"
+        ],
+        "from": "exec-4",
+        "guards": [],
+        "id": "flow-5",
+        "kind": "flow",
+        "to": "exec-decision-runtime"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-5a25ec966e007b79d69271d9"
+        ],
+        "from": "exec-decision-runtime",
+        "guards": [
+          {
+            "decisionRef": "decision-runtime",
+            "value": "yes"
+          }
+        ],
+        "id": "flow-6",
+        "kind": "branch",
+        "to": "exec-decision-readiness"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-1383ab0d1094d6e1f3ee3da3"
+        ],
+        "from": "exec-decision-runtime",
+        "guards": [
+          {
+            "decisionRef": "decision-runtime",
+            "value": "no"
+          }
+        ],
+        "id": "flow-7",
+        "kind": "branch",
+        "to": "exec-19"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-c8a6fa0d72e991dcb331391e"
+        ],
+        "from": "exec-decision-readiness",
+        "guards": [
+          {
+            "decisionRef": "decision-readiness",
+            "value": "some"
+          }
+        ],
+        "id": "flow-8",
+        "kind": "branch",
+        "to": "exec-19"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-f0edabe3ed44575d5f4c2dd6"
+        ],
+        "from": "exec-decision-readiness",
+        "guards": [
+          {
+            "decisionRef": "decision-readiness",
+            "value": "none"
+          }
+        ],
+        "id": "flow-9",
+        "kind": "branch",
+        "to": "exec-19"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-4465d01407bc52b035305829"
+        ],
+        "from": "exec-19",
+        "guards": [],
+        "id": "flow-10",
+        "kind": "flow",
+        "to": "exec-decision-parallel"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-cb4703ed05e4363b4e598381"
+        ],
+        "from": "exec-decision-parallel",
+        "guards": [
+          {
+            "decisionRef": "decision-parallel",
+            "value": "parallel"
+          }
+        ],
+        "id": "flow-11",
+        "kind": "branch",
+        "to": "exec-40"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-a2d35a6d15bc42df0bb41e66"
+        ],
+        "from": "exec-decision-parallel",
+        "guards": [
+          {
+            "decisionRef": "decision-parallel",
+            "value": "exclusive"
+          }
+        ],
+        "id": "flow-12",
+        "kind": "branch",
+        "to": "exec-40"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-2af55ca3717ae22aec4af49d"
+        ],
+        "from": "exec-40",
+        "guards": [],
+        "id": "flow-13",
+        "kind": "flow",
+        "to": "exec-decision-timing"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-6561de8060d30409e890aa7c"
+        ],
+        "from": "exec-decision-timing",
+        "guards": [
+          {
+            "decisionRef": "decision-timing",
+            "value": "yes"
+          }
+        ],
+        "id": "flow-14",
+        "kind": "branch",
+        "to": "exec-47"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-acfa86a2ae16953c7301e364"
+        ],
+        "from": "exec-decision-timing",
+        "guards": [
+          {
+            "decisionRef": "decision-timing",
+            "value": "no"
+          }
+        ],
+        "id": "flow-15",
+        "kind": "branch",
+        "to": "exec-47"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-f81c076d6fa195e75b8aefe1"
+        ],
+        "from": "exec-47",
+        "guards": [],
+        "id": "flow-16",
+        "kind": "flow",
+        "to": "exec-59"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-ce9c73b9d9bd512298e80922"
+        ],
+        "from": "exec-59",
+        "guards": [],
+        "id": "flow-17",
+        "kind": "flow",
+        "to": "exec-decision-ready-event"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-c5f19236aff31e2d9d40983e"
+        ],
+        "from": "exec-decision-ready-event",
+        "guards": [
+          {
+            "decisionRef": "decision-ready-event",
+            "value": "yes"
+          }
+        ],
+        "id": "flow-18",
+        "kind": "branch",
+        "to": "exec-return"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-40168a9d2c05fe454408e87e"
+        ],
+        "from": "exec-decision-ready-event",
+        "guards": [
+          {
+            "decisionRef": "decision-ready-event",
+            "value": "no"
+          }
+        ],
+        "id": "flow-19",
+        "kind": "branch",
+        "to": "exec-return"
+      }
+    ],
+    "entryNodeRef": "exec-entry",
+    "evidence": [
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "entry",
+          "subjectRef": "exec-entry",
+          "targets": [
+            "actor-main",
+            "ToolCallRuntime::handle_tool_call_with_source::{closure#1}"
+          ]
+        },
+        "id": "evidence-ada39d0e3c57b0840b649ec6",
+        "locator": "bb1",
+        "quote": "                let _message_admission = message_admission?;"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "action",
+          "subjectRef": "P01/A01.1",
+          "targets": [
+            "exec-1"
+          ]
+        },
+        "id": "evidence-4f274a1ad329047a6bbba6eb",
+        "locator": "bb1,bb2",
+        "quote": "                let _message_admission = message_admission?;"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "action",
+          "subjectRef": "P01/A02.5",
+          "targets": [
+            "exec-5"
+          ]
+        },
+        "id": "evidence-8b2116eca90a710bc3e76343",
+        "locator": "bb5,bb6,bb153,bb154,bb155,bb156,bb157,bb158,bb159,bb160,bb161,bb162,bb163,bb164,bb165,bb166",
+        "quote": "                let _message_admission = message_admission?;"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "action",
+          "subjectRef": "P01/A03.4",
+          "targets": [
+            "exec-4"
+          ]
+        },
+        "id": "evidence-485b638c890c3022bb6db6a6",
+        "locator": "bb4,bb7,bb8,bb9,bb10,bb11,bb12,bb13,bb14,bb16,bb17,bb18,bb128",
+        "quote": "                let _message_admission = message_admission?;\n                if let Some(tool_runtime) = tool_runtime"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "action",
+          "subjectRef": "P01/A04.19",
+          "targets": [
+            "exec-19"
+          ]
+        },
+        "id": "evidence-44279bc27eee98c25da78bc5",
+        "locator": "bb19,bb20,bb21,bb22,bb23,bb24,bb25,bb26,bb28,bb29,bb30,bb31,bb32,bb33,bb34,bb35,bb36,bb38,bb39",
+        "quote": "                let guard = if supports_parallel {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "action",
+          "subjectRef": "P01/A05.40",
+          "targets": [
+            "exec-40"
+          ]
+        },
+        "id": "evidence-2d0b460621ed769288987254",
+        "locator": "bb40,bb41,bb42,bb43,bb44,bb45,bb46",
+        "quote": "                if let Some(execution_started_at) = execution_started_at {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "action",
+          "subjectRef": "P02/A06.47",
+          "targets": [
+            "exec-47"
+          ]
+        },
+        "id": "evidence-c96e14a2d4c15b19b244d1a9",
+        "locator": "bb47,bb48,bb49,bb50,bb51,bb52,bb53,bb54,bb55,bb57,bb58",
+        "quote": "                let result = router\n                    .dispatch_tool_call_with_state(\n                        session,\n                        step_context,\n                        invocation_cancellation_token,\n                        tracker,\n                        dispatch_call,\n                        source,\n                        dispatch_call_state,\n                    )"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "action",
+          "subjectRef": "P02/A07.59",
+          "targets": [
+            "exec-59"
+          ]
+        },
+        "id": "evidence-2bb8ed8eb916a7b7e2bf434c",
+        "locator": "bb59,bb60,bb61,bb62,bb63,bb64,bb65,bb66,bb67,bb68,bb69,bb70,bb71,bb134,bb135,bb136,bb137,bb138",
+        "quote": "                if !matches!(&result, Err(FunctionCallError::Fatal(_))) {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "decision",
+          "subjectRef": "exec-decision-admission",
+          "targets": [
+            "decision-admission"
+          ]
+        },
+        "id": "evidence-c8782cbfb30def01aae91eb1",
+        "locator": "bb2",
+        "quote": "                let _message_admission = message_admission?;"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "decision",
+          "subjectRef": "exec-decision-runtime",
+          "targets": [
+            "decision-runtime"
+          ]
+        },
+        "id": "evidence-04787276bccee65525a30c82",
+        "locator": "bb4",
+        "quote": "                let _message_admission = message_admission?;\n                if let Some(tool_runtime) = tool_runtime"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "decision",
+          "subjectRef": "exec-decision-readiness",
+          "targets": [
+            "decision-readiness"
+          ]
+        },
+        "id": "evidence-27c9693f00723f5aec2c6d41",
+        "locator": "bb9",
+        "quote": "                    && let Some(readiness) = tool_runtime.wait_until_ready(&session)"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "decision",
+          "subjectRef": "exec-decision-parallel",
+          "targets": [
+            "decision-parallel"
+          ]
+        },
+        "id": "evidence-8061e4991257c7911543c8d4",
+        "locator": "bb19",
+        "quote": "                let guard = if supports_parallel {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "decision",
+          "subjectRef": "exec-decision-timing",
+          "targets": [
+            "decision-timing"
+          ]
+        },
+        "id": "evidence-1d3915b69e5c2987c21e7e4a",
+        "locator": "bb40",
+        "quote": "                if let Some(execution_started_at) = execution_started_at {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "decision",
+          "subjectRef": "exec-decision-ready-event",
+          "targets": [
+            "decision-ready-event"
+          ]
+        },
+        "id": "evidence-93e59bffdaa9d379ec1ea3b6",
+        "locator": "bb63",
+        "quote": "                if !matches!(&result, Err(FunctionCallError::Fatal(_))) {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "terminal",
+          "subjectRef": "exec-rejected",
+          "targets": [
+            "error"
+          ]
+        },
+        "id": "evidence-adcaf26f8b2b188a6fc0b212",
+        "locator": "bb5,bb72",
+        "quote": "                let _message_admission = message_admission?;"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "terminal",
+          "subjectRef": "exec-return",
+          "targets": [
+            "return"
+          ]
+        },
+        "id": "evidence-8b406b3473b8c49a56f6f8bc",
+        "locator": "bb70,bb72",
+        "quote": "                result"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "relation",
+          "subjectRef": "flow-0",
+          "targets": [
+            "exec-entry",
+            "exec-1",
+            "flow"
+          ]
+        },
+        "id": "evidence-4a7ba053f38b9e33cfde6084",
+        "locator": "bb1",
+        "quote": "                let _message_admission = message_admission?;"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "relation",
+          "subjectRef": "flow-1",
+          "targets": [
+            "exec-1",
+            "exec-decision-admission",
+            "flow"
+          ]
+        },
+        "id": "evidence-386305f902918606e52afdaf",
+        "locator": "bb2",
+        "quote": "                let _message_admission = message_admission?;"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [
+            "decision-admission=rejected"
+          ],
+          "kind": "relation",
+          "subjectRef": "flow-2",
+          "targets": [
+            "exec-decision-admission",
+            "exec-5",
+            "branch"
+          ]
+        },
+        "id": "evidence-f071322875a77587bbc4b7be",
+        "locator": "m2.1",
+        "quote": "                let _message_admission = message_admission?;"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "relation",
+          "subjectRef": "flow-3",
+          "targets": [
+            "exec-5",
+            "exec-rejected",
+            "flow"
+          ]
+        },
+        "id": "evidence-92ca2828a785461413db306b",
+        "locator": "bb5,bb153,m153.0,bb72",
+        "quote": "                let _message_admission = message_admission?;"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [
+            "decision-admission=accepted"
+          ],
+          "kind": "relation",
+          "subjectRef": "flow-4",
+          "targets": [
+            "exec-decision-admission",
+            "exec-4",
+            "branch"
+          ]
+        },
+        "id": "evidence-37620e3304dbc70b9bd57e48",
+        "locator": "m2.0",
+        "quote": "                let _message_admission = message_admission?;"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "relation",
+          "subjectRef": "flow-5",
+          "targets": [
+            "exec-4",
+            "exec-decision-runtime",
+            "flow"
+          ]
+        },
+        "id": "evidence-4373aab54c174e39d32ca354",
+        "locator": "bb4",
+        "quote": "                let _message_admission = message_admission?;\n                if let Some(tool_runtime) = tool_runtime"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [
+            "decision-runtime=yes"
+          ],
+          "kind": "relation",
+          "subjectRef": "flow-6",
+          "targets": [
+            "exec-decision-runtime",
+            "exec-decision-readiness",
+            "branch"
+          ]
+        },
+        "id": "evidence-5a25ec966e007b79d69271d9",
+        "locator": "m4.0,bb7,bb8,bb9",
+        "quote": "                let _message_admission = message_admission?;\n                if let Some(tool_runtime) = tool_runtime"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [
+            "decision-runtime=no"
+          ],
+          "kind": "relation",
+          "subjectRef": "flow-7",
+          "targets": [
+            "exec-decision-runtime",
+            "exec-19",
+            "branch"
+          ]
+        },
+        "id": "evidence-1383ab0d1094d6e1f3ee3da3",
+        "locator": "m4.1,bb18,m18.0",
+        "quote": "                let _message_admission = message_admission?;\n                if let Some(tool_runtime) = tool_runtime"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [
+            "decision-readiness=some"
+          ],
+          "kind": "relation",
+          "subjectRef": "flow-8",
+          "targets": [
+            "exec-decision-readiness",
+            "exec-19",
+            "branch"
+          ]
+        },
+        "id": "evidence-c8a6fa0d72e991dcb331391e",
+        "locator": "m9.0,bb10,bb17,bb19",
+        "quote": "                    && let Some(readiness) = tool_runtime.wait_until_ready(&session)"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [
+            "decision-readiness=none"
+          ],
+          "kind": "relation",
+          "subjectRef": "flow-9",
+          "targets": [
+            "exec-decision-readiness",
+            "exec-19",
+            "branch"
+          ]
+        },
+        "id": "evidence-f0edabe3ed44575d5f4c2dd6",
+        "locator": "m9.1,bb128,bb18,bb19",
+        "quote": "                    && let Some(readiness) = tool_runtime.wait_until_ready(&session)"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "relation",
+          "subjectRef": "flow-10",
+          "targets": [
+            "exec-19",
+            "exec-decision-parallel",
+            "flow"
+          ]
+        },
+        "id": "evidence-4465d01407bc52b035305829",
+        "locator": "bb19",
+        "quote": "                let guard = if supports_parallel {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [
+            "decision-parallel=parallel"
+          ],
+          "kind": "relation",
+          "subjectRef": "flow-11",
+          "targets": [
+            "exec-decision-parallel",
+            "exec-40",
+            "branch"
+          ]
+        },
+        "id": "evidence-cb4703ed05e4363b4e598381",
+        "locator": "m19.1,bb20,bb29,m29.0",
+        "quote": "                let guard = if supports_parallel {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [
+            "decision-parallel=exclusive"
+          ],
+          "kind": "relation",
+          "subjectRef": "flow-12",
+          "targets": [
+            "exec-decision-parallel",
+            "exec-40",
+            "branch"
+          ]
+        },
+        "id": "evidence-a2d35a6d15bc42df0bb41e66",
+        "locator": "m19.0,bb30,bb39,m39.0",
+        "quote": "                let guard = if supports_parallel {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "relation",
+          "subjectRef": "flow-13",
+          "targets": [
+            "exec-40",
+            "exec-decision-timing",
+            "flow"
+          ]
+        },
+        "id": "evidence-2af55ca3717ae22aec4af49d",
+        "locator": "bb40",
+        "quote": "                if let Some(execution_started_at) = execution_started_at {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [
+            "decision-timing=yes"
+          ],
+          "kind": "relation",
+          "subjectRef": "flow-14",
+          "targets": [
+            "exec-decision-timing",
+            "exec-47",
+            "branch"
+          ]
+        },
+        "id": "evidence-6561de8060d30409e890aa7c",
+        "locator": "m40.0,bb41,bb46,m46.0",
+        "quote": "                if let Some(execution_started_at) = execution_started_at {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [
+            "decision-timing=no"
+          ],
+          "kind": "relation",
+          "subjectRef": "flow-15",
+          "targets": [
+            "exec-decision-timing",
+            "exec-47",
+            "branch"
+          ]
+        },
+        "id": "evidence-acfa86a2ae16953c7301e364",
+        "locator": "m40.1,bb45,m45.0",
+        "quote": "                if let Some(execution_started_at) = execution_started_at {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "relation",
+          "subjectRef": "flow-16",
+          "targets": [
+            "exec-47",
+            "exec-59",
+            "flow"
+          ]
+        },
+        "id": "evidence-f81c076d6fa195e75b8aefe1",
+        "locator": "m58.0",
+        "quote": "                drop(guard);"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "relation",
+          "subjectRef": "flow-17",
+          "targets": [
+            "exec-59",
+            "exec-decision-ready-event",
+            "flow"
+          ]
+        },
+        "id": "evidence-ce9c73b9d9bd512298e80922",
+        "locator": "bb59,bb61,bb63",
+        "quote": "                if !matches!(&result, Err(FunctionCallError::Fatal(_))) {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [
+            "decision-ready-event=yes"
+          ],
+          "kind": "relation",
+          "subjectRef": "flow-18",
+          "targets": [
+            "exec-decision-ready-event",
+            "exec-return",
+            "branch"
+          ]
+        },
+        "id": "evidence-c5f19236aff31e2d9d40983e",
+        "locator": "m63.0,bb64,bb67,bb70,bb72",
+        "quote": "                if !matches!(&result, Err(FunctionCallError::Fatal(_))) {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [
+            "decision-ready-event=no"
+          ],
+          "kind": "relation",
+          "subjectRef": "flow-19",
+          "targets": [
+            "exec-decision-ready-event",
+            "exec-return",
+            "branch"
+          ]
+        },
+        "id": "evidence-40168a9d2c05fe454408e87e",
+        "locator": "m63.1,bb69,bb70,bb72",
+        "quote": "                if !matches!(&result, Err(FunctionCallError::Fatal(_))) {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "decision",
+          "subjectRef": "decision-admission",
+          "targets": [
+            "stability:turn",
+            "accepted",
+            "rejected",
+            "scope:scope-reject"
+          ]
+        },
+        "id": "evidence-6f7a6108f4f43f6b60885595",
+        "locator": "bb2,m2.0,m2.1",
+        "quote": "                let _message_admission = message_admission?;"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [
+            "take=yes",
+            "skip=no"
+          ],
+          "kind": "decision",
+          "subjectRef": "decision-runtime",
+          "targets": [
+            "stability:turn",
+            "no",
+            "yes",
+            "control:control-8"
+          ]
+        },
+        "id": "evidence-e4da6e60b9a6c048ae410a08",
+        "locator": "bb4,m4.0,m4.1",
+        "quote": "                let _message_admission = message_admission?;\n                if let Some(tool_runtime) = tool_runtime"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [
+            "branch-readiness-none=none",
+            "branch-readiness-some=some"
+          ],
+          "kind": "decision",
+          "subjectRef": "decision-readiness",
+          "targets": [
+            "stability:turn",
+            "none",
+            "some",
+            "control:control-readiness"
+          ]
+        },
+        "id": "evidence-9c4f7f29d826946b3018140c",
+        "locator": "bb9,m9.0,m9.1",
+        "quote": "                    && let Some(readiness) = tool_runtime.wait_until_ready(&session)"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [
+            "branch-parallel=parallel",
+            "branch-exclusive=exclusive"
+          ],
+          "kind": "decision",
+          "subjectRef": "decision-parallel",
+          "targets": [
+            "stability:turn",
+            "exclusive",
+            "parallel",
+            "control:control-parallel"
+          ]
+        },
+        "id": "evidence-8ee7b9b92bb5ea894765e704",
+        "locator": "bb19,m19.0,m19.1",
+        "quote": "                let guard = if supports_parallel {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [
+            "take=yes",
+            "skip=no"
+          ],
+          "kind": "decision",
+          "subjectRef": "decision-timing",
+          "targets": [
+            "stability:turn",
+            "no",
+            "yes",
+            "control:control-42"
+          ]
+        },
+        "id": "evidence-aa79bff050582d7494f731ea",
+        "locator": "bb40,m40.0,m40.1",
+        "quote": "                if let Some(execution_started_at) = execution_started_at {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [
+            "take=yes",
+            "skip=no"
+          ],
+          "kind": "decision",
+          "subjectRef": "decision-ready-event",
+          "targets": [
+            "stability:turn",
+            "no",
+            "yes",
+            "control:control-67"
+          ]
+        },
+        "id": "evidence-b35895ce0bb51a69daeb4c46",
+        "locator": "bb59,bb61,bb63,m63.0,m63.1",
+        "quote": "                if !matches!(&result, Err(FunctionCallError::Fatal(_))) {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "control-binding",
+          "subjectRef": "control-reject",
+          "targets": [
+            "exec-5"
+          ]
+        },
+        "id": "evidence-9ca00a2f895407406e62c52f",
+        "locator": "bb2,bb5,m2.1",
+        "quote": "                let _message_admission = message_admission?;"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "control-binding",
+          "subjectRef": "control-8",
+          "targets": [
+            "exec-4"
+          ]
+        },
+        "id": "evidence-512998ed79b6286cf178b301",
+        "locator": "bb4,m4.0,m4.1",
+        "quote": "                let _message_admission = message_admission?;\n                if let Some(tool_runtime) = tool_runtime"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "control-binding",
+          "subjectRef": "control-parallel",
+          "targets": [
+            "exec-19"
+          ]
+        },
+        "id": "evidence-4fbb75df420a6a8124e0d02e",
+        "locator": "bb19,m19.0,m19.1",
+        "quote": "                let guard = if supports_parallel {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "control-binding",
+          "subjectRef": "control-42",
+          "targets": [
+            "exec-40"
+          ]
+        },
+        "id": "evidence-fb4f6937080ed112a8ab9e44",
+        "locator": "bb40,m40.0,m40.1",
+        "quote": "                if let Some(execution_started_at) = execution_started_at {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "control-binding",
+          "subjectRef": "control-48",
+          "targets": [
+            "exec-47"
+          ]
+        },
+        "id": "evidence-51c3db8b163a0c002d38a866",
+        "locator": "call:48,bb48",
+        "quote": "                let result = router\n                    .dispatch_tool_call_with_state(\n                        session,\n                        step_context,\n                        invocation_cancellation_token,\n                        tracker,\n                        dispatch_call,\n                        source,\n                        dispatch_call_state,\n                    )"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "control-binding",
+          "subjectRef": "control-67",
+          "targets": [
+            "exec-59"
+          ]
+        },
+        "id": "evidence-1d8571c037c4608ebfb845b9",
+        "locator": "bb59,bb61,bb63,m63.0,m63.1",
+        "quote": "                if !matches!(&result, Err(FunctionCallError::Fatal(_))) {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "attachment",
+          "subjectRef": "attachment-purpose-8",
+          "targets": [
+            "P01/A03.4",
+            "purpose-8"
+          ]
+        },
+        "id": "evidence-dc1acf7bc3541f1dd3c1f0bd",
+        "locator": "call:8,bb8",
+        "quote": "                    && let Some(readiness) = tool_runtime.wait_until_ready(&session)"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "attachment",
+          "subjectRef": "attachment-purpose-42",
+          "targets": [
+            "P01/A05.40",
+            "purpose-42"
+          ]
+        },
+        "id": "evidence-1cb3eee8cf416408cfc15be8",
+        "locator": "call:42,bb42",
+        "quote": "                    let _ = execution_started_at.set(Instant::now());"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "attachment",
+          "subjectRef": "attachment-purpose-48",
+          "targets": [
+            "P02/A06.47",
+            "purpose-48"
+          ]
+        },
+        "id": "evidence-19bb60ca649d43748af42632",
+        "locator": "call:48,bb48",
+        "quote": "                let result = router\n                    .dispatch_tool_call_with_state(\n                        session,\n                        step_context,\n                        invocation_cancellation_token,\n                        tracker,\n                        dispatch_call,\n                        source,\n                        dispatch_call_state,\n                    )"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "attachment",
+          "subjectRef": "attachment-purpose-67",
+          "targets": [
+            "P02/A07.59",
+            "purpose-67"
+          ]
+        },
+        "id": "evidence-e7eee74a9b808a1191fd6a98",
+        "locator": "call:67,bb67",
+        "quote": "                    call_trace::result_ready(\n                        thread_id,\n                        &turn.sub_id,\n                        &dispatch_tool_name,\n                        &dispatch_call_id,\n                        trace_source,\n                    );"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "inventory",
+          "subjectRef": "ToolCallRuntime::handle_tool_call_with_source::{closure#1}",
+          "targets": [
+            "action:P01/A01.1",
+            "action:P01/A02.5",
+            "action:P01/A03.4",
+            "action:P01/A04.19",
+            "action:P01/A05.40",
+            "action:P02/A06.47",
+            "action:P02/A07.59",
+            "control:control-reject",
+            "control:control-8",
+            "control:control-parallel",
+            "control:control-42",
+            "control:control-48",
+            "control:control-67"
+          ]
+        },
+        "id": "evidence-a469b4ee3a4b48751bc3a2eb",
+        "locator": "bb1,bb2,bb4,bb19,bb40,bb48,bb63,bb67,bb70",
+        "quote": "                let _message_admission = message_admission?;"
+      }
+    ],
+    "inventory": {
+      "actionRefs": [
+        "P01/A01.1",
+        "P01/A02.5",
+        "P01/A03.4",
+        "P01/A04.19",
+        "P01/A05.40",
+        "P02/A06.47",
+        "P02/A07.59"
+      ],
+      "controlRefs": [
+        "control-reject",
+        "control-8",
+        "control-parallel",
+        "control-42",
+        "control-48",
+        "control-67"
+      ],
+      "evidenceRefs": [
+        "evidence-a469b4ee3a4b48751bc3a2eb"
+      ]
+    },
+    "nodes": [
+      {
+        "basicBlockRefs": [
+          "bb1"
+        ],
+        "evidenceRefs": [
+          "evidence-ada39d0e3c57b0840b649ec6"
+        ],
+        "id": "exec-entry",
+        "kind": "entry",
+        "label": "接收 Runtime 启动的后台任务",
+        "lineRanges": [
+          {
+            "endLine": 198,
+            "startLine": 198
+          }
+        ]
+      },
+      {
+        "actionRef": "P01/A01.1",
+        "basicBlockRefs": [
+          "bb1",
+          "bb2"
+        ],
+        "evidenceRefs": [
+          "evidence-4f274a1ad329047a6bbba6eb"
+        ],
+        "id": "exec-1",
+        "kind": "action",
+        "label": "确认 code-mode 消息准入结果",
+        "lineRanges": [
+          {
+            "endLine": 198,
+            "startLine": 198
+          }
+        ]
+      },
+      {
+        "actionRef": "P01/A02.5",
+        "basicBlockRefs": [
+          "bb5",
+          "bb6",
+          "bb153",
+          "bb154",
+          "bb155",
+          "bb156",
+          "bb157",
+          "bb158",
+          "bb159",
+          "bb160",
+          "bb161",
+          "bb162",
+          "bb163",
+          "bb164",
+          "bb165",
+          "bb166"
+        ],
+        "evidenceRefs": [
+          "evidence-8b2116eca90a710bc3e76343"
+        ],
+        "id": "exec-5",
+        "kind": "action",
+        "label": "交还消息准入失败并释放本次捕获资源",
+        "lineRanges": [
+          {
+            "endLine": 198,
+            "startLine": 198
+          }
+        ]
+      },
+      {
+        "actionRef": "P01/A03.4",
+        "basicBlockRefs": [
+          "bb4",
+          "bb7",
+          "bb8",
+          "bb9",
+          "bb10",
+          "bb11",
+          "bb12",
+          "bb13",
+          "bb14",
+          "bb16",
+          "bb17",
+          "bb18",
+          "bb128"
+        ],
+        "evidenceRefs": [
+          "evidence-485b638c890c3022bb6db6a6"
+        ],
+        "id": "exec-4",
+        "kind": "action",
+        "label": "在可用 runtime 就绪后继续调度",
+        "lineRanges": [
+          {
+            "endLine": 200,
+            "startLine": 198
+          },
+          {
+            "endLine": 202,
+            "startLine": 202
+          }
+        ]
+      },
+      {
+        "actionRef": "P01/A04.19",
+        "basicBlockRefs": [
+          "bb19",
+          "bb20",
+          "bb21",
+          "bb22",
+          "bb23",
+          "bb24",
+          "bb25",
+          "bb26",
+          "bb28",
+          "bb29",
+          "bb30",
+          "bb31",
+          "bb32",
+          "bb33",
+          "bb34",
+          "bb35",
+          "bb36",
+          "bb38",
+          "bb39"
+        ],
+        "evidenceRefs": [
+          "evidence-44279bc27eee98c25da78bc5"
+        ],
+        "id": "exec-19",
+        "kind": "action",
+        "label": "按工具并发能力取得执行许可",
+        "lineRanges": [
+          {
+            "endLine": 206,
+            "startLine": 205
+          },
+          {
+            "endLine": 208,
+            "startLine": 208
+          }
+        ]
+      },
+      {
+        "actionRef": "P01/A05.40",
+        "basicBlockRefs": [
+          "bb40",
+          "bb41",
+          "bb42",
+          "bb43",
+          "bb44",
+          "bb45",
+          "bb46"
+        ],
+        "evidenceRefs": [
+          "evidence-2d0b460621ed769288987254"
+        ],
+        "id": "exec-40",
+        "kind": "action",
+        "label": "为启用计时的调用标记 handler 起点",
+        "lineRanges": [
+          {
+            "endLine": 213,
+            "startLine": 212
+          }
+        ]
+      },
+      {
+        "actionRef": "P02/A06.47",
+        "basicBlockRefs": [
+          "bb47",
+          "bb48",
+          "bb49",
+          "bb50",
+          "bb51",
+          "bb52",
+          "bb53",
+          "bb54",
+          "bb55",
+          "bb57",
+          "bb58"
+        ],
+        "broadRangeReason": "216–225 行传入 router 所需的调用、来源和共享状态；226–227 行携带 span 并等待同一调用完成；228 行释放执行许可。这些行共同覆盖一次实际分发及完成交接，均属于本 action。",
+        "evidenceRefs": [
+          "evidence-c96e14a2d4c15b19b244d1a9"
+        ],
+        "id": "exec-47",
+        "kind": "action",
+        "label": "让 router 分发调用并取得工具结果",
+        "lineRanges": [
+          {
+            "endLine": 228,
+            "startLine": 216
+          }
+        ]
+      },
+      {
+        "actionRef": "P02/A07.59",
+        "basicBlockRefs": [
+          "bb59",
+          "bb60",
+          "bb61",
+          "bb62",
+          "bb63",
+          "bb64",
+          "bb65",
+          "bb66",
+          "bb67",
+          "bb68",
+          "bb69",
+          "bb70",
+          "bb71",
+          "bb134",
+          "bb135",
+          "bb136",
+          "bb137",
+          "bb138"
+        ],
+        "evidenceRefs": [
+          "evidence-2bb8ed8eb916a7b7e2bf434c"
+        ],
+        "id": "exec-59",
+        "kind": "action",
+        "label": "记录非 Fatal 结果就绪并交还调用结果",
+        "lineRanges": [
+          {
+            "endLine": 240,
+            "startLine": 233
+          },
+          {
+            "endLine": 242,
+            "startLine": 242
+          }
+        ]
+      },
+      {
+        "basicBlockRefs": [
+          "bb2"
+        ],
+        "decisionRef": "decision-admission",
+        "evidenceRefs": [
+          "evidence-c8782cbfb30def01aae91eb1"
+        ],
+        "id": "exec-decision-admission",
+        "kind": "decision",
+        "label": "消息准入是否成功",
+        "lineRanges": [
+          {
+            "endLine": 198,
+            "startLine": 198
+          }
+        ]
+      },
+      {
+        "basicBlockRefs": [
+          "bb4"
+        ],
+        "decisionRef": "decision-runtime",
+        "evidenceRefs": [
+          "evidence-04787276bccee65525a30c82"
+        ],
+        "id": "exec-decision-runtime",
+        "kind": "decision",
+        "label": "是否存在 tool_runtime",
+        "lineRanges": [
+          {
+            "endLine": 199,
+            "startLine": 199
+          }
+        ]
+      },
+      {
+        "basicBlockRefs": [
+          "bb9"
+        ],
+        "decisionRef": "decision-readiness",
+        "evidenceRefs": [
+          "evidence-27c9693f00723f5aec2c6d41"
+        ],
+        "id": "exec-decision-readiness",
+        "kind": "decision",
+        "label": "是否需要等待 runtime 就绪",
+        "lineRanges": [
+          {
+            "endLine": 200,
+            "startLine": 200
+          }
+        ]
+      },
+      {
+        "basicBlockRefs": [
+          "bb19"
+        ],
+        "decisionRef": "decision-parallel",
+        "evidenceRefs": [
+          "evidence-8061e4991257c7911543c8d4"
+        ],
+        "id": "exec-decision-parallel",
+        "kind": "decision",
+        "label": "是否允许并行执行",
+        "lineRanges": [
+          {
+            "endLine": 205,
+            "startLine": 205
+          }
+        ]
+      },
+      {
+        "basicBlockRefs": [
+          "bb40"
+        ],
+        "decisionRef": "decision-timing",
+        "evidenceRefs": [
+          "evidence-1d3915b69e5c2987c21e7e4a"
+        ],
+        "id": "exec-decision-timing",
+        "kind": "decision",
+        "label": "是否记录 handler 起点",
+        "lineRanges": [
+          {
+            "endLine": 212,
+            "startLine": 212
+          }
+        ]
+      },
+      {
+        "basicBlockRefs": [
+          "bb59",
+          "bb61",
+          "bb63"
+        ],
+        "decisionRef": "decision-ready-event",
+        "evidenceRefs": [
+          "evidence-93e59bffdaa9d379ec1ea3b6"
+        ],
+        "id": "exec-decision-ready-event",
+        "kind": "decision",
+        "label": "是否发送非 Fatal 结果就绪事件",
+        "lineRanges": [
+          {
+            "endLine": 233,
+            "startLine": 233
+          }
+        ]
+      },
+      {
+        "basicBlockRefs": [
+          "bb5",
+          "bb72"
+        ],
+        "evidenceRefs": [
+          "evidence-adcaf26f8b2b188a6fc0b212"
+        ],
+        "id": "exec-rejected",
+        "kind": "terminal",
+        "label": "交还消息准入错误",
+        "lineRanges": [
+          {
+            "endLine": 198,
+            "startLine": 198
+          }
+        ],
+        "outcome": "error"
+      },
+      {
+        "basicBlockRefs": [
+          "bb70",
+          "bb72"
+        ],
+        "evidenceRefs": [
+          "evidence-8b406b3473b8c49a56f6f8bc"
+        ],
+        "id": "exec-return",
+        "kind": "terminal",
+        "label": "交还原始工具结果",
+        "lineRanges": [
+          {
+            "endLine": 242,
+            "startLine": 242
+          }
+        ],
+        "outcome": "return"
+      }
+    ],
+    "rootActorRef": "actor-main",
+    "tasks": []
+  },
+  "fixture": {
+    "actors": [
+      {
+        "actorId": "actor-main",
+        "bodyRef": "fe2e95c3e6be137e7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
+        "color": "#327B98",
+        "kind": "body",
+        "label": "ToolCallRuntime::handle_tool_call_with_source::{closure#1}",
+        "sourceNodeRef": "fe2e95c3e6be137e7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
+      },
+      {
+        "actorId": "actor-crate",
+        "children": [
+          {
+            "actorId": "module-registry",
+            "children": [
+              {
+                "actorId": "actor-8",
+                "bodyRef": "c0d1e4ad485880a07f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
+                "color": "#567B5A",
+                "kind": "body",
+                "label": "CoreToolRuntime::wait_until_ready",
+                "sourceNodeRef": "c0d1e4ad485880a07f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
+              }
+            ],
+            "color": "#567B5A",
+            "kind": "module",
+            "label": "tools::registry",
+            "sourceNodeRef": "3168a63966c331067f347cbdcc2b778a"
+          },
+          {
+            "actorId": "module-router",
+            "children": [
+              {
+                "actorId": "actor-48",
+                "bodyRef": "baf48489da22c9437f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
+                "color": "#567B5A",
+                "kind": "body",
+                "label": "ToolRouter::dispatch_tool_call_with_state::{closure#0}",
+                "sourceNodeRef": "baf48489da22c9437f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
+              }
+            ],
+            "color": "#567B5A",
+            "kind": "module",
+            "label": "tools::router",
+            "sourceNodeRef": "0842d5d216317e2b7f347cbdcc2b778a"
+          },
+          {
+            "actorId": "module-call_trace",
+            "children": [
+              {
+                "actorId": "actor-67",
+                "bodyRef": "8ea69ae16a50823e7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
+                "color": "#567B5A",
+                "kind": "body",
+                "label": "result_ready",
+                "sourceNodeRef": "8ea69ae16a50823e7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
+              }
+            ],
+            "color": "#567B5A",
+            "kind": "module",
+            "label": "tools::call_trace",
+            "sourceNodeRef": "cde361f3781343167f347cbdcc2b778a"
+          }
+        ],
+        "color": "#567B5A",
+        "kind": "crate",
+        "label": "codex_core",
+        "sourceNodeRef": "7f347cbdcc2b778a7f347cbdcc2b778a"
+      }
+    ],
+    "messages": []
+  },
+  "functionSource": {
+    "definitionRef": "f5ab0280c7d978027f347cbdcc2b778a",
+    "endLine": 295,
+    "file": "core/src/tools/parallel.rs",
+    "lines": [
+      "    pub(crate) fn handle_tool_call_with_source(",
+      "        self,",
+      "        step_context: Arc<StepContext>,",
+      "        call: ToolCall,",
+      "        source: ToolCallSource,",
+      "        cancellation_token: CancellationToken,",
+      "        call_state: Arc<ToolCallState>,",
+      "    ) -> impl std::future::Future<Output = Result<AnyToolResult, FunctionCallError>> {",
+      "        let message_admission =",
+      "            super::user_messaging::admit_code_mode_send(&self.session, &source, &call.tool_name);",
+      "        self.session",
+      "            .services",
+      "            .executed_tool_calls",
+      "            .record_tool_call(&call, &source, &step_context);",
+      "        let router = &step_context.tool_router;",
+      "        let supports_parallel = router.tool_supports_parallel(&call);",
+      "        let tool_runtime = router.tool_runtime(&call.tool_name);",
+      "        let router = Arc::clone(router);",
+      "        let session = Arc::clone(&self.session);",
+      "        let turn = Arc::clone(&step_context.turn);",
+      "        let tracker = Arc::clone(&self.tracker);",
+      "        let lock = Arc::clone(&self.parallel_execution);",
+      "        let invocation_cancellation_token = cancellation_token.clone();",
+      "        let started = Instant::now();",
+      "        let mut tool_call_timing_guard = ToolCallTimingGuard::capture(",
+      "            started,",
+      "            &session.thread_id,",
+      "            &turn.sub_id,",
+      "            &call,",
+      "            &source,",
+      "            Arc::clone(&session.services.extensions),",
+      "        );",
+      "        if let Some(guard) = tool_call_timing_guard.as_mut() {",
+      "            for observer in session.services.extensions.tool_lifecycle_contributors() {",
+      "                observer.on_tool_dispatch(codex_extension_api::ToolDispatchInput {",
+      "                    thread_id: &guard.conversation_id,",
+      "                    turn_id: &guard.turn_id,",
+      "                    call_id: &guard.call_id,",
+      "                    tool_name: &guard.tool_name,",
+      "                });",
+      "            }",
+      "        }",
+      "        let execution_started_at = tool_call_timing_guard",
+      "            .as_ref()",
+      "            .map(|timing| Arc::clone(&timing.execution_started_at));",
+      "        let abort_session = Arc::clone(&session);",
+      "        let abort_source = source.clone();",
+      "        let abort_turn = Arc::clone(&turn);",
+      "        let dispatch_call_state = Arc::clone(&call_state);",
+      "        let dispatch_call = call.clone();",
+      "        let thread_id = session.thread_id;",
+      "        let trace_source = match &source {",
+      "            ToolCallSource::Direct | ToolCallSource::DirectPlaintextMessage => {",
+      "                call_trace::Source::Direct",
+      "            }",
+      "            ToolCallSource::CodeMode { .. } => call_trace::Source::CodeMode,",
+      "        };",
+      "        let dispatch_tool_name = call.tool_name.clone();",
+      "        let dispatch_call_id = call.call_id.clone();",
+      "",
+      "        // Code-mode callbacks can resume outside the turn's local span ancestry.",
+      "        let dispatch_span = trace_span!(",
+      "            \"dispatch_tool_call_with_code_mode_result\",",
+      "            otel.name = %call.tool_name,",
+      "            tool_name = %call.tool_name,",
+      "            thread.id = %session.thread_id,",
+      "            call_id = call.call_id.as_str(),",
+      "            aborted = false,",
+      "        );",
+      "        let abort_dispatch_span = dispatch_span.clone();",
+      "",
+      "        let mut dispatch_handle = AbortOnDropHandle::new(tokio::spawn(",
+      "            async move {",
+      "                let _message_admission = message_admission?;",
+      "                if let Some(tool_runtime) = tool_runtime",
+      "                    && let Some(readiness) = tool_runtime.wait_until_ready(&session)",
+      "                {",
+      "                    readiness.await;",
+      "                }",
+      "",
+      "                let guard = if supports_parallel {",
+      "                    Either::Left(lock.read().await)",
+      "                } else {",
+      "                    Either::Right(lock.write().await)",
+      "                };",
+      "                // Admission through the parallel-execution gate marks the end",
+      "                // of dispatch waiting and the start of handler execution.",
+      "                if let Some(execution_started_at) = execution_started_at {",
+      "                    let _ = execution_started_at.set(Instant::now());",
+      "                }",
+      "",
+      "                let result = router",
+      "                    .dispatch_tool_call_with_state(",
+      "                        session,",
+      "                        step_context,",
+      "                        invocation_cancellation_token,",
+      "                        tracker,",
+      "                        dispatch_call,",
+      "                        source,",
+      "                        dispatch_call_state,",
+      "                    )",
+      "                    .instrument(dispatch_span.clone())",
+      "                    .await;",
+      "                drop(guard);",
+      "                // The sampling loop collects results in order only after its stream ends.",
+      "                // Record readiness here, before either caller encodes or collects the result.",
+      "                // A fatal error still propagates to the caller instead of producing a tool",
+      "                // result; unlike a normal tool failure, it has no readiness event.",
+      "                if !matches!(&result, Err(FunctionCallError::Fatal(_))) {",
+      "                    call_trace::result_ready(",
+      "                        thread_id,",
+      "                        &turn.sub_id,",
+      "                        &dispatch_tool_name,",
+      "                        &dispatch_call_id,",
+      "                        trace_source,",
+      "                    );",
+      "                }",
+      "                result",
+      "            }",
+      "            .in_current_span(),",
+      "        ));",
+      "",
+      "        async move {",
+      "            let mut tool_call_timing_guard = tool_call_timing_guard;",
+      "            let mut result = tokio::select! {",
+      "                res = &mut dispatch_handle => res.map_err(Self::tool_task_join_error)?,",
+      "                _ = cancellation_token.cancelled() => {",
+      "                    if call_state.terminal_outcome_reached.load(Ordering::Acquire) || dispatch_handle.is_finished() {",
+      "                        dispatch_handle.await.map_err(Self::tool_task_join_error)?",
+      "                    } else {",
+      "                        let secs = started.elapsed().as_secs_f32().max(0.1);",
+      "                        abort_dispatch_span.record(\"aborted\", true);",
+      "                        dispatch_handle.abort();",
+      "                        match dispatch_handle.await {",
+      "                            Ok(result) => result,",
+      "                            Err(err) if err.is_cancelled() => {",
+      "                                let response = Self::aborted_response(&call, secs);",
+      "                                call_trace::result_ready(",
+      "                                    thread_id,",
+      "                                    &abort_turn.sub_id,",
+      "                                    &call.tool_name,",
+      "                                    &call.call_id,",
+      "                                    trace_source,",
+      "                                );",
+      "                                notify_tool_aborted(",
+      "                                    abort_session.as_ref(),",
+      "                                    abort_turn.as_ref(),",
+      "                                    call.call_id.as_str(),",
+      "                                    &call.tool_name,",
+      "                                    abort_source,",
+      "                                )",
+      "                                .await;",
+      "                                Ok(response)",
+      "                            }",
+      "                            Err(err) => Err(Self::tool_task_join_error(err)),",
+      "                        }",
+      "                    }",
+      "                },",
+      "            };",
+      "            // Use one completion measurement for logging and response formatting.",
+      "            // Measuring inside a handler would omit routing and output processing.",
+      "            if let Some(timing) = tool_call_timing_guard.as_mut()",
+      "                && let Some(handler_duration_ms) = timing.finish()",
+      "                && let Ok(result) = &mut result",
+      "            {",
+      "                result.result.set_handler_duration_ms(handler_duration_ms);",
+      "            }",
+      "            result",
+      "        }",
+      "        .in_current_span()",
+      "    }"
+    ],
+    "sourcePath": "source/parallel.rs",
+    "startLine": 125
+  },
+  "initialState": {
+    "expandedActionIds": [],
+    "expandedActorIds": [],
+    "expandedGoalIds": [],
+    "expandedPhaseIds": []
+  },
+  "messagePlacements": [
+    {
+      "branchPath": [],
+      "controlRef": "sequence-runtime",
+      "messageRef": "request-8",
+      "rootControlRef": "control-8"
+    },
+    {
+      "branchPath": [],
+      "controlRef": "sequence-runtime",
+      "messageRef": "return-8",
+      "rootControlRef": "control-8"
+    },
+    {
+      "branchPath": [],
+      "controlRef": "control-42",
+      "messageRef": "self-42",
+      "rootControlRef": "control-42"
+    },
+    {
+      "branchPath": [],
+      "controlRef": "control-48",
+      "messageRef": "request-48",
+      "rootControlRef": "control-48"
+    },
+    {
+      "branchPath": [],
+      "controlRef": "control-48",
+      "messageRef": "return-48",
+      "rootControlRef": "control-48"
+    },
+    {
+      "branchPath": [],
+      "controlRef": "control-67",
+      "messageRef": "request-67",
+      "rootControlRef": "control-67"
+    },
+    {
+      "branchPath": [],
+      "controlRef": "control-67",
+      "messageRef": "return-67",
+      "rootControlRef": "control-67"
+    }
+  ],
+  "messages": [
+    {
+      "bindingRef": "call:8",
+      "fromActorId": "actor-main",
+      "invocationRef": "invocation-8",
+      "kind": "request",
+      "label": "等待工具运行环境可用",
+      "messageId": "request-8",
+      "pair": "pair-8",
+      "stage": "business-request",
+      "toActorId": "actor-8"
+    },
+    {
+      "bindingRef": "call:8",
+      "fromActorId": "actor-8",
+      "invocationRef": "invocation-8",
+      "kind": "return",
+      "label": "取得可选 readiness 对象",
+      "messageId": "return-8",
+      "pair": "pair-8",
+      "stage": "business-completion",
+      "toActorId": "actor-main"
+    },
+    {
+      "bindingRef": "call:42",
+      "fromActorId": "actor-main",
+      "invocationRef": "invocation-42",
+      "kind": "self",
+      "label": "得到当前 Instant",
+      "messageId": "self-42",
+      "pair": null,
+      "stage": "business-request",
+      "toActorId": "actor-main"
+    },
+    {
+      "bindingRef": "call:48",
+      "fromActorId": "actor-main",
+      "invocationRef": "invocation-48",
+      "kind": "request",
+      "label": "将请求交给注册的工具执行链",
+      "messageId": "request-48",
+      "pair": "pair-48",
+      "stage": "business-request",
+      "toActorId": "actor-48"
+    },
+    {
+      "bindingRef": "call:48",
+      "fromActorId": "actor-48",
+      "invocationRef": "invocation-48",
+      "kind": "return",
+      "label": "收到 AnyToolResult 或 FunctionCallError",
+      "messageId": "return-48",
+      "pair": "pair-48",
+      "stage": "business-completion",
+      "toActorId": "actor-main"
+    },
+    {
+      "bindingRef": "call:67",
+      "fromActorId": "actor-main",
+      "invocationRef": "invocation-67",
+      "kind": "request",
+      "label": "在调用方收集结果之前标记可用",
+      "messageId": "request-67",
+      "pair": "pair-67",
+      "stage": "business-request",
+      "toActorId": "actor-67"
+    },
+    {
+      "bindingRef": "call:67",
+      "fromActorId": "actor-67",
+      "invocationRef": "invocation-67",
+      "kind": "return",
+      "label": "result_ready 事件已记录",
+      "messageId": "return-67",
+      "pair": "pair-67",
+      "stage": "business-completion",
+      "toActorId": "actor-main"
+    }
+  ],
+  "phases": [
+    {
+      "basicBlockRefs": [
+        "bb1",
+        "bb2",
+        "bb4",
+        "bb5",
+        "bb6",
+        "bb7",
+        "bb8",
+        "bb9",
+        "bb10",
+        "bb11",
+        "bb12",
+        "bb13",
+        "bb14",
+        "bb16",
+        "bb17",
+        "bb18",
+        "bb19",
+        "bb20",
+        "bb21",
+        "bb22",
+        "bb23",
+        "bb24",
+        "bb25",
+        "bb26",
+        "bb28",
+        "bb29",
+        "bb30",
+        "bb31",
+        "bb32",
+        "bb33",
+        "bb34",
+        "bb35",
+        "bb36",
+        "bb38",
+        "bb39",
+        "bb40",
+        "bb41",
+        "bb42",
+        "bb43",
+        "bb44",
+        "bb45",
+        "bb46",
+        "bb128",
+        "bb153",
+        "bb154",
+        "bb155",
+        "bb156",
+        "bb157",
+        "bb158",
+        "bb159",
+        "bb160",
+        "bb161",
+        "bb162",
+        "bb163",
+        "bb164",
+        "bb165",
+        "bb166"
+      ],
+      "boundaryControlRefs": [],
+      "color": "#327B98",
+      "goals": [
+        {
+          "actions": [
+            {
+              "basicBlockRefs": [
+                "bb1",
+                "bb2"
+              ],
+              "controlRefs": [],
+              "id": "P01/A01.1",
+              "label": "确认 code-mode 消息准入结果",
+              "lineRanges": [
+                {
+                  "endLine": 198,
+                  "startLine": 198
+                }
+              ],
+              "renderId": "P01_A01.1"
+            },
+            {
+              "basicBlockRefs": [
+                "bb5",
+                "bb6",
+                "bb153",
+                "bb154",
+                "bb155",
+                "bb156",
+                "bb157",
+                "bb158",
+                "bb159",
+                "bb160",
+                "bb161",
+                "bb162",
+                "bb163",
+                "bb164",
+                "bb165",
+                "bb166"
+              ],
+              "controlRefs": [
+                "control-reject"
+              ],
+              "id": "P01/A02.5",
+              "label": "交还消息准入失败并释放本次捕获资源",
+              "lineRanges": [
+                {
+                  "endLine": 198,
+                  "startLine": 198
+                }
+              ],
+              "renderId": "P01_A02.5"
+            }
+          ],
+          "basicBlockRefs": [
+            "bb1",
+            "bb2",
+            "bb5",
+            "bb6",
+            "bb153",
+            "bb154",
+            "bb155",
+            "bb156",
+            "bb157",
+            "bb158",
+            "bb159",
+            "bb160",
+            "bb161",
+            "bb162",
+            "bb163",
+            "bb164",
+            "bb165",
+            "bb166"
+          ],
+          "id": "sem:P01:admission",
+          "label": "接纳消息准入结论并完成失败交接",
+          "lineRanges": [
+            {
+              "endLine": 198,
+              "startLine": 198
+            }
+          ],
+          "renderId": "sem:P01:admission"
+        },
+        {
+          "actions": [
+            {
+              "basicBlockRefs": [
+                "bb4",
+                "bb7",
+                "bb8",
+                "bb9",
+                "bb10",
+                "bb11",
+                "bb12",
+                "bb13",
+                "bb14",
+                "bb16",
+                "bb17",
+                "bb18",
+                "bb128"
+              ],
+              "controlRefs": [
+                "control-8"
+              ],
+              "id": "P01/A03.4",
+              "label": "在可用 runtime 就绪后继续调度",
+              "lineRanges": [
+                {
+                  "endLine": 200,
+                  "startLine": 198
+                },
+                {
+                  "endLine": 202,
+                  "startLine": 202
+                }
+              ],
+              "renderId": "P01_A03.4"
+            },
+            {
+              "basicBlockRefs": [
+                "bb19",
+                "bb20",
+                "bb21",
+                "bb22",
+                "bb23",
+                "bb24",
+                "bb25",
+                "bb26",
+                "bb28",
+                "bb29",
+                "bb30",
+                "bb31",
+                "bb32",
+                "bb33",
+                "bb34",
+                "bb35",
+                "bb36",
+                "bb38",
+                "bb39"
+              ],
+              "controlRefs": [
+                "control-parallel"
+              ],
+              "id": "P01/A04.19",
+              "label": "按工具并发能力取得执行许可",
+              "lineRanges": [
+                {
+                  "endLine": 206,
+                  "startLine": 205
+                },
+                {
+                  "endLine": 208,
+                  "startLine": 208
+                }
+              ],
+              "renderId": "P01_A04.19"
+            },
+            {
+              "basicBlockRefs": [
+                "bb40",
+                "bb41",
+                "bb42",
+                "bb43",
+                "bb44",
+                "bb45",
+                "bb46"
+              ],
+              "controlRefs": [
+                "control-42"
+              ],
+              "id": "P01/A05.40",
+              "label": "为启用计时的调用标记 handler 起点",
+              "lineRanges": [
+                {
+                  "endLine": 213,
+                  "startLine": 212
+                }
+              ],
+              "renderId": "P01_A05.40"
+            }
+          ],
+          "basicBlockRefs": [
+            "bb4",
+            "bb7",
+            "bb8",
+            "bb9",
+            "bb10",
+            "bb11",
+            "bb12",
+            "bb13",
+            "bb14",
+            "bb16",
+            "bb17",
+            "bb18",
+            "bb19",
+            "bb20",
+            "bb21",
+            "bb22",
+            "bb23",
+            "bb24",
+            "bb25",
+            "bb26",
+            "bb28",
+            "bb29",
+            "bb30",
+            "bb31",
+            "bb32",
+            "bb33",
+            "bb34",
+            "bb35",
+            "bb36",
+            "bb38",
+            "bb39",
+            "bb40",
+            "bb41",
+            "bb42",
+            "bb43",
+            "bb44",
+            "bb45",
+            "bb46",
+            "bb128"
+          ],
+          "id": "sem:P01:readiness",
+          "label": "准备 handler 可以开始执行的运行条件",
+          "lineRanges": [
+            {
+              "endLine": 200,
+              "startLine": 198
+            },
+            {
+              "endLine": 202,
+              "startLine": 202
+            },
+            {
+              "endLine": 206,
+              "startLine": 205
+            },
+            {
+              "endLine": 208,
+              "startLine": 208
+            },
+            {
+              "endLine": 213,
+              "startLine": 212
+            }
+          ],
+          "renderId": "sem:P01:readiness"
+        }
+      ],
+      "id": "P01",
+      "label": "完成消息准入和执行等待",
+      "lineRanges": [
+        {
+          "endLine": 200,
+          "startLine": 198
+        },
+        {
+          "endLine": 202,
+          "startLine": 202
+        },
+        {
+          "endLine": 206,
+          "startLine": 205
+        },
+        {
+          "endLine": 208,
+          "startLine": 208
+        },
+        {
+          "endLine": 213,
+          "startLine": 212
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb47",
+        "bb48",
+        "bb49",
+        "bb50",
+        "bb51",
+        "bb52",
+        "bb53",
+        "bb54",
+        "bb55",
+        "bb57",
+        "bb58",
+        "bb59",
+        "bb60",
+        "bb61",
+        "bb62",
+        "bb63",
+        "bb64",
+        "bb65",
+        "bb66",
+        "bb67",
+        "bb68",
+        "bb69",
+        "bb70",
+        "bb71",
+        "bb134",
+        "bb135",
+        "bb136",
+        "bb137",
+        "bb138"
+      ],
+      "boundaryControlRefs": [],
+      "color": "#327B98",
+      "goals": [
+        {
+          "actions": [
+            {
+              "basicBlockRefs": [
+                "bb47",
+                "bb48",
+                "bb49",
+                "bb50",
+                "bb51",
+                "bb52",
+                "bb53",
+                "bb54",
+                "bb55",
+                "bb57",
+                "bb58"
+              ],
+              "broadRangeReason": "216–225 行传入 router 所需的调用、来源和共享状态；226–227 行携带 span 并等待同一调用完成；228 行释放执行许可。这些行共同覆盖一次实际分发及完成交接，均属于本 action。",
+              "controlRefs": [
+                "control-48"
+              ],
+              "id": "P02/A06.47",
+              "label": "让 router 分发调用并取得工具结果",
+              "lineRanges": [
+                {
+                  "endLine": 228,
+                  "startLine": 216
+                }
+              ],
+              "renderId": "P02_A06.47"
+            },
+            {
+              "basicBlockRefs": [
+                "bb59",
+                "bb60",
+                "bb61",
+                "bb62",
+                "bb63",
+                "bb64",
+                "bb65",
+                "bb66",
+                "bb67",
+                "bb68",
+                "bb69",
+                "bb70",
+                "bb71",
+                "bb134",
+                "bb135",
+                "bb136",
+                "bb137",
+                "bb138"
+              ],
+              "controlRefs": [
+                "control-67"
+              ],
+              "id": "P02/A07.59",
+              "label": "记录非 Fatal 结果就绪并交还调用结果",
+              "lineRanges": [
+                {
+                  "endLine": 240,
+                  "startLine": 233
+                },
+                {
+                  "endLine": 242,
+                  "startLine": 242
+                }
+              ],
+              "renderId": "P02_A07.59"
+            }
+          ],
+          "basicBlockRefs": [
+            "bb47",
+            "bb48",
+            "bb49",
+            "bb50",
+            "bb51",
+            "bb52",
+            "bb53",
+            "bb54",
+            "bb55",
+            "bb57",
+            "bb58",
+            "bb59",
+            "bb60",
+            "bb61",
+            "bb62",
+            "bb63",
+            "bb64",
+            "bb65",
+            "bb66",
+            "bb67",
+            "bb68",
+            "bb69",
+            "bb70",
+            "bb71",
+            "bb134",
+            "bb135",
+            "bb136",
+            "bb137",
+            "bb138"
+          ],
+          "broadRangeReason": "216–228 行完成路由与并发许可释放；233–240 行按 Fatal 条件记录结果就绪；242 行交还同一结果。三段属于本 goal 的完整结果交付承诺，排除中间注释。",
+          "id": "sem:P02:delivery",
+          "label": "把获准调用转化为可交付的工具结果",
+          "lineRanges": [
+            {
+              "endLine": 228,
+              "startLine": 216
+            },
+            {
+              "endLine": 240,
+              "startLine": 233
+            },
+            {
+              "endLine": 242,
+              "startLine": 242
+            }
+          ],
+          "renderId": "sem:P02:delivery"
+        }
+      ],
+      "id": "P02",
+      "label": "执行路由并交付工具结果",
+      "lineRanges": [
+        {
+          "endLine": 228,
+          "startLine": 216
+        },
+        {
+          "endLine": 240,
+          "startLine": 233
+        },
+        {
+          "endLine": 242,
+          "startLine": 242
+        }
+      ]
+    }
+  ],
+  "profile": "v6.1/1",
+  "purposeProjections": [
+    {
+      "defaultVisible": true,
+      "goalRef": "sem:P01:readiness",
+      "id": "purpose-8",
+      "invocationRefs": [
+        "invocation-8"
+      ],
+      "relatedGoalRefs": [],
+      "summary": {
+        "drawAsMessage": false,
+        "kind": "note",
+        "object": "runtime readiness",
+        "purpose": "等待工具运行环境可用",
+        "result": "取得可选 readiness 对象"
+      },
+      "waitRefs": []
+    },
+    {
+      "defaultVisible": true,
+      "goalRef": "sem:P01:readiness",
+      "id": "purpose-42",
+      "invocationRefs": [
+        "invocation-42"
+      ],
+      "relatedGoalRefs": [],
+      "summary": {
+        "drawAsMessage": false,
+        "kind": "note",
+        "object": "handler 起点时间",
+        "purpose": "区分排队等待与 handler 执行",
+        "result": "得到当前 Instant"
+      },
+      "waitRefs": []
+    },
+    {
+      "defaultVisible": true,
+      "goalRef": "sem:P02:delivery",
+      "id": "purpose-48",
+      "invocationRefs": [
+        "invocation-48"
+      ],
+      "relatedGoalRefs": [],
+      "summary": {
+        "drawAsMessage": false,
+        "kind": "note",
+        "object": "本次 ToolCall",
+        "purpose": "将请求交给注册的工具执行链",
+        "result": "收到 AnyToolResult 或 FunctionCallError"
+      },
+      "waitRefs": []
+    },
+    {
+      "defaultVisible": true,
+      "goalRef": "sem:P02:delivery",
+      "id": "purpose-67",
+      "invocationRefs": [
+        "invocation-67"
+      ],
+      "relatedGoalRefs": [],
+      "summary": {
+        "drawAsMessage": false,
+        "kind": "note",
+        "object": "本次调用就绪事件",
+        "purpose": "在调用方收集结果之前标记可用",
+        "result": "result_ready 事件已记录"
+      },
+      "waitRefs": []
+    }
+  ],
+  "readingScopes": [
+    {
+      "condition": "消息准入失败",
+      "decision": {
+        "values": [
+          "accepted",
+          "rejected"
+        ],
+        "variable": "decision-admission"
+      },
+      "id": "scope-reject",
+      "kind": "opt",
+      "members": [
+        {
+          "kind": "action",
+          "ref": "P01/A02.5"
+        }
+      ],
+      "originControlRef": "control-reject",
+      "parentScopeRef": null,
+      "skip": "消息准入成功时进入 runtime 与执行许可准备",
+      "skipValues": [
+        "accepted"
+      ],
+      "takeValues": [
+        "rejected"
+      ]
+    }
+  ],
+  "returnContracts": [
+    {
+      "branchRef": null,
+      "meaning": "normal-return",
+      "messageRef": "return-8"
+    },
+    {
+      "branchRef": null,
+      "meaning": "normal-return",
+      "messageRef": "return-48"
+    },
+    {
+      "branchRef": null,
+      "meaning": "normal-return",
+      "messageRef": "return-67"
+    }
+  ],
+  "rootAnchors": [],
+  "rootControlRefs": [],
+  "scopeAnnotations": [],
+  "segments": [
+    {
+      "id": "segment-8",
+      "invocationRef": "invocation-8",
+      "kind": "sequence",
+      "messages": [
+        "request-8",
+        "return-8"
+      ]
+    },
+    {
+      "id": "segment-42",
+      "invocationRef": "invocation-42",
+      "kind": "sequence",
+      "messages": [
+        "self-42"
+      ]
+    },
+    {
+      "id": "segment-48",
+      "invocationRef": "invocation-48",
+      "kind": "sequence",
+      "messages": [
+        "request-48",
+        "return-48"
+      ]
+    },
+    {
+      "id": "segment-67",
+      "invocationRef": "invocation-67",
+      "kind": "sequence",
+      "messages": [
+        "request-67",
+        "return-67"
+      ]
+    }
+  ],
+  "semanticRoot": {
+    "actorRef": "actor-main",
+    "symbol": "ToolCallRuntime::handle_tool_call_with_source::{closure#1}"
+  },
+  "sourceGroups": [
+    {
+      "basicBlockRefs": [
+        "bb1",
+        "bb2"
+      ],
+      "id": "P01/A01.1/C1",
+      "label": "展开 `message_admission` 的成功与失败分支",
+      "lineRanges": [
+        {
+          "endLine": 198,
+          "startLine": 198
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb5",
+        "bb6",
+        "bb153",
+        "bb154",
+        "bb155",
+        "bb156",
+        "bb157",
+        "bb158",
+        "bb159",
+        "bb160",
+        "bb161",
+        "bb162",
+        "bb163",
+        "bb164",
+        "bb165",
+        "bb166"
+      ],
+      "id": "P01/A02.5/C5",
+      "label": "保留准入错误并依次释放任务捕获值",
+      "lineRanges": [
+        {
+          "endLine": 198,
+          "startLine": 198
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb10",
+        "bb11",
+        "bb12",
+        "bb13",
+        "bb14",
+        "bb16",
+        "bb17"
+      ],
+      "id": "P01/A03.4/C10",
+      "label": "等待 `readiness` 完成并释放等待对象",
+      "lineRanges": [
+        {
+          "endLine": 200,
+          "startLine": 200
+        },
+        {
+          "endLine": 202,
+          "startLine": 202
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb128"
+      ],
+      "id": "P01/A03.4/C128",
+      "label": "释放空的 `readiness` 容器后继续",
+      "lineRanges": [],
+      "sourceRangeReason": "No precise semantic operation span in the recorded BBs; only compiler state, storage, drop, cleanup or enclosing-scope context. Full source remains available."
+    },
+    {
+      "basicBlockRefs": [
+        "bb18"
+      ],
+      "id": "P01/A03.4/C18",
+      "label": "无 runtime 或无需等待时汇入并发准入",
+      "lineRanges": [],
+      "sourceRangeReason": "No precise semantic operation span in the recorded BBs; only compiler state, storage, drop, cleanup or enclosing-scope context. Full source remains available."
+    },
+    {
+      "basicBlockRefs": [
+        "bb4"
+      ],
+      "id": "P01/A03.4/C4",
+      "label": "判断是否提供 `tool_runtime`",
+      "lineRanges": [
+        {
+          "endLine": 199,
+          "startLine": 198
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb7",
+        "bb8",
+        "bb9"
+      ],
+      "id": "P01/A03.4/C7",
+      "label": "询问 `wait_until_ready` 是否返回等待对象",
+      "lineRanges": [
+        {
+          "endLine": 200,
+          "startLine": 199
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb19"
+      ],
+      "id": "P01/A04.19/C19",
+      "label": "读取 `supports_parallel` 选择锁类型",
+      "lineRanges": [
+        {
+          "endLine": 205,
+          "startLine": 205
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb20",
+        "bb21",
+        "bb22",
+        "bb23",
+        "bb24",
+        "bb25",
+        "bb26",
+        "bb28",
+        "bb29"
+      ],
+      "id": "P01/A04.19/C20",
+      "label": "等待共享读锁并保存 `Either::Left`",
+      "lineRanges": [
+        {
+          "endLine": 206,
+          "startLine": 206
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb30",
+        "bb31",
+        "bb32",
+        "bb33",
+        "bb34",
+        "bb35",
+        "bb36",
+        "bb38",
+        "bb39"
+      ],
+      "id": "P01/A04.19/C30",
+      "label": "等待独占写锁并保存 `Either::Right`",
+      "lineRanges": [
+        {
+          "endLine": 208,
+          "startLine": 208
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb40"
+      ],
+      "id": "P01/A05.40/C40",
+      "label": "检查是否提供 `execution_started_at`",
+      "lineRanges": [
+        {
+          "endLine": 212,
+          "startLine": 212
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb41",
+        "bb42",
+        "bb43",
+        "bb44",
+        "bb46"
+      ],
+      "id": "P01/A05.40/C41",
+      "label": "获取 `Instant` 并写入 `OnceLock`",
+      "lineRanges": [
+        {
+          "endLine": 213,
+          "startLine": 212
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb45"
+      ],
+      "id": "P01/A05.40/C45",
+      "label": "未启用起点计时时继续路由",
+      "lineRanges": [],
+      "sourceRangeReason": "No precise semantic operation span in the recorded BBs; only compiler state, storage, drop, cleanup or enclosing-scope context. Full source remains available."
+    },
+    {
+      "basicBlockRefs": [
+        "bb47",
+        "bb48",
+        "bb49",
+        "bb50",
+        "bb51",
+        "bb52",
+        "bb53",
+        "bb54",
+        "bb55",
+        "bb57",
+        "bb58"
+      ],
+      "id": "P02/A06.47/C47",
+      "label": "传入调用状态、等待路由结果并显式释放 guard",
+      "lineRanges": [
+        {
+          "endLine": 228,
+          "startLine": 216
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb59"
+      ],
+      "id": "P02/A07.59/C59",
+      "label": "判断工具结果是成功还是错误",
+      "lineRanges": [
+        {
+          "endLine": 233,
+          "startLine": 233
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb60"
+      ],
+      "id": "P02/A07.59/C60",
+      "label": "把成功或非 Fatal 错误标记为可报告就绪",
+      "lineRanges": [
+        {
+          "endLine": 233,
+          "startLine": 233
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb61"
+      ],
+      "id": "P02/A07.59/C61",
+      "label": "检查错误是否属于 `FunctionCallError::Fatal`",
+      "lineRanges": [
+        {
+          "endLine": 233,
+          "startLine": 233
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb62"
+      ],
+      "id": "P02/A07.59/C62",
+      "label": "把 Fatal 错误标记为不发送就绪事件",
+      "lineRanges": [
+        {
+          "endLine": 233,
+          "startLine": 233
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb63"
+      ],
+      "id": "P02/A07.59/C63",
+      "label": "按 Fatal 判断选择是否报告结果",
+      "lineRanges": [
+        {
+          "endLine": 233,
+          "startLine": 233
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb64",
+        "bb65",
+        "bb66",
+        "bb67",
+        "bb68"
+      ],
+      "id": "P02/A07.59/C64",
+      "label": "携带 thread、turn 与 call 标识发送 `result_ready`",
+      "lineRanges": [
+        {
+          "endLine": 240,
+          "startLine": 234
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb69"
+      ],
+      "id": "P02/A07.59/C69",
+      "label": "Fatal 错误绕过结果就绪通知",
+      "lineRanges": [],
+      "sourceRangeReason": "No precise semantic operation span in the recorded BBs; only compiler state, storage, drop, cleanup or enclosing-scope context. Full source remains available."
+    },
+    {
+      "basicBlockRefs": [
+        "bb70",
+        "bb71",
+        "bb134",
+        "bb135",
+        "bb136",
+        "bb137",
+        "bb138"
+      ],
+      "id": "P02/A07.59/C70",
+      "label": "保全工具结果并释放剩余 dispatch 捕获值",
+      "lineRanges": [
+        {
+          "endLine": 242,
+          "startLine": 242
+        }
+      ]
+    }
+  ],
+  "testBoundaries": []
+}

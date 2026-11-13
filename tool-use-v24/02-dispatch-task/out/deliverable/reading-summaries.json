@@ -1,0 +1,52 @@
+{
+  "units": {
+    "P01": {
+      "kind": "phase",
+      "text": "完成消息准入和执行等待，获得执行许可或交还准入失败。"
+    },
+    "P01/A01.1": {
+      "kind": "action",
+      "text": "后台 dispatch 任务开始时，确认 code-mode 消息准入结果；准入成功继续，失败交还原错误。"
+    },
+    "P01/A02.5": {
+      "kind": "action",
+      "text": "消息准入被拒绝时，交还消息准入失败并释放本次捕获资源；调用方收到准入错误，handler 未执行。"
+    },
+    "P01/A03.4": {
+      "kind": "action",
+      "text": "消息准入成功时，在可用 runtime 就绪后继续调度；runtime 无需等待或已报告就绪。"
+    },
+    "P01/A04.19": {
+      "kind": "action",
+      "text": "runtime 已就绪时，按工具并发能力取得执行许可；并行工具持有读锁，串行工具持有写锁。"
+    },
+    "P01/A05.40": {
+      "kind": "action",
+      "text": "已取得并发执行许可时，为启用计时的调用标记 handler 起点；可用的 `execution_started_at` 写入当前时间。"
+    },
+    "P02": {
+      "kind": "phase",
+      "text": "执行路由并交付工具结果，结果交还且执行许可已释放。"
+    },
+    "P02/A06.47": {
+      "kind": "action",
+      "text": "准入与执行许可均已满足时，让 router 分发调用并取得工具结果；得到 router 返回的结果并释放并发许可。"
+    },
+    "P02/A07.59": {
+      "kind": "action",
+      "text": "router 已返回且并发许可已释放时，记录非 Fatal 结果就绪并交还调用结果；非 Fatal 结果记入 trace，原结果交还等待方。"
+    },
+    "sem:P01:admission": {
+      "kind": "goal",
+      "text": "后台任务启动后，准入失败已交还错误，准入成功可继续等待执行。"
+    },
+    "sem:P01:readiness": {
+      "kind": "goal",
+      "text": "消息准入通过后，runtime 已就绪且执行许可已取得；启用计时时已记录起点。"
+    },
+    "sem:P02:delivery": {
+      "kind": "goal",
+      "text": "准入条件全部满足后，执行许可已释放，结果可交还；非 Fatal 已报告就绪。"
+    }
+  }
+}

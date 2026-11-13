@@ -1,0 +1,64 @@
+{
+  "units": {
+    "P01": {
+      "kind": "phase",
+      "text": "先计算 code-mode 消息准入并登记调用，再查询并发能力与工具 runtime。"
+    },
+    "P01/A01.71": {
+      "kind": "action",
+      "text": "收到 ToolCall 与 source时，保留 message_admission 结果并记录本次调用。"
+    },
+    "P01/A02.76": {
+      "kind": "action",
+      "text": "调用已登记时，取得 supports_parallel、tool_runtime 和执行上下文捕获。"
+    },
+    "P02": {
+      "kind": "phase",
+      "text": "捕获覆盖路由与输出处理的计时起点；存在 guard 时逐个通知生命周期观察者。"
+    },
+    "P02/A03.88": {
+      "kind": "action",
+      "text": "路由配置已准备时，得到 started 与可选 ToolCallTimingGuard。"
+    },
+    "P02/A04.97": {
+      "kind": "action",
+      "text": "存在 timing guard时，得到 tool_lifecycle_contributors 的迭代器。"
+    },
+    "P02/A05.102": {
+      "kind": "action",
+      "text": "观察者迭代器已准备时，每个 observer 收到 ToolDispatchInput；耗尽后继续。"
+    },
+    "P03": {
+      "kind": "phase",
+      "text": "保存执行与取消两侧捕获，立即 spawn 分派任务，再返回负责等待、取消和完成计时的 Future。"
+    },
+    "P03/A06.113": {
+      "kind": "action",
+      "text": "生命周期 dispatch 通知已完成或被跳过时，保存 execution_started_at、取消上下文和 trace_source。"
+    },
+    "P03/A07.178": {
+      "kind": "action",
+      "text": "dispatch 捕获与 span 已准备时，取得 AbortOnDropHandle；后台 task 可独立推进。"
+    },
+    "P03/A08.181": {
+      "kind": "action",
+      "text": "后台 dispatch task 已启动时，返回带 timing guard 和 cancellation token 的等待 Future。"
+    },
+    "sem:P01:dispatch-config": {
+      "kind": "goal",
+      "text": "收到工具调用后，准入结果、并发能力与 runtime 已准备。"
+    },
+    "sem:P02:lifecycle": {
+      "kind": "goal",
+      "text": "执行配置已准备后，完成可选生命周期通知并保留 timing guard。"
+    },
+    "sem:P03:task-context": {
+      "kind": "goal",
+      "text": "生命周期通知完成或无需通知后，执行任务与取消处理的捕获已准备。"
+    },
+    "sem:P03:task-launch": {
+      "kind": "goal",
+      "text": "捕获上下文已准备后，task 已启动且等待 Future 已交回。"
+    }
+  }
+}

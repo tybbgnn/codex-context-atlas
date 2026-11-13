@@ -1,0 +1,1298 @@
+{
+  "status": "passed",
+  "passed": true,
+  "clean_pass": false,
+  "mir_status": "通过，但有 12 项缺 MIR",
+  "missing_mir_count": 12,
+  "counts": {
+    "action_count": 28,
+    "bb_covered": 824,
+    "bb_total": 824,
+    "execution_node_count": 63,
+    "goal_count": 9,
+    "message_count": 59,
+    "phase_count": 4
+  },
+  "browser_checked": true,
+  "checks_not_run": [],
+  "checks": {
+    "batch": {
+      "passed": true
+    },
+    "batch-reference": {
+      "passed": true
+    },
+    "browser": {
+      "passed": true
+    },
+    "contract": {
+      "passed": true
+    },
+    "duplicates": {
+      "passed": true
+    },
+    "hard-rules": {
+      "passed": true
+    },
+    "independent-source": {
+      "passed": true
+    },
+    "principles": {
+      "passed": true
+    },
+    "regressions": {
+      "passed": true
+    }
+  },
+  "source_commit": "c248f6d48b97eb4a2aa56147a0b11b7d763278b9",
+  "registered_deviation_count": 0,
+  "missing_mir": [
+    {
+      "callee": "<std::result::Result<std::boxed::Box<dyn codex_tools::ToolOutput>, codex_tools::FunctionCallError> as std::ops::FromResidual<std::result::Result<std::convert::Infallible, codex_tools::FunctionCallError>>>::from_residual",
+      "category": "declaration",
+      "def_path_hash": "006f519113f498ad2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:186 (macro)"
+    },
+    {
+      "callee": "<std::result::Result<std::boxed::Box<dyn codex_tools::ToolOutput>, codex_tools::FunctionCallError> as std::ops::FromResidual<std::result::Result<std::convert::Infallible, codex_tools::FunctionCallError>>>::from_residual",
+      "category": "declaration",
+      "def_path_hash": "006f519113f498ad2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:187 (macro)"
+    },
+    {
+      "callee": "<std::result::Result<std::boxed::Box<dyn codex_tools::ToolOutput>, codex_tools::FunctionCallError> as std::ops::FromResidual<std::result::Result<std::convert::Infallible, codex_tools::FunctionCallError>>>::from_residual",
+      "category": "declaration",
+      "def_path_hash": "006f519113f498ad2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:197 (macro)"
+    },
+    {
+      "callee": "<std::result::Result<std::boxed::Box<dyn codex_tools::ToolOutput>, codex_tools::FunctionCallError> as std::ops::FromResidual<std::result::Result<std::convert::Infallible, codex_tools::FunctionCallError>>>::from_residual",
+      "category": "declaration",
+      "def_path_hash": "006f519113f498ad2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:239 (macro)"
+    },
+    {
+      "callee": "<std::result::Result<std::boxed::Box<dyn codex_tools::ToolOutput>, codex_tools::FunctionCallError> as std::ops::FromResidual<std::result::Result<std::convert::Infallible, codex_tools::FunctionCallError>>>::from_residual",
+      "category": "declaration",
+      "def_path_hash": "006f519113f498ad2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:244 (macro)"
+    },
+    {
+      "callee": "<std::result::Result<std::boxed::Box<dyn codex_tools::ToolOutput>, codex_tools::FunctionCallError> as std::ops::FromResidual<std::result::Result<std::convert::Infallible, codex_tools::FunctionCallError>>>::from_residual",
+      "category": "declaration",
+      "def_path_hash": "006f519113f498ad2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:253 (macro)"
+    },
+    {
+      "callee": "<std::result::Result<std::boxed::Box<dyn codex_tools::ToolOutput>, codex_tools::FunctionCallError> as std::ops::FromResidual<std::result::Result<std::convert::Infallible, codex_tools::FunctionCallError>>>::from_residual",
+      "category": "declaration",
+      "def_path_hash": "006f519113f498ad2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:292 (macro)"
+    },
+    {
+      "callee": "<std::result::Result<std::boxed::Box<dyn codex_tools::ToolOutput>, codex_tools::FunctionCallError> as std::ops::FromResidual<std::result::Result<std::convert::Infallible, codex_tools::FunctionCallError>>>::from_residual",
+      "category": "declaration",
+      "def_path_hash": "006f519113f498ad2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:391 (macro)"
+    },
+    {
+      "callee": "std::string::String::into_bytes",
+      "category": "declaration",
+      "def_path_hash": "08a9d1f7c34eb9500881b6f26f9b543c",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:396"
+    },
+    {
+      "callee": "std::string::String::into_bytes",
+      "category": "declaration",
+      "def_path_hash": "08a9d1f7c34eb9500881b6f26f9b543c",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:461"
+    },
+    {
+      "callee": "core::panicking::panic_fmt",
+      "category": "declaration",
+      "def_path_hash": "0d96ec32223158742bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "../../../../../../../../../../.rustup/toolchains/nightly-2026-03-01-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/panic.rs:62"
+    },
+    {
+      "callee": "std::boxed::Box::<T>::new",
+      "category": "declaration",
+      "def_path_hash": "0ea4ff1e37caac6e0881b6f26f9b543c",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/context.rs:42"
+    },
+    {
+      "callee": "rand::rng",
+      "category": "declaration",
+      "def_path_hash": "103f8ae4a88c6f6a1b4687aaa47d0a12",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/unified_exec/mod.rs:236"
+    },
+    {
+      "callee": "std::option::Option::<&str>::filter::<{closure@core/src/tools/handlers/unified_exec/exec_command.rs:200:21: 200:30}>",
+      "category": "declaration",
+      "def_path_hash": "151b2739ff3556ae2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:197"
+    },
+    {
+      "callee": "std::option::Option::<std::string::String>::as_deref",
+      "category": "declaration",
+      "def_path_hash": "1835c87e5e8cca882bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:189"
+    },
+    {
+      "callee": "std::option::Option::<std::string::String>::as_deref",
+      "category": "declaration",
+      "def_path_hash": "1835c87e5e8cca882bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:197"
+    },
+    {
+      "callee": "std::option::Option::<std::string::String>::as_deref",
+      "category": "declaration",
+      "def_path_hash": "1835c87e5e8cca882bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:253"
+    },
+    {
+      "callee": "std::fmt::Arguments::<'_>::from_str_nonconst",
+      "category": "declaration",
+      "def_path_hash": "19819a7ed67a09972bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "../../../../../../../../../../.rustup/toolchains/nightly-2026-03-01-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/panic.rs:62"
+    },
+    {
+      "callee": "codex_utils_path_uri::PathUri::join",
+      "category": "out-of-scope",
+      "def_path_hash": "1fd3cffd3d6dcf0246072e0d4ac9267f",
+      "reason": "definition exists but extraction container has no body (body_available=True)",
+      "rerun_command": "python3 \"$MIRLOADER_ROOT/mirloader.py\" --definitions '$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/ai product hunter/pm2builder/6-posts/codex-文科生真的看懂harness/posts/codex-context/v3/v3-1-2-claude/03outputs/definitions/definitions.json' --scope \"$MIR_SCOPE_WITH_MISSING_DEFINITIONS\" --workspace '$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/ai product hunter/pm2builder/6-posts/codex-文科生真的看懂harness/codex/codex-rs' --output-dir \"$MIR_REEXTRACT_OUTPUT\" --result-file \"$MIR_REEXTRACT_OUTPUT/mir-bodies.json\" --offline --jobs 8",
+      "scope_requirement": "Generate a scope-definitions JSON including codex_utils_path_uri::PathUri::join (1fd3cffd3d6dcf0246072e0d4ac9267f); --scope accepts a scope file, not a callee name.",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:203",
+      "tool_reference": "$HOME/ai/codex拆解/v3/v3-1-2-claude/02scrpits/03-mir-extraction/mirloader/README.md"
+    },
+    {
+      "callee": "codex_utils_path_uri::PathUri::to_abs_path",
+      "category": "out-of-scope",
+      "def_path_hash": "20c38f03e212ad4246072e0d4ac9267f",
+      "reason": "definition exists but extraction container has no body (body_available=True)",
+      "rerun_command": "python3 \"$MIRLOADER_ROOT/mirloader.py\" --definitions '$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/ai product hunter/pm2builder/6-posts/codex-文科生真的看懂harness/posts/codex-context/v3/v3-1-2-claude/03outputs/definitions/definitions.json' --scope \"$MIR_SCOPE_WITH_MISSING_DEFINITIONS\" --workspace '$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/ai product hunter/pm2builder/6-posts/codex-文科生真的看懂harness/codex/codex-rs' --output-dir \"$MIR_REEXTRACT_OUTPUT\" --result-file \"$MIR_REEXTRACT_OUTPUT/mir-bodies.json\" --offline --jobs 8",
+      "scope_requirement": "Generate a scope-definitions JSON including codex_utils_path_uri::PathUri::to_abs_path (20c38f03e212ad4246072e0d4ac9267f); --scope accepts a scope file, not a callee name.",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:225",
+      "tool_reference": "$HOME/ai/codex拆解/v3/v3-1-2-claude/02scrpits/03-mir-extraction/mirloader/README.md"
+    },
+    {
+      "callee": "<std::option::Option<codex_utils_path_uri::PathConvention> as std::cmp::PartialEq>::eq",
+      "category": "declaration",
+      "def_path_hash": "20f42b1508b59b242bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:224"
+    },
+    {
+      "callee": "<codex_utils_path_uri::PathUriParseError as std::string::ToString>::to_string",
+      "category": "declaration",
+      "def_path_hash": "227cbef13c3894950881b6f26f9b543c",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:205"
+    },
+    {
+      "callee": "<std::io::Error as std::string::ToString>::to_string",
+      "category": "declaration",
+      "def_path_hash": "227cbef13c3894950881b6f26f9b543c",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:228"
+    },
+    {
+      "callee": "<str as std::string::ToString>::to_string",
+      "category": "declaration",
+      "def_path_hash": "227cbef13c3894950881b6f26f9b543c",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:174"
+    },
+    {
+      "callee": "<str as std::string::ToString>::to_string",
+      "category": "declaration",
+      "def_path_hash": "227cbef13c3894950881b6f26f9b543c",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:193"
+    },
+    {
+      "callee": "<str as std::string::ToString>::to_string",
+      "category": "declaration",
+      "def_path_hash": "227cbef13c3894950881b6f26f9b543c",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:249"
+    },
+    {
+      "callee": "std::path::Path::new::<std::string::String>",
+      "category": "declaration",
+      "def_path_hash": "244e6d3f378fa7c77e6be08242084ac8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:284"
+    },
+    {
+      "callee": "core::fmt::rt::Argument::<'_>::new_lower_hex::<i32>",
+      "category": "declaration",
+      "def_path_hash": "2978ac67243f65cb2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/unified_exec/mod.rs:238"
+    },
+    {
+      "callee": "std::time::Duration::from_millis",
+      "category": "declaration",
+      "def_path_hash": "3699e19c2170ca262bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:316"
+    },
+    {
+      "callee": "<std::sync::Arc<codex_exec_server::Environment> as std::convert::AsRef<codex_exec_server::Environment>>::as_ref",
+      "category": "declaration",
+      "def_path_hash": "39d972858970f2b32bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:265"
+    },
+    {
+      "callee": "<std::sync::Arc<dyn codex_exec_server::ExecutorFileSystem> as std::convert::AsRef<dyn codex_exec_server::ExecutorFileSystem>>::as_ref",
+      "category": "declaration",
+      "def_path_hash": "39d972858970f2b32bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:381"
+    },
+    {
+      "callee": "<std::sync::Arc<dyn codex_exec_server::ExecutorFileSystem> as std::convert::AsRef<dyn codex_exec_server::ExecutorFileSystem>>::as_ref",
+      "category": "declaration",
+      "def_path_hash": "39d972858970f2b32bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:414"
+    },
+    {
+      "callee": "<std::sync::Arc<session::session::Session> as std::convert::AsRef<session::session::Session>>::as_ref",
+      "category": "declaration",
+      "def_path_hash": "39d972858970f2b32bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:256"
+    },
+    {
+      "callee": "<std::sync::Arc<session::session::Session> as std::convert::AsRef<session::session::Session>>::as_ref",
+      "category": "declaration",
+      "def_path_hash": "39d972858970f2b32bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:329"
+    },
+    {
+      "callee": "<std::sync::Arc<session::session::Session> as std::convert::AsRef<session::session::Session>>::as_ref",
+      "category": "declaration",
+      "def_path_hash": "39d972858970f2b32bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:409"
+    },
+    {
+      "callee": "<std::sync::Arc<session::turn_context::TurnContext> as std::convert::AsRef<session::turn_context::TurnContext>>::as_ref",
+      "category": "declaration",
+      "def_path_hash": "39d972858970f2b32bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:257"
+    },
+    {
+      "callee": "<std::sync::Arc<session::turn_context::TurnContext> as std::convert::AsRef<session::turn_context::TurnContext>>::as_ref",
+      "category": "declaration",
+      "def_path_hash": "39d972858970f2b32bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:410"
+    },
+    {
+      "callee": "<std::iter::Map<std::ops::Range<i32>, {closure@core/src/unified_exec/mod.rs:238:14: 238:17}> as std::iter::Iterator>::collect::<std::string::String>",
+      "category": "declaration",
+      "def_path_hash": "44b893caa092a8472bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/unified_exec/mod.rs:237"
+    },
+    {
+      "callee": "std::string::String::new",
+      "category": "declaration",
+      "def_path_hash": "542a1b46c28baeac0881b6f26f9b543c",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:393"
+    },
+    {
+      "callee": "std::string::String::new",
+      "category": "declaration",
+      "def_path_hash": "542a1b46c28baeac0881b6f26f9b543c",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:394"
+    },
+    {
+      "callee": "std::pin::Pin::<&mut {async fn body of skills::maybe_emit_implicit_skill_invocation()}>::new_unchecked",
+      "category": "declaration",
+      "def_path_hash": "57dad189d36364332bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:263 (macro)"
+    },
+    {
+      "callee": "std::pin::Pin::<&mut {async fn body of tools::handlers::apply_granted_turn_permissions()}>::new_unchecked",
+      "category": "declaration",
+      "def_path_hash": "57dad189d36364332bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:335 (macro)"
+    },
+    {
+      "callee": "std::pin::Pin::<&mut {async fn body of tools::handlers::apply_patch::intercept_apply_patch()}>::new_unchecked",
+      "category": "declaration",
+      "def_path_hash": "57dad189d36364332bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:390 (macro)"
+    },
+    {
+      "callee": "std::pin::Pin::<&mut {async fn body of tools::lifecycle::notify_command_start()}>::new_unchecked",
+      "category": "declaration",
+      "def_path_hash": "57dad189d36364332bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:416 (macro)"
+    },
+    {
+      "callee": "std::pin::Pin::<&mut {async fn body of unified_exec::oneshot::<impl unified_exec::UnifiedExecProcessManager>::exec_command_to_completion()}>::new_unchecked",
+      "category": "declaration",
+      "def_path_hash": "57dad189d36364332bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:442 (macro)"
+    },
+    {
+      "callee": "std::pin::Pin::<&mut {async fn body of unified_exec::process_manager::<impl unified_exec::UnifiedExecProcessManager>::allocate_process_id()}>::new_unchecked",
+      "category": "declaration",
+      "def_path_hash": "57dad189d36364332bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:418 (macro)"
+    },
+    {
+      "callee": "std::pin::Pin::<&mut {async fn body of unified_exec::process_manager::<impl unified_exec::UnifiedExecProcessManager>::exec_command()}>::new_unchecked",
+      "category": "declaration",
+      "def_path_hash": "57dad189d36364332bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:444 (macro)"
+    },
+    {
+      "callee": "<{async fn body of skills::maybe_emit_implicit_skill_invocation()} as futures::Future>::poll",
+      "category": "declaration",
+      "def_path_hash": "591fc3e935af0c362bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:263 (macro)"
+    },
+    {
+      "callee": "<{async fn body of tools::handlers::apply_granted_turn_permissions()} as futures::Future>::poll",
+      "category": "declaration",
+      "def_path_hash": "591fc3e935af0c362bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:335 (macro)"
+    },
+    {
+      "callee": "<{async fn body of tools::handlers::apply_patch::intercept_apply_patch()} as futures::Future>::poll",
+      "category": "declaration",
+      "def_path_hash": "591fc3e935af0c362bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:390 (macro)"
+    },
+    {
+      "callee": "<{async fn body of tools::lifecycle::notify_command_start()} as futures::Future>::poll",
+      "category": "declaration",
+      "def_path_hash": "591fc3e935af0c362bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:416 (macro)"
+    },
+    {
+      "callee": "<{async fn body of unified_exec::oneshot::<impl unified_exec::UnifiedExecProcessManager>::exec_command_to_completion()} as futures::Future>::poll",
+      "category": "declaration",
+      "def_path_hash": "591fc3e935af0c362bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:442 (macro)"
+    },
+    {
+      "callee": "<{async fn body of unified_exec::process_manager::<impl unified_exec::UnifiedExecProcessManager>::allocate_process_id()} as futures::Future>::poll",
+      "category": "declaration",
+      "def_path_hash": "591fc3e935af0c362bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:418 (macro)"
+    },
+    {
+      "callee": "<{async fn body of unified_exec::process_manager::<impl unified_exec::UnifiedExecProcessManager>::exec_command()} as futures::Future>::poll",
+      "category": "declaration",
+      "def_path_hash": "591fc3e935af0c362bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:444 (macro)"
+    },
+    {
+      "callee": "codex_sandboxing::SandboxManager::new",
+      "category": "out-of-scope",
+      "def_path_hash": "631282f4a4bba4c3ab9aa54c4ae74daa",
+      "reason": "definition exists but extraction container has no body (body_available=True)",
+      "rerun_command": "python3 \"$MIRLOADER_ROOT/mirloader.py\" --definitions '$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/ai product hunter/pm2builder/6-posts/codex-文科生真的看懂harness/posts/codex-context/v3/v3-1-2-claude/03outputs/definitions/definitions.json' --scope \"$MIR_SCOPE_WITH_MISSING_DEFINITIONS\" --workspace '$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/ai product hunter/pm2builder/6-posts/codex-文科生真的看懂harness/codex/codex-rs' --output-dir \"$MIR_REEXTRACT_OUTPUT\" --result-file \"$MIR_REEXTRACT_OUTPUT/mir-bodies.json\" --offline --jobs 8",
+      "scope_requirement": "Generate a scope-definitions JSON including codex_sandboxing::SandboxManager::new (631282f4a4bba4c3ab9aa54c4ae74daa); --scope accepts a scope file, not a callee name.",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:212",
+      "tool_reference": "$HOME/ai/codex拆解/v3/v3-1-2-claude/02scrpits/03-mir-extraction/mirloader/README.md"
+    },
+    {
+      "callee": "std::fmt::Arguments::<'_>::new::<114, 1>",
+      "category": "declaration",
+      "def_path_hash": "6488302cb95ba4ee2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "../../../../../../../../../../.rustup/toolchains/nightly-2026-03-01-aarch64-apple-darwin/lib/rustlib/src/rust/library/alloc/src/macros.rs:114 (macro)"
+    },
+    {
+      "callee": "std::fmt::Arguments::<'_>::new::<2, 1>",
+      "category": "declaration",
+      "def_path_hash": "6488302cb95ba4ee2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "../../../../../../../../../../.rustup/toolchains/nightly-2026-03-01-aarch64-apple-darwin/lib/rustlib/src/rust/library/alloc/src/macros.rs:114"
+    },
+    {
+      "callee": "std::fmt::Arguments::<'_>::new::<24, 1>",
+      "category": "declaration",
+      "def_path_hash": "6488302cb95ba4ee2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "../../../../../../../../../../.rustup/toolchains/nightly-2026-03-01-aarch64-apple-darwin/lib/rustlib/src/rust/library/alloc/src/macros.rs:114 (macro)"
+    },
+    {
+      "callee": "std::fmt::Arguments::<'_>::new::<37, 2>",
+      "category": "declaration",
+      "def_path_hash": "6488302cb95ba4ee2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "../../../../../../../../../../.rustup/toolchains/nightly-2026-03-01-aarch64-apple-darwin/lib/rustlib/src/rust/library/alloc/src/macros.rs:114 (macro)"
+    },
+    {
+      "callee": "std::fmt::Arguments::<'_>::new::<42, 1>",
+      "category": "declaration",
+      "def_path_hash": "6488302cb95ba4ee2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "../../../../../../../../../../.rustup/toolchains/nightly-2026-03-01-aarch64-apple-darwin/lib/rustlib/src/rust/library/alloc/src/macros.rs:114 (macro)"
+    },
+    {
+      "callee": "std::fmt::Arguments::<'_>::new::<65, 2>",
+      "category": "declaration",
+      "def_path_hash": "6488302cb95ba4ee2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "../../../../../../../../../../.rustup/toolchains/nightly-2026-03-01-aarch64-apple-darwin/lib/rustlib/src/rust/library/alloc/src/macros.rs:114 (macro)"
+    },
+    {
+      "callee": "codex_exec_server::FileSystemSandboxContext::policy_context",
+      "category": "out-of-scope",
+      "def_path_hash": "65118cc09a958dc87a598dcd768c4df6",
+      "reason": "definition exists but extraction container has no body (body_available=True)",
+      "rerun_command": "python3 \"$MIRLOADER_ROOT/mirloader.py\" --definitions '$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/ai product hunter/pm2builder/6-posts/codex-文科生真的看懂harness/posts/codex-context/v3/v3-1-2-claude/03outputs/definitions/definitions.json' --scope \"$MIR_SCOPE_WITH_MISSING_DEFINITIONS\" --workspace '$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/ai product hunter/pm2builder/6-posts/codex-文科生真的看懂harness/codex/codex-rs' --output-dir \"$MIR_REEXTRACT_OUTPUT\" --result-file \"$MIR_REEXTRACT_OUTPUT/mir-bodies.json\" --offline --jobs 8",
+      "scope_requirement": "Generate a scope-definitions JSON including codex_exec_server::FileSystemSandboxContext::policy_context (65118cc09a958dc87a598dcd768c4df6); --scope accepts a scope file, not a callee name.",
+      "source_line": "core/src/tools/handlers/mod.rs:248",
+      "tool_reference": "$HOME/ai/codex拆解/v3/v3-1-2-claude/02scrpits/03-mir-extraction/mirloader/README.md"
+    },
+    {
+      "callee": "serde_json::from_str::<'_, T>",
+      "category": "declaration",
+      "def_path_hash": "6798bce54f7f8cda11aec5995a6c5bab",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/mod.rs:90"
+    },
+    {
+      "callee": "std::option::Option::<&str>::is_some",
+      "category": "declaration",
+      "def_path_hash": "6a48af0263ed1c4a2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:347"
+    },
+    {
+      "callee": "std::option::Option::<codex_network_proxy::NetworkProxy>::is_some",
+      "category": "declaration",
+      "def_path_hash": "6a48af0263ed1c4a2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:219"
+    },
+    {
+      "callee": "std::hint::must_use::<std::string::String>",
+      "category": "declaration",
+      "def_path_hash": "7502e9a8aa1e55562bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "../../../../../../../../../../.rustup/toolchains/nightly-2026-03-01-aarch64-apple-darwin/lib/rustlib/src/rust/library/alloc/src/macros.rs:113"
+    },
+    {
+      "callee": "std::hint::must_use::<std::string::String>",
+      "category": "declaration",
+      "def_path_hash": "7502e9a8aa1e55562bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "../../../../../../../../../../.rustup/toolchains/nightly-2026-03-01-aarch64-apple-darwin/lib/rustlib/src/rust/library/alloc/src/macros.rs:113 (macro)"
+    },
+    {
+      "callee": "std::option::Option::<std::sync::Arc<shell::Shell>>::unwrap_or_else::<{closure@core/src/tools/handlers/unified_exec/exec_command.rs:272:29: 272:31}>",
+      "category": "declaration",
+      "def_path_hash": "7c70afa9f20534cc2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:268"
+    },
+    {
+      "callee": "std::option::Option::<usize>::unwrap_or_else::<{closure@core/src/tools/handlers/unified_exec/exec_command.rs:456:57: 456:59}>",
+      "category": "declaration",
+      "def_path_hash": "7c70afa9f20534cc2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:456"
+    },
+    {
+      "callee": "core::fmt::rt::Argument::<'_>::new_debug::<codex_protocol::protocol::AskForApproval>",
+      "category": "declaration",
+      "def_path_hash": "8c6f307cc2d7a5c32bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:350 (macro)"
+    },
+    {
+      "callee": "core::fmt::rt::Argument::<'_>::new_debug::<unified_exec::errors::UnifiedExecError>",
+      "category": "declaration",
+      "def_path_hash": "8c6f307cc2d7a5c32bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:474 (macro)"
+    },
+    {
+      "callee": "<codex_sandboxing::SandboxType as std::cmp::PartialEq>::ne",
+      "category": "declaration",
+      "def_path_hash": "90ad9a2b1a3cc46b2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:212"
+    },
+    {
+      "callee": "<std::option::Option<codex_shell_command::shell_detect::ShellType> as std::cmp::PartialEq>::ne",
+      "category": "declaration",
+      "def_path_hash": "90ad9a2b1a3cc46b2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:284"
+    },
+    {
+      "callee": "codex_protocol::sandbox::effective_windows_sandbox_type",
+      "category": "out-of-scope",
+      "def_path_hash": "949fc1a7ba15a794fd9ac5127673ba6d",
+      "reason": "definition exists but extraction container has no body (body_available=True)",
+      "rerun_command": "python3 \"$MIRLOADER_ROOT/mirloader.py\" --definitions '$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/ai product hunter/pm2builder/6-posts/codex-文科生真的看懂harness/posts/codex-context/v3/v3-1-2-claude/03outputs/definitions/definitions.json' --scope \"$MIR_SCOPE_WITH_MISSING_DEFINITIONS\" --workspace '$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/ai product hunter/pm2builder/6-posts/codex-文科生真的看懂harness/codex/codex-rs' --output-dir \"$MIR_REEXTRACT_OUTPUT\" --result-file \"$MIR_REEXTRACT_OUTPUT/mir-bodies.json\" --offline --jobs 8",
+      "scope_requirement": "Generate a scope-definitions JSON including codex_protocol::sandbox::effective_windows_sandbox_type (949fc1a7ba15a794fd9ac5127673ba6d); --scope accepts a scope file, not a callee name.",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:215",
+      "tool_reference": "$HOME/ai/codex拆解/v3/v3-1-2-claude/02scrpits/03-mir-extraction/mirloader/README.md"
+    },
+    {
+      "callee": "<codex_utils_path_uri::PathUri as std::clone::Clone>::clone",
+      "category": "out-of-scope",
+      "def_path_hash": "a06578f871e6014046072e0d4ac9267f",
+      "reason": "definition exists but extraction container has no body (body_available=True)",
+      "rerun_command": "python3 \"$MIRLOADER_ROOT/mirloader.py\" --definitions '$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/ai product hunter/pm2builder/6-posts/codex-文科生真的看懂harness/posts/codex-context/v3/v3-1-2-claude/03outputs/definitions/definitions.json' --scope \"$MIR_SCOPE_WITH_MISSING_DEFINITIONS\" --workspace '$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/ai product hunter/pm2builder/6-posts/codex-文科生真的看懂harness/codex/codex-rs' --output-dir \"$MIR_REEXTRACT_OUTPUT\" --result-file \"$MIR_REEXTRACT_OUTPUT/mir-bodies.json\" --offline --jobs 8",
+      "scope_requirement": "Generate a scope-definitions JSON including <codex_utils_path_uri::PathUri as std::clone::Clone>::clone (a06578f871e6014046072e0d4ac9267f); --scope accepts a scope file, not a callee name.",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:196",
+      "tool_reference": "$HOME/ai/codex拆解/v3/v3-1-2-claude/02scrpits/03-mir-extraction/mirloader/README.md"
+    },
+    {
+      "callee": "std::slice::<impl [codex_utils_path_uri::PathUri]>::to_vec",
+      "category": "declaration",
+      "def_path_hash": "a10c8d820290eeca0881b6f26f9b543c",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/session/turn_context.rs:231"
+    },
+    {
+      "callee": "std::option::Option::<codex_protocol::models::AdditionalPermissionProfile>::as_ref",
+      "category": "declaration",
+      "def_path_hash": "a11824a548d0e6b32bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/session/turn_context.rs:226"
+    },
+    {
+      "callee": "std::option::Option::<codex_protocol::models::AdditionalPermissionProfile>::as_ref",
+      "category": "declaration",
+      "def_path_hash": "a11824a548d0e6b32bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:356"
+    },
+    {
+      "callee": "std::option::Option::<codex_utils_absolute_path::AbsolutePathBuf>::as_ref",
+      "category": "declaration",
+      "def_path_hash": "a11824a548d0e6b32bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:236"
+    },
+    {
+      "callee": "std::option::Option::<codex_utils_absolute_path::AbsolutePathBuf>::as_ref",
+      "category": "declaration",
+      "def_path_hash": "a11824a548d0e6b32bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:260"
+    },
+    {
+      "callee": "std::option::Option::<shell::Shell>::as_ref",
+      "category": "declaration",
+      "def_path_hash": "a11824a548d0e6b32bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:278"
+    },
+    {
+      "callee": "std::option::Option::<&str>::map_or_else::<std::result::Result<codex_utils_path_uri::PathUri, codex_utils_path_uri::PathUriParseError>, {closure@core/src/tools/handlers/unified_exec/exec_command.rs:202:17: 202:19}, {closure@core/src/tools/handlers/unified_exec/exec_command.rs:203:17: 203:26}>",
+      "category": "declaration",
+      "def_path_hash": "a41d3d908e637d622bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:197"
+    },
+    {
+      "callee": "std::option::Option::<codex_protocol::models::AdditionalPermissionProfile>::map_or_else::<std::result::Result<std::option::Option<codex_protocol::models::AdditionalPermissionProfile>, std::string::String>, {closure@core/src/tools/handlers/unified_exec/exec_command.rs:360:13: 360:15}, {closure@core/src/tools/handlers/unified_exec/exec_command.rs:370:13: 370:26}>",
+      "category": "declaration",
+      "def_path_hash": "a41d3d908e637d622bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:354"
+    },
+    {
+      "callee": "<codex_protocol::openai_models::TruncationPolicyConfig as std::convert::Into<codex_utils_output_truncation::TruncationPolicy>>::into",
+      "category": "declaration",
+      "def_path_hash": "ab1a02cbfe5179c42bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:397"
+    },
+    {
+      "callee": "std::result::Result::<codex_utils_path_uri::PathUri, codex_utils_path_uri::PathUriParseError>::map_err::<codex_tools::FunctionCallError, {closure@core/src/tools/handlers/unified_exec/exec_command.rs:205:22: 205:27}>",
+      "category": "declaration",
+      "def_path_hash": "b208b59e6d19ae672bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:197"
+    },
+    {
+      "callee": "std::result::Result::<tools::handlers::unified_exec::ResolvedCommand, std::string::String>::map_err::<codex_tools::FunctionCallError, fn(std::string::String) -> codex_tools::FunctionCallError {codex_tools::FunctionCallError::RespondToModel}>",
+      "category": "declaration",
+      "def_path_hash": "b208b59e6d19ae672bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:292"
+    },
+    {
+      "callee": "codex_utils_string::approx_token_count",
+      "category": "out-of-scope",
+      "def_path_hash": "b3f19fb555302eed0d31e0e4d860f8d7",
+      "reason": "definition exists but extraction container has no body (body_available=True)",
+      "rerun_command": "python3 \"$MIRLOADER_ROOT/mirloader.py\" --definitions '$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/ai product hunter/pm2builder/6-posts/codex-文科生真的看懂harness/posts/codex-context/v3/v3-1-2-claude/03outputs/definitions/definitions.json' --scope \"$MIR_SCOPE_WITH_MISSING_DEFINITIONS\" --workspace '$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/ai product hunter/pm2builder/6-posts/codex-文科生真的看懂harness/codex/codex-rs' --output-dir \"$MIR_REEXTRACT_OUTPUT\" --result-file \"$MIR_REEXTRACT_OUTPUT/mir-bodies.json\" --offline --jobs 8",
+      "scope_requirement": "Generate a scope-definitions JSON including codex_utils_string::approx_token_count (b3f19fb555302eed0d31e0e4d860f8d7); --scope accepts a scope file, not a callee name.",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:456",
+      "tool_reference": "$HOME/ai/codex拆解/v3/v3-1-2-claude/02scrpits/03-mir-extraction/mirloader/README.md"
+    },
+    {
+      "callee": "std::fmt::format",
+      "category": "declaration",
+      "def_path_hash": "b4651e06de7cdf100881b6f26f9b543c",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "../../../../../../../../../../.rustup/toolchains/nightly-2026-03-01-aarch64-apple-darwin/lib/rustlib/src/rust/library/alloc/src/macros.rs:114"
+    },
+    {
+      "callee": "std::fmt::format",
+      "category": "declaration",
+      "def_path_hash": "b4651e06de7cdf100881b6f26f9b543c",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "../../../../../../../../../../.rustup/toolchains/nightly-2026-03-01-aarch64-apple-darwin/lib/rustlib/src/rust/library/alloc/src/macros.rs:114 (macro)"
+    },
+    {
+      "callee": "<rand::prelude::ThreadRng as rand::Rng>::random_range::<i32, std::ops::Range<i32>>",
+      "category": "declaration",
+      "def_path_hash": "b5b33a6de2b373801b4687aaa47d0a12",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/unified_exec/mod.rs:238"
+    },
+    {
+      "callee": "codex_utils_string::truncate_middle_chars",
+      "category": "out-of-scope",
+      "def_path_hash": "b6a0faa69ae76bed0d31e0e4d860f8d7",
+      "reason": "definition exists but extraction container has no body (body_available=True)",
+      "rerun_command": "python3 \"$MIRLOADER_ROOT/mirloader.py\" --definitions '$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/ai product hunter/pm2builder/6-posts/codex-文科生真的看懂harness/posts/codex-context/v3/v3-1-2-claude/03outputs/definitions/definitions.json' --scope \"$MIR_SCOPE_WITH_MISSING_DEFINITIONS\" --workspace '$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/ai product hunter/pm2builder/6-posts/codex-文科生真的看懂harness/codex/codex-rs' --output-dir \"$MIR_REEXTRACT_OUTPUT\" --result-file \"$MIR_REEXTRACT_OUTPUT/mir-bodies.json\" --offline --jobs 8",
+      "scope_requirement": "Generate a scope-definitions JSON including codex_utils_string::truncate_middle_chars (b6a0faa69ae76bed0d31e0e4d860f8d7); --scope accepts a scope file, not a callee name.",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:475",
+      "tool_reference": "$HOME/ai/codex拆解/v3/v3-1-2-claude/02scrpits/03-mir-extraction/mirloader/README.md"
+    },
+    {
+      "callee": "codex_sandboxing::SandboxManager::select_initial",
+      "category": "out-of-scope",
+      "def_path_hash": "b954d3439812dbe2ab9aa54c4ae74daa",
+      "reason": "definition exists but extraction container has no body (body_available=True)",
+      "rerun_command": "python3 \"$MIRLOADER_ROOT/mirloader.py\" --definitions '$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/ai product hunter/pm2builder/6-posts/codex-文科生真的看懂harness/posts/codex-context/v3/v3-1-2-claude/03outputs/definitions/definitions.json' --scope \"$MIR_SCOPE_WITH_MISSING_DEFINITIONS\" --workspace '$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/ai product hunter/pm2builder/6-posts/codex-文科生真的看懂harness/codex/codex-rs' --output-dir \"$MIR_REEXTRACT_OUTPUT\" --result-file \"$MIR_REEXTRACT_OUTPUT/mir-bodies.json\" --offline --jobs 8",
+      "scope_requirement": "Generate a scope-definitions JSON including codex_sandboxing::SandboxManager::select_initial (b954d3439812dbe2ab9aa54c4ae74daa); --scope accepts a scope file, not a callee name.",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:212",
+      "tool_reference": "$HOME/ai/codex拆解/v3/v3-1-2-claude/02scrpits/03-mir-extraction/mirloader/README.md"
+    },
+    {
+      "callee": "<std::result::Result<codex_protocol::models::SandboxPermissions, codex_tools::FunctionCallError> as std::ops::Try>::branch",
+      "category": "declaration",
+      "def_path_hash": "c554288a6d26ad412bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:253 (macro)"
+    },
+    {
+      "callee": "<std::result::Result<codex_utils_path_uri::PathUri, codex_tools::FunctionCallError> as std::ops::Try>::branch",
+      "category": "declaration",
+      "def_path_hash": "c554288a6d26ad412bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:197 (macro)"
+    },
+    {
+      "callee": "<std::result::Result<std::option::Option<&session::turn_context::TurnEnvironment>, codex_tools::FunctionCallError> as std::ops::Try>::branch",
+      "category": "declaration",
+      "def_path_hash": "c554288a6d26ad412bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:187 (macro)"
+    },
+    {
+      "callee": "<std::result::Result<std::option::Option<tools::context::FunctionToolOutput>, codex_tools::FunctionCallError> as std::ops::Try>::branch",
+      "category": "declaration",
+      "def_path_hash": "c554288a6d26ad412bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:391 (macro)"
+    },
+    {
+      "callee": "<std::result::Result<tools::handlers::unified_exec::ExecCommandArgs, codex_tools::FunctionCallError> as std::ops::Try>::branch",
+      "category": "declaration",
+      "def_path_hash": "c554288a6d26ad412bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:239 (macro)"
+    },
+    {
+      "callee": "<std::result::Result<tools::handlers::unified_exec::ExecCommandArgs, codex_tools::FunctionCallError> as std::ops::Try>::branch",
+      "category": "declaration",
+      "def_path_hash": "c554288a6d26ad412bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:244 (macro)"
+    },
+    {
+      "callee": "<std::result::Result<tools::handlers::unified_exec::ExecCommandEnvironmentArgs, codex_tools::FunctionCallError> as std::ops::Try>::branch",
+      "category": "declaration",
+      "def_path_hash": "c554288a6d26ad412bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:186 (macro)"
+    },
+    {
+      "callee": "<std::result::Result<tools::handlers::unified_exec::ResolvedCommand, codex_tools::FunctionCallError> as std::ops::Try>::branch",
+      "category": "declaration",
+      "def_path_hash": "c554288a6d26ad412bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:292 (macro)"
+    },
+    {
+      "callee": "codex_sandboxing::policy_transforms::effective_permission_profile",
+      "category": "out-of-scope",
+      "def_path_hash": "ccec41e98310454bab9aa54c4ae74daa",
+      "reason": "definition exists but extraction container has no body (body_available=True)",
+      "rerun_command": "python3 \"$MIRLOADER_ROOT/mirloader.py\" --definitions '$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/ai product hunter/pm2builder/6-posts/codex-文科生真的看懂harness/posts/codex-context/v3/v3-1-2-claude/03outputs/definitions/definitions.json' --scope \"$MIR_SCOPE_WITH_MISSING_DEFINITIONS\" --workspace '$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/ai product hunter/pm2builder/6-posts/codex-文科生真的看懂harness/codex/codex-rs' --output-dir \"$MIR_REEXTRACT_OUTPUT\" --result-file \"$MIR_REEXTRACT_OUTPUT/mir-bodies.json\" --offline --jobs 8",
+      "scope_requirement": "Generate a scope-definitions JSON including codex_sandboxing::policy_transforms::effective_permission_profile (ccec41e98310454bab9aa54c4ae74daa); --scope accepts a scope file, not a callee name.",
+      "source_line": "core/src/session/turn_context.rs:224",
+      "tool_reference": "$HOME/ai/codex拆解/v3/v3-1-2-claude/02scrpits/03-mir-extraction/mirloader/README.md"
+    },
+    {
+      "callee": "codex_utils_path_uri::PathUri::infer_path_convention",
+      "category": "out-of-scope",
+      "def_path_hash": "cfe4a8c6e028875446072e0d4ac9267f",
+      "reason": "definition exists but extraction container has no body (body_available=True)",
+      "rerun_command": "python3 \"$MIRLOADER_ROOT/mirloader.py\" --definitions '$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/ai product hunter/pm2builder/6-posts/codex-文科生真的看懂harness/posts/codex-context/v3/v3-1-2-claude/03outputs/definitions/definitions.json' --scope \"$MIR_SCOPE_WITH_MISSING_DEFINITIONS\" --workspace '$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/ai product hunter/pm2builder/6-posts/codex-文科生真的看懂harness/codex/codex-rs' --output-dir \"$MIR_REEXTRACT_OUTPUT\" --result-file \"$MIR_REEXTRACT_OUTPUT/mir-bodies.json\" --offline --jobs 8",
+      "scope_requirement": "Generate a scope-definitions JSON including codex_utils_path_uri::PathUri::infer_path_convention (cfe4a8c6e028875446072e0d4ac9267f); --scope accepts a scope file, not a callee name.",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:224",
+      "tool_reference": "$HOME/ai/codex拆解/v3/v3-1-2-claude/02scrpits/03-mir-extraction/mirloader/README.md"
+    },
+    {
+      "callee": "codex_utils_path_uri::PathConvention::native",
+      "category": "out-of-scope",
+      "def_path_hash": "d3bca14298d3fc7346072e0d4ac9267f",
+      "reason": "definition exists but extraction container has no body (body_available=True)",
+      "rerun_command": "python3 \"$MIRLOADER_ROOT/mirloader.py\" --definitions '$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/ai product hunter/pm2builder/6-posts/codex-文科生真的看懂harness/posts/codex-context/v3/v3-1-2-claude/03outputs/definitions/definitions.json' --scope \"$MIR_SCOPE_WITH_MISSING_DEFINITIONS\" --workspace '$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/ai product hunter/pm2builder/6-posts/codex-文科生真的看懂harness/codex/codex-rs' --output-dir \"$MIR_REEXTRACT_OUTPUT\" --result-file \"$MIR_REEXTRACT_OUTPUT/mir-bodies.json\" --offline --jobs 8",
+      "scope_requirement": "Generate a scope-definitions JSON including codex_utils_path_uri::PathConvention::native (d3bca14298d3fc7346072e0d4ac9267f); --scope accepts a scope file, not a callee name.",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:224",
+      "tool_reference": "$HOME/ai/codex拆解/v3/v3-1-2-claude/02scrpits/03-mir-extraction/mirloader/README.md"
+    },
+    {
+      "callee": "<{async fn body of skills::maybe_emit_implicit_skill_invocation()} as std::future::IntoFuture>::into_future",
+      "category": "declaration",
+      "def_path_hash": "d568101b07447f112bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:263 (macro)"
+    },
+    {
+      "callee": "<{async fn body of tools::handlers::apply_granted_turn_permissions()} as std::future::IntoFuture>::into_future",
+      "category": "declaration",
+      "def_path_hash": "d568101b07447f112bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:335 (macro)"
+    },
+    {
+      "callee": "<{async fn body of tools::handlers::apply_patch::intercept_apply_patch()} as std::future::IntoFuture>::into_future",
+      "category": "declaration",
+      "def_path_hash": "d568101b07447f112bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:390 (macro)"
+    },
+    {
+      "callee": "<{async fn body of tools::lifecycle::notify_command_start()} as std::future::IntoFuture>::into_future",
+      "category": "declaration",
+      "def_path_hash": "d568101b07447f112bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:416 (macro)"
+    },
+    {
+      "callee": "<{async fn body of unified_exec::oneshot::<impl unified_exec::UnifiedExecProcessManager>::exec_command_to_completion()} as std::future::IntoFuture>::into_future",
+      "category": "declaration",
+      "def_path_hash": "d568101b07447f112bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:442 (macro)"
+    },
+    {
+      "callee": "<{async fn body of unified_exec::process_manager::<impl unified_exec::UnifiedExecProcessManager>::allocate_process_id()} as std::future::IntoFuture>::into_future",
+      "category": "declaration",
+      "def_path_hash": "d568101b07447f112bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:418 (macro)"
+    },
+    {
+      "callee": "<{async fn body of unified_exec::process_manager::<impl unified_exec::UnifiedExecProcessManager>::exec_command()} as std::future::IntoFuture>::into_future",
+      "category": "declaration",
+      "def_path_hash": "d568101b07447f112bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:444 (macro)"
+    },
+    {
+      "callee": "std::option::Option::<u64>::unwrap_or",
+      "category": "declaration",
+      "def_path_hash": "da4dfcd332ea72da2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:317"
+    },
+    {
+      "callee": "<config::managed_features::ManagedFeatures as std::clone::Clone>::clone",
+      "category": "declaration",
+      "def_path_hash": "e0eda86b01817d1a2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/session/mod.rs:4221"
+    },
+    {
+      "callee": "<session::turn_context::TurnEnvironment as std::clone::Clone>::clone",
+      "category": "declaration",
+      "def_path_hash": "e0eda86b01817d1a2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:382"
+    },
+    {
+      "callee": "<session::turn_context::TurnEnvironment as std::clone::Clone>::clone",
+      "category": "declaration",
+      "def_path_hash": "e0eda86b01817d1a2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:428"
+    },
+    {
+      "callee": "<std::option::Option<codex_network_proxy::NetworkProxy> as std::clone::Clone>::clone",
+      "category": "declaration",
+      "def_path_hash": "e0eda86b01817d1a2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:430"
+    },
+    {
+      "callee": "<std::option::Option<codex_protocol::models::AdditionalPermissionProfile> as std::clone::Clone>::clone",
+      "category": "declaration",
+      "def_path_hash": "e0eda86b01817d1a2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:324"
+    },
+    {
+      "callee": "<std::option::Option<shell::Shell> as std::clone::Clone>::clone",
+      "category": "declaration",
+      "def_path_hash": "e0eda86b01817d1a2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:268"
+    },
+    {
+      "callee": "<std::string::String as std::clone::Clone>::clone",
+      "category": "declaration",
+      "def_path_hash": "e0eda86b01817d1a2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:184"
+    },
+    {
+      "callee": "<std::string::String as std::clone::Clone>::clone",
+      "category": "declaration",
+      "def_path_hash": "e0eda86b01817d1a2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:254"
+    },
+    {
+      "callee": "<std::string::String as std::clone::Clone>::clone",
+      "category": "declaration",
+      "def_path_hash": "e0eda86b01817d1a2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:422"
+    },
+    {
+      "callee": "<std::string::String as std::clone::Clone>::clone",
+      "category": "declaration",
+      "def_path_hash": "e0eda86b01817d1a2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:458"
+    },
+    {
+      "callee": "<std::sync::Arc<codex_exec_server::Environment> as std::clone::Clone>::clone",
+      "category": "declaration",
+      "def_path_hash": "e0eda86b01817d1a2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:206"
+    },
+    {
+      "callee": "<std::sync::Arc<dyn codex_file_system::ExecutorFileSystem> as std::clone::Clone>::clone",
+      "category": "declaration",
+      "def_path_hash": "e0eda86b01817d1a2bac9d628bdc1eb8",
+      "reason": "dynamic dispatch has no concrete body",
+      "source_line": "exec-server/src/environment.rs:1145"
+    },
+    {
+      "callee": "<std::sync::Arc<session::session::Session> as std::clone::Clone>::clone",
+      "category": "declaration",
+      "def_path_hash": "e0eda86b01817d1a2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:181"
+    },
+    {
+      "callee": "<std::sync::Arc<session::session::Session> as std::clone::Clone>::clone",
+      "category": "declaration",
+      "def_path_hash": "e0eda86b01817d1a2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:383"
+    },
+    {
+      "callee": "<std::sync::Arc<session::step_context::StepContext> as std::clone::Clone>::clone",
+      "category": "declaration",
+      "def_path_hash": "e0eda86b01817d1a2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:182"
+    },
+    {
+      "callee": "<std::sync::Arc<session::step_context::StepContext> as std::clone::Clone>::clone",
+      "category": "declaration",
+      "def_path_hash": "e0eda86b01817d1a2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:384"
+    },
+    {
+      "callee": "<tokio_util::sync::CancellationToken as std::clone::Clone>::clone",
+      "category": "declaration",
+      "def_path_hash": "e0eda86b01817d1a2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:385"
+    },
+    {
+      "callee": "core::str::<impl str>::is_empty",
+      "category": "declaration",
+      "def_path_hash": "e6fc4078087cf98b2bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:200"
+    },
+    {
+      "callee": "<std::ops::Range<i32> as std::iter::Iterator>::map::<std::string::String, {closure@core/src/unified_exec/mod.rs:238:14: 238:17}>",
+      "category": "declaration",
+      "def_path_hash": "e8ee9691c44e2ad32bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/unified_exec/mod.rs:237"
+    },
+    {
+      "callee": "<config::managed_features::ManagedFeatures as std::ops::Deref>::deref",
+      "category": "declaration",
+      "def_path_hash": "edf7108b995e0d952bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:247"
+    },
+    {
+      "callee": "<config::managed_features::ManagedFeatures as std::ops::Deref>::deref",
+      "category": "declaration",
+      "def_path_hash": "edf7108b995e0d952bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:323"
+    },
+    {
+      "callee": "<config::managed_features::ManagedFeatures as std::ops::Deref>::deref",
+      "category": "declaration",
+      "def_path_hash": "edf7108b995e0d952bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:337"
+    },
+    {
+      "callee": "<std::string::String as std::ops::Deref>::deref",
+      "category": "declaration",
+      "def_path_hash": "edf7108b995e0d952bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:186"
+    },
+    {
+      "callee": "<std::string::String as std::ops::Deref>::deref",
+      "category": "declaration",
+      "def_path_hash": "edf7108b995e0d952bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:239"
+    },
+    {
+      "callee": "<std::string::String as std::ops::Deref>::deref",
+      "category": "declaration",
+      "def_path_hash": "edf7108b995e0d952bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:244"
+    },
+    {
+      "callee": "<std::string::String as std::ops::Deref>::deref",
+      "category": "declaration",
+      "def_path_hash": "edf7108b995e0d952bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:258"
+    },
+    {
+      "callee": "<std::string::String as std::ops::Deref>::deref",
+      "category": "declaration",
+      "def_path_hash": "edf7108b995e0d952bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:261"
+    },
+    {
+      "callee": "<std::string::String as std::ops::Deref>::deref",
+      "category": "declaration",
+      "def_path_hash": "edf7108b995e0d952bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:387"
+    },
+    {
+      "callee": "<std::string::String as std::ops::Deref>::deref",
+      "category": "declaration",
+      "def_path_hash": "edf7108b995e0d952bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:411"
+    },
+    {
+      "callee": "<std::string::String as std::ops::Deref>::deref",
+      "category": "declaration",
+      "def_path_hash": "edf7108b995e0d952bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:476"
+    },
+    {
+      "callee": "<std::sync::Arc<codex_exec_server::Environment> as std::ops::Deref>::deref",
+      "category": "declaration",
+      "def_path_hash": "edf7108b995e0d952bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:207"
+    },
+    {
+      "callee": "<std::sync::Arc<codex_exec_server::Environment> as std::ops::Deref>::deref",
+      "category": "declaration",
+      "def_path_hash": "edf7108b995e0d952bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:211"
+    },
+    {
+      "callee": "<std::sync::Arc<codex_exec_server::Environment> as std::ops::Deref>::deref",
+      "category": "declaration",
+      "def_path_hash": "edf7108b995e0d952bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:275"
+    },
+    {
+      "callee": "<std::sync::Arc<codex_protocol::openai_models::ModelInfo> as std::ops::Deref>::deref",
+      "category": "declaration",
+      "def_path_hash": "edf7108b995e0d952bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:397"
+    },
+    {
+      "callee": "<std::sync::Arc<codex_protocol::openai_models::ModelInfo> as std::ops::Deref>::deref",
+      "category": "declaration",
+      "def_path_hash": "edf7108b995e0d952bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:462"
+    },
+    {
+      "callee": "<std::sync::Arc<session::session::Session> as std::ops::Deref>::deref",
+      "category": "declaration",
+      "def_path_hash": "edf7108b995e0d952bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:179"
+    },
+    {
+      "callee": "<std::sync::Arc<session::session::Session> as std::ops::Deref>::deref",
+      "category": "declaration",
+      "def_path_hash": "edf7108b995e0d952bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:247"
+    },
+    {
+      "callee": "<std::sync::Arc<session::session::Session> as std::ops::Deref>::deref",
+      "category": "declaration",
+      "def_path_hash": "edf7108b995e0d952bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:323"
+    },
+    {
+      "callee": "<std::sync::Arc<session::session::Session> as std::ops::Deref>::deref",
+      "category": "declaration",
+      "def_path_hash": "edf7108b995e0d952bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:337"
+    },
+    {
+      "callee": "<std::sync::Arc<session::step_context::StepContext> as std::ops::Deref>::deref",
+      "category": "declaration",
+      "def_path_hash": "edf7108b995e0d952bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:188"
+    },
+    {
+      "callee": "<std::sync::Arc<session::step_context::StepContext> as std::ops::Deref>::deref",
+      "category": "declaration",
+      "def_path_hash": "edf7108b995e0d952bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:257"
+    },
+    {
+      "callee": "<std::sync::Arc<session::step_context::StepContext> as std::ops::Deref>::deref",
+      "category": "declaration",
+      "def_path_hash": "edf7108b995e0d952bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:342"
+    },
+    {
+      "callee": "<std::sync::Arc<session::step_context::StepContext> as std::ops::Deref>::deref",
+      "category": "declaration",
+      "def_path_hash": "edf7108b995e0d952bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:397"
+    },
+    {
+      "callee": "<std::sync::Arc<session::step_context::StepContext> as std::ops::Deref>::deref",
+      "category": "declaration",
+      "def_path_hash": "edf7108b995e0d952bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:407"
+    },
+    {
+      "callee": "<std::sync::Arc<session::step_context::StepContext> as std::ops::Deref>::deref",
+      "category": "declaration",
+      "def_path_hash": "edf7108b995e0d952bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:410"
+    },
+    {
+      "callee": "<std::sync::Arc<session::step_context::StepContext> as std::ops::Deref>::deref",
+      "category": "declaration",
+      "def_path_hash": "edf7108b995e0d952bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:430"
+    },
+    {
+      "callee": "<std::sync::Arc<session::step_context::StepContext> as std::ops::Deref>::deref",
+      "category": "declaration",
+      "def_path_hash": "edf7108b995e0d952bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:462"
+    },
+    {
+      "callee": "<std::sync::Arc<session::step_settings::ResolvedStepSettings> as std::ops::Deref>::deref",
+      "category": "declaration",
+      "def_path_hash": "edf7108b995e0d952bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:342"
+    },
+    {
+      "callee": "<std::sync::Arc<session::step_settings::ResolvedStepSettings> as std::ops::Deref>::deref",
+      "category": "declaration",
+      "def_path_hash": "edf7108b995e0d952bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:397"
+    },
+    {
+      "callee": "<std::sync::Arc<session::step_settings::ResolvedStepSettings> as std::ops::Deref>::deref",
+      "category": "declaration",
+      "def_path_hash": "edf7108b995e0d952bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:462"
+    },
+    {
+      "callee": "<std::sync::Arc<session::turn_context::TurnContext> as std::ops::Deref>::deref",
+      "category": "declaration",
+      "def_path_hash": "edf7108b995e0d952bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:219"
+    },
+    {
+      "callee": "<std::sync::Arc<session::turn_context::TurnContext> as std::ops::Deref>::deref",
+      "category": "declaration",
+      "def_path_hash": "edf7108b995e0d952bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:265"
+    },
+    {
+      "callee": "<std::sync::Arc<session::turn_context::TurnContext> as std::ops::Deref>::deref",
+      "category": "declaration",
+      "def_path_hash": "edf7108b995e0d952bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:430"
+    },
+    {
+      "callee": "<std::vec::Vec<codex_utils_path_uri::PathUri> as std::ops::Deref>::deref",
+      "category": "declaration",
+      "def_path_hash": "edf7108b995e0d952bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/session/turn_context.rs:209"
+    },
+    {
+      "callee": "<std::vec::Vec<std::string::String> as std::ops::Deref>::deref",
+      "category": "declaration",
+      "def_path_hash": "edf7108b995e0d952bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:379"
+    },
+    {
+      "callee": "<std::vec::Vec<std::string::String> as std::ops::Deref>::deref",
+      "category": "declaration",
+      "def_path_hash": "edf7108b995e0d952bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:412"
+    },
+    {
+      "callee": "std::option::Option::<shell::Shell>::map::<std::sync::Arc<shell::Shell>, fn(shell::Shell) -> std::sync::Arc<shell::Shell> {std::sync::Arc::<shell::Shell>::new}>",
+      "category": "declaration",
+      "def_path_hash": "efc1704abda0d2442bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:268"
+    },
+    {
+      "callee": "core::fmt::rt::Argument::<'_>::new_display::<&str>",
+      "category": "declaration",
+      "def_path_hash": "f912a25b9b2af1492bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:286 (macro)"
+    },
+    {
+      "callee": "core::fmt::rt::Argument::<'_>::new_display::<codex_utils_path_uri::PathConvention>",
+      "category": "declaration",
+      "def_path_hash": "f912a25b9b2af1492bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:231 (macro)"
+    },
+    {
+      "callee": "core::fmt::rt::Argument::<'_>::new_display::<codex_utils_path_uri::PathUri>",
+      "category": "declaration",
+      "def_path_hash": "f912a25b9b2af1492bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:231 (macro)"
+    },
+    {
+      "callee": "core::fmt::rt::Argument::<'_>::new_display::<std::string::String>",
+      "category": "declaration",
+      "def_path_hash": "f912a25b9b2af1492bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:280 (macro)"
+    },
+    {
+      "callee": "core::fmt::rt::Argument::<'_>::new_display::<std::string::String>",
+      "category": "declaration",
+      "def_path_hash": "f912a25b9b2af1492bac9d628bdc1eb8",
+      "reason": "std/third-party declaration absent from definitions",
+      "source_line": "core/src/tools/handlers/unified_exec/exec_command.rs:286 (macro)"
+    }
+  ]
+}

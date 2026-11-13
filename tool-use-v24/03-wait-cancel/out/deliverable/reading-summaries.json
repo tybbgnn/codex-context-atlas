@@ -1,0 +1,64 @@
+{
+  "units": {
+    "P01": {
+      "kind": "phase",
+      "text": "任务完成与取消信号竞争；已有终局优先得到保留，仍在运行的任务才移交取消处理。"
+    },
+    "P01/A01.1": {
+      "kind": "action",
+      "text": "调用方开始 poll 返回的 Future时，等待后台任务完成或调用取消；选出完成事件或取消事件。"
+    },
+    "P01/A02.26": {
+      "kind": "action",
+      "text": "dispatch_handle 首先就绪时，收回正常完成的后台任务结果；join 成功得到工具结果，join 失败生成传播错误。"
+    },
+    "P01/A03.25": {
+      "kind": "action",
+      "text": "cancellation_token 首先就绪时，取消到达后先保护已经形成的最终结果；区分必须保留的最终结果与仍可取消的工作。"
+    },
+    "P01/A04.38": {
+      "kind": "action",
+      "text": "已有 terminal outcome 或 dispatch_handle 已完成时，在终局已确定时等待原任务交还结果；保留原任务结果，不以取消响应覆盖它。"
+    },
+    "P02": {
+      "kind": "phase",
+      "text": "abort 后重新确认 join 结果：可以取得原结果、构造取消响应，也可以保留非取消错误。"
+    },
+    "P02/A05.51": {
+      "kind": "action",
+      "text": "调用被取消且尚无最终结果时，终止仍在运行的任务并核对取消竞态；任务可能已完成、已取消或发生其他 join 错误。"
+    },
+    "P02/A06.67": {
+      "kind": "action",
+      "text": "abort 得到已取消的 JoinError时，构造取消响应并通知工具生命周期；取消响应、就绪事件与 aborted 通知全部形成。"
+    },
+    "P02/A07.68": {
+      "kind": "action",
+      "text": "JoinError 不是 cancelled时，保留 abort 后的非取消任务错误；转换为 FunctionCallError，继续统一完成处理。"
+    },
+    "P03": {
+      "kind": "phase",
+      "text": "统一完成测量只补充成功结果的时长；提前 join 失败仍直接返回错误。"
+    },
+    "P03/A08.87": {
+      "kind": "action",
+      "text": "已收回工具结果或形成取消结果时，用同一次完成测量补充 handler 时长；有计时数据且结果成功时写入 handler_duration_ms。"
+    },
+    "P03/A09.99": {
+      "kind": "action",
+      "text": "正常、取消或 join 错误路径已确定输出时，交还已确定的结果并释放等待任务资源；Future 交还对应结果，捕获资源被释放。"
+    },
+    "sem:P01:observe": {
+      "kind": "goal",
+      "text": "调用方开始等待后，完成事件已收回，或已判定必须进入取消处理。"
+    },
+    "sem:P02:cancel": {
+      "kind": "goal",
+      "text": "取消到达且任务尚无终局后，任务原结果、取消响应或异常错误之一已确定。"
+    },
+    "sem:P03:finish": {
+      "kind": "goal",
+      "text": "已得到结果或提前 join 失败后，调用结果已交付，适用时附带 handler 时长。"
+    }
+  }
+}

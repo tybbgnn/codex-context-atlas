@@ -1,0 +1,3657 @@
+{
+  "actors": [
+    {
+      "actorId": "actor-main",
+      "bodyRef": "f5ab0280c7d978027f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
+      "color": "#327B98",
+      "kind": "body",
+      "label": "ToolCallRuntime::handle_tool_call_with_source",
+      "sourceNodeRef": "f5ab0280c7d978027f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
+    },
+    {
+      "actorId": "crate-0",
+      "children": [
+        {
+          "actorId": "module-0",
+          "children": [
+            {
+              "actorId": "actor-72",
+              "bodyRef": "7018f4d51975e2857f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
+              "color": "#567B5A",
+              "kind": "body",
+              "label": "admit_code_mode_send",
+              "sourceNodeRef": "7018f4d51975e2857f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
+            }
+          ],
+          "color": "#567B5A",
+          "kind": "module",
+          "label": "tools::user_messaging",
+          "sourceNodeRef": "7fbe7166b02a82547f347cbdcc2b778a"
+        },
+        {
+          "actorId": "module-1",
+          "children": [
+            {
+              "actorId": "actor-75",
+              "bodyRef": "f6b8c6530836677e7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
+              "color": "#567B5A",
+              "kind": "body",
+              "label": "ExecutedToolCalls::record_tool_call",
+              "sourceNodeRef": "f6b8c6530836677e7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
+            }
+          ],
+          "color": "#567B5A",
+          "kind": "module",
+          "label": "tools::executed_tool_calls",
+          "sourceNodeRef": "ff50358321e190fd7f347cbdcc2b778a"
+        },
+        {
+          "actorId": "module-2",
+          "children": [
+            {
+              "actorId": "actor-78",
+              "bodyRef": "7a68e615db48398f7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
+              "color": "#567B5A",
+              "kind": "body",
+              "label": "ToolRouter::tool_supports_parallel",
+              "sourceNodeRef": "7a68e615db48398f7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
+            },
+            {
+              "actorId": "actor-80",
+              "bodyRef": "7aa24bf3d1b049427f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
+              "color": "#567B5A",
+              "kind": "body",
+              "label": "ToolRouter::tool_runtime",
+              "sourceNodeRef": "7aa24bf3d1b049427f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
+            }
+          ],
+          "color": "#567B5A",
+          "kind": "module",
+          "label": "tools::router",
+          "sourceNodeRef": "0842d5d216317e2b7f347cbdcc2b778a"
+        },
+        {
+          "actorId": "module-3",
+          "children": [
+            {
+              "actorId": "actor-94",
+              "bodyRef": "742949c3b08e2d8a7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
+              "color": "#567B5A",
+              "kind": "body",
+              "label": "ToolCallTimingGuard::capture",
+              "sourceNodeRef": "742949c3b08e2d8a7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
+            },
+            {
+              "actorId": "actor-179",
+              "bodyRef": "fe2e95c3e6be137e7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
+              "color": "#567B5A",
+              "kind": "body",
+              "label": "ToolCallRuntime::handle_tool_call_with_source::{closure#1}",
+              "sourceNodeRef": "fe2e95c3e6be137e7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
+            },
+            {
+              "actorId": "actor-181",
+              "bodyRef": "f361ae0baf35f2e37f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
+              "color": "#567B5A",
+              "kind": "body",
+              "label": "ToolCallRuntime::handle_tool_call_with_source::{closure#2}",
+              "sourceNodeRef": "f361ae0baf35f2e37f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
+            }
+          ],
+          "color": "#567B5A",
+          "kind": "module",
+          "label": "tools::parallel",
+          "sourceNodeRef": "2d0c5be8daf841137f347cbdcc2b778a"
+        }
+      ],
+      "color": "#567B5A",
+      "kind": "crate",
+      "label": "codex_core",
+      "sourceNodeRef": "7f347cbdcc2b778a7f347cbdcc2b778a"
+    },
+    {
+      "actorId": "crate-1",
+      "children": [
+        {
+          "actorId": "module-4",
+          "children": [
+            {
+              "actorId": "actor-99",
+              "bodyRef": "156c1dd476e84970f696af05e8b8761e|mir_drops_elaborated_and_const_checked|main",
+              "color": "#567B5A",
+              "kind": "body",
+              "label": "tool_lifecycle_contributors",
+              "sourceNodeRef": "156c1dd476e84970f696af05e8b8761e|mir_drops_elaborated_and_const_checked|main"
+            }
+          ],
+          "color": "#567B5A",
+          "kind": "module",
+          "label": "registry",
+          "sourceNodeRef": "e7e16096d172688df696af05e8b8761e"
+        }
+      ],
+      "color": "#567B5A",
+      "kind": "crate",
+      "label": "codex_extension_api",
+      "sourceNodeRef": "f696af05e8b8761ef696af05e8b8761e"
+    }
+  ],
+  "branchRoles": [
+    {
+      "branchRef": "branch-trace-source-direct",
+      "controlRef": "control-trace-source",
+      "role": "business"
+    },
+    {
+      "branchRef": "branch-trace-source-code-mode",
+      "controlRef": "control-trace-source",
+      "role": "business"
+    }
+  ],
+  "caseIndex": [],
+  "controlOwners": [
+    {
+      "controlRef": "sequence-72",
+      "owner": {
+        "kind": "action",
+        "ref": "P01/A01.71"
+      }
+    },
+    {
+      "controlRef": "sequence-75",
+      "owner": {
+        "kind": "action",
+        "ref": "P01/A01.71"
+      }
+    },
+    {
+      "controlRef": "sequence-78",
+      "owner": {
+        "kind": "action",
+        "ref": "P01/A02.76"
+      }
+    },
+    {
+      "controlRef": "sequence-80",
+      "owner": {
+        "kind": "action",
+        "ref": "P01/A02.76"
+      }
+    },
+    {
+      "controlRef": "sequence-88",
+      "owner": {
+        "kind": "action",
+        "ref": "P02/A03.88"
+      }
+    },
+    {
+      "controlRef": "sequence-94",
+      "owner": {
+        "kind": "action",
+        "ref": "P02/A03.88"
+      }
+    },
+    {
+      "controlRef": "scope-control-timing-guard",
+      "owner": {
+        "kind": "action",
+        "ref": "P02/A04.97"
+      }
+    },
+    {
+      "controlRef": "sequence-99",
+      "owner": {
+        "kind": "action",
+        "ref": "P02/A04.97"
+      }
+    },
+    {
+      "controlRef": "control-trace-source",
+      "owner": {
+        "kind": "action",
+        "ref": "P03/A06.113"
+      }
+    },
+    {
+      "controlRef": "sequence-179",
+      "owner": {
+        "kind": "action",
+        "ref": "P03/A07.178"
+      }
+    },
+    {
+      "controlRef": "sequence-181",
+      "owner": {
+        "kind": "action",
+        "ref": "P03/A08.181"
+      }
+    }
+  ],
+  "controls": [
+    {
+      "condition": "存在 ToolCallTimingGuard",
+      "id": "scope-control-timing-guard",
+      "kind": "opt",
+      "skip": "没有 timing guard 时不遍历 observers，直接准备执行与取消捕获"
+    },
+    {
+      "branches": [
+        {
+          "children": [],
+          "condition": "direct",
+          "id": "branch-trace-source-direct",
+          "outcome": "Direct 和 DirectPlaintextMessage 都映射 Source::Direct"
+        },
+        {
+          "children": [],
+          "condition": "code-mode",
+          "id": "branch-trace-source-code-mode",
+          "outcome": "映射 Source::CodeMode"
+        }
+      ],
+      "condition": "调用来源属于 Direct 还是 CodeMode",
+      "id": "control-trace-source",
+      "kind": "alt"
+    },
+    {
+      "id": "sequence-72",
+      "invocationRef": "invocation-72",
+      "kind": "sequence",
+      "messages": [
+        "request-72",
+        "return-72"
+      ]
+    },
+    {
+      "id": "sequence-75",
+      "invocationRef": "invocation-75",
+      "kind": "sequence",
+      "messages": [
+        "request-75",
+        "return-75"
+      ]
+    },
+    {
+      "id": "sequence-78",
+      "invocationRef": "invocation-78",
+      "kind": "sequence",
+      "messages": [
+        "request-78",
+        "return-78"
+      ]
+    },
+    {
+      "id": "sequence-80",
+      "invocationRef": "invocation-80",
+      "kind": "sequence",
+      "messages": [
+        "request-80",
+        "return-80"
+      ]
+    },
+    {
+      "id": "sequence-88",
+      "invocationRef": "invocation-88",
+      "kind": "sequence",
+      "messages": [
+        "self-88"
+      ]
+    },
+    {
+      "id": "sequence-94",
+      "invocationRef": "invocation-94",
+      "kind": "sequence",
+      "messages": [
+        "request-94",
+        "return-94"
+      ]
+    },
+    {
+      "id": "sequence-99",
+      "invocationRef": "invocation-99",
+      "kind": "sequence",
+      "messages": [
+        "request-99",
+        "return-99"
+      ]
+    },
+    {
+      "id": "sequence-179",
+      "invocationRef": "invocation-179",
+      "kind": "sequence",
+      "messages": [
+        "request-179",
+        "return-179"
+      ]
+    },
+    {
+      "id": "sequence-181",
+      "invocationRef": "invocation-181",
+      "kind": "sequence",
+      "messages": [
+        "request-181",
+        "return-181"
+      ]
+    }
+  ],
+  "dataKind": "source-backed",
+  "definitionNotes": [],
+  "deliveryMode": "real-flow",
+  "display": {
+    "description": "codex_core::tools::parallel::ToolCallRuntime::handle_tool_call_with_source",
+    "sourceLabel": "core/src/tools/parallel.rs",
+    "title": "ToolCallRuntime::handle_tool_call_with_source"
+  },
+  "execution": {
+    "artifacts": [
+      {
+        "content": "    pub(crate) fn handle_tool_call_with_source(\n        self,\n        step_context: Arc<StepContext>,\n        call: ToolCall,\n        source: ToolCallSource,\n        cancellation_token: CancellationToken,\n        call_state: Arc<ToolCallState>,\n    ) -> impl std::future::Future<Output = Result<AnyToolResult, FunctionCallError>> {\n        let message_admission =\n            super::user_messaging::admit_code_mode_send(&self.session, &source, &call.tool_name);\n        self.session\n            .services\n            .executed_tool_calls\n            .record_tool_call(&call, &source, &step_context);\n        let router = &step_context.tool_router;\n        let supports_parallel = router.tool_supports_parallel(&call);\n        let tool_runtime = router.tool_runtime(&call.tool_name);\n        let router = Arc::clone(router);\n        let session = Arc::clone(&self.session);\n        let turn = Arc::clone(&step_context.turn);\n        let tracker = Arc::clone(&self.tracker);\n        let lock = Arc::clone(&self.parallel_execution);\n        let invocation_cancellation_token = cancellation_token.clone();\n        let started = Instant::now();\n        let mut tool_call_timing_guard = ToolCallTimingGuard::capture(\n            started,\n            &session.thread_id,\n            &turn.sub_id,\n            &call,\n            &source,\n            Arc::clone(&session.services.extensions),\n        );\n        if let Some(guard) = tool_call_timing_guard.as_mut() {\n            for observer in session.services.extensions.tool_lifecycle_contributors() {\n                observer.on_tool_dispatch(codex_extension_api::ToolDispatchInput {\n                    thread_id: &guard.conversation_id,\n                    turn_id: &guard.turn_id,\n                    call_id: &guard.call_id,\n                    tool_name: &guard.tool_name,\n                });\n            }\n        }\n        let execution_started_at = tool_call_timing_guard\n            .as_ref()\n            .map(|timing| Arc::clone(&timing.execution_started_at));\n        let abort_session = Arc::clone(&session);\n        let abort_source = source.clone();\n        let abort_turn = Arc::clone(&turn);\n        let dispatch_call_state = Arc::clone(&call_state);\n        let dispatch_call = call.clone();\n        let thread_id = session.thread_id;\n        let trace_source = match &source {\n            ToolCallSource::Direct | ToolCallSource::DirectPlaintextMessage => {\n                call_trace::Source::Direct\n            }\n            ToolCallSource::CodeMode { .. } => call_trace::Source::CodeMode,\n        };\n        let dispatch_tool_name = call.tool_name.clone();\n        let dispatch_call_id = call.call_id.clone();\n\n        // Code-mode callbacks can resume outside the turn's local span ancestry.\n        let dispatch_span = trace_span!(\n            \"dispatch_tool_call_with_code_mode_result\",\n            otel.name = %call.tool_name,\n            tool_name = %call.tool_name,\n            thread.id = %session.thread_id,\n            call_id = call.call_id.as_str(),\n            aborted = false,\n        );\n        let abort_dispatch_span = dispatch_span.clone();\n\n        let mut dispatch_handle = AbortOnDropHandle::new(tokio::spawn(\n            async move {\n                let _message_admission = message_admission?;\n                if let Some(tool_runtime) = tool_runtime\n                    && let Some(readiness) = tool_runtime.wait_until_ready(&session)\n                {\n                    readiness.await;\n                }\n\n                let guard = if supports_parallel {\n                    Either::Left(lock.read().await)\n                } else {\n                    Either::Right(lock.write().await)\n                };\n                // Admission through the parallel-execution gate marks the end\n                // of dispatch waiting and the start of handler execution.\n                if let Some(execution_started_at) = execution_started_at {\n                    let _ = execution_started_at.set(Instant::now());\n                }\n\n                let result = router\n                    .dispatch_tool_call_with_state(\n                        session,\n                        step_context,\n                        invocation_cancellation_token,\n                        tracker,\n                        dispatch_call,\n                        source,\n                        dispatch_call_state,\n                    )\n                    .instrument(dispatch_span.clone())\n                    .await;\n                drop(guard);\n                // The sampling loop collects results in order only after its stream ends.\n                // Record readiness here, before either caller encodes or collects the result.\n                // A fatal error still propagates to the caller instead of producing a tool\n                // result; unlike a normal tool failure, it has no readiness event.\n                if !matches!(&result, Err(FunctionCallError::Fatal(_))) {\n                    call_trace::result_ready(\n                        thread_id,\n                        &turn.sub_id,\n                        &dispatch_tool_name,\n                        &dispatch_call_id,\n                        trace_source,\n                    );\n                }\n                result\n            }\n            .in_current_span(),\n        ));\n\n        async move {\n            let mut tool_call_timing_guard = tool_call_timing_guard;\n            let mut result = tokio::select! {\n                res = &mut dispatch_handle => res.map_err(Self::tool_task_join_error)?,\n                _ = cancellation_token.cancelled() => {\n                    if call_state.terminal_outcome_reached.load(Ordering::Acquire) || dispatch_handle.is_finished() {\n                        dispatch_handle.await.map_err(Self::tool_task_join_error)?\n                    } else {\n                        let secs = started.elapsed().as_secs_f32().max(0.1);\n                        abort_dispatch_span.record(\"aborted\", true);\n                        dispatch_handle.abort();\n                        match dispatch_handle.await {\n                            Ok(result) => result,\n                            Err(err) if err.is_cancelled() => {\n                                let response = Self::aborted_response(&call, secs);\n                                call_trace::result_ready(\n                                    thread_id,\n                                    &abort_turn.sub_id,\n                                    &call.tool_name,\n                                    &call.call_id,\n                                    trace_source,\n                                );\n                                notify_tool_aborted(\n                                    abort_session.as_ref(),\n                                    abort_turn.as_ref(),\n                                    call.call_id.as_str(),\n                                    &call.tool_name,\n                                    abort_source,\n                                )\n                                .await;\n                                Ok(response)\n                            }\n                            Err(err) => Err(Self::tool_task_join_error(err)),\n                        }\n                    }\n                },\n            };\n            // Use one completion measurement for logging and response formatting.\n            // Measuring inside a handler would omit routing and output processing.\n            if let Some(timing) = tool_call_timing_guard.as_mut()\n                && let Some(handler_duration_ms) = timing.finish()\n                && let Ok(result) = &mut result\n            {\n                result.result.set_handler_duration_ms(handler_duration_ms);\n            }\n            result\n        }\n        .in_current_span()\n    }",
+        "format": "rust",
+        "id": "source-function",
+        "sha256": "33dd50f9ab2648de9e3d78fa5c39b6fcb724b6b97e2e31183eefeefbdef547db",
+        "sourcePath": "source/parallel.rs"
+      }
+    ],
+    "attachments": [
+      {
+        "evidenceRefs": [
+          "evidence-cdeed7665e51f4570b3acebe"
+        ],
+        "id": "attachment-purpose-72",
+        "kind": "purpose",
+        "ownerActionRef": "P01/A01.71",
+        "purposeRef": "purpose-72"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-ab6b1b1b3aef992d6743f0dc"
+        ],
+        "id": "attachment-purpose-75",
+        "kind": "purpose",
+        "ownerActionRef": "P01/A01.71",
+        "purposeRef": "purpose-75"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-cba282448e7f92eef9eb305d"
+        ],
+        "id": "attachment-purpose-78",
+        "kind": "purpose",
+        "ownerActionRef": "P01/A02.76",
+        "purposeRef": "purpose-78"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-2ec1d82b5c27eec49fe6630e"
+        ],
+        "id": "attachment-purpose-80",
+        "kind": "purpose",
+        "ownerActionRef": "P01/A02.76",
+        "purposeRef": "purpose-80"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-91a30a1e14c25f8556c37d09"
+        ],
+        "id": "attachment-purpose-88",
+        "kind": "purpose",
+        "ownerActionRef": "P02/A03.88",
+        "purposeRef": "purpose-88"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-2327309cfc4c775e9a094a6a"
+        ],
+        "id": "attachment-purpose-94",
+        "kind": "purpose",
+        "ownerActionRef": "P02/A03.88",
+        "purposeRef": "purpose-94"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-d278b2b349e41811a5f7648d"
+        ],
+        "id": "attachment-purpose-99",
+        "kind": "purpose",
+        "ownerActionRef": "P02/A04.97",
+        "purposeRef": "purpose-99"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-37923a7bff4966d9d0b887fd"
+        ],
+        "id": "attachment-purpose-179",
+        "kind": "purpose",
+        "ownerActionRef": "P03/A07.178",
+        "purposeRef": "purpose-179"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-6c96dc94ba331d37ddf6b640"
+        ],
+        "id": "attachment-purpose-181",
+        "kind": "purpose",
+        "ownerActionRef": "P03/A08.181",
+        "purposeRef": "purpose-181"
+      }
+    ],
+    "controlBindings": [
+      {
+        "controlRef": "sequence-72",
+        "evidenceRefs": [
+          "evidence-eef10d342c67df5b0ccb54ba"
+        ],
+        "nodeRef": "a-admission"
+      },
+      {
+        "controlRef": "sequence-75",
+        "evidenceRefs": [
+          "evidence-36d5ce94db6ea5d1d9877bc3"
+        ],
+        "nodeRef": "a-admission"
+      },
+      {
+        "controlRef": "sequence-78",
+        "evidenceRefs": [
+          "evidence-08ce7e3c11d29b0bd5d92d05"
+        ],
+        "nodeRef": "a-runtime"
+      },
+      {
+        "controlRef": "sequence-80",
+        "evidenceRefs": [
+          "evidence-036706d24887ab18cca5a69e"
+        ],
+        "nodeRef": "a-runtime"
+      },
+      {
+        "controlRef": "sequence-88",
+        "evidenceRefs": [
+          "evidence-2c8e990cd3f228d5449d54cf"
+        ],
+        "nodeRef": "a-timing"
+      },
+      {
+        "controlRef": "sequence-94",
+        "evidenceRefs": [
+          "evidence-a6b72e7ca1f2ae044e70237e"
+        ],
+        "nodeRef": "a-timing"
+      },
+      {
+        "controlRef": "scope-control-timing-guard",
+        "evidenceRefs": [
+          "evidence-0063e617a977b42a7b09e4e6"
+        ],
+        "nodeRef": "a-observers"
+      },
+      {
+        "controlRef": "sequence-99",
+        "evidenceRefs": [
+          "evidence-f9e79c8956dc3cba555ff8fa"
+        ],
+        "nodeRef": "a-observers"
+      },
+      {
+        "controlRef": "control-trace-source",
+        "evidenceRefs": [
+          "evidence-c56075ca7f94cb9676f53533"
+        ],
+        "nodeRef": "a-captures"
+      },
+      {
+        "controlRef": "sequence-179",
+        "evidenceRefs": [
+          "evidence-89e17490f955a08ef0609f8d"
+        ],
+        "nodeRef": "a-spawn"
+      },
+      {
+        "controlRef": "sequence-181",
+        "evidenceRefs": [
+          "evidence-e653ae2660e43362c6bc3bbd"
+        ],
+        "nodeRef": "a-wait-future"
+      }
+    ],
+    "decisions": [
+      {
+        "evidenceRefs": [
+          "evidence-8dbb1fabfc8a548da3fffd97"
+        ],
+        "id": "decision-timing-guard",
+        "readingScopeRef": "scope-timing-guard",
+        "stability": "turn",
+        "values": [
+          "some",
+          "none"
+        ]
+      },
+      {
+        "evidenceRefs": [
+          "evidence-a92ce0a750461068408080e0"
+        ],
+        "id": "decision-observer-next",
+        "readingScopeRef": "scope-observers",
+        "stability": "turn",
+        "values": [
+          "done",
+          "more"
+        ]
+      },
+      {
+        "branchBindings": [
+          {
+            "branchRef": "branch-trace-source-direct",
+            "values": [
+              "direct"
+            ]
+          },
+          {
+            "branchRef": "branch-trace-source-code-mode",
+            "values": [
+              "code-mode"
+            ]
+          }
+        ],
+        "controlRef": "control-trace-source",
+        "evidenceRefs": [
+          "evidence-010ecbe24ee4c8ac8017b01a"
+        ],
+        "id": "decision-trace-source",
+        "stability": "turn",
+        "values": [
+          "direct",
+          "code-mode"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "evidenceRefs": [
+          "evidence-3fdc7c6ea02b7c92e27922e0"
+        ],
+        "from": "entry",
+        "guards": [],
+        "id": "flow-0",
+        "kind": "flow",
+        "to": "a-admission"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-d9d19b99aef6ad6a7cc85182"
+        ],
+        "from": "a-admission",
+        "guards": [],
+        "id": "flow-1",
+        "kind": "flow",
+        "to": "a-runtime"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-8fc48e6a983770fa2ac7f6e3"
+        ],
+        "from": "a-runtime",
+        "guards": [],
+        "id": "flow-2",
+        "kind": "flow",
+        "to": "a-timing"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-adb35be96a340e502790d568"
+        ],
+        "from": "a-timing",
+        "guards": [],
+        "id": "flow-3",
+        "kind": "flow",
+        "to": "d-timing-guard"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-648359d41136a77e17b3ead2"
+        ],
+        "from": "a-observers",
+        "guards": [],
+        "id": "flow-4",
+        "kind": "flow",
+        "to": "a-notify"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-5b5860ce296823c69eb066cd"
+        ],
+        "from": "a-notify",
+        "guards": [],
+        "id": "flow-5",
+        "kind": "flow",
+        "to": "d-observer-next"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-dbcfee997aa02a8b2c391ec6"
+        ],
+        "from": "a-captures",
+        "guards": [],
+        "id": "flow-6",
+        "kind": "flow",
+        "to": "d-trace-source"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-9625c7750f6e113a46c31c8f"
+        ],
+        "from": "a-spawn",
+        "guards": [],
+        "id": "flow-7",
+        "kind": "flow",
+        "to": "a-wait-future"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-6e8aa1f698becd5fa33f7962"
+        ],
+        "from": "a-wait-future",
+        "guards": [],
+        "id": "flow-8",
+        "kind": "flow",
+        "to": "terminal-185"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-7847392c720f28cfa71a2775"
+        ],
+        "from": "d-timing-guard",
+        "guards": [
+          {
+            "decisionRef": "decision-timing-guard",
+            "value": "some"
+          }
+        ],
+        "id": "flow-9",
+        "kind": "branch",
+        "to": "a-observers"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-498ee0bcaa58babbe2bff524"
+        ],
+        "from": "d-timing-guard",
+        "guards": [
+          {
+            "decisionRef": "decision-timing-guard",
+            "value": "none"
+          }
+        ],
+        "id": "flow-10",
+        "kind": "branch",
+        "to": "a-captures"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-4fd10c867e17b8cfdb15fdb8"
+        ],
+        "from": "d-observer-next",
+        "guards": [
+          {
+            "decisionRef": "decision-observer-next",
+            "value": "done"
+          }
+        ],
+        "id": "flow-11",
+        "kind": "loop-exit",
+        "readingScopeRef": "scope-observers",
+        "to": "a-captures"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-7017b83874b2e21585268bd7"
+        ],
+        "from": "d-observer-next",
+        "guards": [
+          {
+            "decisionRef": "decision-observer-next",
+            "value": "more"
+          }
+        ],
+        "id": "flow-12",
+        "kind": "loop-continue",
+        "readingScopeRef": "scope-observers",
+        "to": "a-notify"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-719e67309089cac5998e7584"
+        ],
+        "from": "d-trace-source",
+        "guards": [
+          {
+            "decisionRef": "decision-trace-source",
+            "value": "direct"
+          }
+        ],
+        "id": "flow-13",
+        "kind": "branch",
+        "to": "a-spawn"
+      },
+      {
+        "evidenceRefs": [
+          "evidence-a9ba194bfb2e9f884448a0ea"
+        ],
+        "from": "d-trace-source",
+        "guards": [
+          {
+            "decisionRef": "decision-trace-source",
+            "value": "code-mode"
+          }
+        ],
+        "id": "flow-14",
+        "kind": "branch",
+        "to": "a-spawn"
+      }
+    ],
+    "entryNodeRef": "entry",
+    "evidence": [
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "entry",
+          "subjectRef": "entry",
+          "targets": [
+            "actor-main",
+            "ToolCallRuntime::handle_tool_call_with_source"
+          ]
+        },
+        "id": "evidence-4f86e56217323ffc68c0032e",
+        "locator": "bb71",
+        "quote": "            super::user_messaging::admit_code_mode_send(&self.session, &source, &call.tool_name);"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "action",
+          "subjectRef": "P01/A01.71",
+          "targets": [
+            "a-admission"
+          ]
+        },
+        "id": "evidence-969c61bc45be9350e78cb88f",
+        "locator": "bb71,bb72,bb73,bb74,bb75",
+        "quote": "            super::user_messaging::admit_code_mode_send(&self.session, &source, &call.tool_name);"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "action",
+          "subjectRef": "P01/A02.76",
+          "targets": [
+            "a-runtime"
+          ]
+        },
+        "id": "evidence-d510682a58c258f50337499f",
+        "locator": "bb76,bb77,bb78,bb79,bb80,bb81,bb82,bb83,bb84,bb85,bb86,bb87",
+        "quote": "        let router = &step_context.tool_router;"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "action",
+          "subjectRef": "P02/A03.88",
+          "targets": [
+            "a-timing"
+          ]
+        },
+        "id": "evidence-e37e6fb43da0f34e206c36ec",
+        "locator": "bb88,bb89,bb90,bb91,bb92,bb93,bb94,bb95,bb96",
+        "quote": "        let started = Instant::now();"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "action",
+          "subjectRef": "P02/A04.97",
+          "targets": [
+            "a-observers"
+          ]
+        },
+        "id": "evidence-7c03fad648b34940f43a3d2b",
+        "locator": "bb97,bb98,bb99,bb100,bb101",
+        "quote": "        if let Some(guard) = tool_call_timing_guard.as_mut() {\n            for observer in session.services.extensions.tool_lifecycle_contributors() {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "action",
+          "subjectRef": "P02/A05.102",
+          "targets": [
+            "a-notify"
+          ]
+        },
+        "id": "evidence-f55f699ca30e2e009225bf83",
+        "locator": "bb102,bb103,bb105,bb106,bb107,bb108,bb109,bb110,bb111",
+        "quote": "            for observer in session.services.extensions.tool_lifecycle_contributors() {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "action",
+          "subjectRef": "P03/A06.113",
+          "targets": [
+            "a-captures"
+          ]
+        },
+        "id": "evidence-289e405780eab49816eb56d6",
+        "locator": "bb113,bb114,bb115,bb116,bb117,bb118,bb119,bb120,bb121,bb122,bb123,bb124,bb125,bb126,bb112,bb142,bb144,bb167,bb169,bb177",
+        "quote": "        let execution_started_at = tool_call_timing_guard\n            .as_ref()"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "action",
+          "subjectRef": "P03/A07.178",
+          "targets": [
+            "a-spawn"
+          ]
+        },
+        "id": "evidence-b9f95fd6dabd8a1a26ac9428",
+        "locator": "bb178,bb179,bb180",
+        "quote": "            async move {\n                let _message_admission = message_admission?;\n                if let Some(tool_runtime) = tool_runtime\n                    && let Some(readiness) = tool_runtime.wait_until_ready(&session)\n                {\n                    readiness.await;\n                }\n\n                let guard = if supports_parallel {\n                    Either::Left(lock.read().await)\n                } else {\n                    Either::Right(lock.write().await)\n                };\n                // Admission through the parallel-execution gate marks the end\n                // of dispatch waiting and the start of handler execution.\n                if let Some(execution_started_at) = execution_started_at {\n                    let _ = execution_started_at.set(Instant::now());\n                }\n\n                let result = router\n                    .dispatch_tool_call_with_state(\n                        session,\n                        step_context,\n                        invocation_cancellation_token,\n                        tracker,\n                        dispatch_call,\n                        source,\n                        dispatch_call_state,\n                    )\n                    .instrument(dispatch_span.clone())\n                    .await;\n                drop(guard);\n                // The sampling loop collects results in order only after its stream ends.\n                // Record readiness here, before either caller encodes or collects the result.\n                // A fatal error still propagates to the caller instead of producing a tool\n                // result; unlike a normal tool failure, it has no readiness event.\n                if !matches!(&result, Err(FunctionCallError::Fatal(_))) {\n                    call_trace::result_ready(\n                        thread_id,\n                        &turn.sub_id,\n                        &dispatch_tool_name,\n                        &dispatch_call_id,\n                        trace_source,\n                    );\n                }\n                result\n            }\n            .in_current_span(),"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "action",
+          "subjectRef": "P03/A08.181",
+          "targets": [
+            "a-wait-future"
+          ]
+        },
+        "id": "evidence-f1555d2cc30ec7a5679a24df",
+        "locator": "bb181,bb184,bb185",
+        "quote": "        async move {\n            let mut tool_call_timing_guard = tool_call_timing_guard;\n            let mut result = tokio::select! {\n                res = &mut dispatch_handle => res.map_err(Self::tool_task_join_error)?,\n                _ = cancellation_token.cancelled() => {\n                    if call_state.terminal_outcome_reached.load(Ordering::Acquire) || dispatch_handle.is_finished() {\n                        dispatch_handle.await.map_err(Self::tool_task_join_error)?\n                    } else {\n                        let secs = started.elapsed().as_secs_f32().max(0.1);\n                        abort_dispatch_span.record(\"aborted\", true);\n                        dispatch_handle.abort();\n                        match dispatch_handle.await {\n                            Ok(result) => result,\n                            Err(err) if err.is_cancelled() => {\n                                let response = Self::aborted_response(&call, secs);\n                                call_trace::result_ready(\n                                    thread_id,\n                                    &abort_turn.sub_id,\n                                    &call.tool_name,\n                                    &call.call_id,\n                                    trace_source,\n                                );\n                                notify_tool_aborted(\n                                    abort_session.as_ref(),\n                                    abort_turn.as_ref(),\n                                    call.call_id.as_str(),\n                                    &call.tool_name,\n                                    abort_source,\n                                )\n                                .await;\n                                Ok(response)\n                            }\n                            Err(err) => Err(Self::tool_task_join_error(err)),\n                        }\n                    }\n                },\n            };\n            // Use one completion measurement for logging and response formatting.\n            // Measuring inside a handler would omit routing and output processing.\n            if let Some(timing) = tool_call_timing_guard.as_mut()\n                && let Some(handler_duration_ms) = timing.finish()\n                && let Ok(result) = &mut result\n            {\n                result.result.set_handler_duration_ms(handler_duration_ms);\n            }\n            result\n        }\n        .in_current_span()"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "decision",
+          "subjectRef": "d-timing-guard",
+          "targets": [
+            "decision-timing-guard"
+          ]
+        },
+        "id": "evidence-de0662b06d097daa5621600d",
+        "locator": "bb96",
+        "quote": "        if let Some(guard) = tool_call_timing_guard.as_mut() {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "decision",
+          "subjectRef": "d-observer-next",
+          "targets": [
+            "decision-observer-next"
+          ]
+        },
+        "id": "evidence-9be0ba0d6f27738c543a35a8",
+        "locator": "bb103",
+        "quote": "            for observer in session.services.extensions.tool_lifecycle_contributors() {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "decision",
+          "subjectRef": "d-trace-source",
+          "targets": [
+            "decision-trace-source"
+          ]
+        },
+        "id": "evidence-20b29cd9fea98c4667ed5a62",
+        "locator": "bb121",
+        "quote": "        let thread_id = session.thread_id;\n        let trace_source = match &source {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "terminal",
+          "subjectRef": "terminal-185",
+          "targets": [
+            "return"
+          ]
+        },
+        "id": "evidence-f7ee52e78b1dfc6a0c9616f8",
+        "locator": "bb185",
+        "quote": "    pub(crate) fn handle_tool_call_with_source("
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "relation",
+          "subjectRef": "flow-0",
+          "targets": [
+            "entry",
+            "a-admission",
+            "flow"
+          ]
+        },
+        "id": "evidence-3fdc7c6ea02b7c92e27922e0",
+        "locator": "bb71",
+        "quote": "            super::user_messaging::admit_code_mode_send(&self.session, &source, &call.tool_name);"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "relation",
+          "subjectRef": "flow-1",
+          "targets": [
+            "a-admission",
+            "a-runtime",
+            "flow"
+          ]
+        },
+        "id": "evidence-d9d19b99aef6ad6a7cc85182",
+        "locator": "bb71,m71.0,bb72,m72.0,bb73,m73.0,bb74,m74.0,bb75,m75.0,bb76",
+        "quote": "            super::user_messaging::admit_code_mode_send(&self.session, &source, &call.tool_name);"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "relation",
+          "subjectRef": "flow-2",
+          "targets": [
+            "a-runtime",
+            "a-timing",
+            "flow"
+          ]
+        },
+        "id": "evidence-8fc48e6a983770fa2ac7f6e3",
+        "locator": "bb76,m76.0,bb77,m77.0,bb78,m78.0,bb79,m79.0,bb80,m80.0,bb81,m81.0,bb82,m82.0,bb83,m83.0,bb84,m84.0,bb85,m85.0,bb86,m86.0,bb87,m87.0,bb88",
+        "quote": "        let router = &step_context.tool_router;"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "relation",
+          "subjectRef": "flow-3",
+          "targets": [
+            "a-timing",
+            "d-timing-guard",
+            "flow"
+          ]
+        },
+        "id": "evidence-adb35be96a340e502790d568",
+        "locator": "bb88,m88.0,bb89,m89.0,bb90,m90.0,bb91,m91.0,bb92,m92.0,bb93,m93.0,bb94,m94.0,bb95,m95.0,bb96",
+        "quote": "        let started = Instant::now();"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "relation",
+          "subjectRef": "flow-4",
+          "targets": [
+            "a-observers",
+            "a-notify",
+            "flow"
+          ]
+        },
+        "id": "evidence-648359d41136a77e17b3ead2",
+        "locator": "bb97,m97.0,bb98,m98.0,bb99,m99.0,bb100,m100.0,bb101,m101.0,bb102",
+        "quote": "        if let Some(guard) = tool_call_timing_guard.as_mut() {\n            for observer in session.services.extensions.tool_lifecycle_contributors() {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "relation",
+          "subjectRef": "flow-5",
+          "targets": [
+            "a-notify",
+            "d-observer-next",
+            "flow"
+          ]
+        },
+        "id": "evidence-5b5860ce296823c69eb066cd",
+        "locator": "bb102,m102.0,bb103",
+        "quote": "            for observer in session.services.extensions.tool_lifecycle_contributors() {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "relation",
+          "subjectRef": "flow-6",
+          "targets": [
+            "a-captures",
+            "d-trace-source",
+            "flow"
+          ]
+        },
+        "id": "evidence-dbcfee997aa02a8b2c391ec6",
+        "locator": "bb113,m113.0,bb114,m114.0,bb115,m115.0,bb116,m116.0,bb117,m117.0,bb118,m118.0,bb119,m119.0,bb120,m120.0,bb121",
+        "quote": "        let execution_started_at = tool_call_timing_guard\n            .as_ref()"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "relation",
+          "subjectRef": "flow-7",
+          "targets": [
+            "a-spawn",
+            "a-wait-future",
+            "flow"
+          ]
+        },
+        "id": "evidence-9625c7750f6e113a46c31c8f",
+        "locator": "bb178,m178.0,bb179,m179.0,bb180,m180.0,bb181",
+        "quote": "            async move {\n                let _message_admission = message_admission?;\n                if let Some(tool_runtime) = tool_runtime\n                    && let Some(readiness) = tool_runtime.wait_until_ready(&session)\n                {\n                    readiness.await;\n                }\n\n                let guard = if supports_parallel {\n                    Either::Left(lock.read().await)\n                } else {\n                    Either::Right(lock.write().await)\n                };\n                // Admission through the parallel-execution gate marks the end\n                // of dispatch waiting and the start of handler execution.\n                if let Some(execution_started_at) = execution_started_at {\n                    let _ = execution_started_at.set(Instant::now());\n                }\n\n                let result = router\n                    .dispatch_tool_call_with_state(\n                        session,\n                        step_context,\n                        invocation_cancellation_token,\n                        tracker,\n                        dispatch_call,\n                        source,\n                        dispatch_call_state,\n                    )\n                    .instrument(dispatch_span.clone())\n                    .await;\n                drop(guard);\n                // The sampling loop collects results in order only after its stream ends.\n                // Record readiness here, before either caller encodes or collects the result.\n                // A fatal error still propagates to the caller instead of producing a tool\n                // result; unlike a normal tool failure, it has no readiness event.\n                if !matches!(&result, Err(FunctionCallError::Fatal(_))) {\n                    call_trace::result_ready(\n                        thread_id,\n                        &turn.sub_id,\n                        &dispatch_tool_name,\n                        &dispatch_call_id,\n                        trace_source,\n                    );\n                }\n                result\n            }\n            .in_current_span(),"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "relation",
+          "subjectRef": "flow-8",
+          "targets": [
+            "a-wait-future",
+            "terminal-185",
+            "flow"
+          ]
+        },
+        "id": "evidence-6e8aa1f698becd5fa33f7962",
+        "locator": "bb181,m181.0,bb182,m182.0,bb183,m183.0,bb184,m184.0,bb185,m183.1,bb197,m197.0,m182.1,bb196,m196.0",
+        "quote": "        async move {\n            let mut tool_call_timing_guard = tool_call_timing_guard;\n            let mut result = tokio::select! {\n                res = &mut dispatch_handle => res.map_err(Self::tool_task_join_error)?,\n                _ = cancellation_token.cancelled() => {\n                    if call_state.terminal_outcome_reached.load(Ordering::Acquire) || dispatch_handle.is_finished() {\n                        dispatch_handle.await.map_err(Self::tool_task_join_error)?\n                    } else {\n                        let secs = started.elapsed().as_secs_f32().max(0.1);\n                        abort_dispatch_span.record(\"aborted\", true);\n                        dispatch_handle.abort();\n                        match dispatch_handle.await {\n                            Ok(result) => result,\n                            Err(err) if err.is_cancelled() => {\n                                let response = Self::aborted_response(&call, secs);\n                                call_trace::result_ready(\n                                    thread_id,\n                                    &abort_turn.sub_id,\n                                    &call.tool_name,\n                                    &call.call_id,\n                                    trace_source,\n                                );\n                                notify_tool_aborted(\n                                    abort_session.as_ref(),\n                                    abort_turn.as_ref(),\n                                    call.call_id.as_str(),\n                                    &call.tool_name,\n                                    abort_source,\n                                )\n                                .await;\n                                Ok(response)\n                            }\n                            Err(err) => Err(Self::tool_task_join_error(err)),\n                        }\n                    }\n                },\n            };\n            // Use one completion measurement for logging and response formatting.\n            // Measuring inside a handler would omit routing and output processing.\n            if let Some(timing) = tool_call_timing_guard.as_mut()\n                && let Some(handler_duration_ms) = timing.finish()\n                && let Ok(result) = &mut result\n            {\n                result.result.set_handler_duration_ms(handler_duration_ms);\n            }\n            result\n        }\n        .in_current_span()"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [
+            "decision-timing-guard=some"
+          ],
+          "kind": "relation",
+          "subjectRef": "flow-9",
+          "targets": [
+            "d-timing-guard",
+            "a-observers",
+            "branch"
+          ]
+        },
+        "id": "evidence-7847392c720f28cfa71a2775",
+        "locator": "bb96,m96.0,bb97",
+        "quote": "        if let Some(guard) = tool_call_timing_guard.as_mut() {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [
+            "decision-timing-guard=none"
+          ],
+          "kind": "relation",
+          "subjectRef": "flow-10",
+          "targets": [
+            "d-timing-guard",
+            "a-captures",
+            "branch"
+          ]
+        },
+        "id": "evidence-498ee0bcaa58babbe2bff524",
+        "locator": "bb96,m96.1,bb112,m112.0,bb113",
+        "quote": "        if let Some(guard) = tool_call_timing_guard.as_mut() {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [
+            "decision-observer-next=done"
+          ],
+          "kind": "relation",
+          "subjectRef": "flow-11",
+          "targets": [
+            "d-observer-next",
+            "a-captures",
+            "loop-exit",
+            "scope:scope-observers"
+          ]
+        },
+        "id": "evidence-4fd10c867e17b8cfdb15fdb8",
+        "locator": "bb103,m103.0,bb106,m106.0,bb113",
+        "quote": "            for observer in session.services.extensions.tool_lifecycle_contributors() {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [
+            "decision-observer-next=more"
+          ],
+          "kind": "relation",
+          "subjectRef": "flow-12",
+          "targets": [
+            "d-observer-next",
+            "a-notify",
+            "loop-continue",
+            "scope:scope-observers"
+          ]
+        },
+        "id": "evidence-7017b83874b2e21585268bd7",
+        "locator": "bb103,m103.1,bb105,m105.0,bb107,m107.0,bb108,m108.0,bb109,m109.0,bb110,m110.0,bb111,m111.0,bb102",
+        "quote": "            for observer in session.services.extensions.tool_lifecycle_contributors() {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [
+            "decision-trace-source=direct"
+          ],
+          "kind": "relation",
+          "subjectRef": "flow-13",
+          "targets": [
+            "d-trace-source",
+            "a-spawn",
+            "branch"
+          ]
+        },
+        "id": "evidence-719e67309089cac5998e7584",
+        "locator": "bb121,m121.0,bb123,m123.0,bb124,m124.0,bb125,m125.0,bb126,m126.0,bb127,m127.0,bb128,m128.0,bb150,m150.0,bb151,m151.0,bb152,m152.0,bb153,m153.0,bb155,m155.0,bb159,m159.0,bb160,m160.0,bb175,m175.0,bb176,m176.0,bb177,m177.0,bb178,m160.1,bb161,m161.0,bb162,m162.0,bb163,m163.0,bb164,m164.0,bb165,m165.0,bb166,m166.0,bb167,m167.0,bb168,m168.0,bb169,m169.0,bb170,m170.0,bb171,m171.0,bb172,m172.0,bb174,m174.0,m162.1,bb173,m173.0,m153.1,bb156,m156.0,m153.2,bb157,m157.0,m153.3,bb158,m158.0,m153.4,bb154,m154.0,m128.1,bb129,m129.0,bb130,m130.0,bb131,m131.0,bb149,m149.0,m131.1,bb132,m132.0,bb133,m133.0,bb134,m134.0,m134.1,bb135,m135.0,bb136,m136.0,bb137,m137.0,bb148,m148.0,m137.1,bb138,m138.0,bb139,m139.0,bb140,m140.0,bb141,m141.0,bb142,m142.0,bb143,m143.0,bb144,m144.0,bb145,m145.0,bb146,m146.0,bb147,m147.0,m121.1",
+        "quote": "        let thread_id = session.thread_id;\n        let trace_source = match &source {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [
+            "decision-trace-source=code-mode"
+          ],
+          "kind": "relation",
+          "subjectRef": "flow-14",
+          "targets": [
+            "d-trace-source",
+            "a-spawn",
+            "branch"
+          ]
+        },
+        "id": "evidence-a9ba194bfb2e9f884448a0ea",
+        "locator": "bb121,m121.2,bb122,m122.0,bb124,m124.0,bb125,m125.0,bb126,m126.0,bb127,m127.0,bb128,m128.0,bb150,m150.0,bb151,m151.0,bb152,m152.0,bb153,m153.0,bb155,m155.0,bb159,m159.0,bb160,m160.0,bb175,m175.0,bb176,m176.0,bb177,m177.0,bb178,m160.1,bb161,m161.0,bb162,m162.0,bb163,m163.0,bb164,m164.0,bb165,m165.0,bb166,m166.0,bb167,m167.0,bb168,m168.0,bb169,m169.0,bb170,m170.0,bb171,m171.0,bb172,m172.0,bb174,m174.0,m162.1,bb173,m173.0,m153.1,bb156,m156.0,m153.2,bb157,m157.0,m153.3,bb158,m158.0,m153.4,bb154,m154.0,m128.1,bb129,m129.0,bb130,m130.0,bb131,m131.0,bb149,m149.0,m131.1,bb132,m132.0,bb133,m133.0,bb134,m134.0,m134.1,bb135,m135.0,bb136,m136.0,bb137,m137.0,bb148,m148.0,m137.1,bb138,m138.0,bb139,m139.0,bb140,m140.0,bb141,m141.0,bb142,m142.0,bb143,m143.0,bb144,m144.0,bb145,m145.0,bb146,m146.0,bb147,m147.0",
+        "quote": "        let thread_id = session.thread_id;\n        let trace_source = match &source {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "decision",
+          "subjectRef": "decision-timing-guard",
+          "targets": [
+            "stability:turn",
+            "some",
+            "none",
+            "scope:scope-timing-guard"
+          ]
+        },
+        "id": "evidence-8dbb1fabfc8a548da3fffd97",
+        "locator": "bb96",
+        "quote": "        if let Some(guard) = tool_call_timing_guard.as_mut() {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "decision",
+          "subjectRef": "decision-observer-next",
+          "targets": [
+            "stability:turn",
+            "done",
+            "more",
+            "scope:scope-observers"
+          ]
+        },
+        "id": "evidence-a92ce0a750461068408080e0",
+        "locator": "bb103",
+        "quote": "            for observer in session.services.extensions.tool_lifecycle_contributors() {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [
+            "branch-trace-source-direct=direct",
+            "branch-trace-source-code-mode=code-mode"
+          ],
+          "kind": "decision",
+          "subjectRef": "decision-trace-source",
+          "targets": [
+            "stability:turn",
+            "direct",
+            "code-mode",
+            "control:control-trace-source"
+          ]
+        },
+        "id": "evidence-010ecbe24ee4c8ac8017b01a",
+        "locator": "bb121",
+        "quote": "        let thread_id = session.thread_id;\n        let trace_source = match &source {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "control-binding",
+          "subjectRef": "sequence-72",
+          "targets": [
+            "a-admission"
+          ]
+        },
+        "id": "evidence-eef10d342c67df5b0ccb54ba",
+        "locator": "call:72,bb72",
+        "quote": "            super::user_messaging::admit_code_mode_send(&self.session, &source, &call.tool_name);"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "control-binding",
+          "subjectRef": "sequence-75",
+          "targets": [
+            "a-admission"
+          ]
+        },
+        "id": "evidence-36d5ce94db6ea5d1d9877bc3",
+        "locator": "call:75,bb75",
+        "quote": "        self.session\n            .services\n            .executed_tool_calls\n            .record_tool_call(&call, &source, &step_context);"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "control-binding",
+          "subjectRef": "sequence-78",
+          "targets": [
+            "a-runtime"
+          ]
+        },
+        "id": "evidence-08ce7e3c11d29b0bd5d92d05",
+        "locator": "call:78,bb78",
+        "quote": "        let supports_parallel = router.tool_supports_parallel(&call);"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "control-binding",
+          "subjectRef": "sequence-80",
+          "targets": [
+            "a-runtime"
+          ]
+        },
+        "id": "evidence-036706d24887ab18cca5a69e",
+        "locator": "call:80,bb80",
+        "quote": "        let tool_runtime = router.tool_runtime(&call.tool_name);"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "control-binding",
+          "subjectRef": "sequence-88",
+          "targets": [
+            "a-timing"
+          ]
+        },
+        "id": "evidence-2c8e990cd3f228d5449d54cf",
+        "locator": "call:88,bb88",
+        "quote": "        let started = Instant::now();"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "control-binding",
+          "subjectRef": "sequence-94",
+          "targets": [
+            "a-timing"
+          ]
+        },
+        "id": "evidence-a6b72e7ca1f2ae044e70237e",
+        "locator": "call:94,bb94",
+        "quote": "        let mut tool_call_timing_guard = ToolCallTimingGuard::capture(\n            started,\n            &session.thread_id,\n            &turn.sub_id,\n            &call,\n            &source,\n            Arc::clone(&session.services.extensions),\n        );"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "control-binding",
+          "subjectRef": "scope-control-timing-guard",
+          "targets": [
+            "a-observers"
+          ]
+        },
+        "id": "evidence-0063e617a977b42a7b09e4e6",
+        "locator": "bb96",
+        "quote": "        if let Some(guard) = tool_call_timing_guard.as_mut() {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "control-binding",
+          "subjectRef": "sequence-99",
+          "targets": [
+            "a-observers"
+          ]
+        },
+        "id": "evidence-f9e79c8956dc3cba555ff8fa",
+        "locator": "call:99,bb99",
+        "quote": "            for observer in session.services.extensions.tool_lifecycle_contributors() {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "control-binding",
+          "subjectRef": "control-trace-source",
+          "targets": [
+            "a-captures"
+          ]
+        },
+        "id": "evidence-c56075ca7f94cb9676f53533",
+        "locator": "bb121",
+        "quote": "        let thread_id = session.thread_id;\n        let trace_source = match &source {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "control-binding",
+          "subjectRef": "sequence-179",
+          "targets": [
+            "a-spawn"
+          ]
+        },
+        "id": "evidence-89e17490f955a08ef0609f8d",
+        "locator": "call:179,bb179",
+        "quote": "        let mut dispatch_handle = AbortOnDropHandle::new(tokio::spawn(\n            async move {\n                let _message_admission = message_admission?;\n                if let Some(tool_runtime) = tool_runtime\n                    && let Some(readiness) = tool_runtime.wait_until_ready(&session)\n                {\n                    readiness.await;\n                }\n\n                let guard = if supports_parallel {\n                    Either::Left(lock.read().await)\n                } else {\n                    Either::Right(lock.write().await)\n                };\n                // Admission through the parallel-execution gate marks the end\n                // of dispatch waiting and the start of handler execution.\n                if let Some(execution_started_at) = execution_started_at {\n                    let _ = execution_started_at.set(Instant::now());\n                }\n\n                let result = router\n                    .dispatch_tool_call_with_state(\n                        session,\n                        step_context,\n                        invocation_cancellation_token,\n                        tracker,\n                        dispatch_call,\n                        source,\n                        dispatch_call_state,\n                    )\n                    .instrument(dispatch_span.clone())\n                    .await;\n                drop(guard);\n                // The sampling loop collects results in order only after its stream ends.\n                // Record readiness here, before either caller encodes or collects the result.\n                // A fatal error still propagates to the caller instead of producing a tool\n                // result; unlike a normal tool failure, it has no readiness event.\n                if !matches!(&result, Err(FunctionCallError::Fatal(_))) {\n                    call_trace::result_ready(\n                        thread_id,\n                        &turn.sub_id,\n                        &dispatch_tool_name,\n                        &dispatch_call_id,\n                        trace_source,\n                    );\n                }\n                result\n            }\n            .in_current_span(),\n        ));"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "control-binding",
+          "subjectRef": "sequence-181",
+          "targets": [
+            "a-wait-future"
+          ]
+        },
+        "id": "evidence-e653ae2660e43362c6bc3bbd",
+        "locator": "call:181,bb181",
+        "quote": "        async move {\n            let mut tool_call_timing_guard = tool_call_timing_guard;\n            let mut result = tokio::select! {\n                res = &mut dispatch_handle => res.map_err(Self::tool_task_join_error)?,\n                _ = cancellation_token.cancelled() => {\n                    if call_state.terminal_outcome_reached.load(Ordering::Acquire) || dispatch_handle.is_finished() {\n                        dispatch_handle.await.map_err(Self::tool_task_join_error)?\n                    } else {\n                        let secs = started.elapsed().as_secs_f32().max(0.1);\n                        abort_dispatch_span.record(\"aborted\", true);\n                        dispatch_handle.abort();\n                        match dispatch_handle.await {\n                            Ok(result) => result,\n                            Err(err) if err.is_cancelled() => {\n                                let response = Self::aborted_response(&call, secs);\n                                call_trace::result_ready(\n                                    thread_id,\n                                    &abort_turn.sub_id,\n                                    &call.tool_name,\n                                    &call.call_id,\n                                    trace_source,\n                                );\n                                notify_tool_aborted(\n                                    abort_session.as_ref(),\n                                    abort_turn.as_ref(),\n                                    call.call_id.as_str(),\n                                    &call.tool_name,\n                                    abort_source,\n                                )\n                                .await;\n                                Ok(response)\n                            }\n                            Err(err) => Err(Self::tool_task_join_error(err)),\n                        }\n                    }\n                },\n            };\n            // Use one completion measurement for logging and response formatting.\n            // Measuring inside a handler would omit routing and output processing.\n            if let Some(timing) = tool_call_timing_guard.as_mut()\n                && let Some(handler_duration_ms) = timing.finish()\n                && let Ok(result) = &mut result\n            {\n                result.result.set_handler_duration_ms(handler_duration_ms);\n            }\n            result\n        }\n        .in_current_span()"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "attachment",
+          "subjectRef": "attachment-purpose-72",
+          "targets": [
+            "P01/A01.71",
+            "purpose-72"
+          ]
+        },
+        "id": "evidence-cdeed7665e51f4570b3acebe",
+        "locator": "call:72,bb72",
+        "quote": "            super::user_messaging::admit_code_mode_send(&self.session, &source, &call.tool_name);"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "attachment",
+          "subjectRef": "attachment-purpose-75",
+          "targets": [
+            "P01/A01.71",
+            "purpose-75"
+          ]
+        },
+        "id": "evidence-ab6b1b1b3aef992d6743f0dc",
+        "locator": "call:75,bb75",
+        "quote": "        self.session\n            .services\n            .executed_tool_calls\n            .record_tool_call(&call, &source, &step_context);"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "attachment",
+          "subjectRef": "attachment-purpose-78",
+          "targets": [
+            "P01/A02.76",
+            "purpose-78"
+          ]
+        },
+        "id": "evidence-cba282448e7f92eef9eb305d",
+        "locator": "call:78,bb78",
+        "quote": "        let supports_parallel = router.tool_supports_parallel(&call);"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "attachment",
+          "subjectRef": "attachment-purpose-80",
+          "targets": [
+            "P01/A02.76",
+            "purpose-80"
+          ]
+        },
+        "id": "evidence-2ec1d82b5c27eec49fe6630e",
+        "locator": "call:80,bb80",
+        "quote": "        let tool_runtime = router.tool_runtime(&call.tool_name);"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "attachment",
+          "subjectRef": "attachment-purpose-88",
+          "targets": [
+            "P02/A03.88",
+            "purpose-88"
+          ]
+        },
+        "id": "evidence-91a30a1e14c25f8556c37d09",
+        "locator": "call:88,bb88",
+        "quote": "        let started = Instant::now();"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "attachment",
+          "subjectRef": "attachment-purpose-94",
+          "targets": [
+            "P02/A03.88",
+            "purpose-94"
+          ]
+        },
+        "id": "evidence-2327309cfc4c775e9a094a6a",
+        "locator": "call:94,bb94",
+        "quote": "        let mut tool_call_timing_guard = ToolCallTimingGuard::capture(\n            started,\n            &session.thread_id,\n            &turn.sub_id,\n            &call,\n            &source,\n            Arc::clone(&session.services.extensions),\n        );"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "attachment",
+          "subjectRef": "attachment-purpose-99",
+          "targets": [
+            "P02/A04.97",
+            "purpose-99"
+          ]
+        },
+        "id": "evidence-d278b2b349e41811a5f7648d",
+        "locator": "call:99,bb99",
+        "quote": "            for observer in session.services.extensions.tool_lifecycle_contributors() {"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "attachment",
+          "subjectRef": "attachment-purpose-179",
+          "targets": [
+            "P03/A07.178",
+            "purpose-179"
+          ]
+        },
+        "id": "evidence-37923a7bff4966d9d0b887fd",
+        "locator": "call:179,bb179",
+        "quote": "        let mut dispatch_handle = AbortOnDropHandle::new(tokio::spawn(\n            async move {\n                let _message_admission = message_admission?;\n                if let Some(tool_runtime) = tool_runtime\n                    && let Some(readiness) = tool_runtime.wait_until_ready(&session)\n                {\n                    readiness.await;\n                }\n\n                let guard = if supports_parallel {\n                    Either::Left(lock.read().await)\n                } else {\n                    Either::Right(lock.write().await)\n                };\n                // Admission through the parallel-execution gate marks the end\n                // of dispatch waiting and the start of handler execution.\n                if let Some(execution_started_at) = execution_started_at {\n                    let _ = execution_started_at.set(Instant::now());\n                }\n\n                let result = router\n                    .dispatch_tool_call_with_state(\n                        session,\n                        step_context,\n                        invocation_cancellation_token,\n                        tracker,\n                        dispatch_call,\n                        source,\n                        dispatch_call_state,\n                    )\n                    .instrument(dispatch_span.clone())\n                    .await;\n                drop(guard);\n                // The sampling loop collects results in order only after its stream ends.\n                // Record readiness here, before either caller encodes or collects the result.\n                // A fatal error still propagates to the caller instead of producing a tool\n                // result; unlike a normal tool failure, it has no readiness event.\n                if !matches!(&result, Err(FunctionCallError::Fatal(_))) {\n                    call_trace::result_ready(\n                        thread_id,\n                        &turn.sub_id,\n                        &dispatch_tool_name,\n                        &dispatch_call_id,\n                        trace_source,\n                    );\n                }\n                result\n            }\n            .in_current_span(),\n        ));"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "attachment",
+          "subjectRef": "attachment-purpose-181",
+          "targets": [
+            "P03/A08.181",
+            "purpose-181"
+          ]
+        },
+        "id": "evidence-6c96dc94ba331d37ddf6b640",
+        "locator": "call:181,bb181",
+        "quote": "        async move {\n            let mut tool_call_timing_guard = tool_call_timing_guard;\n            let mut result = tokio::select! {\n                res = &mut dispatch_handle => res.map_err(Self::tool_task_join_error)?,\n                _ = cancellation_token.cancelled() => {\n                    if call_state.terminal_outcome_reached.load(Ordering::Acquire) || dispatch_handle.is_finished() {\n                        dispatch_handle.await.map_err(Self::tool_task_join_error)?\n                    } else {\n                        let secs = started.elapsed().as_secs_f32().max(0.1);\n                        abort_dispatch_span.record(\"aborted\", true);\n                        dispatch_handle.abort();\n                        match dispatch_handle.await {\n                            Ok(result) => result,\n                            Err(err) if err.is_cancelled() => {\n                                let response = Self::aborted_response(&call, secs);\n                                call_trace::result_ready(\n                                    thread_id,\n                                    &abort_turn.sub_id,\n                                    &call.tool_name,\n                                    &call.call_id,\n                                    trace_source,\n                                );\n                                notify_tool_aborted(\n                                    abort_session.as_ref(),\n                                    abort_turn.as_ref(),\n                                    call.call_id.as_str(),\n                                    &call.tool_name,\n                                    abort_source,\n                                )\n                                .await;\n                                Ok(response)\n                            }\n                            Err(err) => Err(Self::tool_task_join_error(err)),\n                        }\n                    }\n                },\n            };\n            // Use one completion measurement for logging and response formatting.\n            // Measuring inside a handler would omit routing and output processing.\n            if let Some(timing) = tool_call_timing_guard.as_mut()\n                && let Some(handler_duration_ms) = timing.finish()\n                && let Ok(result) = &mut result\n            {\n                result.result.set_handler_duration_ms(handler_duration_ms);\n            }\n            result\n        }\n        .in_current_span()"
+      },
+      {
+        "artifactRef": "source-function",
+        "claim": {
+          "conditions": [],
+          "kind": "inventory",
+          "subjectRef": "ToolCallRuntime::handle_tool_call_with_source",
+          "targets": [
+            "action:P01/A01.71",
+            "action:P01/A02.76",
+            "action:P02/A03.88",
+            "action:P02/A04.97",
+            "action:P02/A05.102",
+            "action:P03/A06.113",
+            "action:P03/A07.178",
+            "action:P03/A08.181",
+            "control:scope-control-timing-guard",
+            "control:control-trace-source",
+            "control:sequence-72",
+            "control:sequence-75",
+            "control:sequence-78",
+            "control:sequence-80",
+            "control:sequence-88",
+            "control:sequence-94",
+            "control:sequence-99",
+            "control:sequence-179",
+            "control:sequence-181"
+          ]
+        },
+        "id": "evidence-aef9b9e4c2987a8d00592a1c",
+        "locator": "bb1,bb185,bb96,bb103,bb121",
+        "quote": "        if let Some(guard) = tool_call_timing_guard.as_mut() {"
+      }
+    ],
+    "inventory": {
+      "actionRefs": [
+        "P01/A01.71",
+        "P01/A02.76",
+        "P02/A03.88",
+        "P02/A04.97",
+        "P02/A05.102",
+        "P03/A06.113",
+        "P03/A07.178",
+        "P03/A08.181"
+      ],
+      "controlRefs": [
+        "scope-control-timing-guard",
+        "control-trace-source",
+        "sequence-72",
+        "sequence-75",
+        "sequence-78",
+        "sequence-80",
+        "sequence-88",
+        "sequence-94",
+        "sequence-99",
+        "sequence-179",
+        "sequence-181"
+      ],
+      "evidenceRefs": [
+        "evidence-aef9b9e4c2987a8d00592a1c"
+      ]
+    },
+    "nodes": [
+      {
+        "basicBlockRefs": [
+          "bb71"
+        ],
+        "evidenceRefs": [
+          "evidence-4f86e56217323ffc68c0032e"
+        ],
+        "id": "entry",
+        "kind": "entry",
+        "label": "收到 ToolCall 与来源",
+        "lineRanges": [
+          {
+            "endLine": 134,
+            "startLine": 134
+          }
+        ]
+      },
+      {
+        "actionRef": "P01/A01.71",
+        "basicBlockRefs": [
+          "bb71",
+          "bb72",
+          "bb73",
+          "bb74",
+          "bb75"
+        ],
+        "evidenceRefs": [
+          "evidence-969c61bc45be9350e78cb88f"
+        ],
+        "id": "a-admission",
+        "kind": "action",
+        "label": "登记调用并取得 code-mode 消息准入结果",
+        "lineRanges": [
+          {
+            "endLine": 138,
+            "startLine": 134
+          }
+        ]
+      },
+      {
+        "actionRef": "P01/A02.76",
+        "basicBlockRefs": [
+          "bb76",
+          "bb77",
+          "bb78",
+          "bb79",
+          "bb80",
+          "bb81",
+          "bb82",
+          "bb83",
+          "bb84",
+          "bb85",
+          "bb86",
+          "bb87"
+        ],
+        "evidenceRefs": [
+          "evidence-d510682a58c258f50337499f"
+        ],
+        "id": "a-runtime",
+        "kind": "action",
+        "label": "选择工具并发能力与 runtime",
+        "lineRanges": [
+          {
+            "endLine": 147,
+            "startLine": 139
+          }
+        ]
+      },
+      {
+        "actionRef": "P02/A03.88",
+        "basicBlockRefs": [
+          "bb88",
+          "bb89",
+          "bb90",
+          "bb91",
+          "bb92",
+          "bb93",
+          "bb94",
+          "bb95",
+          "bb96"
+        ],
+        "evidenceRefs": [
+          "evidence-e37e6fb43da0f34e206c36ec"
+        ],
+        "id": "a-timing",
+        "kind": "action",
+        "label": "开始全流程计时并捕获 timing guard",
+        "lineRanges": [
+          {
+            "endLine": 157,
+            "startLine": 148
+          }
+        ]
+      },
+      {
+        "actionRef": "P02/A04.97",
+        "basicBlockRefs": [
+          "bb97",
+          "bb98",
+          "bb99",
+          "bb100",
+          "bb101"
+        ],
+        "evidenceRefs": [
+          "evidence-7c03fad648b34940f43a3d2b"
+        ],
+        "id": "a-observers",
+        "kind": "action",
+        "label": "取得待通知的生命周期观察者",
+        "lineRanges": [
+          {
+            "endLine": 158,
+            "startLine": 157
+          }
+        ]
+      },
+      {
+        "actionRef": "P02/A05.102",
+        "basicBlockRefs": [
+          "bb102",
+          "bb103",
+          "bb105",
+          "bb106",
+          "bb107",
+          "bb108",
+          "bb109",
+          "bb110",
+          "bb111"
+        ],
+        "evidenceRefs": [
+          "evidence-f55f699ca30e2e009225bf83"
+        ],
+        "id": "a-notify",
+        "kind": "action",
+        "label": "逐个通知工具已进入 dispatch",
+        "lineRanges": [
+          {
+            "endLine": 164,
+            "startLine": 158
+          }
+        ]
+      },
+      {
+        "actionRef": "P03/A06.113",
+        "basicBlockRefs": [
+          "bb112",
+          "bb113",
+          "bb114",
+          "bb115",
+          "bb116",
+          "bb117",
+          "bb118",
+          "bb119",
+          "bb120",
+          "bb121",
+          "bb122",
+          "bb123",
+          "bb124",
+          "bb125",
+          "bb126",
+          "bb142",
+          "bb144",
+          "bb167",
+          "bb169",
+          "bb177"
+        ],
+        "evidenceRefs": [
+          "evidence-289e405780eab49816eb56d6"
+        ],
+        "id": "a-captures",
+        "kind": "action",
+        "label": "准备执行任务与取消处理各自的上下文",
+        "lineRanges": [
+          {
+            "endLine": 176,
+            "startLine": 167
+          },
+          {
+            "endLine": 178,
+            "startLine": 178
+          },
+          {
+            "endLine": 180,
+            "startLine": 180
+          },
+          {
+            "endLine": 183,
+            "startLine": 182
+          },
+          {
+            "endLine": 194,
+            "startLine": 186
+          }
+        ]
+      },
+      {
+        "actionRef": "P03/A07.178",
+        "basicBlockRefs": [
+          "bb178",
+          "bb179",
+          "bb180"
+        ],
+        "broadRangeReason": "源码 196–245 与 247–294 的 async move 字面量在 MIR 构造/包装调用上带整段 span；本节点只承诺 spawn 或返回 Future，闭包内执行发生在另一 body。宽高亮用于定位完整捕获表达式。",
+        "evidenceRefs": [
+          "evidence-b9f95fd6dabd8a1a26ac9428"
+        ],
+        "id": "a-spawn",
+        "kind": "action",
+        "label": "立即启动拥有并发门与 router 分派的 task",
+        "lineRanges": [
+          {
+            "endLine": 245,
+            "startLine": 196
+          }
+        ]
+      },
+      {
+        "actionRef": "P03/A08.181",
+        "basicBlockRefs": [
+          "bb181",
+          "bb184",
+          "bb185"
+        ],
+        "broadRangeReason": "源码 196–245 与 247–294 的 async move 字面量在 MIR 构造/包装调用上带整段 span；本节点只承诺 spawn 或返回 Future，闭包内执行发生在另一 body。宽高亮用于定位完整捕获表达式。",
+        "evidenceRefs": [
+          "evidence-f1555d2cc30ec7a5679a24df"
+        ],
+        "id": "a-wait-future",
+        "kind": "action",
+        "label": "交回等待结果并处理取消的 Future",
+        "lineRanges": [
+          {
+            "endLine": 294,
+            "startLine": 247
+          }
+        ]
+      },
+      {
+        "basicBlockRefs": [
+          "bb96"
+        ],
+        "decisionRef": "decision-timing-guard",
+        "evidenceRefs": [
+          "evidence-de0662b06d097daa5621600d"
+        ],
+        "id": "d-timing-guard",
+        "kind": "decision",
+        "label": "是否捕获到 timing guard",
+        "lineRanges": [
+          {
+            "endLine": 157,
+            "startLine": 157
+          }
+        ]
+      },
+      {
+        "basicBlockRefs": [
+          "bb103"
+        ],
+        "decisionRef": "decision-observer-next",
+        "evidenceRefs": [
+          "evidence-9be0ba0d6f27738c543a35a8"
+        ],
+        "id": "d-observer-next",
+        "kind": "decision",
+        "label": "是否还有生命周期 observer",
+        "lineRanges": [
+          {
+            "endLine": 158,
+            "startLine": 158
+          }
+        ]
+      },
+      {
+        "basicBlockRefs": [
+          "bb121"
+        ],
+        "decisionRef": "decision-trace-source",
+        "evidenceRefs": [
+          "evidence-20b29cd9fea98c4667ed5a62"
+        ],
+        "id": "d-trace-source",
+        "kind": "decision",
+        "label": "调用来源属于 Direct 还是 CodeMode",
+        "lineRanges": [
+          {
+            "endLine": 176,
+            "startLine": 176
+          }
+        ]
+      },
+      {
+        "basicBlockRefs": [
+          "bb185"
+        ],
+        "evidenceRefs": [
+          "evidence-f7ee52e78b1dfc6a0c9616f8"
+        ],
+        "id": "terminal-185",
+        "kind": "terminal",
+        "label": "交付已经确定的结果",
+        "lineRanges": [],
+        "outcome": "return",
+        "sourceRangeReason": "No precise semantic operation span in the recorded BBs; only compiler state, storage, drop, cleanup or enclosing-scope context. Full source remains available."
+      }
+    ],
+    "rootActorRef": "actor-main",
+    "tasks": []
+  },
+  "fixture": {
+    "actors": [
+      {
+        "actorId": "actor-main",
+        "bodyRef": "f5ab0280c7d978027f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
+        "color": "#327B98",
+        "kind": "body",
+        "label": "ToolCallRuntime::handle_tool_call_with_source",
+        "sourceNodeRef": "f5ab0280c7d978027f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
+      },
+      {
+        "actorId": "crate-0",
+        "children": [
+          {
+            "actorId": "module-0",
+            "children": [
+              {
+                "actorId": "actor-72",
+                "bodyRef": "7018f4d51975e2857f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
+                "color": "#567B5A",
+                "kind": "body",
+                "label": "admit_code_mode_send",
+                "sourceNodeRef": "7018f4d51975e2857f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
+              }
+            ],
+            "color": "#567B5A",
+            "kind": "module",
+            "label": "tools::user_messaging",
+            "sourceNodeRef": "7fbe7166b02a82547f347cbdcc2b778a"
+          },
+          {
+            "actorId": "module-1",
+            "children": [
+              {
+                "actorId": "actor-75",
+                "bodyRef": "f6b8c6530836677e7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
+                "color": "#567B5A",
+                "kind": "body",
+                "label": "ExecutedToolCalls::record_tool_call",
+                "sourceNodeRef": "f6b8c6530836677e7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
+              }
+            ],
+            "color": "#567B5A",
+            "kind": "module",
+            "label": "tools::executed_tool_calls",
+            "sourceNodeRef": "ff50358321e190fd7f347cbdcc2b778a"
+          },
+          {
+            "actorId": "module-2",
+            "children": [
+              {
+                "actorId": "actor-78",
+                "bodyRef": "7a68e615db48398f7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
+                "color": "#567B5A",
+                "kind": "body",
+                "label": "ToolRouter::tool_supports_parallel",
+                "sourceNodeRef": "7a68e615db48398f7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
+              },
+              {
+                "actorId": "actor-80",
+                "bodyRef": "7aa24bf3d1b049427f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
+                "color": "#567B5A",
+                "kind": "body",
+                "label": "ToolRouter::tool_runtime",
+                "sourceNodeRef": "7aa24bf3d1b049427f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
+              }
+            ],
+            "color": "#567B5A",
+            "kind": "module",
+            "label": "tools::router",
+            "sourceNodeRef": "0842d5d216317e2b7f347cbdcc2b778a"
+          },
+          {
+            "actorId": "module-3",
+            "children": [
+              {
+                "actorId": "actor-94",
+                "bodyRef": "742949c3b08e2d8a7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
+                "color": "#567B5A",
+                "kind": "body",
+                "label": "ToolCallTimingGuard::capture",
+                "sourceNodeRef": "742949c3b08e2d8a7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
+              },
+              {
+                "actorId": "actor-179",
+                "bodyRef": "fe2e95c3e6be137e7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
+                "color": "#567B5A",
+                "kind": "body",
+                "label": "ToolCallRuntime::handle_tool_call_with_source::{closure#1}",
+                "sourceNodeRef": "fe2e95c3e6be137e7f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
+              },
+              {
+                "actorId": "actor-181",
+                "bodyRef": "f361ae0baf35f2e37f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main",
+                "color": "#567B5A",
+                "kind": "body",
+                "label": "ToolCallRuntime::handle_tool_call_with_source::{closure#2}",
+                "sourceNodeRef": "f361ae0baf35f2e37f347cbdcc2b778a|mir_drops_elaborated_and_const_checked|main"
+              }
+            ],
+            "color": "#567B5A",
+            "kind": "module",
+            "label": "tools::parallel",
+            "sourceNodeRef": "2d0c5be8daf841137f347cbdcc2b778a"
+          }
+        ],
+        "color": "#567B5A",
+        "kind": "crate",
+        "label": "codex_core",
+        "sourceNodeRef": "7f347cbdcc2b778a7f347cbdcc2b778a"
+      },
+      {
+        "actorId": "crate-1",
+        "children": [
+          {
+            "actorId": "module-4",
+            "children": [
+              {
+                "actorId": "actor-99",
+                "bodyRef": "156c1dd476e84970f696af05e8b8761e|mir_drops_elaborated_and_const_checked|main",
+                "color": "#567B5A",
+                "kind": "body",
+                "label": "tool_lifecycle_contributors",
+                "sourceNodeRef": "156c1dd476e84970f696af05e8b8761e|mir_drops_elaborated_and_const_checked|main"
+              }
+            ],
+            "color": "#567B5A",
+            "kind": "module",
+            "label": "registry",
+            "sourceNodeRef": "e7e16096d172688df696af05e8b8761e"
+          }
+        ],
+        "color": "#567B5A",
+        "kind": "crate",
+        "label": "codex_extension_api",
+        "sourceNodeRef": "f696af05e8b8761ef696af05e8b8761e"
+      }
+    ],
+    "messages": []
+  },
+  "functionSource": {
+    "definitionRef": "f5ab0280c7d978027f347cbdcc2b778a",
+    "endLine": 295,
+    "file": "core/src/tools/parallel.rs",
+    "lines": [
+      "    pub(crate) fn handle_tool_call_with_source(",
+      "        self,",
+      "        step_context: Arc<StepContext>,",
+      "        call: ToolCall,",
+      "        source: ToolCallSource,",
+      "        cancellation_token: CancellationToken,",
+      "        call_state: Arc<ToolCallState>,",
+      "    ) -> impl std::future::Future<Output = Result<AnyToolResult, FunctionCallError>> {",
+      "        let message_admission =",
+      "            super::user_messaging::admit_code_mode_send(&self.session, &source, &call.tool_name);",
+      "        self.session",
+      "            .services",
+      "            .executed_tool_calls",
+      "            .record_tool_call(&call, &source, &step_context);",
+      "        let router = &step_context.tool_router;",
+      "        let supports_parallel = router.tool_supports_parallel(&call);",
+      "        let tool_runtime = router.tool_runtime(&call.tool_name);",
+      "        let router = Arc::clone(router);",
+      "        let session = Arc::clone(&self.session);",
+      "        let turn = Arc::clone(&step_context.turn);",
+      "        let tracker = Arc::clone(&self.tracker);",
+      "        let lock = Arc::clone(&self.parallel_execution);",
+      "        let invocation_cancellation_token = cancellation_token.clone();",
+      "        let started = Instant::now();",
+      "        let mut tool_call_timing_guard = ToolCallTimingGuard::capture(",
+      "            started,",
+      "            &session.thread_id,",
+      "            &turn.sub_id,",
+      "            &call,",
+      "            &source,",
+      "            Arc::clone(&session.services.extensions),",
+      "        );",
+      "        if let Some(guard) = tool_call_timing_guard.as_mut() {",
+      "            for observer in session.services.extensions.tool_lifecycle_contributors() {",
+      "                observer.on_tool_dispatch(codex_extension_api::ToolDispatchInput {",
+      "                    thread_id: &guard.conversation_id,",
+      "                    turn_id: &guard.turn_id,",
+      "                    call_id: &guard.call_id,",
+      "                    tool_name: &guard.tool_name,",
+      "                });",
+      "            }",
+      "        }",
+      "        let execution_started_at = tool_call_timing_guard",
+      "            .as_ref()",
+      "            .map(|timing| Arc::clone(&timing.execution_started_at));",
+      "        let abort_session = Arc::clone(&session);",
+      "        let abort_source = source.clone();",
+      "        let abort_turn = Arc::clone(&turn);",
+      "        let dispatch_call_state = Arc::clone(&call_state);",
+      "        let dispatch_call = call.clone();",
+      "        let thread_id = session.thread_id;",
+      "        let trace_source = match &source {",
+      "            ToolCallSource::Direct | ToolCallSource::DirectPlaintextMessage => {",
+      "                call_trace::Source::Direct",
+      "            }",
+      "            ToolCallSource::CodeMode { .. } => call_trace::Source::CodeMode,",
+      "        };",
+      "        let dispatch_tool_name = call.tool_name.clone();",
+      "        let dispatch_call_id = call.call_id.clone();",
+      "",
+      "        // Code-mode callbacks can resume outside the turn's local span ancestry.",
+      "        let dispatch_span = trace_span!(",
+      "            \"dispatch_tool_call_with_code_mode_result\",",
+      "            otel.name = %call.tool_name,",
+      "            tool_name = %call.tool_name,",
+      "            thread.id = %session.thread_id,",
+      "            call_id = call.call_id.as_str(),",
+      "            aborted = false,",
+      "        );",
+      "        let abort_dispatch_span = dispatch_span.clone();",
+      "",
+      "        let mut dispatch_handle = AbortOnDropHandle::new(tokio::spawn(",
+      "            async move {",
+      "                let _message_admission = message_admission?;",
+      "                if let Some(tool_runtime) = tool_runtime",
+      "                    && let Some(readiness) = tool_runtime.wait_until_ready(&session)",
+      "                {",
+      "                    readiness.await;",
+      "                }",
+      "",
+      "                let guard = if supports_parallel {",
+      "                    Either::Left(lock.read().await)",
+      "                } else {",
+      "                    Either::Right(lock.write().await)",
+      "                };",
+      "                // Admission through the parallel-execution gate marks the end",
+      "                // of dispatch waiting and the start of handler execution.",
+      "                if let Some(execution_started_at) = execution_started_at {",
+      "                    let _ = execution_started_at.set(Instant::now());",
+      "                }",
+      "",
+      "                let result = router",
+      "                    .dispatch_tool_call_with_state(",
+      "                        session,",
+      "                        step_context,",
+      "                        invocation_cancellation_token,",
+      "                        tracker,",
+      "                        dispatch_call,",
+      "                        source,",
+      "                        dispatch_call_state,",
+      "                    )",
+      "                    .instrument(dispatch_span.clone())",
+      "                    .await;",
+      "                drop(guard);",
+      "                // The sampling loop collects results in order only after its stream ends.",
+      "                // Record readiness here, before either caller encodes or collects the result.",
+      "                // A fatal error still propagates to the caller instead of producing a tool",
+      "                // result; unlike a normal tool failure, it has no readiness event.",
+      "                if !matches!(&result, Err(FunctionCallError::Fatal(_))) {",
+      "                    call_trace::result_ready(",
+      "                        thread_id,",
+      "                        &turn.sub_id,",
+      "                        &dispatch_tool_name,",
+      "                        &dispatch_call_id,",
+      "                        trace_source,",
+      "                    );",
+      "                }",
+      "                result",
+      "            }",
+      "            .in_current_span(),",
+      "        ));",
+      "",
+      "        async move {",
+      "            let mut tool_call_timing_guard = tool_call_timing_guard;",
+      "            let mut result = tokio::select! {",
+      "                res = &mut dispatch_handle => res.map_err(Self::tool_task_join_error)?,",
+      "                _ = cancellation_token.cancelled() => {",
+      "                    if call_state.terminal_outcome_reached.load(Ordering::Acquire) || dispatch_handle.is_finished() {",
+      "                        dispatch_handle.await.map_err(Self::tool_task_join_error)?",
+      "                    } else {",
+      "                        let secs = started.elapsed().as_secs_f32().max(0.1);",
+      "                        abort_dispatch_span.record(\"aborted\", true);",
+      "                        dispatch_handle.abort();",
+      "                        match dispatch_handle.await {",
+      "                            Ok(result) => result,",
+      "                            Err(err) if err.is_cancelled() => {",
+      "                                let response = Self::aborted_response(&call, secs);",
+      "                                call_trace::result_ready(",
+      "                                    thread_id,",
+      "                                    &abort_turn.sub_id,",
+      "                                    &call.tool_name,",
+      "                                    &call.call_id,",
+      "                                    trace_source,",
+      "                                );",
+      "                                notify_tool_aborted(",
+      "                                    abort_session.as_ref(),",
+      "                                    abort_turn.as_ref(),",
+      "                                    call.call_id.as_str(),",
+      "                                    &call.tool_name,",
+      "                                    abort_source,",
+      "                                )",
+      "                                .await;",
+      "                                Ok(response)",
+      "                            }",
+      "                            Err(err) => Err(Self::tool_task_join_error(err)),",
+      "                        }",
+      "                    }",
+      "                },",
+      "            };",
+      "            // Use one completion measurement for logging and response formatting.",
+      "            // Measuring inside a handler would omit routing and output processing.",
+      "            if let Some(timing) = tool_call_timing_guard.as_mut()",
+      "                && let Some(handler_duration_ms) = timing.finish()",
+      "                && let Ok(result) = &mut result",
+      "            {",
+      "                result.result.set_handler_duration_ms(handler_duration_ms);",
+      "            }",
+      "            result",
+      "        }",
+      "        .in_current_span()",
+      "    }"
+    ],
+    "sourcePath": "source/parallel.rs",
+    "startLine": 125
+  },
+  "initialState": {
+    "expandedActionIds": [],
+    "expandedActorIds": [],
+    "expandedGoalIds": [],
+    "expandedPhaseIds": []
+  },
+  "messagePlacements": [
+    {
+      "branchPath": [],
+      "controlRef": "sequence-72",
+      "messageRef": "request-72",
+      "rootControlRef": "sequence-72"
+    },
+    {
+      "branchPath": [],
+      "controlRef": "sequence-72",
+      "messageRef": "return-72",
+      "rootControlRef": "sequence-72"
+    },
+    {
+      "branchPath": [],
+      "controlRef": "sequence-75",
+      "messageRef": "request-75",
+      "rootControlRef": "sequence-75"
+    },
+    {
+      "branchPath": [],
+      "controlRef": "sequence-75",
+      "messageRef": "return-75",
+      "rootControlRef": "sequence-75"
+    },
+    {
+      "branchPath": [],
+      "controlRef": "sequence-78",
+      "messageRef": "request-78",
+      "rootControlRef": "sequence-78"
+    },
+    {
+      "branchPath": [],
+      "controlRef": "sequence-78",
+      "messageRef": "return-78",
+      "rootControlRef": "sequence-78"
+    },
+    {
+      "branchPath": [],
+      "controlRef": "sequence-80",
+      "messageRef": "request-80",
+      "rootControlRef": "sequence-80"
+    },
+    {
+      "branchPath": [],
+      "controlRef": "sequence-80",
+      "messageRef": "return-80",
+      "rootControlRef": "sequence-80"
+    },
+    {
+      "branchPath": [],
+      "controlRef": "sequence-88",
+      "messageRef": "self-88",
+      "rootControlRef": "sequence-88"
+    },
+    {
+      "branchPath": [],
+      "controlRef": "sequence-94",
+      "messageRef": "request-94",
+      "rootControlRef": "sequence-94"
+    },
+    {
+      "branchPath": [],
+      "controlRef": "sequence-94",
+      "messageRef": "return-94",
+      "rootControlRef": "sequence-94"
+    },
+    {
+      "branchPath": [],
+      "controlRef": "sequence-99",
+      "messageRef": "request-99",
+      "rootControlRef": "sequence-99"
+    },
+    {
+      "branchPath": [],
+      "controlRef": "sequence-99",
+      "messageRef": "return-99",
+      "rootControlRef": "sequence-99"
+    },
+    {
+      "branchPath": [],
+      "controlRef": "sequence-179",
+      "messageRef": "request-179",
+      "rootControlRef": "sequence-179"
+    },
+    {
+      "branchPath": [],
+      "controlRef": "sequence-179",
+      "messageRef": "return-179",
+      "rootControlRef": "sequence-179"
+    },
+    {
+      "branchPath": [],
+      "controlRef": "sequence-181",
+      "messageRef": "request-181",
+      "rootControlRef": "sequence-181"
+    },
+    {
+      "branchPath": [],
+      "controlRef": "sequence-181",
+      "messageRef": "return-181",
+      "rootControlRef": "sequence-181"
+    }
+  ],
+  "messages": [
+    {
+      "bindingRef": "call:72",
+      "fromActorId": "actor-main",
+      "invocationRef": "invocation-72",
+      "kind": "request",
+      "label": "取得 code-mode send 的 message_admission",
+      "messageId": "request-72",
+      "pair": "pair-72",
+      "stage": "business-request",
+      "toActorId": "actor-72"
+    },
+    {
+      "bindingRef": "call:72",
+      "fromActorId": "actor-72",
+      "invocationRef": "invocation-72",
+      "kind": "return",
+      "label": "保存准入 Result，实际 ? 在后台任务执行",
+      "messageId": "return-72",
+      "pair": "pair-72",
+      "stage": "business-completion",
+      "toActorId": "actor-main"
+    },
+    {
+      "bindingRef": "call:75",
+      "fromActorId": "actor-main",
+      "invocationRef": "invocation-75",
+      "kind": "request",
+      "label": "向 ExecutedToolCalls 记录 call/source/step_context",
+      "messageId": "request-75",
+      "pair": "pair-75",
+      "stage": "business-request",
+      "toActorId": "actor-75"
+    },
+    {
+      "bindingRef": "call:75",
+      "fromActorId": "actor-75",
+      "invocationRef": "invocation-75",
+      "kind": "return",
+      "label": "调用已进入本 turn 的执行记录",
+      "messageId": "return-75",
+      "pair": "pair-75",
+      "stage": "business-completion",
+      "toActorId": "actor-main"
+    },
+    {
+      "bindingRef": "call:78",
+      "fromActorId": "actor-main",
+      "invocationRef": "invocation-78",
+      "kind": "request",
+      "label": "查询工具是否支持并行执行",
+      "messageId": "request-78",
+      "pair": "pair-78",
+      "stage": "business-request",
+      "toActorId": "actor-78"
+    },
+    {
+      "bindingRef": "call:78",
+      "fromActorId": "actor-78",
+      "invocationRef": "invocation-78",
+      "kind": "return",
+      "label": "保存 supports_parallel，供后台选择读锁或写锁",
+      "messageId": "return-78",
+      "pair": "pair-78",
+      "stage": "business-completion",
+      "toActorId": "actor-main"
+    },
+    {
+      "bindingRef": "call:80",
+      "fromActorId": "actor-main",
+      "invocationRef": "invocation-80",
+      "kind": "request",
+      "label": "按 tool_name 查询工具 runtime",
+      "messageId": "request-80",
+      "pair": "pair-80",
+      "stage": "business-request",
+      "toActorId": "actor-80"
+    },
+    {
+      "bindingRef": "call:80",
+      "fromActorId": "actor-80",
+      "invocationRef": "invocation-80",
+      "kind": "return",
+      "label": "保存可选 CoreToolRuntime，供后台 readiness 等待",
+      "messageId": "return-80",
+      "pair": "pair-80",
+      "stage": "business-completion",
+      "toActorId": "actor-main"
+    },
+    {
+      "bindingRef": "call:88",
+      "fromActorId": "actor-main",
+      "invocationRef": "invocation-88",
+      "kind": "self",
+      "label": "得到 started，后续计时包含排队、执行与输出处理",
+      "messageId": "self-88",
+      "pair": null,
+      "stage": "business-request",
+      "toActorId": "actor-main"
+    },
+    {
+      "bindingRef": "call:94",
+      "fromActorId": "actor-main",
+      "invocationRef": "invocation-94",
+      "kind": "request",
+      "label": "捕获本次调用的 ToolCallTimingGuard",
+      "messageId": "request-94",
+      "pair": "pair-94",
+      "stage": "business-request",
+      "toActorId": "actor-94"
+    },
+    {
+      "bindingRef": "call:94",
+      "fromActorId": "actor-94",
+      "invocationRef": "invocation-94",
+      "kind": "return",
+      "label": "得到可选 timing guard",
+      "messageId": "return-94",
+      "pair": "pair-94",
+      "stage": "business-completion",
+      "toActorId": "actor-main"
+    },
+    {
+      "bindingRef": "call:99",
+      "fromActorId": "actor-main",
+      "invocationRef": "invocation-99",
+      "kind": "request",
+      "label": "读取已注册的 tool_lifecycle_contributors",
+      "messageId": "request-99",
+      "pair": "pair-99",
+      "stage": "business-request",
+      "toActorId": "actor-99"
+    },
+    {
+      "bindingRef": "call:99",
+      "fromActorId": "actor-99",
+      "invocationRef": "invocation-99",
+      "kind": "return",
+      "label": "得到待逐个通知的 observer 列表",
+      "messageId": "return-99",
+      "pair": "pair-99",
+      "stage": "business-completion",
+      "toActorId": "actor-main"
+    },
+    {
+      "bindingRef": "call:179",
+      "fromActorId": "actor-main",
+      "invocationRef": "invocation-179",
+      "kind": "request",
+      "label": "spawn 准入、readiness、并发门与 router 分派 coroutine",
+      "messageId": "request-179",
+      "pair": "pair-179",
+      "stage": "business-request",
+      "toActorId": "actor-179"
+    },
+    {
+      "bindingRef": "call:179",
+      "fromActorId": "actor-179",
+      "invocationRef": "invocation-179",
+      "kind": "return",
+      "label": "立即取得 JoinHandle；task 可能与后续同步准备并发推进",
+      "messageId": "return-179",
+      "pair": "pair-179",
+      "stage": "business-completion",
+      "toActorId": "actor-main"
+    },
+    {
+      "bindingRef": "call:181",
+      "fromActorId": "actor-main",
+      "invocationRef": "invocation-181",
+      "kind": "request",
+      "label": "构造等待 dispatch 或 cancellation 的 coroutine",
+      "messageId": "request-181",
+      "pair": "pair-181",
+      "stage": "business-request",
+      "toActorId": "actor-181"
+    },
+    {
+      "bindingRef": "call:181",
+      "fromActorId": "actor-181",
+      "invocationRef": "invocation-181",
+      "kind": "return",
+      "label": "交回惰性 Future；取消与完成计时逻辑在调用方 poll 后执行",
+      "messageId": "return-181",
+      "pair": "pair-181",
+      "stage": "business-completion",
+      "toActorId": "actor-main"
+    }
+  ],
+  "phases": [
+    {
+      "basicBlockRefs": [
+        "bb71",
+        "bb72",
+        "bb73",
+        "bb74",
+        "bb75",
+        "bb76",
+        "bb77",
+        "bb78",
+        "bb79",
+        "bb80",
+        "bb81",
+        "bb82",
+        "bb83",
+        "bb84",
+        "bb85",
+        "bb86",
+        "bb87"
+      ],
+      "boundaryControlRefs": [],
+      "color": "#327B98",
+      "goals": [
+        {
+          "actions": [
+            {
+              "basicBlockRefs": [
+                "bb71",
+                "bb72",
+                "bb73",
+                "bb74",
+                "bb75"
+              ],
+              "controlRefs": [
+                "sequence-72",
+                "sequence-75"
+              ],
+              "id": "P01/A01.71",
+              "label": "登记调用并取得 code-mode 消息准入结果",
+              "lineRanges": [
+                {
+                  "endLine": 138,
+                  "startLine": 134
+                }
+              ],
+              "renderId": "P01_A01.71"
+            },
+            {
+              "basicBlockRefs": [
+                "bb76",
+                "bb77",
+                "bb78",
+                "bb79",
+                "bb80",
+                "bb81",
+                "bb82",
+                "bb83",
+                "bb84",
+                "bb85",
+                "bb86",
+                "bb87"
+              ],
+              "controlRefs": [
+                "sequence-78",
+                "sequence-80"
+              ],
+              "id": "P01/A02.76",
+              "label": "选择工具并发能力与 runtime",
+              "lineRanges": [
+                {
+                  "endLine": 147,
+                  "startLine": 139
+                }
+              ],
+              "renderId": "P01_A02.76"
+            }
+          ],
+          "basicBlockRefs": [
+            "bb71",
+            "bb72",
+            "bb73",
+            "bb74",
+            "bb75",
+            "bb76",
+            "bb77",
+            "bb78",
+            "bb79",
+            "bb80",
+            "bb81",
+            "bb82",
+            "bb83",
+            "bb84",
+            "bb85",
+            "bb86",
+            "bb87"
+          ],
+          "id": "sem:P01:dispatch-config",
+          "label": "取得可用于后台分派的调用配置",
+          "lineRanges": [
+            {
+              "endLine": 147,
+              "startLine": 134
+            }
+          ],
+          "renderId": "sem:P01:dispatch-config"
+        }
+      ],
+      "id": "P01",
+      "label": "建立调用登记与路由配置",
+      "lineRanges": [
+        {
+          "endLine": 147,
+          "startLine": 134
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb88",
+        "bb89",
+        "bb90",
+        "bb91",
+        "bb92",
+        "bb93",
+        "bb94",
+        "bb95",
+        "bb96",
+        "bb97",
+        "bb98",
+        "bb99",
+        "bb100",
+        "bb101",
+        "bb102",
+        "bb103",
+        "bb105",
+        "bb106",
+        "bb107",
+        "bb108",
+        "bb109",
+        "bb110",
+        "bb111"
+      ],
+      "boundaryControlRefs": [],
+      "color": "#327B98",
+      "goals": [
+        {
+          "actions": [
+            {
+              "basicBlockRefs": [
+                "bb88",
+                "bb89",
+                "bb90",
+                "bb91",
+                "bb92",
+                "bb93",
+                "bb94",
+                "bb95",
+                "bb96"
+              ],
+              "controlRefs": [
+                "sequence-88",
+                "sequence-94"
+              ],
+              "id": "P02/A03.88",
+              "label": "开始全流程计时并捕获 timing guard",
+              "lineRanges": [
+                {
+                  "endLine": 157,
+                  "startLine": 148
+                }
+              ],
+              "renderId": "P02_A03.88"
+            },
+            {
+              "basicBlockRefs": [
+                "bb97",
+                "bb98",
+                "bb99",
+                "bb100",
+                "bb101"
+              ],
+              "controlRefs": [
+                "scope-control-timing-guard",
+                "sequence-99"
+              ],
+              "id": "P02/A04.97",
+              "label": "取得待通知的生命周期观察者",
+              "lineRanges": [
+                {
+                  "endLine": 158,
+                  "startLine": 157
+                }
+              ],
+              "renderId": "P02_A04.97"
+            },
+            {
+              "basicBlockRefs": [
+                "bb102",
+                "bb103",
+                "bb105",
+                "bb106",
+                "bb107",
+                "bb108",
+                "bb109",
+                "bb110",
+                "bb111"
+              ],
+              "controlRefs": [],
+              "id": "P02/A05.102",
+              "label": "逐个通知工具已进入 dispatch",
+              "lineRanges": [
+                {
+                  "endLine": 164,
+                  "startLine": 158
+                }
+              ],
+              "renderId": "P02_A05.102"
+            }
+          ],
+          "basicBlockRefs": [
+            "bb88",
+            "bb89",
+            "bb90",
+            "bb91",
+            "bb92",
+            "bb93",
+            "bb94",
+            "bb95",
+            "bb96",
+            "bb97",
+            "bb98",
+            "bb99",
+            "bb100",
+            "bb101",
+            "bb102",
+            "bb103",
+            "bb105",
+            "bb106",
+            "bb107",
+            "bb108",
+            "bb109",
+            "bb110",
+            "bb111"
+          ],
+          "id": "sem:P02:lifecycle",
+          "label": "为本次调用建立计时与 dispatch 通知",
+          "lineRanges": [
+            {
+              "endLine": 164,
+              "startLine": 148
+            }
+          ],
+          "renderId": "sem:P02:lifecycle"
+        }
+      ],
+      "id": "P02",
+      "label": "建立全流程计时并通知生命周期观察者",
+      "lineRanges": [
+        {
+          "endLine": 164,
+          "startLine": 148
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb112",
+        "bb113",
+        "bb114",
+        "bb115",
+        "bb116",
+        "bb117",
+        "bb118",
+        "bb119",
+        "bb120",
+        "bb121",
+        "bb122",
+        "bb123",
+        "bb124",
+        "bb125",
+        "bb126",
+        "bb142",
+        "bb144",
+        "bb167",
+        "bb169",
+        "bb177",
+        "bb178",
+        "bb179",
+        "bb180",
+        "bb181",
+        "bb184",
+        "bb185"
+      ],
+      "boundaryControlRefs": [],
+      "color": "#327B98",
+      "goals": [
+        {
+          "actions": [
+            {
+              "basicBlockRefs": [
+                "bb112",
+                "bb113",
+                "bb114",
+                "bb115",
+                "bb116",
+                "bb117",
+                "bb118",
+                "bb119",
+                "bb120",
+                "bb121",
+                "bb122",
+                "bb123",
+                "bb124",
+                "bb125",
+                "bb126",
+                "bb142",
+                "bb144",
+                "bb167",
+                "bb169",
+                "bb177"
+              ],
+              "controlRefs": [
+                "control-trace-source"
+              ],
+              "id": "P03/A06.113",
+              "label": "准备执行任务与取消处理各自的上下文",
+              "lineRanges": [
+                {
+                  "endLine": 176,
+                  "startLine": 167
+                },
+                {
+                  "endLine": 178,
+                  "startLine": 178
+                },
+                {
+                  "endLine": 180,
+                  "startLine": 180
+                },
+                {
+                  "endLine": 183,
+                  "startLine": 182
+                },
+                {
+                  "endLine": 194,
+                  "startLine": 186
+                }
+              ],
+              "renderId": "P03_A06.113"
+            }
+          ],
+          "basicBlockRefs": [
+            "bb112",
+            "bb113",
+            "bb114",
+            "bb115",
+            "bb116",
+            "bb117",
+            "bb118",
+            "bb119",
+            "bb120",
+            "bb121",
+            "bb122",
+            "bb123",
+            "bb124",
+            "bb125",
+            "bb126",
+            "bb142",
+            "bb144",
+            "bb167",
+            "bb169",
+            "bb177"
+          ],
+          "id": "sem:P03:task-context",
+          "label": "为执行和取消保留各自需要的数据",
+          "lineRanges": [
+            {
+              "endLine": 176,
+              "startLine": 167
+            },
+            {
+              "endLine": 178,
+              "startLine": 178
+            },
+            {
+              "endLine": 180,
+              "startLine": 180
+            },
+            {
+              "endLine": 183,
+              "startLine": 182
+            },
+            {
+              "endLine": 194,
+              "startLine": 186
+            }
+          ],
+          "renderId": "sem:P03:task-context"
+        },
+        {
+          "actions": [
+            {
+              "basicBlockRefs": [
+                "bb178",
+                "bb179",
+                "bb180"
+              ],
+              "broadRangeReason": "本同步函数在源码 196–245 构造并 spawn 第一段 async move，在 247–294 构造并返回第二段 async move；MIR aggregate/包装调用的 span 覆盖完整字面量，故高亮较宽。这里说明构造、捕获与移交时机，不声称同步执行了闭包内的等待或取消流程。",
+              "controlRefs": [
+                "sequence-179"
+              ],
+              "id": "P03/A07.178",
+              "label": "立即启动拥有并发门与 router 分派的 task",
+              "lineRanges": [
+                {
+                  "endLine": 245,
+                  "startLine": 196
+                }
+              ],
+              "renderId": "P03_A07.178"
+            },
+            {
+              "basicBlockRefs": [
+                "bb181",
+                "bb184",
+                "bb185"
+              ],
+              "broadRangeReason": "本同步函数在源码 196–245 构造并 spawn 第一段 async move，在 247–294 构造并返回第二段 async move；MIR aggregate/包装调用的 span 覆盖完整字面量，故高亮较宽。这里说明构造、捕获与移交时机，不声称同步执行了闭包内的等待或取消流程。",
+              "controlRefs": [
+                "sequence-181"
+              ],
+              "id": "P03/A08.181",
+              "label": "交回等待结果并处理取消的 Future",
+              "lineRanges": [
+                {
+                  "endLine": 294,
+                  "startLine": 247
+                }
+              ],
+              "renderId": "P03_A08.181"
+            }
+          ],
+          "basicBlockRefs": [
+            "bb178",
+            "bb179",
+            "bb180",
+            "bb181",
+            "bb184",
+            "bb185"
+          ],
+          "broadRangeReason": "本同步函数在源码 196–245 构造并 spawn 第一段 async move，在 247–294 构造并返回第二段 async move；MIR aggregate/包装调用的 span 覆盖完整字面量，故高亮较宽。这里说明构造、捕获与移交时机，不声称同步执行了闭包内的等待或取消流程。",
+          "id": "sem:P03:task-launch",
+          "label": "建立可取消且可等待的后台调用",
+          "lineRanges": [
+            {
+              "endLine": 245,
+              "startLine": 196
+            },
+            {
+              "endLine": 294,
+              "startLine": 247
+            }
+          ],
+          "renderId": "sem:P03:task-launch"
+        }
+      ],
+      "id": "P03",
+      "label": "移交后台执行与调用方等待职责",
+      "lineRanges": [
+        {
+          "endLine": 176,
+          "startLine": 167
+        },
+        {
+          "endLine": 178,
+          "startLine": 178
+        },
+        {
+          "endLine": 180,
+          "startLine": 180
+        },
+        {
+          "endLine": 183,
+          "startLine": 182
+        },
+        {
+          "endLine": 194,
+          "startLine": 186
+        },
+        {
+          "endLine": 245,
+          "startLine": 196
+        },
+        {
+          "endLine": 294,
+          "startLine": 247
+        }
+      ]
+    }
+  ],
+  "profile": "v6.1/1",
+  "purposeProjections": [
+    {
+      "defaultVisible": true,
+      "goalRef": "sem:P01:dispatch-config",
+      "id": "purpose-72",
+      "invocationRefs": [
+        "invocation-72"
+      ],
+      "relatedGoalRefs": [],
+      "summary": {
+        "drawAsMessage": false,
+        "kind": "note",
+        "object": "code-mode 消息准入",
+        "purpose": "取得 code-mode send 的 message_admission",
+        "result": "保存准入 Result，实际 ? 在后台任务执行"
+      },
+      "waitRefs": []
+    },
+    {
+      "defaultVisible": true,
+      "goalRef": "sem:P01:dispatch-config",
+      "id": "purpose-75",
+      "invocationRefs": [
+        "invocation-75"
+      ],
+      "relatedGoalRefs": [],
+      "summary": {
+        "drawAsMessage": false,
+        "kind": "note",
+        "object": "调用登记",
+        "purpose": "向 ExecutedToolCalls 记录 call/source/step_context",
+        "result": "调用已进入本 turn 的执行记录"
+      },
+      "waitRefs": []
+    },
+    {
+      "defaultVisible": true,
+      "goalRef": "sem:P01:dispatch-config",
+      "id": "purpose-78",
+      "invocationRefs": [
+        "invocation-78"
+      ],
+      "relatedGoalRefs": [],
+      "summary": {
+        "drawAsMessage": false,
+        "kind": "note",
+        "object": "并发能力",
+        "purpose": "查询工具是否支持并行执行",
+        "result": "保存 supports_parallel，供后台选择读锁或写锁"
+      },
+      "waitRefs": []
+    },
+    {
+      "defaultVisible": true,
+      "goalRef": "sem:P01:dispatch-config",
+      "id": "purpose-80",
+      "invocationRefs": [
+        "invocation-80"
+      ],
+      "relatedGoalRefs": [],
+      "summary": {
+        "drawAsMessage": false,
+        "kind": "note",
+        "object": "工具 runtime",
+        "purpose": "按 tool_name 查询工具 runtime",
+        "result": "保存可选 CoreToolRuntime，供后台 readiness 等待"
+      },
+      "waitRefs": []
+    },
+    {
+      "defaultVisible": true,
+      "goalRef": "sem:P02:lifecycle",
+      "id": "purpose-88",
+      "invocationRefs": [
+        "invocation-88"
+      ],
+      "relatedGoalRefs": [],
+      "summary": {
+        "drawAsMessage": false,
+        "kind": "note",
+        "object": "端到端计时起点",
+        "purpose": "记录 dispatch 准备阶段的 Instant",
+        "result": "得到 started，后续计时包含排队、执行与输出处理"
+      },
+      "waitRefs": []
+    },
+    {
+      "defaultVisible": true,
+      "goalRef": "sem:P02:lifecycle",
+      "id": "purpose-94",
+      "invocationRefs": [
+        "invocation-94"
+      ],
+      "relatedGoalRefs": [],
+      "summary": {
+        "drawAsMessage": false,
+        "kind": "note",
+        "object": "工具生命周期计时",
+        "purpose": "捕获本次调用的 ToolCallTimingGuard",
+        "result": "得到可选 timing guard"
+      },
+      "waitRefs": []
+    },
+    {
+      "defaultVisible": true,
+      "goalRef": "sem:P02:lifecycle",
+      "id": "purpose-99",
+      "invocationRefs": [
+        "invocation-99"
+      ],
+      "relatedGoalRefs": [],
+      "summary": {
+        "drawAsMessage": false,
+        "kind": "note",
+        "object": "生命周期观察者",
+        "purpose": "读取已注册的 tool_lifecycle_contributors",
+        "result": "得到待逐个通知的 observer 列表"
+      },
+      "waitRefs": []
+    },
+    {
+      "defaultVisible": true,
+      "goalRef": "sem:P03:task-launch",
+      "id": "purpose-179",
+      "invocationRefs": [
+        "invocation-179"
+      ],
+      "relatedGoalRefs": [],
+      "summary": {
+        "drawAsMessage": false,
+        "kind": "note",
+        "object": "后台分派任务",
+        "purpose": "spawn 准入、readiness、并发门与 router 分派 coroutine",
+        "result": "立即取得 JoinHandle；task 可能与后续同步准备并发推进"
+      },
+      "waitRefs": []
+    },
+    {
+      "defaultVisible": true,
+      "goalRef": "sem:P03:task-launch",
+      "id": "purpose-181",
+      "invocationRefs": [
+        "invocation-181"
+      ],
+      "relatedGoalRefs": [],
+      "summary": {
+        "drawAsMessage": false,
+        "kind": "note",
+        "object": "调用方等待 Future",
+        "purpose": "构造等待 dispatch 或 cancellation 的 coroutine",
+        "result": "交回惰性 Future；取消与完成计时逻辑在调用方 poll 后执行"
+      },
+      "waitRefs": []
+    }
+  ],
+  "readingScopes": [
+    {
+      "condition": "存在 ToolCallTimingGuard",
+      "decision": {
+        "values": [
+          "some",
+          "none"
+        ],
+        "variable": "decision-timing-guard"
+      },
+      "id": "scope-timing-guard",
+      "kind": "opt",
+      "members": [
+        {
+          "kind": "action",
+          "ref": "P02/A04.97"
+        },
+        {
+          "kind": "action",
+          "ref": "P02/A05.102"
+        }
+      ],
+      "originControlRef": "scope-control-timing-guard",
+      "parentScopeRef": null,
+      "skip": "没有 timing guard 时不遍历 observers，直接准备执行与取消捕获",
+      "skipValues": [
+        "none"
+      ],
+      "takeValues": [
+        "some"
+      ]
+    },
+    {
+      "commonAfter": {
+        "actionRef": "P03/A06.113",
+        "arrivals": [
+          {
+            "condition": "所有 observer 已通知",
+            "path": "exit"
+          }
+        ],
+        "label": "准备后台任务与取消路径捕获"
+      },
+      "condition": "逐项遍历 tool_lifecycle_contributors",
+      "decision": {
+        "values": [
+          "done",
+          "more"
+        ],
+        "variable": "decision-observer-next"
+      },
+      "id": "scope-observers",
+      "kind": "loop",
+      "members": [
+        {
+          "kind": "action",
+          "ref": "P02/A05.102"
+        }
+      ],
+      "parentScopeRef": "scope-timing-guard",
+      "repeat": {
+        "continue": "通知当前 observer 后读取下一项",
+        "continueValues": [
+          "more"
+        ],
+        "entryActionRef": "P02/A05.102",
+        "exit": "迭代耗尽后准备执行与取消捕获",
+        "exitValues": [
+          "done"
+        ],
+        "limit": "当前 contributors slice 中的有限 observer 数量"
+      }
+    }
+  ],
+  "returnContracts": [
+    {
+      "branchRef": null,
+      "meaning": "normal-return",
+      "messageRef": "return-72"
+    },
+    {
+      "branchRef": null,
+      "meaning": "normal-return",
+      "messageRef": "return-75"
+    },
+    {
+      "branchRef": null,
+      "meaning": "normal-return",
+      "messageRef": "return-78"
+    },
+    {
+      "branchRef": null,
+      "meaning": "normal-return",
+      "messageRef": "return-80"
+    },
+    {
+      "branchRef": null,
+      "meaning": "normal-return",
+      "messageRef": "return-94"
+    },
+    {
+      "branchRef": null,
+      "meaning": "normal-return",
+      "messageRef": "return-99"
+    },
+    {
+      "branchRef": null,
+      "meaning": "normal-return",
+      "messageRef": "return-179"
+    },
+    {
+      "branchRef": null,
+      "meaning": "normal-return",
+      "messageRef": "return-181"
+    }
+  ],
+  "rootAnchors": [],
+  "rootControlRefs": [],
+  "scopeAnnotations": [],
+  "segments": [
+    {
+      "id": "segment-72",
+      "invocationRef": "invocation-72",
+      "kind": "sequence",
+      "messages": [
+        "request-72",
+        "return-72"
+      ]
+    },
+    {
+      "id": "segment-75",
+      "invocationRef": "invocation-75",
+      "kind": "sequence",
+      "messages": [
+        "request-75",
+        "return-75"
+      ]
+    },
+    {
+      "id": "segment-78",
+      "invocationRef": "invocation-78",
+      "kind": "sequence",
+      "messages": [
+        "request-78",
+        "return-78"
+      ]
+    },
+    {
+      "id": "segment-80",
+      "invocationRef": "invocation-80",
+      "kind": "sequence",
+      "messages": [
+        "request-80",
+        "return-80"
+      ]
+    },
+    {
+      "id": "segment-88",
+      "invocationRef": "invocation-88",
+      "kind": "sequence",
+      "messages": [
+        "self-88"
+      ]
+    },
+    {
+      "id": "segment-94",
+      "invocationRef": "invocation-94",
+      "kind": "sequence",
+      "messages": [
+        "request-94",
+        "return-94"
+      ]
+    },
+    {
+      "id": "segment-99",
+      "invocationRef": "invocation-99",
+      "kind": "sequence",
+      "messages": [
+        "request-99",
+        "return-99"
+      ]
+    },
+    {
+      "id": "segment-179",
+      "invocationRef": "invocation-179",
+      "kind": "sequence",
+      "messages": [
+        "request-179",
+        "return-179"
+      ]
+    },
+    {
+      "id": "segment-181",
+      "invocationRef": "invocation-181",
+      "kind": "sequence",
+      "messages": [
+        "request-181",
+        "return-181"
+      ]
+    }
+  ],
+  "semanticRoot": {
+    "actorRef": "actor-main",
+    "symbol": "ToolCallRuntime::handle_tool_call_with_source"
+  },
+  "sourceGroups": [
+    {
+      "basicBlockRefs": [
+        "bb71",
+        "bb72",
+        "bb73",
+        "bb74",
+        "bb75"
+      ],
+      "id": "P01/A01.71/C71",
+      "label": "计算 message_admission 并把 call/source/step_context 写入调用记录",
+      "lineRanges": [
+        {
+          "endLine": 138,
+          "startLine": 134
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb76",
+        "bb77",
+        "bb78",
+        "bb79",
+        "bb80",
+        "bb81",
+        "bb82",
+        "bb83",
+        "bb84",
+        "bb85",
+        "bb86",
+        "bb87"
+      ],
+      "id": "P01/A02.76/C76",
+      "label": "查询并行能力与 runtime，捕获 router/session/turn/tracker/lock 和取消 token",
+      "lineRanges": [
+        {
+          "endLine": 147,
+          "startLine": 139
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb88",
+        "bb89",
+        "bb90",
+        "bb91",
+        "bb92",
+        "bb93",
+        "bb94",
+        "bb95",
+        "bb96"
+      ],
+      "id": "P02/A03.88/C88",
+      "label": "记录 started，捕获 ToolCallTimingGuard 并检查是否存在",
+      "lineRanges": [
+        {
+          "endLine": 157,
+          "startLine": 148
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb97",
+        "bb98",
+        "bb99",
+        "bb100",
+        "bb101"
+      ],
+      "id": "P02/A04.97/C97",
+      "label": "读取 lifecycle contributors 并初始化迭代器",
+      "lineRanges": [
+        {
+          "endLine": 158,
+          "startLine": 157
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb102",
+        "bb103"
+      ],
+      "id": "P02/A05.102/C102",
+      "label": "取得下一个 observer 并检查迭代是否耗尽",
+      "lineRanges": [
+        {
+          "endLine": 158,
+          "startLine": 158
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb105",
+        "bb107",
+        "bb108",
+        "bb109",
+        "bb110",
+        "bb111"
+      ],
+      "id": "P02/A05.102/C105",
+      "label": "向当前 observer 交付 thread/turn/call/tool 标识并回到下一项",
+      "lineRanges": [
+        {
+          "endLine": 164,
+          "startLine": 158
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb106"
+      ],
+      "id": "P02/A05.102/C106",
+      "label": "迭代耗尽后离开通知范围",
+      "lineRanges": [],
+      "sourceRangeReason": "No precise semantic operation span in the recorded BBs; only compiler state, storage, drop, cleanup or enclosing-scope context. Full source remains available."
+    },
+    {
+      "basicBlockRefs": [
+        "bb112"
+      ],
+      "id": "P03/A06.113/C112",
+      "label": "没有 timing guard 时绕过 observer 通知",
+      "lineRanges": [],
+      "sourceRangeReason": "No precise semantic operation span in the recorded BBs; only compiler state, storage, drop, cleanup or enclosing-scope context. Full source remains available."
+    },
+    {
+      "basicBlockRefs": [
+        "bb113",
+        "bb114",
+        "bb115",
+        "bb116",
+        "bb117",
+        "bb118",
+        "bb119",
+        "bb120",
+        "bb121"
+      ],
+      "id": "P03/A06.113/C113",
+      "label": "保留计时开始槽与取消所需上下文，并检查 call source",
+      "lineRanges": [
+        {
+          "endLine": 176,
+          "startLine": 167
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb122"
+      ],
+      "id": "P03/A06.113/C122",
+      "label": "将 CodeMode 映射为 trace Source::CodeMode",
+      "lineRanges": [
+        {
+          "endLine": 180,
+          "startLine": 180
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb123"
+      ],
+      "id": "P03/A06.113/C123",
+      "label": "将 Direct 与 DirectPlaintextMessage 映射为 trace Source::Direct",
+      "lineRanges": [
+        {
+          "endLine": 178,
+          "startLine": 178
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb124",
+        "bb125",
+        "bb126"
+      ],
+      "id": "P03/A06.113/C124",
+      "label": "保存 dispatch_tool_name、dispatch_call_id 与捕获存活标记",
+      "lineRanges": [
+        {
+          "endLine": 183,
+          "startLine": 182
+        },
+        {
+          "endLine": 193,
+          "startLine": 186
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb142",
+        "bb144"
+      ],
+      "id": "P03/A06.113/C142",
+      "label": "为启用的 dispatch span 读取 session.thread_id 和 call_id",
+      "lineRanges": [
+        {
+          "endLine": 193,
+          "startLine": 186
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb167",
+        "bb169"
+      ],
+      "id": "P03/A06.113/C167",
+      "label": "为 disabled span 的字段记录读取 session.thread_id 和 call_id",
+      "lineRanges": [
+        {
+          "endLine": 193,
+          "startLine": 186
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb177"
+      ],
+      "id": "P03/A06.113/C177",
+      "label": "复制 dispatch span 供取消路径记录 aborted",
+      "lineRanges": [
+        {
+          "endLine": 194,
+          "startLine": 194
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb178",
+        "bb179",
+        "bb180"
+      ],
+      "id": "P03/A07.178/C178",
+      "label": "构造 dispatch coroutine，立即 tokio::spawn 并包装 AbortOnDropHandle",
+      "lineRanges": [
+        {
+          "endLine": 245,
+          "startLine": 196
+        }
+      ]
+    },
+    {
+      "basicBlockRefs": [
+        "bb181",
+        "bb184",
+        "bb185"
+      ],
+      "id": "P03/A08.181/C181",
+      "label": "构造等待/取消 coroutine 并作为本函数结果交回",
+      "lineRanges": [
+        {
+          "endLine": 294,
+          "startLine": 247
+        }
+      ]
+    }
+  ],
+  "testBoundaries": []
+}
